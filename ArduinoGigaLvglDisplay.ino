@@ -1,6 +1,6 @@
 /**
  * @file ArduinoGigaLvglDisplay.ino
- * @author Jadon Jung (mailto:jadonjung3@gmail.com)
+ * @author Jadon Jung (jadonjung3@gmail.com)
  * @brief Arduino Giga LVGL Display For Robot Car
  * @version 1.0
  * @date 2025-11-30

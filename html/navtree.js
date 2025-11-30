@@ -27,7 +27,7 @@ function initNavTree(toroot,relpath,allMembersFile) {
   let navTreeSubIndices = [];
   const ARROW_DOWN = '<span class="arrowhead opened"></span>';
   const ARROW_RIGHT = '<span class="arrowhead closed"></span>';
-  const NAVPATH_COOKIE_NAME = ''+'navpath';
+  const NAVPATH_COOKIE_NAME = '4b43b0aee35624cd95b910189b3dc231_'+'navpath';
   const fullSidebar = typeof page_layout!=='undefined' && page_layout==1;
 
   function getScrollBarWidth () {
