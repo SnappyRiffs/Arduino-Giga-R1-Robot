@@ -1,0 +1,25 @@
+[OPTIONS]
+Compiled file=index.chm
+Compatibility=1.1
+Full-text search=Yes
+Contents file=index.hhc
+Default Window=main
+Default topic=index.html
+Language=0x409 English (United States)
+Title=Arduino Giga Project Doxygen
+
+[WINDOWS]
+main="Arduino Giga Project Doxygen","index.hhc",,"index.html","index.html",,,,,0x23520,,0x10387e,,,,,,,,0
+
+[FILES]
+_arduino_giga_lvgl_display_8ino.html
+_arduino_giga_lvgl_display_8ino_source.html
+doxygen_crawl.html
+files.html
+index.html
+doxygen.svg
+doxygen.css
+dynsections.js
+jquery.js
+navtree.css
+tabs.css

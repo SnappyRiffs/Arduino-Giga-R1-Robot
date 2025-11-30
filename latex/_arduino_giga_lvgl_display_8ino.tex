@@ -1,0 +1,573 @@
+\doxysection{Arduino\+Giga\+Lvgl\+Display.\+ino File Reference}
+\hypertarget{_arduino_giga_lvgl_display_8ino}{}\label{_arduino_giga_lvgl_display_8ino}\index{ArduinoGigaLvglDisplay.ino@{ArduinoGigaLvglDisplay.ino}}
+
+
+Arduino Giga LVGL Display For Robot Car.  
+
+
+{\ttfamily \#include $<$Arduino\+\_\+\+Giga\+Display\+Touch.\+h$>$}\newline
+{\ttfamily \#include $<$lv\+\_\+api\+\_\+map\+\_\+v9\+\_\+0.\+h$>$}\newline
+{\ttfamily \#include $<$lv\+\_\+api\+\_\+map\+\_\+v9\+\_\+1.\+h$>$}\newline
+{\ttfamily \#include $<$lv\+\_\+api\+\_\+map\+\_\+v9\+\_\+2.\+h$>$}\newline
+{\ttfamily \#include $<$lv\+\_\+api\+\_\+map\+\_\+v9\+\_\+3.\+h$>$}\newline
+{\ttfamily \#include $<$lv\+\_\+conf\+\_\+internal.\+h$>$}\newline
+{\ttfamily \#include $<$lv\+\_\+conf\+\_\+kconfig.\+h$>$}\newline
+{\ttfamily \#include $<$lv\+\_\+init.\+h$>$}\newline
+{\ttfamily \#include $<$lvgl\+\_\+private.\+h$>$}\newline
+{\ttfamily \#include $<$lvgl.\+h$>$}\newline
+{\ttfamily \#include "{}Arduino\+\_\+\+H7\+\_\+\+Video.\+h"{}}\newline
+{\ttfamily \#include $<$vector$>$}\newline
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+Arduino\+\_\+\+H7\+\_\+\+Video \mbox{\hyperlink{group___display___group_ga981250658d9bfa2913d1fc9759006912}{Display}} (800, 480, Giga\+Display\+Shield)
+\begin{DoxyCompactList}\small\item\em Create an instance of Arduino\+\_\+\+H7\+\_\+\+Video configured for an 800x480 resolution using the Giga Display Shield. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{_arduino_giga_lvgl_display_8ino_a0397ddbe4d2bddb9d77afbb47acf56f0}{apply\+\_\+mode}} (const char \texorpdfstring{$\ast$}{*}mode\+\_\+name, const char \texorpdfstring{$\ast$}{*}direction)
+\begin{DoxyCompactList}\small\item\em Applies the selected movement mode and direction. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{_arduino_giga_lvgl_display_8ino_a599fa16066a270f3a22e7de32fbb250f}{btn\+\_\+\+Run\+\_\+\+Program\+\_\+event\+\_\+cb}} (lv\+\_\+event\+\_\+t \texorpdfstring{$\ast$}{*}e)
+\begin{DoxyCompactList}\small\item\em Handles the "{}\+Run Program"{} button event. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{_arduino_giga_lvgl_display_8ino_a20585e8659a8214cc0bd75f5e979acba}{btnm\+\_\+event\+\_\+cb}} (lv\+\_\+event\+\_\+t \texorpdfstring{$\ast$}{*}e)
+\begin{DoxyCompactList}\small\item\em Handles all main directional and mode selection button events. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{_arduino_giga_lvgl_display_8ino_a387364b391da0c6e0e19cbdddd28b77a}{test\+\_\+btnm\+\_\+event\+\_\+cb}} (lv\+\_\+event\+\_\+t \texorpdfstring{$\ast$}{*}e)
+\begin{DoxyCompactList}\small\item\em Handles individual test control button events. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{_arduino_giga_lvgl_display_8ino_accf9c682319e11f61db68997b6938fdc}{slider\+\_\+event\+\_\+cb}} (lv\+\_\+event\+\_\+t \texorpdfstring{$\ast$}{*}e)
+\begin{DoxyCompactList}\small\item\em Updates the global speed variable when a slider is moved. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{_arduino_giga_lvgl_display_8ino_a5c854330b94e76f43e26164660df409c}{toggle\+\_\+fwdrev\+\_\+cb}} (lv\+\_\+event\+\_\+t \texorpdfstring{$\ast$}{*}e)
+\begin{DoxyCompactList}\small\item\em Handles toggling between Forward and Reverse. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_arduino_giga_lvgl_display_8ino_a6fbd991f948fc782ccc13e510b824d91}{set\+\_\+btnm\+\_\+bg\+\_\+colors}} (lv\+\_\+obj\+\_\+t \texorpdfstring{$\ast$}{*}btnm, uint32\+\_\+t normal, uint32\+\_\+t pressed)
+\begin{DoxyCompactList}\small\item\em Set the btnm bg colors object. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_arduino_giga_lvgl_display_8ino_a47db19faa16aed1d6d68dfdaf103bf6a}{create\+\_\+button\+\_\+matrix}} (lv\+\_\+obj\+\_\+t \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{_arduino_giga_lvgl_display_8ino_a6ab2f42db29199d62773bffd8ea4e25e}{screen\+\_\+buttons}})
+\item 
+void \mbox{\hyperlink{_arduino_giga_lvgl_display_8ino_aecc909a3f155365b24a95ec0ffef19d3}{create\+\_\+test\+\_\+button\+\_\+matrix}} (lv\+\_\+obj\+\_\+t \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{_arduino_giga_lvgl_display_8ino_a6ab2f42db29199d62773bffd8ea4e25e}{screen\+\_\+buttons}})
+\item 
+void \mbox{\hyperlink{_arduino_giga_lvgl_display_8ino_a1887246f5467ff145cd963e98fc2258e}{create\+\_\+ui}} ()
+\begin{DoxyCompactList}\small\item\em Create a ui object. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_arduino_giga_lvgl_display_8ino_a1d1a4db533ab78b9a2a06a09ba8a3bba}{FR\+\_\+move}} (int speed)
+\begin{DoxyCompactList}\small\item\em Moves the front-\/right (FR) motor at the specified speed. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_arduino_giga_lvgl_display_8ino_a89702714cf6f17fb069f22e5f1f36d97}{FL\+\_\+move}} (int speed)
+\begin{DoxyCompactList}\small\item\em Moves the front-\/left (FL) motor at the specified speed. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_arduino_giga_lvgl_display_8ino_a72d3ab08a583fa7cbdf7e3db1cb9ee5f}{RR\+\_\+move}} (int speed)
+\begin{DoxyCompactList}\small\item\em Moves the rear-\/right (RR) motor at the specified speed. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_arduino_giga_lvgl_display_8ino_ac5e4ea79ee09f85143f444ee9d22cea6}{RL\+\_\+move}} (int speed)
+\begin{DoxyCompactList}\small\item\em Moves the rear-\/left (RL) motor at the specified speed. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_arduino_giga_lvgl_display_8ino_a4fc01d736fe50cf5b977f755b675f11d}{setup}} ()
+\item 
+void \mbox{\hyperlink{_arduino_giga_lvgl_display_8ino_afe461d27b9c48d5921c00d521181f12f}{loop}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+Arduino\+\_\+\+Giga\+Display\+Touch \mbox{\hyperlink{group___display___group_gae108ec4dedc4caca549733338bf32414}{Touch\+Detector}}
+\begin{DoxyCompactList}\small\item\em Create global touch detector object. \end{DoxyCompactList}\item 
+lv\+\_\+obj\+\_\+t \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{group___msg___group_ga585898b7bac0a7898292e85b2de2a39b}{msg\+\_\+label}} = NULL
+\begin{DoxyCompactList}\small\item\em Message label. \end{DoxyCompactList}\item 
+unsigned long \mbox{\hyperlink{group___msg___group_ga971e9cd1d44a1613b880ab40f1a6c99e}{msg\+\_\+start\+\_\+time}} = 0
+\begin{DoxyCompactList}\small\item\em Message start time (always 0). \end{DoxyCompactList}\item 
+const unsigned long \mbox{\hyperlink{group___msg___group_gac2f78c0baea19329ba258e0968ecdc31}{msg\+\_\+duration}} = 1500
+\begin{DoxyCompactList}\small\item\em Message duration (in milliseconds). \end{DoxyCompactList}\item 
+lv\+\_\+obj\+\_\+t \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{_arduino_giga_lvgl_display_8ino_a6ab2f42db29199d62773bffd8ea4e25e}{screen\+\_\+buttons}}
+\begin{DoxyCompactList}\small\item\em Screen object for buttons. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{group___motor___variables_gac153c1dd7b0ceef0acd0c43a6690e3e9}{motor\+\_\+speed}}
+\begin{DoxyCompactList}\small\item\em Motor speed variable (0-\/255). \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{group___motor___variables_gaa4c5f0f5f64ae87887bca053777176e3}{motor\+\_\+direction}}
+\begin{DoxyCompactList}\small\item\em Motor direction variable (1 for Forward, -\/1 for Reverse). \end{DoxyCompactList}\item 
+const int \mbox{\hyperlink{_arduino_giga_lvgl_display_8ino_a4763be0e77388074ff071965028a76ba}{ENB\+\_\+B}} = 13
+\begin{DoxyCompactList}\small\item\em Initialize motor control pins. \end{DoxyCompactList}\item 
+const int \mbox{\hyperlink{_arduino_giga_lvgl_display_8ino_a2bf2794b643a821a4a1ee3fce9a17b39}{IN4\+\_\+B}} = 12
+\item 
+const int \mbox{\hyperlink{_arduino_giga_lvgl_display_8ino_a0eff9fd47f52060c179765fc406c824f}{IN3\+\_\+B}} = 11
+\item 
+const int \mbox{\hyperlink{_arduino_giga_lvgl_display_8ino_a9570059ff6b742c8040a32962d0d5a37}{IN2\+\_\+B}} = 10
+\item 
+const int \mbox{\hyperlink{_arduino_giga_lvgl_display_8ino_ac74564e770f6c90dbf7dd71476f5114e}{IN1\+\_\+B}} = 9
+\item 
+const int \mbox{\hyperlink{_arduino_giga_lvgl_display_8ino_a51076b14694e306a6194047c53593a31}{ENA\+\_\+B}} = 8
+\item 
+const int \mbox{\hyperlink{_arduino_giga_lvgl_display_8ino_af062d7609355335ffce63fa23bfed5f7}{ENB\+\_\+A}} = 7
+\item 
+const int \mbox{\hyperlink{_arduino_giga_lvgl_display_8ino_a7bc7d13c97218d43553bd1bdde068e9d}{IN4\+\_\+A}} = 6
+\item 
+const int \mbox{\hyperlink{_arduino_giga_lvgl_display_8ino_a5c616be1a0da4e4851766ab26fdc106b}{IN3\+\_\+A}} = 5
+\item 
+const int \mbox{\hyperlink{_arduino_giga_lvgl_display_8ino_a0a2da1fa43e204f03999bfcd82e2ce93}{IN2\+\_\+A}} = 4
+\item 
+const int \mbox{\hyperlink{_arduino_giga_lvgl_display_8ino_a2f8c3e5c64df336aadd989def65390df}{IN1\+\_\+A}} = 3
+\item 
+const int \mbox{\hyperlink{_arduino_giga_lvgl_display_8ino_a448921cced6d8ecae8e0ea9dc739dcea}{ENA\+\_\+A}} = 2
+\item 
+std\+::vector$<$ const char \texorpdfstring{$\ast$}{*} $>$ \mbox{\hyperlink{_arduino_giga_lvgl_display_8ino_a029d685f4cb2412bb10f78d34254bd9d}{program}}
+\begin{DoxyCompactList}\small\item\em Initialize program vector. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Arduino Giga LVGL Display For Robot Car. 
+
+\begin{DoxyAuthor}{Author}
+Jadon Jung (\href{mailto:jadonjung3@gmail.com}{\texttt{jadonjung3@gmail.\+com}}) 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+1.\+0 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+2025-\/11-\/30
+\end{DoxyDate}
+\begin{DoxyCopyright}{Copyright}
+Copyright (c) 2025 
+\end{DoxyCopyright}
+
+
+Definition in file \mbox{\hyperlink{_arduino_giga_lvgl_display_8ino_source}{Arduino\+Giga\+Lvgl\+Display.\+ino}}.
+
+
+
+\label{doc-func-members}
+\Hypertarget{_arduino_giga_lvgl_display_8ino_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{_arduino_giga_lvgl_display_8ino_a0397ddbe4d2bddb9d77afbb47acf56f0}\index{ArduinoGigaLvglDisplay.ino@{ArduinoGigaLvglDisplay.ino}!apply\_mode@{apply\_mode}}
+\index{apply\_mode@{apply\_mode}!ArduinoGigaLvglDisplay.ino@{ArduinoGigaLvglDisplay.ino}}
+\doxysubsubsection{\texorpdfstring{apply\_mode()}{apply\_mode()}}
+{\footnotesize\ttfamily \label{_arduino_giga_lvgl_display_8ino_a0397ddbe4d2bddb9d77afbb47acf56f0} 
+void apply\+\_\+mode (\begin{DoxyParamCaption}\item[{const char \texorpdfstring{$\ast$}{*}}]{mode\+\_\+name}{, }\item[{const char \texorpdfstring{$\ast$}{*}}]{direction}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Applies the selected movement mode and direction. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em mode\+\_\+name} & mode of movement \\
+\hline
+{\em direction} & \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{_arduino_giga_lvgl_display_8ino_source_l00123}{123}} of file \mbox{\hyperlink{_arduino_giga_lvgl_display_8ino_source}{Arduino\+Giga\+Lvgl\+Display.\+ino}}.
+
+\Hypertarget{_arduino_giga_lvgl_display_8ino_a599fa16066a270f3a22e7de32fbb250f}\index{ArduinoGigaLvglDisplay.ino@{ArduinoGigaLvglDisplay.ino}!btn\_Run\_Program\_event\_cb@{btn\_Run\_Program\_event\_cb}}
+\index{btn\_Run\_Program\_event\_cb@{btn\_Run\_Program\_event\_cb}!ArduinoGigaLvglDisplay.ino@{ArduinoGigaLvglDisplay.ino}}
+\doxysubsubsection{\texorpdfstring{btn\_Run\_Program\_event\_cb()}{btn\_Run\_Program\_event\_cb()}}
+{\footnotesize\ttfamily \label{_arduino_giga_lvgl_display_8ino_a599fa16066a270f3a22e7de32fbb250f} 
+void btn\+\_\+\+Run\+\_\+\+Program\+\_\+event\+\_\+cb (\begin{DoxyParamCaption}\item[{lv\+\_\+event\+\_\+t \texorpdfstring{$\ast$}{*}}]{e}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Handles the "{}\+Run Program"{} button event. 
+
+This callback is triggered when the user presses the {\bfseries{Prgm Car}} button in the button matrix. It displays a temporary "{}\+Applied program!"{} message on the screen, prints all stored program steps to the serial monitor, clears the program list, and records the timestamp so the message can be removed later.
+
+The function also deletes any previous message label before creating a new one.
+
+
+\begin{DoxyParams}{Parameters}
+{\em e} & Pointer to the LVGL event descriptor. Contains information about the event and the object that triggered it, although this callback does not use it directly. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{_arduino_giga_lvgl_display_8ino_source_l00161}{161}} of file \mbox{\hyperlink{_arduino_giga_lvgl_display_8ino_source}{Arduino\+Giga\+Lvgl\+Display.\+ino}}.
+
+\Hypertarget{_arduino_giga_lvgl_display_8ino_a20585e8659a8214cc0bd75f5e979acba}\index{ArduinoGigaLvglDisplay.ino@{ArduinoGigaLvglDisplay.ino}!btnm\_event\_cb@{btnm\_event\_cb}}
+\index{btnm\_event\_cb@{btnm\_event\_cb}!ArduinoGigaLvglDisplay.ino@{ArduinoGigaLvglDisplay.ino}}
+\doxysubsubsection{\texorpdfstring{btnm\_event\_cb()}{btnm\_event\_cb()}}
+{\footnotesize\ttfamily \label{_arduino_giga_lvgl_display_8ino_a20585e8659a8214cc0bd75f5e979acba} 
+void btnm\+\_\+event\+\_\+cb (\begin{DoxyParamCaption}\item[{lv\+\_\+event\+\_\+t \texorpdfstring{$\ast$}{*}}]{e}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Handles all main directional and mode selection button events. 
+
+This callback is triggered whenever a button in the primary button matrix is pressed. It reads the button\textquotesingle{}s text label and maps it to a specific movement mode (Straight, Sideways, Diagonal, Pivot, Pivot Sideways, Rotate). The corresponding mode and direction string are then forwarded to \doxylink{_arduino_giga_lvgl_display_8ino_a0397ddbe4d2bddb9d77afbb47acf56f0}{apply\+\_\+mode()}.
+
+If the selected button is "{}\+Prgm Car"{}, this function instead triggers the special program execution callback \doxylink{_arduino_giga_lvgl_display_8ino_a599fa16066a270f3a22e7de32fbb250f}{btn\+\_\+\+Run\+\_\+\+Program\+\_\+event\+\_\+cb()}.
+
+
+\begin{DoxyParams}{Parameters}
+{\em e} & Pointer to the LVGL event descriptor containing details about the button press event (e.\+g., target object). \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{_arduino_giga_lvgl_display_8ino_source_l00208}{208}} of file \mbox{\hyperlink{_arduino_giga_lvgl_display_8ino_source}{Arduino\+Giga\+Lvgl\+Display.\+ino}}.
+
+\Hypertarget{_arduino_giga_lvgl_display_8ino_a47db19faa16aed1d6d68dfdaf103bf6a}\index{ArduinoGigaLvglDisplay.ino@{ArduinoGigaLvglDisplay.ino}!create\_button\_matrix@{create\_button\_matrix}}
+\index{create\_button\_matrix@{create\_button\_matrix}!ArduinoGigaLvglDisplay.ino@{ArduinoGigaLvglDisplay.ino}}
+\doxysubsubsection{\texorpdfstring{create\_button\_matrix()}{create\_button\_matrix()}}
+{\footnotesize\ttfamily \label{_arduino_giga_lvgl_display_8ino_a47db19faa16aed1d6d68dfdaf103bf6a} 
+void create\+\_\+button\+\_\+matrix (\begin{DoxyParamCaption}\item[{lv\+\_\+obj\+\_\+t \texorpdfstring{$\ast$}{*}}]{screen\+\_\+buttons}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_arduino_giga_lvgl_display_8ino_source_l00374}{374}} of file \mbox{\hyperlink{_arduino_giga_lvgl_display_8ino_source}{Arduino\+Giga\+Lvgl\+Display.\+ino}}.
+
+\Hypertarget{_arduino_giga_lvgl_display_8ino_aecc909a3f155365b24a95ec0ffef19d3}\index{ArduinoGigaLvglDisplay.ino@{ArduinoGigaLvglDisplay.ino}!create\_test\_button\_matrix@{create\_test\_button\_matrix}}
+\index{create\_test\_button\_matrix@{create\_test\_button\_matrix}!ArduinoGigaLvglDisplay.ino@{ArduinoGigaLvglDisplay.ino}}
+\doxysubsubsection{\texorpdfstring{create\_test\_button\_matrix()}{create\_test\_button\_matrix()}}
+{\footnotesize\ttfamily \label{_arduino_giga_lvgl_display_8ino_aecc909a3f155365b24a95ec0ffef19d3} 
+void create\+\_\+test\+\_\+button\+\_\+matrix (\begin{DoxyParamCaption}\item[{lv\+\_\+obj\+\_\+t \texorpdfstring{$\ast$}{*}}]{screen\+\_\+buttons}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_arduino_giga_lvgl_display_8ino_source_l00395}{395}} of file \mbox{\hyperlink{_arduino_giga_lvgl_display_8ino_source}{Arduino\+Giga\+Lvgl\+Display.\+ino}}.
+
+\Hypertarget{_arduino_giga_lvgl_display_8ino_a1887246f5467ff145cd963e98fc2258e}\index{ArduinoGigaLvglDisplay.ino@{ArduinoGigaLvglDisplay.ino}!create\_ui@{create\_ui}}
+\index{create\_ui@{create\_ui}!ArduinoGigaLvglDisplay.ino@{ArduinoGigaLvglDisplay.ino}}
+\doxysubsubsection{\texorpdfstring{create\_ui()}{create\_ui()}}
+{\footnotesize\ttfamily \label{_arduino_giga_lvgl_display_8ino_a1887246f5467ff145cd963e98fc2258e} 
+void create\+\_\+ui (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Create a ui object. 
+
+
+
+Definition at line \mbox{\hyperlink{_arduino_giga_lvgl_display_8ino_source_l00414}{414}} of file \mbox{\hyperlink{_arduino_giga_lvgl_display_8ino_source}{Arduino\+Giga\+Lvgl\+Display.\+ino}}.
+
+\Hypertarget{_arduino_giga_lvgl_display_8ino_a89702714cf6f17fb069f22e5f1f36d97}\index{ArduinoGigaLvglDisplay.ino@{ArduinoGigaLvglDisplay.ino}!FL\_move@{FL\_move}}
+\index{FL\_move@{FL\_move}!ArduinoGigaLvglDisplay.ino@{ArduinoGigaLvglDisplay.ino}}
+\doxysubsubsection{\texorpdfstring{FL\_move()}{FL\_move()}}
+{\footnotesize\ttfamily \label{_arduino_giga_lvgl_display_8ino_a89702714cf6f17fb069f22e5f1f36d97} 
+void FL\+\_\+move (\begin{DoxyParamCaption}\item[{int}]{speed}{}\end{DoxyParamCaption})}
+
+
+
+Moves the front-\/left (FL) motor at the specified speed. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em speed} & Speed of movement (-\/255 to 255) \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{_arduino_giga_lvgl_display_8ino_source_l00500}{500}} of file \mbox{\hyperlink{_arduino_giga_lvgl_display_8ino_source}{Arduino\+Giga\+Lvgl\+Display.\+ino}}.
+
+\Hypertarget{_arduino_giga_lvgl_display_8ino_a1d1a4db533ab78b9a2a06a09ba8a3bba}\index{ArduinoGigaLvglDisplay.ino@{ArduinoGigaLvglDisplay.ino}!FR\_move@{FR\_move}}
+\index{FR\_move@{FR\_move}!ArduinoGigaLvglDisplay.ino@{ArduinoGigaLvglDisplay.ino}}
+\doxysubsubsection{\texorpdfstring{FR\_move()}{FR\_move()}}
+{\footnotesize\ttfamily \label{_arduino_giga_lvgl_display_8ino_a1d1a4db533ab78b9a2a06a09ba8a3bba} 
+void FR\+\_\+move (\begin{DoxyParamCaption}\item[{int}]{speed}{}\end{DoxyParamCaption})}
+
+
+
+Moves the front-\/right (FR) motor at the specified speed. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em speed} & Speed of movement (-\/255 to 255) \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{_arduino_giga_lvgl_display_8ino_source_l00479}{479}} of file \mbox{\hyperlink{_arduino_giga_lvgl_display_8ino_source}{Arduino\+Giga\+Lvgl\+Display.\+ino}}.
+
+\Hypertarget{_arduino_giga_lvgl_display_8ino_afe461d27b9c48d5921c00d521181f12f}\index{ArduinoGigaLvglDisplay.ino@{ArduinoGigaLvglDisplay.ino}!loop@{loop}}
+\index{loop@{loop}!ArduinoGigaLvglDisplay.ino@{ArduinoGigaLvglDisplay.ino}}
+\doxysubsubsection{\texorpdfstring{loop()}{loop()}}
+{\footnotesize\ttfamily \label{_arduino_giga_lvgl_display_8ino_afe461d27b9c48d5921c00d521181f12f} 
+void loop (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_arduino_giga_lvgl_display_8ino_source_l00571}{571}} of file \mbox{\hyperlink{_arduino_giga_lvgl_display_8ino_source}{Arduino\+Giga\+Lvgl\+Display.\+ino}}.
+
+\Hypertarget{_arduino_giga_lvgl_display_8ino_ac5e4ea79ee09f85143f444ee9d22cea6}\index{ArduinoGigaLvglDisplay.ino@{ArduinoGigaLvglDisplay.ino}!RL\_move@{RL\_move}}
+\index{RL\_move@{RL\_move}!ArduinoGigaLvglDisplay.ino@{ArduinoGigaLvglDisplay.ino}}
+\doxysubsubsection{\texorpdfstring{RL\_move()}{RL\_move()}}
+{\footnotesize\ttfamily \label{_arduino_giga_lvgl_display_8ino_ac5e4ea79ee09f85143f444ee9d22cea6} 
+void RL\+\_\+move (\begin{DoxyParamCaption}\item[{int}]{speed}{}\end{DoxyParamCaption})}
+
+
+
+Moves the rear-\/left (RL) motor at the specified speed. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em speed} & Speed of movement (-\/255 to 255) \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{_arduino_giga_lvgl_display_8ino_source_l00542}{542}} of file \mbox{\hyperlink{_arduino_giga_lvgl_display_8ino_source}{Arduino\+Giga\+Lvgl\+Display.\+ino}}.
+
+\Hypertarget{_arduino_giga_lvgl_display_8ino_a72d3ab08a583fa7cbdf7e3db1cb9ee5f}\index{ArduinoGigaLvglDisplay.ino@{ArduinoGigaLvglDisplay.ino}!RR\_move@{RR\_move}}
+\index{RR\_move@{RR\_move}!ArduinoGigaLvglDisplay.ino@{ArduinoGigaLvglDisplay.ino}}
+\doxysubsubsection{\texorpdfstring{RR\_move()}{RR\_move()}}
+{\footnotesize\ttfamily \label{_arduino_giga_lvgl_display_8ino_a72d3ab08a583fa7cbdf7e3db1cb9ee5f} 
+void RR\+\_\+move (\begin{DoxyParamCaption}\item[{int}]{speed}{}\end{DoxyParamCaption})}
+
+
+
+Moves the rear-\/right (RR) motor at the specified speed. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em speed} & Speed of movement (-\/255 to 255) \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{_arduino_giga_lvgl_display_8ino_source_l00521}{521}} of file \mbox{\hyperlink{_arduino_giga_lvgl_display_8ino_source}{Arduino\+Giga\+Lvgl\+Display.\+ino}}.
+
+\Hypertarget{_arduino_giga_lvgl_display_8ino_a6fbd991f948fc782ccc13e510b824d91}\index{ArduinoGigaLvglDisplay.ino@{ArduinoGigaLvglDisplay.ino}!set\_btnm\_bg\_colors@{set\_btnm\_bg\_colors}}
+\index{set\_btnm\_bg\_colors@{set\_btnm\_bg\_colors}!ArduinoGigaLvglDisplay.ino@{ArduinoGigaLvglDisplay.ino}}
+\doxysubsubsection{\texorpdfstring{set\_btnm\_bg\_colors()}{set\_btnm\_bg\_colors()}}
+{\footnotesize\ttfamily \label{_arduino_giga_lvgl_display_8ino_a6fbd991f948fc782ccc13e510b824d91} 
+void set\+\_\+btnm\+\_\+bg\+\_\+colors (\begin{DoxyParamCaption}\item[{lv\+\_\+obj\+\_\+t \texorpdfstring{$\ast$}{*}}]{btnm}{, }\item[{uint32\+\_\+t}]{normal}{, }\item[{uint32\+\_\+t}]{pressed}{}\end{DoxyParamCaption})}
+
+
+
+Set the btnm bg colors object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em btnm} & button map object \\
+\hline
+{\em normal} & color at normal state \\
+\hline
+{\em pressed} & color at pressed state \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{_arduino_giga_lvgl_display_8ino_source_l00366}{366}} of file \mbox{\hyperlink{_arduino_giga_lvgl_display_8ino_source}{Arduino\+Giga\+Lvgl\+Display.\+ino}}.
+
+\Hypertarget{_arduino_giga_lvgl_display_8ino_a4fc01d736fe50cf5b977f755b675f11d}\index{ArduinoGigaLvglDisplay.ino@{ArduinoGigaLvglDisplay.ino}!setup@{setup}}
+\index{setup@{setup}!ArduinoGigaLvglDisplay.ino@{ArduinoGigaLvglDisplay.ino}}
+\doxysubsubsection{\texorpdfstring{setup()}{setup()}}
+{\footnotesize\ttfamily \label{_arduino_giga_lvgl_display_8ino_a4fc01d736fe50cf5b977f755b675f11d} 
+void setup (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_arduino_giga_lvgl_display_8ino_source_l00559}{559}} of file \mbox{\hyperlink{_arduino_giga_lvgl_display_8ino_source}{Arduino\+Giga\+Lvgl\+Display.\+ino}}.
+
+\Hypertarget{_arduino_giga_lvgl_display_8ino_accf9c682319e11f61db68997b6938fdc}\index{ArduinoGigaLvglDisplay.ino@{ArduinoGigaLvglDisplay.ino}!slider\_event\_cb@{slider\_event\_cb}}
+\index{slider\_event\_cb@{slider\_event\_cb}!ArduinoGigaLvglDisplay.ino@{ArduinoGigaLvglDisplay.ino}}
+\doxysubsubsection{\texorpdfstring{slider\_event\_cb()}{slider\_event\_cb()}}
+{\footnotesize\ttfamily \label{_arduino_giga_lvgl_display_8ino_accf9c682319e11f61db68997b6938fdc} 
+void slider\+\_\+event\+\_\+cb (\begin{DoxyParamCaption}\item[{lv\+\_\+event\+\_\+t \texorpdfstring{$\ast$}{*}}]{e}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Updates the global speed variable when a slider is moved. 
+
+This callback is triggered whenever the user interacts with a speed slider. It reads the slider\textquotesingle{}s current value and assigns it to the global speed variable.
+
+If user data is attached to the event (typically a string naming the slider), that label is printed to the serial monitor for clarity.
+
+
+\begin{DoxyParams}{Parameters}
+{\em e} & Pointer to the LVGL event descriptor. Used to access the slider object and optional user data. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{_arduino_giga_lvgl_display_8ino_source_l00346}{346}} of file \mbox{\hyperlink{_arduino_giga_lvgl_display_8ino_source}{Arduino\+Giga\+Lvgl\+Display.\+ino}}.
+
+\Hypertarget{_arduino_giga_lvgl_display_8ino_a387364b391da0c6e0e19cbdddd28b77a}\index{ArduinoGigaLvglDisplay.ino@{ArduinoGigaLvglDisplay.ino}!test\_btnm\_event\_cb@{test\_btnm\_event\_cb}}
+\index{test\_btnm\_event\_cb@{test\_btnm\_event\_cb}!ArduinoGigaLvglDisplay.ino@{ArduinoGigaLvglDisplay.ino}}
+\doxysubsubsection{\texorpdfstring{test\_btnm\_event\_cb()}{test\_btnm\_event\_cb()}}
+{\footnotesize\ttfamily \label{_arduino_giga_lvgl_display_8ino_a387364b391da0c6e0e19cbdddd28b77a} 
+void test\+\_\+btnm\+\_\+event\+\_\+cb (\begin{DoxyParamCaption}\item[{lv\+\_\+event\+\_\+t \texorpdfstring{$\ast$}{*}}]{e}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Handles individual test control button events. 
+
+Triggered when a test control button (FL, FR, RL, RR) is pressed. This callback identifies which test was selected and calls the appropriate test movement function using the current global speed and direction values.
+
+
+\begin{DoxyParams}{Parameters}
+{\em e} & Pointer to the LVGL event descriptor. Used to determine which button in the test control matrix was pressed. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{_arduino_giga_lvgl_display_8ino_source_l00259}{259}} of file \mbox{\hyperlink{_arduino_giga_lvgl_display_8ino_source}{Arduino\+Giga\+Lvgl\+Display.\+ino}}.
+
+\Hypertarget{_arduino_giga_lvgl_display_8ino_a5c854330b94e76f43e26164660df409c}\index{ArduinoGigaLvglDisplay.ino@{ArduinoGigaLvglDisplay.ino}!toggle\_fwdrev\_cb@{toggle\_fwdrev\_cb}}
+\index{toggle\_fwdrev\_cb@{toggle\_fwdrev\_cb}!ArduinoGigaLvglDisplay.ino@{ArduinoGigaLvglDisplay.ino}}
+\doxysubsubsection{\texorpdfstring{toggle\_fwdrev\_cb()}{toggle\_fwdrev\_cb()}}
+{\footnotesize\ttfamily \label{_arduino_giga_lvgl_display_8ino_a5c854330b94e76f43e26164660df409c} 
+void toggle\+\_\+fwdrev\+\_\+cb (\begin{DoxyParamCaption}\item[{lv\+\_\+event\+\_\+t \texorpdfstring{$\ast$}{*}}]{e}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Handles toggling between Forward and Reverse. 
+
+When the toggle button is pressed, this callback swaps the label between "{}\+Fwd"{} and "{}\+Rev"{} and updates the global direction variable accordingly\+:
+\begin{DoxyItemize}
+\item "{}\+Fwd"{} → direction = -\/1
+\item "{}\+Rev"{} → direction = 1
+\end{DoxyItemize}
+
+A message is printed to the serial monitor showing the new mode and numeric direction.
+
+
+\begin{DoxyParams}{Parameters}
+{\em e} & Pointer to the LVGL event descriptor. Provides access to the toggle button object. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{_arduino_giga_lvgl_display_8ino_source_l00308}{308}} of file \mbox{\hyperlink{_arduino_giga_lvgl_display_8ino_source}{Arduino\+Giga\+Lvgl\+Display.\+ino}}.
+
+
+
+\label{doc-var-members}
+\Hypertarget{_arduino_giga_lvgl_display_8ino_doc-var-members}
+\doxysubsection{Variable Documentation}
+\Hypertarget{_arduino_giga_lvgl_display_8ino_a448921cced6d8ecae8e0ea9dc739dcea}\index{ArduinoGigaLvglDisplay.ino@{ArduinoGigaLvglDisplay.ino}!ENA\_A@{ENA\_A}}
+\index{ENA\_A@{ENA\_A}!ArduinoGigaLvglDisplay.ino@{ArduinoGigaLvglDisplay.ino}}
+\doxysubsubsection{\texorpdfstring{ENA\_A}{ENA\_A}}
+{\footnotesize\ttfamily \label{_arduino_giga_lvgl_display_8ino_a448921cced6d8ecae8e0ea9dc739dcea} 
+const int ENA\+\_\+A = 2}
+
+
+
+Definition at line \mbox{\hyperlink{_arduino_giga_lvgl_display_8ino_source_l00108}{108}} of file \mbox{\hyperlink{_arduino_giga_lvgl_display_8ino_source}{Arduino\+Giga\+Lvgl\+Display.\+ino}}.
+
+\Hypertarget{_arduino_giga_lvgl_display_8ino_a51076b14694e306a6194047c53593a31}\index{ArduinoGigaLvglDisplay.ino@{ArduinoGigaLvglDisplay.ino}!ENA\_B@{ENA\_B}}
+\index{ENA\_B@{ENA\_B}!ArduinoGigaLvglDisplay.ino@{ArduinoGigaLvglDisplay.ino}}
+\doxysubsubsection{\texorpdfstring{ENA\_B}{ENA\_B}}
+{\footnotesize\ttfamily \label{_arduino_giga_lvgl_display_8ino_a51076b14694e306a6194047c53593a31} 
+const int ENA\+\_\+B = 8}
+
+
+
+Definition at line \mbox{\hyperlink{_arduino_giga_lvgl_display_8ino_source_l00101}{101}} of file \mbox{\hyperlink{_arduino_giga_lvgl_display_8ino_source}{Arduino\+Giga\+Lvgl\+Display.\+ino}}.
+
+\Hypertarget{_arduino_giga_lvgl_display_8ino_af062d7609355335ffce63fa23bfed5f7}\index{ArduinoGigaLvglDisplay.ino@{ArduinoGigaLvglDisplay.ino}!ENB\_A@{ENB\_A}}
+\index{ENB\_A@{ENB\_A}!ArduinoGigaLvglDisplay.ino@{ArduinoGigaLvglDisplay.ino}}
+\doxysubsubsection{\texorpdfstring{ENB\_A}{ENB\_A}}
+{\footnotesize\ttfamily \label{_arduino_giga_lvgl_display_8ino_af062d7609355335ffce63fa23bfed5f7} 
+const int ENB\+\_\+A = 7}
+
+
+
+Definition at line \mbox{\hyperlink{_arduino_giga_lvgl_display_8ino_source_l00103}{103}} of file \mbox{\hyperlink{_arduino_giga_lvgl_display_8ino_source}{Arduino\+Giga\+Lvgl\+Display.\+ino}}.
+
+\Hypertarget{_arduino_giga_lvgl_display_8ino_a4763be0e77388074ff071965028a76ba}\index{ArduinoGigaLvglDisplay.ino@{ArduinoGigaLvglDisplay.ino}!ENB\_B@{ENB\_B}}
+\index{ENB\_B@{ENB\_B}!ArduinoGigaLvglDisplay.ino@{ArduinoGigaLvglDisplay.ino}}
+\doxysubsubsection{\texorpdfstring{ENB\_B}{ENB\_B}}
+{\footnotesize\ttfamily \label{_arduino_giga_lvgl_display_8ino_a4763be0e77388074ff071965028a76ba} 
+const int ENB\+\_\+B = 13}
+
+
+
+Initialize motor control pins. 
+
+
+
+Definition at line \mbox{\hyperlink{_arduino_giga_lvgl_display_8ino_source_l00096}{96}} of file \mbox{\hyperlink{_arduino_giga_lvgl_display_8ino_source}{Arduino\+Giga\+Lvgl\+Display.\+ino}}.
+
+\Hypertarget{_arduino_giga_lvgl_display_8ino_a2f8c3e5c64df336aadd989def65390df}\index{ArduinoGigaLvglDisplay.ino@{ArduinoGigaLvglDisplay.ino}!IN1\_A@{IN1\_A}}
+\index{IN1\_A@{IN1\_A}!ArduinoGigaLvglDisplay.ino@{ArduinoGigaLvglDisplay.ino}}
+\doxysubsubsection{\texorpdfstring{IN1\_A}{IN1\_A}}
+{\footnotesize\ttfamily \label{_arduino_giga_lvgl_display_8ino_a2f8c3e5c64df336aadd989def65390df} 
+const int IN1\+\_\+A = 3}
+
+
+
+Definition at line \mbox{\hyperlink{_arduino_giga_lvgl_display_8ino_source_l00107}{107}} of file \mbox{\hyperlink{_arduino_giga_lvgl_display_8ino_source}{Arduino\+Giga\+Lvgl\+Display.\+ino}}.
+
+\Hypertarget{_arduino_giga_lvgl_display_8ino_ac74564e770f6c90dbf7dd71476f5114e}\index{ArduinoGigaLvglDisplay.ino@{ArduinoGigaLvglDisplay.ino}!IN1\_B@{IN1\_B}}
+\index{IN1\_B@{IN1\_B}!ArduinoGigaLvglDisplay.ino@{ArduinoGigaLvglDisplay.ino}}
+\doxysubsubsection{\texorpdfstring{IN1\_B}{IN1\_B}}
+{\footnotesize\ttfamily \label{_arduino_giga_lvgl_display_8ino_ac74564e770f6c90dbf7dd71476f5114e} 
+const int IN1\+\_\+B = 9}
+
+
+
+Definition at line \mbox{\hyperlink{_arduino_giga_lvgl_display_8ino_source_l00100}{100}} of file \mbox{\hyperlink{_arduino_giga_lvgl_display_8ino_source}{Arduino\+Giga\+Lvgl\+Display.\+ino}}.
+
+\Hypertarget{_arduino_giga_lvgl_display_8ino_a0a2da1fa43e204f03999bfcd82e2ce93}\index{ArduinoGigaLvglDisplay.ino@{ArduinoGigaLvglDisplay.ino}!IN2\_A@{IN2\_A}}
+\index{IN2\_A@{IN2\_A}!ArduinoGigaLvglDisplay.ino@{ArduinoGigaLvglDisplay.ino}}
+\doxysubsubsection{\texorpdfstring{IN2\_A}{IN2\_A}}
+{\footnotesize\ttfamily \label{_arduino_giga_lvgl_display_8ino_a0a2da1fa43e204f03999bfcd82e2ce93} 
+const int IN2\+\_\+A = 4}
+
+
+
+Definition at line \mbox{\hyperlink{_arduino_giga_lvgl_display_8ino_source_l00106}{106}} of file \mbox{\hyperlink{_arduino_giga_lvgl_display_8ino_source}{Arduino\+Giga\+Lvgl\+Display.\+ino}}.
+
+\Hypertarget{_arduino_giga_lvgl_display_8ino_a9570059ff6b742c8040a32962d0d5a37}\index{ArduinoGigaLvglDisplay.ino@{ArduinoGigaLvglDisplay.ino}!IN2\_B@{IN2\_B}}
+\index{IN2\_B@{IN2\_B}!ArduinoGigaLvglDisplay.ino@{ArduinoGigaLvglDisplay.ino}}
+\doxysubsubsection{\texorpdfstring{IN2\_B}{IN2\_B}}
+{\footnotesize\ttfamily \label{_arduino_giga_lvgl_display_8ino_a9570059ff6b742c8040a32962d0d5a37} 
+const int IN2\+\_\+B = 10}
+
+
+
+Definition at line \mbox{\hyperlink{_arduino_giga_lvgl_display_8ino_source_l00099}{99}} of file \mbox{\hyperlink{_arduino_giga_lvgl_display_8ino_source}{Arduino\+Giga\+Lvgl\+Display.\+ino}}.
+
+\Hypertarget{_arduino_giga_lvgl_display_8ino_a5c616be1a0da4e4851766ab26fdc106b}\index{ArduinoGigaLvglDisplay.ino@{ArduinoGigaLvglDisplay.ino}!IN3\_A@{IN3\_A}}
+\index{IN3\_A@{IN3\_A}!ArduinoGigaLvglDisplay.ino@{ArduinoGigaLvglDisplay.ino}}
+\doxysubsubsection{\texorpdfstring{IN3\_A}{IN3\_A}}
+{\footnotesize\ttfamily \label{_arduino_giga_lvgl_display_8ino_a5c616be1a0da4e4851766ab26fdc106b} 
+const int IN3\+\_\+A = 5}
+
+
+
+Definition at line \mbox{\hyperlink{_arduino_giga_lvgl_display_8ino_source_l00105}{105}} of file \mbox{\hyperlink{_arduino_giga_lvgl_display_8ino_source}{Arduino\+Giga\+Lvgl\+Display.\+ino}}.
+
+\Hypertarget{_arduino_giga_lvgl_display_8ino_a0eff9fd47f52060c179765fc406c824f}\index{ArduinoGigaLvglDisplay.ino@{ArduinoGigaLvglDisplay.ino}!IN3\_B@{IN3\_B}}
+\index{IN3\_B@{IN3\_B}!ArduinoGigaLvglDisplay.ino@{ArduinoGigaLvglDisplay.ino}}
+\doxysubsubsection{\texorpdfstring{IN3\_B}{IN3\_B}}
+{\footnotesize\ttfamily \label{_arduino_giga_lvgl_display_8ino_a0eff9fd47f52060c179765fc406c824f} 
+const int IN3\+\_\+B = 11}
+
+
+
+Definition at line \mbox{\hyperlink{_arduino_giga_lvgl_display_8ino_source_l00098}{98}} of file \mbox{\hyperlink{_arduino_giga_lvgl_display_8ino_source}{Arduino\+Giga\+Lvgl\+Display.\+ino}}.
+
+\Hypertarget{_arduino_giga_lvgl_display_8ino_a7bc7d13c97218d43553bd1bdde068e9d}\index{ArduinoGigaLvglDisplay.ino@{ArduinoGigaLvglDisplay.ino}!IN4\_A@{IN4\_A}}
+\index{IN4\_A@{IN4\_A}!ArduinoGigaLvglDisplay.ino@{ArduinoGigaLvglDisplay.ino}}
+\doxysubsubsection{\texorpdfstring{IN4\_A}{IN4\_A}}
+{\footnotesize\ttfamily \label{_arduino_giga_lvgl_display_8ino_a7bc7d13c97218d43553bd1bdde068e9d} 
+const int IN4\+\_\+A = 6}
+
+
+
+Definition at line \mbox{\hyperlink{_arduino_giga_lvgl_display_8ino_source_l00104}{104}} of file \mbox{\hyperlink{_arduino_giga_lvgl_display_8ino_source}{Arduino\+Giga\+Lvgl\+Display.\+ino}}.
+
+\Hypertarget{_arduino_giga_lvgl_display_8ino_a2bf2794b643a821a4a1ee3fce9a17b39}\index{ArduinoGigaLvglDisplay.ino@{ArduinoGigaLvglDisplay.ino}!IN4\_B@{IN4\_B}}
+\index{IN4\_B@{IN4\_B}!ArduinoGigaLvglDisplay.ino@{ArduinoGigaLvglDisplay.ino}}
+\doxysubsubsection{\texorpdfstring{IN4\_B}{IN4\_B}}
+{\footnotesize\ttfamily \label{_arduino_giga_lvgl_display_8ino_a2bf2794b643a821a4a1ee3fce9a17b39} 
+const int IN4\+\_\+B = 12}
+
+
+
+Definition at line \mbox{\hyperlink{_arduino_giga_lvgl_display_8ino_source_l00097}{97}} of file \mbox{\hyperlink{_arduino_giga_lvgl_display_8ino_source}{Arduino\+Giga\+Lvgl\+Display.\+ino}}.
+
+\Hypertarget{_arduino_giga_lvgl_display_8ino_a029d685f4cb2412bb10f78d34254bd9d}\index{ArduinoGigaLvglDisplay.ino@{ArduinoGigaLvglDisplay.ino}!program@{program}}
+\index{program@{program}!ArduinoGigaLvglDisplay.ino@{ArduinoGigaLvglDisplay.ino}}
+\doxysubsubsection{\texorpdfstring{program}{program}}
+{\footnotesize\ttfamily \label{_arduino_giga_lvgl_display_8ino_a029d685f4cb2412bb10f78d34254bd9d} 
+std\+::vector$<$const char \texorpdfstring{$\ast$}{*}$>$ program}
+
+
+
+Initialize program vector. 
+
+
+
+Definition at line \mbox{\hyperlink{_arduino_giga_lvgl_display_8ino_source_l00114}{114}} of file \mbox{\hyperlink{_arduino_giga_lvgl_display_8ino_source}{Arduino\+Giga\+Lvgl\+Display.\+ino}}.
+
+\Hypertarget{_arduino_giga_lvgl_display_8ino_a6ab2f42db29199d62773bffd8ea4e25e}\index{ArduinoGigaLvglDisplay.ino@{ArduinoGigaLvglDisplay.ino}!screen\_buttons@{screen\_buttons}}
+\index{screen\_buttons@{screen\_buttons}!ArduinoGigaLvglDisplay.ino@{ArduinoGigaLvglDisplay.ino}}
+\doxysubsubsection{\texorpdfstring{screen\_buttons}{screen\_buttons}}
+{\footnotesize\ttfamily \label{_arduino_giga_lvgl_display_8ino_a6ab2f42db29199d62773bffd8ea4e25e} 
+lv\+\_\+obj\+\_\+t\texorpdfstring{$\ast$}{*} screen\+\_\+buttons}
+
+
+
+Screen object for buttons. 
+
+
+
+Definition at line \mbox{\hyperlink{_arduino_giga_lvgl_display_8ino_source_l00074}{74}} of file \mbox{\hyperlink{_arduino_giga_lvgl_display_8ino_source}{Arduino\+Giga\+Lvgl\+Display.\+ino}}.
+
