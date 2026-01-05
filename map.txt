@@ -18,4 +18,35 @@ Functions:
         msg_constants::msg_label
         msg_constants::msg_start_time
     btn_Run_Program_event_cb(lv_event_t *e):
-        
+        msg_constants::msg_label
+        msg_constants::msg_start_time
+    main_btnm_event_cb(lv_event_t *e):
+        apply_mode
+        btn_Run_Program_event_cb
+    test_btnm_event_cb(lv_event_t *e):
+        FR_move
+        FL_move
+        RR_move
+        RL_move
+        motor_constants::motor_speed
+        motor_constants::motor_direction
+    toggle_fwdrev_cb(lv_event_t *e):
+        motor_constants::motor_direction
+    slider_event_cb(lv_event_t *e):
+        motor_constants::motor_speed
+    set_btnm_bg_colors(lv_obj_t *btnm, uint32_t normal, uint32_t pressed):
+        no dependencies
+    create_main_button_matrix(lv_obj_t *screen_buttons):
+        set_btnm_bg_colors
+        main_btnm_event_cb
+    create_test_button_matrix(lv_obj_t *screen_buttons);
+        set_btnm_bg_colors
+        test_btnm_event_cb
+    create_speed_sliders(lv_obj_t *parent):
+        slider_event_cb
+    create_ui():
+        other_constants::screen_buttons
+        create_main_button_matrix
+        create_speed_sliders
+        create_test_button_matrix
+        toggle_fwdrev_cb

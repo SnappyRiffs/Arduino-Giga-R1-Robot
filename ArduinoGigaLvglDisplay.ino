@@ -456,7 +456,7 @@ void create_speed_sliders(lv_obj_t *parent)
             {
                 lv_obj_t* s = (lv_obj_t*)lv_event_get_target(e);
                 lv_obj_t* val_lbl = (lv_obj_t*)lv_event_get_user_data(e);
-                char buf[4];
+                char buf[4]; // Buffer to hold the string representation of the slider value (3 digits + null terminator)
                 snprintf(buf, sizeof(buf), "%d", lv_slider_get_value(s));
                 lv_label_set_text(val_lbl, buf); 
             },
