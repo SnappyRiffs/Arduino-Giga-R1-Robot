@@ -122,31 +122,6 @@ std::vector<const char *> program;
  * @param mode_name mode of movement
  * @param direction
  */
-#line 123 "C:\\Users\\Snapp\\OneDrive\\Arduino\\Projects\\ArduinoGigaLvglDisplay\\ArduinoGigaLvglDisplay.ino"
-static void apply_mode(const char *mode_name, const char *direction);
-#line 161 "C:\\Users\\Snapp\\OneDrive\\Arduino\\Projects\\ArduinoGigaLvglDisplay\\ArduinoGigaLvglDisplay.ino"
-static void btn_Run_Program_event_cb(lv_event_t *e);
-#line 366 "C:\\Users\\Snapp\\OneDrive\\Arduino\\Projects\\ArduinoGigaLvglDisplay\\ArduinoGigaLvglDisplay.ino"
-void set_btnm_bg_colors(lv_obj_t *btnm, uint32_t normal, uint32_t pressed);
-#line 375 "C:\\Users\\Snapp\\OneDrive\\Arduino\\Projects\\ArduinoGigaLvglDisplay\\ArduinoGigaLvglDisplay.ino"
-void create_button_matrix(lv_obj_t *screen_buttons);
-#line 397 "C:\\Users\\Snapp\\OneDrive\\Arduino\\Projects\\ArduinoGigaLvglDisplay\\ArduinoGigaLvglDisplay.ino"
-void create_test_button_matrix(lv_obj_t *screen_buttons);
-#line 415 "C:\\Users\\Snapp\\OneDrive\\Arduino\\Projects\\ArduinoGigaLvglDisplay\\ArduinoGigaLvglDisplay.ino"
-void create_ui();
-#line 480 "C:\\Users\\Snapp\\OneDrive\\Arduino\\Projects\\ArduinoGigaLvglDisplay\\ArduinoGigaLvglDisplay.ino"
-void FR_move(int speed);
-#line 501 "C:\\Users\\Snapp\\OneDrive\\Arduino\\Projects\\ArduinoGigaLvglDisplay\\ArduinoGigaLvglDisplay.ino"
-void FL_move(int speed);
-#line 522 "C:\\Users\\Snapp\\OneDrive\\Arduino\\Projects\\ArduinoGigaLvglDisplay\\ArduinoGigaLvglDisplay.ino"
-void RR_move(int speed);
-#line 543 "C:\\Users\\Snapp\\OneDrive\\Arduino\\Projects\\ArduinoGigaLvglDisplay\\ArduinoGigaLvglDisplay.ino"
-void RL_move(int speed);
-#line 560 "C:\\Users\\Snapp\\OneDrive\\Arduino\\Projects\\ArduinoGigaLvglDisplay\\ArduinoGigaLvglDisplay.ino"
-void setup();
-#line 572 "C:\\Users\\Snapp\\OneDrive\\Arduino\\Projects\\ArduinoGigaLvglDisplay\\ArduinoGigaLvglDisplay.ino"
-void loop();
-#line 123 "C:\\Users\\Snapp\\OneDrive\\Arduino\\Projects\\ArduinoGigaLvglDisplay\\ArduinoGigaLvglDisplay.ino"
 static void apply_mode(const char *mode_name, const char *direction)
 {
   if (msg_label != NULL)
@@ -196,6 +171,7 @@ static void btn_Run_Program_event_cb(lv_event_t *e)
   msg_label = lv_label_create(lv_scr_act());
   lv_label_set_text(msg_label, "Applied program!");
 
+  // Print program to Serial Monitor (for debugging)
   for (auto p : program)
   {
     Serial.println(p);
@@ -211,7 +187,7 @@ static void btn_Run_Program_event_cb(lv_event_t *e)
 }
 
 // ======== CALLBACK DECLARATIONS ========
-static void btnm_event_cb(lv_event_t *e);
+static void main_btnm_event_cb(lv_event_t *e);
 static void test_btnm_event_cb(lv_event_t *e);
 static void slider_event_cb(lv_event_t *e);
 static void toggle_fwdrev_cb(lv_event_t *e);
@@ -232,7 +208,7 @@ static void toggle_fwdrev_cb(lv_event_t *e);
  * @param e Pointer to the LVGL event descriptor containing details about
  *          the button press event (e.g., target object).
  */
-static void btnm_event_cb(lv_event_t *e)
+static void main_btnm_event_cb(lv_event_t *e)
 {
   lv_obj_t *btnm = (lv_obj_t *)lv_event_get_target(e);
   const char *txt = lv_btnmatrix_get_btn_text(
@@ -399,7 +375,12 @@ void set_btnm_bg_colors(lv_obj_t *btnm, uint32_t normal, uint32_t pressed)
 }
 
 // ===== Main Button Matrix =====
-void create_button_matrix(lv_obj_t *screen_buttons)
+/**
+ * @brief Create the main button matrix object
+ * @param screen_buttons parent screen object
+ * Runs the btnm_event_cb on button press
+ */
+void create_main_button_matrix(lv_obj_t *screen_buttons)
 {
   static const char *btnm_map[] = {
       "Forward", "Backward", "Left", "Right", "\n",
@@ -417,7 +398,7 @@ void create_button_matrix(lv_obj_t *screen_buttons)
 
   lv_obj_set_style_text_color(btnm, lv_color_hex(0xffffff), LV_PART_ITEMS);
 
-  lv_obj_add_event_cb(btnm, btnm_event_cb, LV_EVENT_VALUE_CHANGED, NULL);
+  lv_obj_add_event_cb(btnm, main_btnm_event_cb, LV_EVENT_VALUE_CHANGED, NULL);
 }
 
 // ===== Test Button Matrix =====
@@ -442,7 +423,7 @@ void create_test_button_matrix(lv_obj_t *screen_buttons)
 void create_ui()
 {
   screen_buttons = lv_obj_create(NULL);
-  create_button_matrix(screen_buttons);
+  create_main_button_matrix(screen_buttons);
   create_test_button_matrix(screen_buttons);
 
   // ===== Speed Sliders =====

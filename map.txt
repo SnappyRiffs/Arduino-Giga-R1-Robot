@@ -1,13 +1,33 @@
-create_test_button_matrix:
-    test_btnm_event_cb
-create_main_button_matrix:
-    main_btnm_event_cb
+apply_mode:
+    program
+    msg_label
+    msg_start_time
+
+btn_Run_Program_event_cb:
+    msg_label
+    program
+    msg_start_time
 
 main_btnm_event_cb:
     apply_mode
     btn_Run_Program_event_cb
+
 test_btnm_event_cb:
     FL_move
     FR_move
     RL_move
     RR_move
+
+slider_event_cb:
+
+
+create_test_button_matrix:
+    test_btnm_event_cb
+create_main_button_matrix:
+    main_btnm_event_cb
+
+
+
+
+
+

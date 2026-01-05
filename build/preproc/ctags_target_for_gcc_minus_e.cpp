@@ -192,6 +192,7 @@ static void btn_Run_Program_event_cb(lv_event_t *e)
   msg_label = lv_label_create(lv_screen_active());
   lv_label_set_text(msg_label, "Applied program!");
 
+  // Print program to Serial Monitor (for debugging)
   for (auto p : program)
   {
     Serial.println(p);
@@ -207,7 +208,7 @@ static void btn_Run_Program_event_cb(lv_event_t *e)
 }
 
 // ======== CALLBACK DECLARATIONS ========
-static void btnm_event_cb(lv_event_t *e);
+static void main_btnm_event_cb(lv_event_t *e);
 static void test_btnm_event_cb(lv_event_t *e);
 static void slider_event_cb(lv_event_t *e);
 static void toggle_fwdrev_cb(lv_event_t *e);
@@ -228,16 +229,16 @@ static void toggle_fwdrev_cb(lv_event_t *e);
  * @param e Pointer to the LVGL event descriptor containing details about
  *          the button press event (e.g., target object).
  */
-static void btnm_event_cb(lv_event_t *e)
+static void main_btnm_event_cb(lv_event_t *e)
 {
   lv_obj_t *btnm = (lv_obj_t *)lv_event_get_target(e);
   const char *txt = lv_buttonmatrix_get_button_text(
       btnm, lv_buttonmatrix_get_selected_button(btnm));
 
   if (txt == 
-# 214 "C:\\Users\\Snapp\\OneDrive\\Arduino\\Projects\\ArduinoGigaLvglDisplay\\ArduinoGigaLvglDisplay.ino" 3 4
+# 215 "C:\\Users\\Snapp\\OneDrive\\Arduino\\Projects\\ArduinoGigaLvglDisplay\\ArduinoGigaLvglDisplay.ino" 3 4
             __null
-# 214 "C:\\Users\\Snapp\\OneDrive\\Arduino\\Projects\\ArduinoGigaLvglDisplay\\ArduinoGigaLvglDisplay.ino"
+# 215 "C:\\Users\\Snapp\\OneDrive\\Arduino\\Projects\\ArduinoGigaLvglDisplay\\ArduinoGigaLvglDisplay.ino"
                 )
     return;
 
@@ -290,9 +291,9 @@ static void test_btnm_event_cb(lv_event_t *e)
       btnm, lv_buttonmatrix_get_selected_button(btnm));
 
   if (txt == 
-# 265 "C:\\Users\\Snapp\\OneDrive\\Arduino\\Projects\\ArduinoGigaLvglDisplay\\ArduinoGigaLvglDisplay.ino" 3 4
+# 266 "C:\\Users\\Snapp\\OneDrive\\Arduino\\Projects\\ArduinoGigaLvglDisplay\\ArduinoGigaLvglDisplay.ino" 3 4
             __null
-# 265 "C:\\Users\\Snapp\\OneDrive\\Arduino\\Projects\\ArduinoGigaLvglDisplay\\ArduinoGigaLvglDisplay.ino"
+# 266 "C:\\Users\\Snapp\\OneDrive\\Arduino\\Projects\\ArduinoGigaLvglDisplay\\ArduinoGigaLvglDisplay.ino"
                 )
     return;
 
@@ -403,7 +404,12 @@ void set_btnm_bg_colors(lv_obj_t *btnm, uint32_t normal, uint32_t pressed)
 }
 
 // ===== Main Button Matrix =====
-void create_button_matrix(lv_obj_t *screen_buttons)
+/**
+ * @brief Create the main button matrix object
+ * @param screen_buttons parent screen object
+ * Runs the btnm_event_cb on button press
+ */
+void create_main_button_matrix(lv_obj_t *screen_buttons)
 {
   static const char *btnm_map[] = {
       "Forward", "Backward", "Left", "Right", "\n",
@@ -421,11 +427,11 @@ void create_button_matrix(lv_obj_t *screen_buttons)
 
   lv_obj_set_style_text_color(btnm, lv_color_hex(0xffffff), LV_PART_ITEMS);
 
-  lv_obj_add_event_cb(btnm, btnm_event_cb, LV_EVENT_VALUE_CHANGED, 
-# 393 "C:\\Users\\Snapp\\OneDrive\\Arduino\\Projects\\ArduinoGigaLvglDisplay\\ArduinoGigaLvglDisplay.ino" 3 4
-                                                                  __null
-# 393 "C:\\Users\\Snapp\\OneDrive\\Arduino\\Projects\\ArduinoGigaLvglDisplay\\ArduinoGigaLvglDisplay.ino"
-                                                                      );
+  lv_obj_add_event_cb(btnm, main_btnm_event_cb, LV_EVENT_VALUE_CHANGED, 
+# 399 "C:\\Users\\Snapp\\OneDrive\\Arduino\\Projects\\ArduinoGigaLvglDisplay\\ArduinoGigaLvglDisplay.ino" 3 4
+                                                                       __null
+# 399 "C:\\Users\\Snapp\\OneDrive\\Arduino\\Projects\\ArduinoGigaLvglDisplay\\ArduinoGigaLvglDisplay.ino"
+                                                                           );
 }
 
 // ===== Test Button Matrix =====
@@ -441,9 +447,9 @@ void create_test_button_matrix(lv_obj_t *screen_buttons)
   set_btnm_bg_colors(test_btnm, 0x5555ff, 0xe74c3c);
 
   lv_obj_add_event_cb(test_btnm, test_btnm_event_cb, LV_EVENT_VALUE_CHANGED, 
-# 408 "C:\\Users\\Snapp\\OneDrive\\Arduino\\Projects\\ArduinoGigaLvglDisplay\\ArduinoGigaLvglDisplay.ino" 3 4
+# 414 "C:\\Users\\Snapp\\OneDrive\\Arduino\\Projects\\ArduinoGigaLvglDisplay\\ArduinoGigaLvglDisplay.ino" 3 4
                                                                             __null
-# 408 "C:\\Users\\Snapp\\OneDrive\\Arduino\\Projects\\ArduinoGigaLvglDisplay\\ArduinoGigaLvglDisplay.ino"
+# 414 "C:\\Users\\Snapp\\OneDrive\\Arduino\\Projects\\ArduinoGigaLvglDisplay\\ArduinoGigaLvglDisplay.ino"
                                                                                 );
 }
 
@@ -454,11 +460,11 @@ void create_test_button_matrix(lv_obj_t *screen_buttons)
 void create_ui()
 {
   screen_buttons = lv_obj_create(
-# 417 "C:\\Users\\Snapp\\OneDrive\\Arduino\\Projects\\ArduinoGigaLvglDisplay\\ArduinoGigaLvglDisplay.ino" 3 4
+# 423 "C:\\Users\\Snapp\\OneDrive\\Arduino\\Projects\\ArduinoGigaLvglDisplay\\ArduinoGigaLvglDisplay.ino" 3 4
                                 __null
-# 417 "C:\\Users\\Snapp\\OneDrive\\Arduino\\Projects\\ArduinoGigaLvglDisplay\\ArduinoGigaLvglDisplay.ino"
+# 423 "C:\\Users\\Snapp\\OneDrive\\Arduino\\Projects\\ArduinoGigaLvglDisplay\\ArduinoGigaLvglDisplay.ino"
                                     );
-  create_button_matrix(screen_buttons);
+  create_main_button_matrix(screen_buttons);
   create_test_button_matrix(screen_buttons);
 
   // ===== Speed Sliders =====
@@ -511,9 +517,9 @@ void create_ui()
 
   // Set direction
   lv_obj_add_event_cb(toggle_FwdRev, toggle_fwdrev_cb, LV_EVENT_CLICKED, 
-# 470 "C:\\Users\\Snapp\\OneDrive\\Arduino\\Projects\\ArduinoGigaLvglDisplay\\ArduinoGigaLvglDisplay.ino" 3 4
+# 476 "C:\\Users\\Snapp\\OneDrive\\Arduino\\Projects\\ArduinoGigaLvglDisplay\\ArduinoGigaLvglDisplay.ino" 3 4
                                                                         __null
-# 470 "C:\\Users\\Snapp\\OneDrive\\Arduino\\Projects\\ArduinoGigaLvglDisplay\\ArduinoGigaLvglDisplay.ino"
+# 476 "C:\\Users\\Snapp\\OneDrive\\Arduino\\Projects\\ArduinoGigaLvglDisplay\\ArduinoGigaLvglDisplay.ino"
                                                                             );
 }
 
@@ -621,16 +627,16 @@ void loop()
   lv_timer_handler();
 
   if (msg_label != 
-# 576 "C:\\Users\\Snapp\\OneDrive\\Arduino\\Projects\\ArduinoGigaLvglDisplay\\ArduinoGigaLvglDisplay.ino" 3 4
+# 582 "C:\\Users\\Snapp\\OneDrive\\Arduino\\Projects\\ArduinoGigaLvglDisplay\\ArduinoGigaLvglDisplay.ino" 3 4
                   __null 
-# 576 "C:\\Users\\Snapp\\OneDrive\\Arduino\\Projects\\ArduinoGigaLvglDisplay\\ArduinoGigaLvglDisplay.ino"
+# 582 "C:\\Users\\Snapp\\OneDrive\\Arduino\\Projects\\ArduinoGigaLvglDisplay\\ArduinoGigaLvglDisplay.ino"
                        && (millis() - msg_start_time > msg_duration))
   {
     lv_obj_delete(msg_label);
     msg_label = 
-# 579 "C:\\Users\\Snapp\\OneDrive\\Arduino\\Projects\\ArduinoGigaLvglDisplay\\ArduinoGigaLvglDisplay.ino" 3 4
+# 585 "C:\\Users\\Snapp\\OneDrive\\Arduino\\Projects\\ArduinoGigaLvglDisplay\\ArduinoGigaLvglDisplay.ino" 3 4
                __null
-# 579 "C:\\Users\\Snapp\\OneDrive\\Arduino\\Projects\\ArduinoGigaLvglDisplay\\ArduinoGigaLvglDisplay.ino"
+# 585 "C:\\Users\\Snapp\\OneDrive\\Arduino\\Projects\\ArduinoGigaLvglDisplay\\ArduinoGigaLvglDisplay.ino"
                    ;
   }
 }
