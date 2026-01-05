@@ -90,6 +90,7 @@ int motor_direction;
 /** @} */ // end of Motor_Variables
 
 /**
+ * @defgroup Motor_Pins Motor control pin definitions
  * @brief Initialize motor control pins
  *
  */
@@ -106,19 +107,22 @@ const int IN3_A = 5;
 const int IN2_A = 4;
 const int IN1_A = 3;
 const int ENA_A = 2;
+/** @} */ // end of Motor_Pins
 
 /**
  * @brief Initialize program vector
- *
+ * Stores the sequence of movement commands
  */
 std::vector<const char *> program;
 
 // ===== Shared label + vector logic =====
 /**
  * @brief Applies the selected movement mode and direction.
- *
+ * This function creates a temporary message label on the screen
+ * indicating the applied mode and direction. It also appends the
+ * direction to the global program vector for later execution.
  * @param mode_name mode of movement
- * @param direction
+ * @param direction direction of movement
  */
 static void apply_mode(const char *mode_name, const char *direction)
 {
@@ -415,66 +419,79 @@ void create_test_button_matrix(lv_obj_t *screen_buttons)
 }
 
 /**
- * @brief Create a ui object
- *
+ * @brief Create a speed sliders object
+ * 
+ * @param parent parent screen object
+ * Creates 4 sliders for FR, FL, RR, RL with labels and value displays
+ */
+// ===== Speed Sliders =====
+void create_speed_sliders(lv_obj_t *parent)
+{
+    const char *labels[] = {"FR", "FL", "RR", "RL"};
+    int y_positions[] = {20, 60, 100, 140};
+
+    for (int i = 0; i < 4; i++)
+    {
+        // Create label
+        lv_obj_t *label = lv_label_create(parent);
+        lv_label_set_text(label, labels[i]);
+        lv_obj_align(label, LV_ALIGN_TOP_RIGHT, -230, y_positions[i]);
+
+        // Create slider
+        lv_obj_t *slider = lv_slider_create(parent);
+        lv_slider_set_range(slider, 0, 255);
+        lv_obj_set_size(slider, 150, 20);
+        lv_obj_align_to(slider, label, LV_ALIGN_OUT_RIGHT_MID, 15, 0);
+
+        // Create value label
+        lv_obj_t *value_label = lv_label_create(parent);
+        char buf[4];
+        snprintf(buf, sizeof(buf), "%d", lv_slider_get_value(slider));
+        lv_label_set_text(value_label, buf);
+        lv_obj_align_to(value_label, slider, LV_ALIGN_OUT_RIGHT_MID, 15, 0);
+
+        // Add event callback that updates the value label
+        lv_obj_add_event_cb(
+            slider, [](lv_event_t *e)
+            {
+                lv_obj_t* s = (lv_obj_t*)lv_event_get_target(e);
+                lv_obj_t* val_lbl = (lv_obj_t*)lv_event_get_user_data(e);
+                char buf[4];
+                snprintf(buf, sizeof(buf), "%d", lv_slider_get_value(s));
+                lv_label_set_text(val_lbl, buf); 
+            },
+            LV_EVENT_VALUE_CHANGED, value_label);
+
+        // Add slider event callback to update speed
+        lv_obj_add_event_cb(slider, slider_event_cb, LV_EVENT_VALUE_CHANGED, (void *)labels[i]);
+    }
+}
+/**
+ * @brief Create the main UI
+ * 
  */
 void create_ui()
 {
-  screen_buttons = lv_obj_create(NULL);
-  create_main_button_matrix(screen_buttons);
-  create_test_button_matrix(screen_buttons);
+    screen_buttons = lv_obj_create(NULL);
+    create_main_button_matrix(screen_buttons);
+    create_test_button_matrix(screen_buttons);
 
-  // ===== Speed Sliders =====
-  const char *labels[] = {"FR", "FL", "RR", "RL"};
-  int y_positions[] = {20, 60, 100, 140};
+    // Call the new function to create speed sliders
+    create_speed_sliders(screen_buttons);
 
-  for (int i = 0; i < 4; i++)
-  {
-    // Create label
-    lv_obj_t *label = lv_label_create(screen_buttons);
-    lv_label_set_text(label, labels[i]);
-    lv_obj_align(label, LV_ALIGN_TOP_RIGHT, -230, y_positions[i]);
+    // ===== Fwd/Rev Toggle Button =====
+    lv_obj_t *toggle_FwdRev = lv_btn_create(screen_buttons);
+    lv_obj_set_size(toggle_FwdRev, 80, 40);
+    lv_obj_align(toggle_FwdRev, LV_ALIGN_TOP_RIGHT, -20, 180);
 
-    // Create slider
-    lv_obj_t *slider = lv_slider_create(screen_buttons);
-    lv_slider_set_range(slider, 0, 255);
-    lv_obj_set_size(slider, 150, 20);
-    lv_obj_align_to(slider, label, LV_ALIGN_OUT_RIGHT_MID, 15, 0);
+    lv_obj_t *toggle_label = lv_label_create(toggle_FwdRev);
+    lv_label_set_text(toggle_label, "Fwd");
+    lv_obj_center(toggle_label);
 
-    // Create value label
-    lv_obj_t *value_label = lv_label_create(screen_buttons);
-    char buf[4];
-    snprintf(buf, sizeof(buf), "%d", lv_slider_get_value(slider));
-    lv_label_set_text(value_label, buf);
-    lv_obj_align_to(value_label, slider, LV_ALIGN_OUT_RIGHT_MID, 15, 0);
-
-    // Add event callback that updates the value label
-    lv_obj_add_event_cb(
-        slider, [](lv_event_t *e)
-        {
-        lv_obj_t* s = (lv_obj_t*)lv_event_get_target(e);
-        lv_obj_t* val_lbl = (lv_obj_t*)lv_event_get_user_data(e);
-        char buf[4];
-        snprintf(buf, sizeof(buf), "%d", lv_slider_get_value(s));
-        lv_label_set_text(val_lbl, buf); },
-        LV_EVENT_VALUE_CHANGED, value_label);
-
-    // Add slider event callback to update speed
-    lv_obj_add_event_cb(slider, slider_event_cb, LV_EVENT_VALUE_CHANGED, (void *)labels[i]);
-  }
-
-  // ===== Fwd/Rev Toggle Button =====
-  lv_obj_t *toggle_FwdRev = lv_btn_create(screen_buttons);
-  lv_obj_set_size(toggle_FwdRev, 80, 40);
-  lv_obj_align(toggle_FwdRev, LV_ALIGN_TOP_RIGHT, -20, 180);
-
-  lv_obj_t *toggle_label = lv_label_create(toggle_FwdRev);
-  lv_label_set_text(toggle_label, "Fwd");
-  lv_obj_center(toggle_label);
-
-  // Set direction
-  lv_obj_add_event_cb(toggle_FwdRev, toggle_fwdrev_cb, LV_EVENT_CLICKED, NULL);
+    // Set direction
+    lv_obj_add_event_cb(toggle_FwdRev, toggle_fwdrev_cb, LV_EVENT_CLICKED, NULL);
 }
+
 
 // ===== test movement functions =====
 
