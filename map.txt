@@ -19,7 +19,10 @@ test_btnm_event_cb:
     RR_move
 
 slider_event_cb:
+    motor_speed
 
+toggle_fwdrev_cb:
+    motor_direction
 
 create_test_button_matrix:
     test_btnm_event_cb
