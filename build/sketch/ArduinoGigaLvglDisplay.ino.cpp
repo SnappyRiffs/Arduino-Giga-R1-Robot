@@ -4,14 +4,13 @@
  * @file ArduinoGigaLvglDisplay.ino
  * @author Jadon Jung (jadonjung3@gmail.com)
  * @brief Arduino Giga LVGL Display For Robot Car
- * @version 0.1
+ * @version 1.0
  * @date 2025-11-30
  *
  * @copyright Copyright (c) 2025
  *
  */
 
-/// @brief Include necessary libraries
 #include <Arduino_GigaDisplayTouch.h>
 
 // #include <lv_api_map_v8.h>
@@ -30,73 +29,99 @@
 #include "Arduino_H7_Video.h"
 #include <vector>
 
-/// @brief Initialize display and touch detector
+/**
+ * @defgroup Display_Group Display-related objects
+ * @brief Objects related to the display and touch detection
+ * @{
+ */
+
+/**
+ * @brief Create an instance of Arduino_H7_Video configured for
+ *  an 800x480 resolution using the Giga Display Shield.
+ */
 Arduino_H7_Video Display(800, 480, GigaDisplayShield);
+
+/**
+ * @brief Create global touch detector object.
+ */
 Arduino_GigaDisplayTouch TouchDetector;
+/** @} */ // end of Display_Group
 
-/// @brief Message related
+/**
+ * @defgroup Msg_Group Message-related variables
+ * @brief Variables related to message display
+ * @{
+ */
+
+/**
+ * @brief Message label
+ */
 lv_obj_t *msg_label = NULL;
+
+/**
+ * @brief Message start time (always 0)
+ */
 unsigned long msg_start_time = 0;
+
+/**
+ * @brief Message duration (in milliseconds)
+ */
 const unsigned long msg_duration = 1500;
+/** @} */ // end of Msg_Group
 
-/// @brief Constants for buttons
-const int OFFSET = 180;
-const int WIDTH = 500;  // Width of main buttons
-const int HEIGHT = 400; // Height of main buttons
-
-/// @brief Screens
+/**
+ * @brief Screen object for buttons
+ *
+ */
 lv_obj_t *screen_buttons;
 
-/// @brief Motor stuff
+/**
+ * @defgroup Motor_Variables Motor control variables
+ * @brief Variables related to motor control
+ * @{
+ */
+/**
+ * @brief Motor speed variable (0-255)
+ */
 int motor_speed;
+
+/**
+ * @brief Motor direction variable (1 for Forward, -1 for Reverse)
+ */
 int motor_direction;
+/** @} */ // end of Motor_Variables
 
-/// @brief Motor pins
-int ENB_B = 13;
-int IN4_B = 12;
-int IN3_B = 11;
-int IN2_B = 10;
-int IN1_B = 9;
-int ENA_B = 8;
+/**
+ * @brief Initialize motor control pins
+ *
+ */
+const int ENB_B = 13;
+const int IN4_B = 12;
+const int IN3_B = 11;
+const int IN2_B = 10;
+const int IN1_B = 9;
+const int ENA_B = 8;
 
-int ENB_A = 7;
-int IN4_A = 6;
-int IN3_A = 5;
-int IN2_A = 4;
-int IN1_A = 3;
-int ENA_A = 2;
+const int ENB_A = 7;
+const int IN4_A = 6;
+const int IN3_A = 5;
+const int IN2_A = 4;
+const int IN1_A = 3;
+const int ENA_A = 2;
 
-/// @brief Program storage
+/**
+ * @brief Initialize program vector
+ *
+ */
 std::vector<const char *> program;
 
 // ===== Shared label + vector logic =====
 /**
- * @brief
+ * @brief Applies the selected movement mode and direction.
  *
  * @param mode_name mode of movement
  * @param direction
  */
-#line 77 "C:\\Users\\Snapp\\OneDrive\\Arduino\\Projects\\ArduinoGigaLvglDisplay\\ArduinoGigaLvglDisplay.ino"
-static void apply_mode(const char *mode_name, const char *direction);
-#line 115 "C:\\Users\\Snapp\\OneDrive\\Arduino\\Projects\\ArduinoGigaLvglDisplay\\ArduinoGigaLvglDisplay.ino"
-static void btn_Run_Program_event_cb(lv_event_t *e);
-#line 320 "C:\\Users\\Snapp\\OneDrive\\Arduino\\Projects\\ArduinoGigaLvglDisplay\\ArduinoGigaLvglDisplay.ino"
-void set_btnm_bg_colors(lv_obj_t *btnm, uint32_t normal, uint32_t pressed);
-#line 328 "C:\\Users\\Snapp\\OneDrive\\Arduino\\Projects\\ArduinoGigaLvglDisplay\\ArduinoGigaLvglDisplay.ino"
-void create_ui();
-#line 422 "C:\\Users\\Snapp\\OneDrive\\Arduino\\Projects\\ArduinoGigaLvglDisplay\\ArduinoGigaLvglDisplay.ino"
-void FR_move(int speed);
-#line 443 "C:\\Users\\Snapp\\OneDrive\\Arduino\\Projects\\ArduinoGigaLvglDisplay\\ArduinoGigaLvglDisplay.ino"
-void FL_move(int speed);
-#line 464 "C:\\Users\\Snapp\\OneDrive\\Arduino\\Projects\\ArduinoGigaLvglDisplay\\ArduinoGigaLvglDisplay.ino"
-void RR_move(int speed);
-#line 485 "C:\\Users\\Snapp\\OneDrive\\Arduino\\Projects\\ArduinoGigaLvglDisplay\\ArduinoGigaLvglDisplay.ino"
-void RL_move(int speed);
-#line 502 "C:\\Users\\Snapp\\OneDrive\\Arduino\\Projects\\ArduinoGigaLvglDisplay\\ArduinoGigaLvglDisplay.ino"
-void setup();
-#line 514 "C:\\Users\\Snapp\\OneDrive\\Arduino\\Projects\\ArduinoGigaLvglDisplay\\ArduinoGigaLvglDisplay.ino"
-void loop();
-#line 77 "C:\\Users\\Snapp\\OneDrive\\Arduino\\Projects\\ArduinoGigaLvglDisplay\\ArduinoGigaLvglDisplay.ino"
 static void apply_mode(const char *mode_name, const char *direction)
 {
   if (msg_label != NULL)
@@ -289,12 +314,12 @@ static void toggle_fwdrev_cb(lv_event_t *e)
 
   const char *txt = lv_label_get_text(label);
 
-  if (strcmp(txt, "Fwd") == 0)
+  if (strcmp(txt, "Fwd") == 0) // If txt is "Fwd", change to "Rev" and assign motor_direction 1
   {
     lv_label_set_text(label, "Rev");
     motor_direction = 1;
   }
-  else
+  else // If txt is "Rev", change to "Fwd" and assign motor_direction -1
   {
     lv_label_set_text(label, "Fwd");
     motor_direction = -1;
@@ -348,11 +373,9 @@ void set_btnm_bg_colors(lv_obj_t *btnm, uint32_t normal, uint32_t pressed)
   lv_obj_set_style_bg_opa(btnm, LV_OPA_COVER, LV_PART_ITEMS | LV_STATE_PRESSED);
 }
 
-void create_ui()
+// ===== Main Button Matrix =====
+void create_button_matrix(lv_obj_t *screen_buttons)
 {
-  screen_buttons = lv_obj_create(NULL);
-
-  // ===== Main Button Matrix =====
   static const char *btnm_map[] = {
       "Forward", "Backward", "Left", "Right", "\n",
       "45", "135", "225", "315", "\n",
@@ -370,8 +393,11 @@ void create_ui()
   lv_obj_set_style_text_color(btnm, lv_color_hex(0xffffff), LV_PART_ITEMS);
 
   lv_obj_add_event_cb(btnm, btnm_event_cb, LV_EVENT_VALUE_CHANGED, NULL);
+}
 
-  // ===== test Test Button Matrix =====
+// ===== Test Button Matrix =====
+void create_test_button_matrix(lv_obj_t *screen_buttons)
+{
   static const char *test_btnm_map[] = {"FL", "FR", "\n", "RL", "RR", ""};
   lv_obj_t *test_btnm = lv_btnmatrix_create(screen_buttons);
   lv_btnmatrix_set_map(test_btnm, test_btnm_map);
@@ -382,6 +408,17 @@ void create_ui()
   set_btnm_bg_colors(test_btnm, 0x5555ff);
 
   lv_obj_add_event_cb(test_btnm, test_btnm_event_cb, LV_EVENT_VALUE_CHANGED, NULL);
+}
+
+/**
+ * @brief Create a ui object
+ *
+ */
+void create_ui()
+{
+  screen_buttons = lv_obj_create(NULL);
+  create_button_matrix(screen_buttons);
+  create_test_button_matrix(screen_buttons);
 
   // ===== Speed Sliders =====
   const char *labels[] = {"FR", "FL", "RR", "RL"};

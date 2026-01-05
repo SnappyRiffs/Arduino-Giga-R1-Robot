@@ -371,9 +371,9 @@ void set_btnm_bg_colors(lv_obj_t *btnm, uint32_t normal, uint32_t pressed)
   lv_obj_set_style_bg_opa(btnm, LV_OPA_COVER, LV_PART_ITEMS | LV_STATE_PRESSED);
 }
 
+// ===== Main Button Matrix =====
 void create_button_matrix(lv_obj_t *screen_buttons)
 {
-  // ===== Main Button Matrix =====
   static const char *btnm_map[] = {
       "Forward", "Backward", "Left", "Right", "\n",
       "45", "135", "225", "315", "\n",
@@ -392,9 +392,10 @@ void create_button_matrix(lv_obj_t *screen_buttons)
 
   lv_obj_add_event_cb(btnm, btnm_event_cb, LV_EVENT_VALUE_CHANGED, NULL);
 }
+
+// ===== Test Button Matrix =====
 void create_test_button_matrix(lv_obj_t *screen_buttons)
 {
-  // ===== Test Button Matrix =====
   static const char *test_btnm_map[] = {"FL", "FR", "\n", "RL", "RR", ""};
   lv_obj_t *test_btnm = lv_btnmatrix_create(screen_buttons);
   lv_btnmatrix_set_map(test_btnm, test_btnm_map);
