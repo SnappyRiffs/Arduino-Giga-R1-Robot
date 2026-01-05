@@ -1,0 +1,13 @@
+create_test_button_matrix:
+    test_btnm_event_cb
+create_main_button_matrix:
+    main_btnm_event_cb
+
+main_btnm_event_cb:
+    apply_mode
+    btn_Run_Program_event_cb
+test_btnm_event_cb:
+    FL_move
+    FR_move
+    RL_move
+    RR_move
