@@ -22,6 +22,8 @@
 #include <lvgl_private.h>
 #include <lvgl.h>
 
+#include <Arduino_constants.h>
+
 #include "lvgl.h"
 #include "Arduino_GigaDisplayTouch.h"
 #include "Arduino_H7_Video.h"
@@ -321,7 +323,7 @@ static void toggle_fwdrev_cb(lv_event_t *e)
   {
     lv_label_set_text(label, "Rev");
     motor_direction = 1;
-  }
+  }  strcpy
   else // If txt is "Rev", change to "Fwd" and assign motor_direction -1
   {
     lv_label_set_text(label, "Fwd");

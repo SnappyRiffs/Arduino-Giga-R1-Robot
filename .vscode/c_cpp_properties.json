@@ -25,7 +25,8 @@
                 "c:\\users\\snapp\\appdata\\local\\arduino15\\packages\\arduino\\tools\\arm-none-eabi-gcc\\7-2017q4\\arm-none-eabi\\include\\c++\\7.2.1\\backward",
                 "c:\\users\\snapp\\appdata\\local\\arduino15\\packages\\arduino\\tools\\arm-none-eabi-gcc\\7-2017q4\\lib\\gcc\\arm-none-eabi\\7.2.1\\include",
                 "c:\\users\\snapp\\appdata\\local\\arduino15\\packages\\arduino\\tools\\arm-none-eabi-gcc\\7-2017q4\\lib\\gcc\\arm-none-eabi\\7.2.1\\include-fixed",
-                "c:\\users\\snapp\\appdata\\local\\arduino15\\packages\\arduino\\tools\\arm-none-eabi-gcc\\7-2017q4\\arm-none-eabi\\include"
+                "c:\\users\\snapp\\appdata\\local\\arduino15\\packages\\arduino\\tools\\arm-none-eabi-gcc\\7-2017q4\\arm-none-eabi\\include",
+                "c:\\Users\\Snapp\\Documents\\Arduino\\libraries\\Arduino_robot_project_library\\src"
             ],
             "forcedInclude": [
                 "C:\\Users\\Snapp\\AppData\\Local\\Arduino15\\packages\\arduino\\hardware\\mbed_giga\\4.4.1\\cores\\arduino\\Arduino.h"

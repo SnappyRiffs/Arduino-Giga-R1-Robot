@@ -24,6 +24,8 @@
 #include <lvgl_private.h>
 #include <lvgl.h>
 
+#include <Arduino_constants.h>
+
 #include "lvgl.h"
 #include "Arduino_GigaDisplayTouch.h"
 #include "Arduino_H7_Video.h"
@@ -126,33 +128,6 @@ std::vector<const char *> program;
  * @param mode_name mode of movement
  * @param direction direction of movement
  */
-#line 127 "C:\\Users\\Snapp\\OneDrive\\Arduino\\Projects\\ArduinoGigaLvglDisplay\\ArduinoGigaLvglDisplay.ino"
-static void apply_mode(const char *mode_name, const char *direction);
-#line 165 "C:\\Users\\Snapp\\OneDrive\\Arduino\\Projects\\ArduinoGigaLvglDisplay\\ArduinoGigaLvglDisplay.ino"
-static void btn_Run_Program_event_cb(lv_event_t *e);
-#line 371 "C:\\Users\\Snapp\\OneDrive\\Arduino\\Projects\\ArduinoGigaLvglDisplay\\ArduinoGigaLvglDisplay.ino"
-void set_btnm_bg_colors(lv_obj_t *btnm, uint32_t normal, uint32_t pressed);
-#line 385 "C:\\Users\\Snapp\\OneDrive\\Arduino\\Projects\\ArduinoGigaLvglDisplay\\ArduinoGigaLvglDisplay.ino"
-void create_main_button_matrix(lv_obj_t *screen_buttons);
-#line 407 "C:\\Users\\Snapp\\OneDrive\\Arduino\\Projects\\ArduinoGigaLvglDisplay\\ArduinoGigaLvglDisplay.ino"
-void create_test_button_matrix(lv_obj_t *screen_buttons);
-#line 428 "C:\\Users\\Snapp\\OneDrive\\Arduino\\Projects\\ArduinoGigaLvglDisplay\\ArduinoGigaLvglDisplay.ino"
-void create_speed_sliders(lv_obj_t *parent);
-#line 473 "C:\\Users\\Snapp\\OneDrive\\Arduino\\Projects\\ArduinoGigaLvglDisplay\\ArduinoGigaLvglDisplay.ino"
-void create_ui();
-#line 503 "C:\\Users\\Snapp\\OneDrive\\Arduino\\Projects\\ArduinoGigaLvglDisplay\\ArduinoGigaLvglDisplay.ino"
-void FR_move(int speed);
-#line 524 "C:\\Users\\Snapp\\OneDrive\\Arduino\\Projects\\ArduinoGigaLvglDisplay\\ArduinoGigaLvglDisplay.ino"
-void FL_move(int speed);
-#line 545 "C:\\Users\\Snapp\\OneDrive\\Arduino\\Projects\\ArduinoGigaLvglDisplay\\ArduinoGigaLvglDisplay.ino"
-void RR_move(int speed);
-#line 566 "C:\\Users\\Snapp\\OneDrive\\Arduino\\Projects\\ArduinoGigaLvglDisplay\\ArduinoGigaLvglDisplay.ino"
-void RL_move(int speed);
-#line 583 "C:\\Users\\Snapp\\OneDrive\\Arduino\\Projects\\ArduinoGigaLvglDisplay\\ArduinoGigaLvglDisplay.ino"
-void setup();
-#line 595 "C:\\Users\\Snapp\\OneDrive\\Arduino\\Projects\\ArduinoGigaLvglDisplay\\ArduinoGigaLvglDisplay.ino"
-void loop();
-#line 127 "C:\\Users\\Snapp\\OneDrive\\Arduino\\Projects\\ArduinoGigaLvglDisplay\\ArduinoGigaLvglDisplay.ino"
 static void apply_mode(const char *mode_name, const char *direction)
 {
   if (msg_label != NULL)
@@ -350,7 +325,7 @@ static void toggle_fwdrev_cb(lv_event_t *e)
   {
     lv_label_set_text(label, "Rev");
     motor_direction = 1;
-  }
+  }  strcpy
   else // If txt is "Rev", change to "Fwd" and assign motor_direction -1
   {
     lv_label_set_text(label, "Fwd");
@@ -485,7 +460,7 @@ void create_speed_sliders(lv_obj_t *parent)
             {
                 lv_obj_t* s = (lv_obj_t*)lv_event_get_target(e);
                 lv_obj_t* val_lbl = (lv_obj_t*)lv_event_get_user_data(e);
-                char buf[4];
+                char buf[4]; // Buffer to hold the string representation of the slider value (3 digits + null terminator)
                 snprintf(buf, sizeof(buf), "%d", lv_slider_get_value(s));
                 lv_label_set_text(val_lbl, buf); 
             },
