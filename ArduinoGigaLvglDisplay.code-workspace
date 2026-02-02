@@ -1,0 +1,11 @@
+{
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+			"path": "../../libraries/Arduino_robot_project_library"
+		}
+	],
+	"settings": {}
+}

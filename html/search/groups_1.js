@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['display_20related_20objects_0',['Display-related objects',['../group___display___group.html',1,'']]]
+  ['definitions_0',['Motor control pin definitions',['../group___motor___pins.html',1,'']]]
 ];

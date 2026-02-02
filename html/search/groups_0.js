@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['control_20variables_0',['Motor control variables',['../group___motor___variables.html',1,'']]]
+  ['control_20pin_20definitions_0',['Motor control pin definitions',['../group___motor___pins.html',1,'']]]
 ];

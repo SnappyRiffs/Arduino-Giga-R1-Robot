@@ -1,7 +1,6 @@
 var searchData=
 [
-  ['related_20objects_0',['Display-related objects',['../group___display___group.html',1,'']]],
-  ['related_20variables_1',['Message-related variables',['../group___msg___group.html',1,'']]],
-  ['rl_5fmove_2',['RL_move',['../_arduino_giga_lvgl_display_8ino.html#ac5e4ea79ee09f85143f444ee9d22cea6',1,'ArduinoGigaLvglDisplay.ino']]],
-  ['rr_5fmove_3',['RR_move',['../_arduino_giga_lvgl_display_8ino.html#a72d3ab08a583fa7cbdf7e3db1cb9ee5f',1,'ArduinoGigaLvglDisplay.ino']]]
+  ['set_5fbtnm_5fbg_5fcolors_0',['set_btnm_bg_colors',['../_arduino_giga_lvgl_display_8ino.html#a6fbd991f948fc782ccc13e510b824d91',1,'ArduinoGigaLvglDisplay.ino']]],
+  ['setup_1',['setup',['../_arduino_giga_lvgl_display_8ino.html#a4fc01d736fe50cf5b977f755b675f11d',1,'ArduinoGigaLvglDisplay.ino']]],
+  ['slider_5fevent_5fcb_2',['slider_event_cb',['../_arduino_giga_lvgl_display_8ino.html#accf9c682319e11f61db68997b6938fdc',1,'ArduinoGigaLvglDisplay.ino']]]
 ];

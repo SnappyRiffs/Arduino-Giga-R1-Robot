@@ -2,14 +2,14 @@ var _arduino_giga_lvgl_display_8ino =
 [
     [ "apply_mode", "_arduino_giga_lvgl_display_8ino.html#a0397ddbe4d2bddb9d77afbb47acf56f0", null ],
     [ "btn_Run_Program_event_cb", "_arduino_giga_lvgl_display_8ino.html#a599fa16066a270f3a22e7de32fbb250f", null ],
-    [ "btnm_event_cb", "_arduino_giga_lvgl_display_8ino.html#a20585e8659a8214cc0bd75f5e979acba", null ],
-    [ "create_button_matrix", "_arduino_giga_lvgl_display_8ino.html#a47db19faa16aed1d6d68dfdaf103bf6a", null ],
+    [ "create_main_button_matrix", "_arduino_giga_lvgl_display_8ino.html#a9965ed6b6152697e6db85d37dfe41720", null ],
+    [ "create_speed_sliders", "_arduino_giga_lvgl_display_8ino.html#ad5dca755f09c580eccadbdd097c4d57d", null ],
     [ "create_test_button_matrix", "_arduino_giga_lvgl_display_8ino.html#aecc909a3f155365b24a95ec0ffef19d3", null ],
     [ "create_ui", "_arduino_giga_lvgl_display_8ino.html#a1887246f5467ff145cd963e98fc2258e", null ],
-    [ "Display", "group___display___group.html#ga981250658d9bfa2913d1fc9759006912", null ],
     [ "FL_move", "_arduino_giga_lvgl_display_8ino.html#a89702714cf6f17fb069f22e5f1f36d97", null ],
     [ "FR_move", "_arduino_giga_lvgl_display_8ino.html#a1d1a4db533ab78b9a2a06a09ba8a3bba", null ],
     [ "loop", "_arduino_giga_lvgl_display_8ino.html#afe461d27b9c48d5921c00d521181f12f", null ],
+    [ "main_btnm_event_cb", "_arduino_giga_lvgl_display_8ino.html#a6b08dca515fd8dd9eaec4b80e83e7e6a", null ],
     [ "RL_move", "_arduino_giga_lvgl_display_8ino.html#ac5e4ea79ee09f85143f444ee9d22cea6", null ],
     [ "RR_move", "_arduino_giga_lvgl_display_8ino.html#a72d3ab08a583fa7cbdf7e3db1cb9ee5f", null ],
     [ "set_btnm_bg_colors", "_arduino_giga_lvgl_display_8ino.html#a6fbd991f948fc782ccc13e510b824d91", null ],
@@ -28,13 +28,5 @@ var _arduino_giga_lvgl_display_8ino =
     [ "IN3_A", "_arduino_giga_lvgl_display_8ino.html#a5c616be1a0da4e4851766ab26fdc106b", null ],
     [ "IN3_B", "_arduino_giga_lvgl_display_8ino.html#a0eff9fd47f52060c179765fc406c824f", null ],
     [ "IN4_A", "_arduino_giga_lvgl_display_8ino.html#a7bc7d13c97218d43553bd1bdde068e9d", null ],
-    [ "IN4_B", "_arduino_giga_lvgl_display_8ino.html#a2bf2794b643a821a4a1ee3fce9a17b39", null ],
-    [ "motor_direction", "group___motor___variables.html#gaa4c5f0f5f64ae87887bca053777176e3", null ],
-    [ "motor_speed", "group___motor___variables.html#gac153c1dd7b0ceef0acd0c43a6690e3e9", null ],
-    [ "msg_duration", "group___msg___group.html#gac2f78c0baea19329ba258e0968ecdc31", null ],
-    [ "msg_label", "group___msg___group.html#ga585898b7bac0a7898292e85b2de2a39b", null ],
-    [ "msg_start_time", "group___msg___group.html#ga971e9cd1d44a1613b880ab40f1a6c99e", null ],
-    [ "program", "_arduino_giga_lvgl_display_8ino.html#a029d685f4cb2412bb10f78d34254bd9d", null ],
-    [ "screen_buttons", "_arduino_giga_lvgl_display_8ino.html#a6ab2f42db29199d62773bffd8ea4e25e", null ],
-    [ "TouchDetector", "group___display___group.html#gae108ec4dedc4caca549733338bf32414", null ]
+    [ "IN4_B", "_arduino_giga_lvgl_display_8ino.html#a2bf2794b643a821a4a1ee3fce9a17b39", null ]
 ];

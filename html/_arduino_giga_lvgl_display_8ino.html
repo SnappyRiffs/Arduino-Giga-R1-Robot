@@ -104,6 +104,10 @@ $(function(){initNavTree('_arduino_giga_lvgl_display_8ino.html','',''); });
 <code>#include &lt;lv_init.h&gt;</code><br />
 <code>#include &lt;lvgl_private.h&gt;</code><br />
 <code>#include &lt;lvgl.h&gt;</code><br />
+<code>#include &lt;Arduino_constants.h&gt;</code><br />
+<code>#include &lt;motor_constants.h&gt;</code><br />
+<code>#include &lt;msg_constants.h&gt;</code><br />
+<code>#include &lt;other_constants.h&gt;</code><br />
 <code>#include &quot;Arduino_H7_Video.h&quot;</code><br />
 <code>#include &lt;vector&gt;</code><br />
 </div>
@@ -111,14 +115,12 @@ $(function(){initNavTree('_arduino_giga_lvgl_display_8ino.html','',''); });
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:ga981250658d9bfa2913d1fc9759006912" id="r_ga981250658d9bfa2913d1fc9759006912"><td class="memItemLeft" align="right" valign="top">Arduino_H7_Video&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___display___group.html#ga981250658d9bfa2913d1fc9759006912">Display</a> (800, 480, GigaDisplayShield)</td></tr>
-<tr class="memdesc:ga981250658d9bfa2913d1fc9759006912"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create an instance of Arduino_H7_Video configured for an 800x480 resolution using the Giga Display Shield.  <br /></td></tr>
 <tr class="memitem:a0397ddbe4d2bddb9d77afbb47acf56f0" id="r_a0397ddbe4d2bddb9d77afbb47acf56f0"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0397ddbe4d2bddb9d77afbb47acf56f0">apply_mode</a> (const char *mode_name, const char *direction)</td></tr>
-<tr class="memdesc:a0397ddbe4d2bddb9d77afbb47acf56f0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Applies the selected movement mode and direction.  <br /></td></tr>
+<tr class="memdesc:a0397ddbe4d2bddb9d77afbb47acf56f0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Applies the selected movement mode and direction. This function creates a temporary message label on the screen indicating the applied mode and direction. It also appends the direction to the global program vector for later execution.  <br /></td></tr>
 <tr class="memitem:a599fa16066a270f3a22e7de32fbb250f" id="r_a599fa16066a270f3a22e7de32fbb250f"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a599fa16066a270f3a22e7de32fbb250f">btn_Run_Program_event_cb</a> (lv_event_t *e)</td></tr>
 <tr class="memdesc:a599fa16066a270f3a22e7de32fbb250f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Handles the "Run Program" button event.  <br /></td></tr>
-<tr class="memitem:a20585e8659a8214cc0bd75f5e979acba" id="r_a20585e8659a8214cc0bd75f5e979acba"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a20585e8659a8214cc0bd75f5e979acba">btnm_event_cb</a> (lv_event_t *e)</td></tr>
-<tr class="memdesc:a20585e8659a8214cc0bd75f5e979acba"><td class="mdescLeft">&#160;</td><td class="mdescRight">Handles all main directional and mode selection button events.  <br /></td></tr>
+<tr class="memitem:a6b08dca515fd8dd9eaec4b80e83e7e6a" id="r_a6b08dca515fd8dd9eaec4b80e83e7e6a"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6b08dca515fd8dd9eaec4b80e83e7e6a">main_btnm_event_cb</a> (lv_event_t *e)</td></tr>
+<tr class="memdesc:a6b08dca515fd8dd9eaec4b80e83e7e6a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Handles all main directional and mode selection button events.  <br /></td></tr>
 <tr class="memitem:a387364b391da0c6e0e19cbdddd28b77a" id="r_a387364b391da0c6e0e19cbdddd28b77a"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a387364b391da0c6e0e19cbdddd28b77a">test_btnm_event_cb</a> (lv_event_t *e)</td></tr>
 <tr class="memdesc:a387364b391da0c6e0e19cbdddd28b77a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Handles individual test control button events.  <br /></td></tr>
 <tr class="memitem:accf9c682319e11f61db68997b6938fdc" id="r_accf9c682319e11f61db68997b6938fdc"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#accf9c682319e11f61db68997b6938fdc">slider_event_cb</a> (lv_event_t *e)</td></tr>
@@ -127,10 +129,13 @@ Functions</h2></td></tr>
 <tr class="memdesc:a5c854330b94e76f43e26164660df409c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Handles toggling between Forward and Reverse.  <br /></td></tr>
 <tr class="memitem:a6fbd991f948fc782ccc13e510b824d91" id="r_a6fbd991f948fc782ccc13e510b824d91"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6fbd991f948fc782ccc13e510b824d91">set_btnm_bg_colors</a> (lv_obj_t *btnm, uint32_t normal, uint32_t pressed)</td></tr>
 <tr class="memdesc:a6fbd991f948fc782ccc13e510b824d91"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the btnm bg colors object.  <br /></td></tr>
-<tr class="memitem:a47db19faa16aed1d6d68dfdaf103bf6a" id="r_a47db19faa16aed1d6d68dfdaf103bf6a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a47db19faa16aed1d6d68dfdaf103bf6a">create_button_matrix</a> (lv_obj_t *<a class="el" href="#a6ab2f42db29199d62773bffd8ea4e25e">screen_buttons</a>)</td></tr>
-<tr class="memitem:aecc909a3f155365b24a95ec0ffef19d3" id="r_aecc909a3f155365b24a95ec0ffef19d3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aecc909a3f155365b24a95ec0ffef19d3">create_test_button_matrix</a> (lv_obj_t *<a class="el" href="#a6ab2f42db29199d62773bffd8ea4e25e">screen_buttons</a>)</td></tr>
+<tr class="memitem:a9965ed6b6152697e6db85d37dfe41720" id="r_a9965ed6b6152697e6db85d37dfe41720"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9965ed6b6152697e6db85d37dfe41720">create_main_button_matrix</a> (lv_obj_t *screen_buttons)</td></tr>
+<tr class="memdesc:a9965ed6b6152697e6db85d37dfe41720"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create the main button matrix object.  <br /></td></tr>
+<tr class="memitem:aecc909a3f155365b24a95ec0ffef19d3" id="r_aecc909a3f155365b24a95ec0ffef19d3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aecc909a3f155365b24a95ec0ffef19d3">create_test_button_matrix</a> (lv_obj_t *screen_buttons)</td></tr>
+<tr class="memitem:ad5dca755f09c580eccadbdd097c4d57d" id="r_ad5dca755f09c580eccadbdd097c4d57d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad5dca755f09c580eccadbdd097c4d57d">create_speed_sliders</a> (lv_obj_t *parent)</td></tr>
+<tr class="memdesc:ad5dca755f09c580eccadbdd097c4d57d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a speed sliders object.  <br /></td></tr>
 <tr class="memitem:a1887246f5467ff145cd963e98fc2258e" id="r_a1887246f5467ff145cd963e98fc2258e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1887246f5467ff145cd963e98fc2258e">create_ui</a> ()</td></tr>
-<tr class="memdesc:a1887246f5467ff145cd963e98fc2258e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a ui object.  <br /></td></tr>
+<tr class="memdesc:a1887246f5467ff145cd963e98fc2258e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create the main UI.  <br /></td></tr>
 <tr class="memitem:a1d1a4db533ab78b9a2a06a09ba8a3bba" id="r_a1d1a4db533ab78b9a2a06a09ba8a3bba"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1d1a4db533ab78b9a2a06a09ba8a3bba">FR_move</a> (int speed)</td></tr>
 <tr class="memdesc:a1d1a4db533ab78b9a2a06a09ba8a3bba"><td class="mdescLeft">&#160;</td><td class="mdescRight">Moves the front-right (FR) motor at the specified speed.  <br /></td></tr>
 <tr class="memitem:a89702714cf6f17fb069f22e5f1f36d97" id="r_a89702714cf6f17fb069f22e5f1f36d97"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a89702714cf6f17fb069f22e5f1f36d97">FL_move</a> (int speed)</td></tr>
@@ -144,22 +149,7 @@ Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-var-members" class="groupheader"><a id="var-members" name="var-members"></a>
 Variables</h2></td></tr>
-<tr class="memitem:gae108ec4dedc4caca549733338bf32414" id="r_gae108ec4dedc4caca549733338bf32414"><td class="memItemLeft" align="right" valign="top">Arduino_GigaDisplayTouch&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___display___group.html#gae108ec4dedc4caca549733338bf32414">TouchDetector</a></td></tr>
-<tr class="memdesc:gae108ec4dedc4caca549733338bf32414"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create global touch detector object.  <br /></td></tr>
-<tr class="memitem:ga585898b7bac0a7898292e85b2de2a39b" id="r_ga585898b7bac0a7898292e85b2de2a39b"><td class="memItemLeft" align="right" valign="top">lv_obj_t *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___msg___group.html#ga585898b7bac0a7898292e85b2de2a39b">msg_label</a> = NULL</td></tr>
-<tr class="memdesc:ga585898b7bac0a7898292e85b2de2a39b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Message label.  <br /></td></tr>
-<tr class="memitem:ga971e9cd1d44a1613b880ab40f1a6c99e" id="r_ga971e9cd1d44a1613b880ab40f1a6c99e"><td class="memItemLeft" align="right" valign="top">unsigned long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___msg___group.html#ga971e9cd1d44a1613b880ab40f1a6c99e">msg_start_time</a> = 0</td></tr>
-<tr class="memdesc:ga971e9cd1d44a1613b880ab40f1a6c99e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Message start time (always 0).  <br /></td></tr>
-<tr class="memitem:gac2f78c0baea19329ba258e0968ecdc31" id="r_gac2f78c0baea19329ba258e0968ecdc31"><td class="memItemLeft" align="right" valign="top">const unsigned long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___msg___group.html#gac2f78c0baea19329ba258e0968ecdc31">msg_duration</a> = 1500</td></tr>
-<tr class="memdesc:gac2f78c0baea19329ba258e0968ecdc31"><td class="mdescLeft">&#160;</td><td class="mdescRight">Message duration (in milliseconds).  <br /></td></tr>
-<tr class="memitem:a6ab2f42db29199d62773bffd8ea4e25e" id="r_a6ab2f42db29199d62773bffd8ea4e25e"><td class="memItemLeft" align="right" valign="top">lv_obj_t *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6ab2f42db29199d62773bffd8ea4e25e">screen_buttons</a></td></tr>
-<tr class="memdesc:a6ab2f42db29199d62773bffd8ea4e25e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Screen object for buttons.  <br /></td></tr>
-<tr class="memitem:gac153c1dd7b0ceef0acd0c43a6690e3e9" id="r_gac153c1dd7b0ceef0acd0c43a6690e3e9"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___motor___variables.html#gac153c1dd7b0ceef0acd0c43a6690e3e9">motor_speed</a></td></tr>
-<tr class="memdesc:gac153c1dd7b0ceef0acd0c43a6690e3e9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Motor speed variable (0-255).  <br /></td></tr>
-<tr class="memitem:gaa4c5f0f5f64ae87887bca053777176e3" id="r_gaa4c5f0f5f64ae87887bca053777176e3"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___motor___variables.html#gaa4c5f0f5f64ae87887bca053777176e3">motor_direction</a></td></tr>
-<tr class="memdesc:gaa4c5f0f5f64ae87887bca053777176e3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Motor direction variable (1 for Forward, -1 for Reverse).  <br /></td></tr>
 <tr class="memitem:a4763be0e77388074ff071965028a76ba" id="r_a4763be0e77388074ff071965028a76ba"><td class="memItemLeft" align="right" valign="top">const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4763be0e77388074ff071965028a76ba">ENB_B</a> = 13</td></tr>
-<tr class="memdesc:a4763be0e77388074ff071965028a76ba"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize motor control pins.  <br /></td></tr>
 <tr class="memitem:a2bf2794b643a821a4a1ee3fce9a17b39" id="r_a2bf2794b643a821a4a1ee3fce9a17b39"><td class="memItemLeft" align="right" valign="top">const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2bf2794b643a821a4a1ee3fce9a17b39">IN4_B</a> = 12</td></tr>
 <tr class="memitem:a0eff9fd47f52060c179765fc406c824f" id="r_a0eff9fd47f52060c179765fc406c824f"><td class="memItemLeft" align="right" valign="top">const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0eff9fd47f52060c179765fc406c824f">IN3_B</a> = 11</td></tr>
 <tr class="memitem:a9570059ff6b742c8040a32962d0d5a37" id="r_a9570059ff6b742c8040a32962d0d5a37"><td class="memItemLeft" align="right" valign="top">const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9570059ff6b742c8040a32962d0d5a37">IN2_B</a> = 10</td></tr>
@@ -171,15 +161,13 @@ Variables</h2></td></tr>
 <tr class="memitem:a0a2da1fa43e204f03999bfcd82e2ce93" id="r_a0a2da1fa43e204f03999bfcd82e2ce93"><td class="memItemLeft" align="right" valign="top">const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0a2da1fa43e204f03999bfcd82e2ce93">IN2_A</a> = 4</td></tr>
 <tr class="memitem:a2f8c3e5c64df336aadd989def65390df" id="r_a2f8c3e5c64df336aadd989def65390df"><td class="memItemLeft" align="right" valign="top">const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2f8c3e5c64df336aadd989def65390df">IN1_A</a> = 3</td></tr>
 <tr class="memitem:a448921cced6d8ecae8e0ea9dc739dcea" id="r_a448921cced6d8ecae8e0ea9dc739dcea"><td class="memItemLeft" align="right" valign="top">const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a448921cced6d8ecae8e0ea9dc739dcea">ENA_A</a> = 2</td></tr>
-<tr class="memitem:a029d685f4cb2412bb10f78d34254bd9d" id="r_a029d685f4cb2412bb10f78d34254bd9d"><td class="memItemLeft" align="right" valign="top">std::vector&lt; const char * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a029d685f4cb2412bb10f78d34254bd9d">program</a></td></tr>
-<tr class="memdesc:a029d685f4cb2412bb10f78d34254bd9d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize program vector.  <br /></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Arduino Giga LVGL Display For Robot Car. </p>
 <dl class="section author"><dt>Author</dt><dd>Jadon Jung (<a href="#" onclick="location.href='mai'+'lto:'+'jad'+'on'+'jun'+'g3'+'@gm'+'ai'+'l.c'+'om'; return false;">jadon<span class="obfuscator">.nosp@m.</span>jung<span class="obfuscator">.nosp@m.</span>3@gma<span class="obfuscator">.nosp@m.</span>il.c<span class="obfuscator">.nosp@m.</span>om</a>) </dd></dl>
 <dl class="section version"><dt>Version</dt><dd>1.0 </dd></dl>
 <dl class="section date"><dt>Date</dt><dd>2025-11-30</dd></dl>
-<dl class="section copyright"><dt>Copyright</dt><dd>Copyright (c) 2025 </dd></dl>
+<dl class="section copyright"><dt>Copyright</dt><dd>Copyright (c) 2026 </dd></dl>
 
 <p class="definition">Definition in file <a class="el" href="_arduino_giga_lvgl_display_8ino_source.html">ArduinoGigaLvglDisplay.ino</a>.</p>
 </div><a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Function Documentation</h2>
@@ -210,16 +198,16 @@ Variables</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Applies the selected movement mode and direction. </p>
+<p>Applies the selected movement mode and direction. This function creates a temporary message label on the screen indicating the applied mode and direction. It also appends the direction to the global program vector for later execution. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">mode_name</td><td>mode of movement </td></tr>
-    <tr><td class="paramname">direction</td><td></td></tr>
+    <tr><td class="paramname">direction</td><td>direction of movement </td></tr>
   </table>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="_arduino_giga_lvgl_display_8ino_source.html#l00123">123</a> of file <a class="el" href="_arduino_giga_lvgl_display_8ino_source.html">ArduinoGigaLvglDisplay.ino</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_arduino_giga_lvgl_display_8ino_source.html#l00063">63</a> of file <a class="el" href="_arduino_giga_lvgl_display_8ino_source.html">ArduinoGigaLvglDisplay.ino</a>.</p>
 
 </div>
 </div>
@@ -256,55 +244,18 @@ Variables</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="_arduino_giga_lvgl_display_8ino_source.html#l00161">161</a> of file <a class="el" href="_arduino_giga_lvgl_display_8ino_source.html">ArduinoGigaLvglDisplay.ino</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_arduino_giga_lvgl_display_8ino_source.html#l00101">101</a> of file <a class="el" href="_arduino_giga_lvgl_display_8ino_source.html">ArduinoGigaLvglDisplay.ino</a>.</p>
 
 </div>
 </div>
-<a id="a20585e8659a8214cc0bd75f5e979acba" name="a20585e8659a8214cc0bd75f5e979acba"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a20585e8659a8214cc0bd75f5e979acba">&#9670;&#160;</a></span>btnm_event_cb()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void btnm_event_cb </td>
-          <td>(</td>
-          <td class="paramtype">lv_event_t *</td>          <td class="paramname"><span class="paramname"><em>e</em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Handles all main directional and mode selection button events. </p>
-<p>This callback is triggered whenever a button in the primary button matrix is pressed. It reads the button's text label and maps it to a specific movement mode (Straight, Sideways, Diagonal, Pivot, Pivot Sideways, Rotate). The corresponding mode and direction string are then forwarded to <a class="el" href="#a0397ddbe4d2bddb9d77afbb47acf56f0" title="Applies the selected movement mode and direction.">apply_mode()</a>.</p>
-<p>If the selected button is "Prgm Car", this function instead triggers the special program execution callback <a class="el" href="#a599fa16066a270f3a22e7de32fbb250f" title="Handles the &quot;Run Program&quot; button event.">btn_Run_Program_event_cb()</a>.</p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">e</td><td>Pointer to the LVGL event descriptor containing details about the button press event (e.g., target object). </td></tr>
-  </table>
-  </dd>
-</dl>
-
-<p class="definition">Definition at line <a class="el" href="_arduino_giga_lvgl_display_8ino_source.html#l00208">208</a> of file <a class="el" href="_arduino_giga_lvgl_display_8ino_source.html">ArduinoGigaLvglDisplay.ino</a>.</p>
-
-</div>
-</div>
-<a id="a47db19faa16aed1d6d68dfdaf103bf6a" name="a47db19faa16aed1d6d68dfdaf103bf6a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a47db19faa16aed1d6d68dfdaf103bf6a">&#9670;&#160;</a></span>create_button_matrix()</h2>
+<a id="a9965ed6b6152697e6db85d37dfe41720" name="a9965ed6b6152697e6db85d37dfe41720"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9965ed6b6152697e6db85d37dfe41720">&#9670;&#160;</a></span>create_main_button_matrix()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void create_button_matrix </td>
+          <td class="memname">void create_main_button_matrix </td>
           <td>(</td>
           <td class="paramtype">lv_obj_t *</td>          <td class="paramname"><span class="paramname"><em>screen_buttons</em></span></td><td>)</td>
           <td></td>
@@ -312,7 +263,42 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_arduino_giga_lvgl_display_8ino_source.html#l00374">374</a> of file <a class="el" href="_arduino_giga_lvgl_display_8ino_source.html">ArduinoGigaLvglDisplay.ino</a>.</p>
+<p>Create the main button matrix object. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">screen_buttons</td><td>parent screen object Runs the btnm_event_cb on button press </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="_arduino_giga_lvgl_display_8ino_source.html#l00321">321</a> of file <a class="el" href="_arduino_giga_lvgl_display_8ino_source.html">ArduinoGigaLvglDisplay.ino</a>.</p>
+
+</div>
+</div>
+<a id="ad5dca755f09c580eccadbdd097c4d57d" name="ad5dca755f09c580eccadbdd097c4d57d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad5dca755f09c580eccadbdd097c4d57d">&#9670;&#160;</a></span>create_speed_sliders()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void create_speed_sliders </td>
+          <td>(</td>
+          <td class="paramtype">lv_obj_t *</td>          <td class="paramname"><span class="paramname"><em>parent</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Create a speed sliders object. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">parent</td><td>parent screen object Creates 4 sliders for FR, FL, RR, RL with labels and value displays </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="_arduino_giga_lvgl_display_8ino_source.html#l00364">364</a> of file <a class="el" href="_arduino_giga_lvgl_display_8ino_source.html">ArduinoGigaLvglDisplay.ino</a>.</p>
 
 </div>
 </div>
@@ -331,7 +317,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_arduino_giga_lvgl_display_8ino_source.html#l00395">395</a> of file <a class="el" href="_arduino_giga_lvgl_display_8ino_source.html">ArduinoGigaLvglDisplay.ino</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_arduino_giga_lvgl_display_8ino_source.html#l00343">343</a> of file <a class="el" href="_arduino_giga_lvgl_display_8ino_source.html">ArduinoGigaLvglDisplay.ino</a>.</p>
 
 </div>
 </div>
@@ -350,9 +336,9 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Create a ui object. </p>
+<p>Create the main UI. </p>
 
-<p class="definition">Definition at line <a class="el" href="_arduino_giga_lvgl_display_8ino_source.html#l00414">414</a> of file <a class="el" href="_arduino_giga_lvgl_display_8ino_source.html">ArduinoGigaLvglDisplay.ino</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_arduino_giga_lvgl_display_8ino_source.html#l00408">408</a> of file <a class="el" href="_arduino_giga_lvgl_display_8ino_source.html">ArduinoGigaLvglDisplay.ino</a>.</p>
 
 </div>
 </div>
@@ -379,7 +365,7 @@ Variables</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="_arduino_giga_lvgl_display_8ino_source.html#l00500">500</a> of file <a class="el" href="_arduino_giga_lvgl_display_8ino_source.html">ArduinoGigaLvglDisplay.ino</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_arduino_giga_lvgl_display_8ino_source.html#l00458">458</a> of file <a class="el" href="_arduino_giga_lvgl_display_8ino_source.html">ArduinoGigaLvglDisplay.ino</a>.</p>
 
 </div>
 </div>
@@ -406,7 +392,7 @@ Variables</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="_arduino_giga_lvgl_display_8ino_source.html#l00479">479</a> of file <a class="el" href="_arduino_giga_lvgl_display_8ino_source.html">ArduinoGigaLvglDisplay.ino</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_arduino_giga_lvgl_display_8ino_source.html#l00437">437</a> of file <a class="el" href="_arduino_giga_lvgl_display_8ino_source.html">ArduinoGigaLvglDisplay.ino</a>.</p>
 
 </div>
 </div>
@@ -425,7 +411,44 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_arduino_giga_lvgl_display_8ino_source.html#l00571">571</a> of file <a class="el" href="_arduino_giga_lvgl_display_8ino_source.html">ArduinoGigaLvglDisplay.ino</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_arduino_giga_lvgl_display_8ino_source.html#l00529">529</a> of file <a class="el" href="_arduino_giga_lvgl_display_8ino_source.html">ArduinoGigaLvglDisplay.ino</a>.</p>
+
+</div>
+</div>
+<a id="a6b08dca515fd8dd9eaec4b80e83e7e6a" name="a6b08dca515fd8dd9eaec4b80e83e7e6a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6b08dca515fd8dd9eaec4b80e83e7e6a">&#9670;&#160;</a></span>main_btnm_event_cb()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void main_btnm_event_cb </td>
+          <td>(</td>
+          <td class="paramtype">lv_event_t *</td>          <td class="paramname"><span class="paramname"><em>e</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Handles all main directional and mode selection button events. </p>
+<p>This callback is triggered whenever a button in the primary button matrix is pressed. It reads the button's text label and maps it to a specific movement mode (Straight, Sideways, Diagonal, Pivot, Pivot Sideways, Rotate). The corresponding mode and direction string are then forwarded to <a class="el" href="#a0397ddbe4d2bddb9d77afbb47acf56f0" title="Applies the selected movement mode and direction. This function creates a temporary message label on ...">apply_mode()</a>.</p>
+<p>If the selected button is "Prgm Car", this function instead triggers the special program execution callback <a class="el" href="#a599fa16066a270f3a22e7de32fbb250f" title="Handles the &quot;Run Program&quot; button event.">btn_Run_Program_event_cb()</a>.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">e</td><td>Pointer to the LVGL event descriptor containing details about the button press event (e.g., target object). </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="_arduino_giga_lvgl_display_8ino_source.html#l00149">149</a> of file <a class="el" href="_arduino_giga_lvgl_display_8ino_source.html">ArduinoGigaLvglDisplay.ino</a>.</p>
 
 </div>
 </div>
@@ -452,7 +475,7 @@ Variables</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="_arduino_giga_lvgl_display_8ino_source.html#l00542">542</a> of file <a class="el" href="_arduino_giga_lvgl_display_8ino_source.html">ArduinoGigaLvglDisplay.ino</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_arduino_giga_lvgl_display_8ino_source.html#l00500">500</a> of file <a class="el" href="_arduino_giga_lvgl_display_8ino_source.html">ArduinoGigaLvglDisplay.ino</a>.</p>
 
 </div>
 </div>
@@ -479,7 +502,7 @@ Variables</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="_arduino_giga_lvgl_display_8ino_source.html#l00521">521</a> of file <a class="el" href="_arduino_giga_lvgl_display_8ino_source.html">ArduinoGigaLvglDisplay.ino</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_arduino_giga_lvgl_display_8ino_source.html#l00479">479</a> of file <a class="el" href="_arduino_giga_lvgl_display_8ino_source.html">ArduinoGigaLvglDisplay.ino</a>.</p>
 
 </div>
 </div>
@@ -517,7 +540,7 @@ Variables</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="_arduino_giga_lvgl_display_8ino_source.html#l00366">366</a> of file <a class="el" href="_arduino_giga_lvgl_display_8ino_source.html">ArduinoGigaLvglDisplay.ino</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_arduino_giga_lvgl_display_8ino_source.html#l00307">307</a> of file <a class="el" href="_arduino_giga_lvgl_display_8ino_source.html">ArduinoGigaLvglDisplay.ino</a>.</p>
 
 </div>
 </div>
@@ -536,7 +559,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_arduino_giga_lvgl_display_8ino_source.html#l00559">559</a> of file <a class="el" href="_arduino_giga_lvgl_display_8ino_source.html">ArduinoGigaLvglDisplay.ino</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_arduino_giga_lvgl_display_8ino_source.html#l00517">517</a> of file <a class="el" href="_arduino_giga_lvgl_display_8ino_source.html">ArduinoGigaLvglDisplay.ino</a>.</p>
 
 </div>
 </div>
@@ -573,7 +596,7 @@ Variables</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="_arduino_giga_lvgl_display_8ino_source.html#l00346">346</a> of file <a class="el" href="_arduino_giga_lvgl_display_8ino_source.html">ArduinoGigaLvglDisplay.ino</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_arduino_giga_lvgl_display_8ino_source.html#l00287">287</a> of file <a class="el" href="_arduino_giga_lvgl_display_8ino_source.html">ArduinoGigaLvglDisplay.ino</a>.</p>
 
 </div>
 </div>
@@ -609,7 +632,7 @@ Variables</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="_arduino_giga_lvgl_display_8ino_source.html#l00259">259</a> of file <a class="el" href="_arduino_giga_lvgl_display_8ino_source.html">ArduinoGigaLvglDisplay.ino</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_arduino_giga_lvgl_display_8ino_source.html#l00200">200</a> of file <a class="el" href="_arduino_giga_lvgl_display_8ino_source.html">ArduinoGigaLvglDisplay.ino</a>.</p>
 
 </div>
 </div>
@@ -649,7 +672,7 @@ Variables</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="_arduino_giga_lvgl_display_8ino_source.html#l00308">308</a> of file <a class="el" href="_arduino_giga_lvgl_display_8ino_source.html">ArduinoGigaLvglDisplay.ino</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_arduino_giga_lvgl_display_8ino_source.html#l00249">249</a> of file <a class="el" href="_arduino_giga_lvgl_display_8ino_source.html">ArduinoGigaLvglDisplay.ino</a>.</p>
 
 </div>
 </div>
@@ -666,7 +689,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_arduino_giga_lvgl_display_8ino_source.html#l00108">108</a> of file <a class="el" href="_arduino_giga_lvgl_display_8ino_source.html">ArduinoGigaLvglDisplay.ino</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_arduino_giga_lvgl_display_8ino_source.html#l00051">51</a> of file <a class="el" href="_arduino_giga_lvgl_display_8ino_source.html">ArduinoGigaLvglDisplay.ino</a>.</p>
 
 </div>
 </div>
@@ -682,7 +705,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_arduino_giga_lvgl_display_8ino_source.html#l00101">101</a> of file <a class="el" href="_arduino_giga_lvgl_display_8ino_source.html">ArduinoGigaLvglDisplay.ino</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_arduino_giga_lvgl_display_8ino_source.html#l00044">44</a> of file <a class="el" href="_arduino_giga_lvgl_display_8ino_source.html">ArduinoGigaLvglDisplay.ino</a>.</p>
 
 </div>
 </div>
@@ -698,7 +721,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_arduino_giga_lvgl_display_8ino_source.html#l00103">103</a> of file <a class="el" href="_arduino_giga_lvgl_display_8ino_source.html">ArduinoGigaLvglDisplay.ino</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_arduino_giga_lvgl_display_8ino_source.html#l00046">46</a> of file <a class="el" href="_arduino_giga_lvgl_display_8ino_source.html">ArduinoGigaLvglDisplay.ino</a>.</p>
 
 </div>
 </div>
@@ -714,9 +737,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Initialize motor control pins. </p>
-
-<p class="definition">Definition at line <a class="el" href="_arduino_giga_lvgl_display_8ino_source.html#l00096">96</a> of file <a class="el" href="_arduino_giga_lvgl_display_8ino_source.html">ArduinoGigaLvglDisplay.ino</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_arduino_giga_lvgl_display_8ino_source.html#l00039">39</a> of file <a class="el" href="_arduino_giga_lvgl_display_8ino_source.html">ArduinoGigaLvglDisplay.ino</a>.</p>
 
 </div>
 </div>
@@ -732,7 +753,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_arduino_giga_lvgl_display_8ino_source.html#l00107">107</a> of file <a class="el" href="_arduino_giga_lvgl_display_8ino_source.html">ArduinoGigaLvglDisplay.ino</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_arduino_giga_lvgl_display_8ino_source.html#l00050">50</a> of file <a class="el" href="_arduino_giga_lvgl_display_8ino_source.html">ArduinoGigaLvglDisplay.ino</a>.</p>
 
 </div>
 </div>
@@ -748,7 +769,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_arduino_giga_lvgl_display_8ino_source.html#l00100">100</a> of file <a class="el" href="_arduino_giga_lvgl_display_8ino_source.html">ArduinoGigaLvglDisplay.ino</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_arduino_giga_lvgl_display_8ino_source.html#l00043">43</a> of file <a class="el" href="_arduino_giga_lvgl_display_8ino_source.html">ArduinoGigaLvglDisplay.ino</a>.</p>
 
 </div>
 </div>
@@ -764,7 +785,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_arduino_giga_lvgl_display_8ino_source.html#l00106">106</a> of file <a class="el" href="_arduino_giga_lvgl_display_8ino_source.html">ArduinoGigaLvglDisplay.ino</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_arduino_giga_lvgl_display_8ino_source.html#l00049">49</a> of file <a class="el" href="_arduino_giga_lvgl_display_8ino_source.html">ArduinoGigaLvglDisplay.ino</a>.</p>
 
 </div>
 </div>
@@ -780,7 +801,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_arduino_giga_lvgl_display_8ino_source.html#l00099">99</a> of file <a class="el" href="_arduino_giga_lvgl_display_8ino_source.html">ArduinoGigaLvglDisplay.ino</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_arduino_giga_lvgl_display_8ino_source.html#l00042">42</a> of file <a class="el" href="_arduino_giga_lvgl_display_8ino_source.html">ArduinoGigaLvglDisplay.ino</a>.</p>
 
 </div>
 </div>
@@ -796,7 +817,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_arduino_giga_lvgl_display_8ino_source.html#l00105">105</a> of file <a class="el" href="_arduino_giga_lvgl_display_8ino_source.html">ArduinoGigaLvglDisplay.ino</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_arduino_giga_lvgl_display_8ino_source.html#l00048">48</a> of file <a class="el" href="_arduino_giga_lvgl_display_8ino_source.html">ArduinoGigaLvglDisplay.ino</a>.</p>
 
 </div>
 </div>
@@ -812,7 +833,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_arduino_giga_lvgl_display_8ino_source.html#l00098">98</a> of file <a class="el" href="_arduino_giga_lvgl_display_8ino_source.html">ArduinoGigaLvglDisplay.ino</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_arduino_giga_lvgl_display_8ino_source.html#l00041">41</a> of file <a class="el" href="_arduino_giga_lvgl_display_8ino_source.html">ArduinoGigaLvglDisplay.ino</a>.</p>
 
 </div>
 </div>
@@ -828,7 +849,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_arduino_giga_lvgl_display_8ino_source.html#l00104">104</a> of file <a class="el" href="_arduino_giga_lvgl_display_8ino_source.html">ArduinoGigaLvglDisplay.ino</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_arduino_giga_lvgl_display_8ino_source.html#l00047">47</a> of file <a class="el" href="_arduino_giga_lvgl_display_8ino_source.html">ArduinoGigaLvglDisplay.ino</a>.</p>
 
 </div>
 </div>
@@ -844,43 +865,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_arduino_giga_lvgl_display_8ino_source.html#l00097">97</a> of file <a class="el" href="_arduino_giga_lvgl_display_8ino_source.html">ArduinoGigaLvglDisplay.ino</a>.</p>
-
-</div>
-</div>
-<a id="a029d685f4cb2412bb10f78d34254bd9d" name="a029d685f4cb2412bb10f78d34254bd9d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a029d685f4cb2412bb10f78d34254bd9d">&#9670;&#160;</a></span>program</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">std::vector&lt;const char *&gt; program</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Initialize program vector. </p>
-
-<p class="definition">Definition at line <a class="el" href="_arduino_giga_lvgl_display_8ino_source.html#l00114">114</a> of file <a class="el" href="_arduino_giga_lvgl_display_8ino_source.html">ArduinoGigaLvglDisplay.ino</a>.</p>
-
-</div>
-</div>
-<a id="a6ab2f42db29199d62773bffd8ea4e25e" name="a6ab2f42db29199d62773bffd8ea4e25e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6ab2f42db29199d62773bffd8ea4e25e">&#9670;&#160;</a></span>screen_buttons</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">lv_obj_t* screen_buttons</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Screen object for buttons. </p>
-
-<p class="definition">Definition at line <a class="el" href="_arduino_giga_lvgl_display_8ino_source.html#l00074">74</a> of file <a class="el" href="_arduino_giga_lvgl_display_8ino_source.html">ArduinoGigaLvglDisplay.ino</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_arduino_giga_lvgl_display_8ino_source.html#l00040">40</a> of file <a class="el" href="_arduino_giga_lvgl_display_8ino_source.html">ArduinoGigaLvglDisplay.ino</a>.</p>
 
 </div>
 </div>
