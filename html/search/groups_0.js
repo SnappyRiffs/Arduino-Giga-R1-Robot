@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['control_20pin_20definitions_0',['Motor control pin definitions',['../group___motor___pins.html',1,'']]]
+  ['all_20the_20imports_20needed_0',['All the imports needed',['../group___imports.html',1,'']]]
 ];

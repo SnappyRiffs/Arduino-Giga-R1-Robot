@@ -1,5 +1,6 @@
 var searchData=
 [
-  ['rl_5fmove_0',['RL_move',['../_arduino_giga_lvgl_display_8ino.html#ac5e4ea79ee09f85143f444ee9d22cea6',1,'ArduinoGigaLvglDisplay.ino']]],
-  ['rr_5fmove_1',['RR_move',['../_arduino_giga_lvgl_display_8ino.html#a72d3ab08a583fa7cbdf7e3db1cb9ee5f',1,'ArduinoGigaLvglDisplay.ino']]]
+  ['other_5fconstants_0',['other_constants',['../classother__constants.html',1,'other_constants'],['../classother__constants.html#af6f2024700208601083c22c1c08476ed',1,'other_constants::other_constants()']]],
+  ['other_5fconstants_2ecpp_1',['other_constants.cpp',['../other__constants_8cpp.html',1,'']]],
+  ['other_5fconstants_2eh_2',['other_constants.h',['../other__constants_8h.html',1,'']]]
 ];

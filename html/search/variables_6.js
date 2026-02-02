@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['screen_5fbuttons_0',['screen_buttons',['../_arduino_giga_lvgl_display_8ino.html#a6ab2f42db29199d62773bffd8ea4e25e',1,'ArduinoGigaLvglDisplay.ino']]]
+  ['touchdetector_0',['TouchDetector',['../class_arduino__constants.html#a3159622c676cfc976b52891ce9bb9025',1,'Arduino_constants']]]
 ];

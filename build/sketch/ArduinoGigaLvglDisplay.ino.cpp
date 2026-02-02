@@ -5,14 +5,19 @@
  * @author Jadon Jung (jadonjung3@gmail.com)
  * @brief Arduino Giga LVGL Display For Robot Car
  * @version 1.0
- * @date 2025-11-30
+ * @date 2026-01-02
  *
- * @copyright Copyright (c) 2025
+ * @copyright Copyright (c) 2026
  *
  */
 
-#include <Arduino_GigaDisplayTouch.h>
 
+/**
+ * @defgroup Imports All the imports needed
+ * @brief Includes all necessary libraries and headers for LVGL and Arduino functionality.
+ *
+ */
+#include <Arduino_GigaDisplayTouch.h>
 // #include <lv_api_map_v8.h>
 #include <lv_api_map_v9_0.h>
 #include <lv_api_map_v9_1.h>
@@ -25,73 +30,15 @@
 #include <lvgl.h>
 
 #include <Arduino_constants.h>
+#include <motor_constants.h>
+#include <msg_constants.h>
+#include <other_constants.h>
 
 #include "lvgl.h"
 #include "Arduino_GigaDisplayTouch.h"
 #include "Arduino_H7_Video.h"
 #include <vector>
-
-/**
- * @defgroup Display_Group Display-related objects
- * @brief Objects related to the display and touch detection
- * @{
- */
-
-/**
- * @brief Create an instance of Arduino_H7_Video configured for
- *  an 800x480 resolution using the Giga Display Shield.
- */
-Arduino_H7_Video Display(800, 480, GigaDisplayShield);
-
-/**
- * @brief Create global touch detector object.
- */
-Arduino_GigaDisplayTouch TouchDetector;
-/** @} */ // end of Display_Group
-
-/**
- * @defgroup Msg_Group Message-related variables
- * @brief Variables related to message display
- * @{
- */
-
-/**
- * @brief Message label
- */
-lv_obj_t *msg_label = NULL;
-
-/**
- * @brief Message start time (always 0)
- */
-unsigned long msg_start_time = 0;
-
-/**
- * @brief Message duration (in milliseconds)
- */
-const unsigned long msg_duration = 1500;
-/** @} */ // end of Msg_Group
-
-/**
- * @brief Screen object for buttons
- *
- */
-lv_obj_t *screen_buttons;
-
-/**
- * @defgroup Motor_Variables Motor control variables
- * @brief Variables related to motor control
- * @{
- */
-/**
- * @brief Motor speed variable (0-255)
- */
-int motor_speed;
-
-/**
- * @brief Motor direction variable (1 for Forward, -1 for Reverse)
- */
-int motor_direction;
-/** @} */ // end of Motor_Variables
+/** @} */ // end of Imports
 
 /**
  * @defgroup Motor_Pins Motor control pin definitions
@@ -113,12 +60,6 @@ const int IN1_A = 3;
 const int ENA_A = 2;
 /** @} */ // end of Motor_Pins
 
-/**
- * @brief Initialize program vector
- * Stores the sequence of movement commands
- */
-std::vector<const char *> program;
-
 // ===== Shared label + vector logic =====
 /**
  * @brief Applies the selected movement mode and direction.
@@ -128,33 +69,6 @@ std::vector<const char *> program;
  * @param mode_name mode of movement
  * @param direction direction of movement
  */
-#line 129 "C:\\Users\\Snapp\\OneDrive\\Arduino\\Projects\\ArduinoGigaLvglDisplay\\ArduinoGigaLvglDisplay.ino"
-static void apply_mode(const char *mode_name, const char *direction);
-#line 167 "C:\\Users\\Snapp\\OneDrive\\Arduino\\Projects\\ArduinoGigaLvglDisplay\\ArduinoGigaLvglDisplay.ino"
-static void btn_Run_Program_event_cb(lv_event_t *e);
-#line 373 "C:\\Users\\Snapp\\OneDrive\\Arduino\\Projects\\ArduinoGigaLvglDisplay\\ArduinoGigaLvglDisplay.ino"
-void set_btnm_bg_colors(lv_obj_t *btnm, uint32_t normal, uint32_t pressed);
-#line 387 "C:\\Users\\Snapp\\OneDrive\\Arduino\\Projects\\ArduinoGigaLvglDisplay\\ArduinoGigaLvglDisplay.ino"
-void create_main_button_matrix(lv_obj_t *screen_buttons);
-#line 409 "C:\\Users\\Snapp\\OneDrive\\Arduino\\Projects\\ArduinoGigaLvglDisplay\\ArduinoGigaLvglDisplay.ino"
-void create_test_button_matrix(lv_obj_t *screen_buttons);
-#line 430 "C:\\Users\\Snapp\\OneDrive\\Arduino\\Projects\\ArduinoGigaLvglDisplay\\ArduinoGigaLvglDisplay.ino"
-void create_speed_sliders(lv_obj_t *parent);
-#line 475 "C:\\Users\\Snapp\\OneDrive\\Arduino\\Projects\\ArduinoGigaLvglDisplay\\ArduinoGigaLvglDisplay.ino"
-void create_ui();
-#line 505 "C:\\Users\\Snapp\\OneDrive\\Arduino\\Projects\\ArduinoGigaLvglDisplay\\ArduinoGigaLvglDisplay.ino"
-void FR_move(int speed);
-#line 526 "C:\\Users\\Snapp\\OneDrive\\Arduino\\Projects\\ArduinoGigaLvglDisplay\\ArduinoGigaLvglDisplay.ino"
-void FL_move(int speed);
-#line 547 "C:\\Users\\Snapp\\OneDrive\\Arduino\\Projects\\ArduinoGigaLvglDisplay\\ArduinoGigaLvglDisplay.ino"
-void RR_move(int speed);
-#line 568 "C:\\Users\\Snapp\\OneDrive\\Arduino\\Projects\\ArduinoGigaLvglDisplay\\ArduinoGigaLvglDisplay.ino"
-void RL_move(int speed);
-#line 585 "C:\\Users\\Snapp\\OneDrive\\Arduino\\Projects\\ArduinoGigaLvglDisplay\\ArduinoGigaLvglDisplay.ino"
-void setup();
-#line 597 "C:\\Users\\Snapp\\OneDrive\\Arduino\\Projects\\ArduinoGigaLvglDisplay\\ArduinoGigaLvglDisplay.ino"
-void loop();
-#line 129 "C:\\Users\\Snapp\\OneDrive\\Arduino\\Projects\\ArduinoGigaLvglDisplay\\ArduinoGigaLvglDisplay.ino"
 static void apply_mode(const char *mode_name, const char *direction)
 {
   if (msg_label != NULL)
@@ -352,8 +266,8 @@ static void toggle_fwdrev_cb(lv_event_t *e)
   {
     lv_label_set_text(label, "Rev");
     motor_direction = 1;
-  }  strcpy
-  else // If txt is "Rev", change to "Fwd" and assign motor_direction -1
+  }
+  strcpy else // If txt is "Rev", change to "Fwd" and assign motor_direction -1
   {
     lv_label_set_text(label, "Fwd");
     motor_direction = -1;
@@ -451,78 +365,76 @@ void create_test_button_matrix(lv_obj_t *screen_buttons)
 
 /**
  * @brief Create a speed sliders object
- * 
+ *
  * @param parent parent screen object
  * Creates 4 sliders for FR, FL, RR, RL with labels and value displays
  */
 // ===== Speed Sliders =====
 void create_speed_sliders(lv_obj_t *parent)
 {
-    const char *labels[] = {"FR", "FL", "RR", "RL"};
-    int y_positions[] = {20, 60, 100, 140};
+  const char *labels[] = {"FR", "FL", "RR", "RL"};
+  int y_positions[] = {20, 60, 100, 140};
 
-    for (int i = 0; i < 4; i++)
-    {
-        // Create label
-        lv_obj_t *label = lv_label_create(parent);
-        lv_label_set_text(label, labels[i]);
-        lv_obj_align(label, LV_ALIGN_TOP_RIGHT, -230, y_positions[i]);
+  for (int i = 0; i < 4; i++)
+  {
+    // Create label
+    lv_obj_t *label = lv_label_create(parent);
+    lv_label_set_text(label, labels[i]);
+    lv_obj_align(label, LV_ALIGN_TOP_RIGHT, -230, y_positions[i]);
 
-        // Create slider
-        lv_obj_t *slider = lv_slider_create(parent);
-        lv_slider_set_range(slider, 0, 255);
-        lv_obj_set_size(slider, 150, 20);
-        lv_obj_align_to(slider, label, LV_ALIGN_OUT_RIGHT_MID, 15, 0);
+    // Create slider
+    lv_obj_t *slider = lv_slider_create(parent);
+    lv_slider_set_range(slider, 0, 255);
+    lv_obj_set_size(slider, 150, 20);
+    lv_obj_align_to(slider, label, LV_ALIGN_OUT_RIGHT_MID, 15, 0);
 
-        // Create value label
-        lv_obj_t *value_label = lv_label_create(parent);
-        char buf[4];
-        snprintf(buf, sizeof(buf), "%d", lv_slider_get_value(slider));
-        lv_label_set_text(value_label, buf);
-        lv_obj_align_to(value_label, slider, LV_ALIGN_OUT_RIGHT_MID, 15, 0);
+    // Create value label
+    lv_obj_t *value_label = lv_label_create(parent);
+    char buf[4];
+    snprintf(buf, sizeof(buf), "%d", lv_slider_get_value(slider));
+    lv_label_set_text(value_label, buf);
+    lv_obj_align_to(value_label, slider, LV_ALIGN_OUT_RIGHT_MID, 15, 0);
 
-        // Add event callback that updates the value label
-        lv_obj_add_event_cb(
-            slider, [](lv_event_t *e)
-            {
+    // Add event callback that updates the value label
+    lv_obj_add_event_cb(
+        slider, [](lv_event_t *e)
+        {
                 lv_obj_t* s = (lv_obj_t*)lv_event_get_target(e);
                 lv_obj_t* val_lbl = (lv_obj_t*)lv_event_get_user_data(e);
                 char buf[4]; // Buffer to hold the string representation of the slider value (3 digits + null terminator)
                 snprintf(buf, sizeof(buf), "%d", lv_slider_get_value(s));
-                lv_label_set_text(val_lbl, buf); 
-            },
-            LV_EVENT_VALUE_CHANGED, value_label);
+                lv_label_set_text(val_lbl, buf); },
+        LV_EVENT_VALUE_CHANGED, value_label);
 
-        // Add slider event callback to update speed
-        lv_obj_add_event_cb(slider, slider_event_cb, LV_EVENT_VALUE_CHANGED, (void *)labels[i]);
-    }
+    // Add slider event callback to update speed
+    lv_obj_add_event_cb(slider, slider_event_cb, LV_EVENT_VALUE_CHANGED, (void *)labels[i]);
+  }
 }
 /**
  * @brief Create the main UI
- * 
+ *
  */
 void create_ui()
 {
-    screen_buttons = lv_obj_create(NULL);
-    create_main_button_matrix(screen_buttons);
-    create_test_button_matrix(screen_buttons);
+  screen_buttons = lv_obj_create(NULL);
+  create_main_button_matrix(screen_buttons);
+  create_test_button_matrix(screen_buttons);
 
-    // Call the new function to create speed sliders
-    create_speed_sliders(screen_buttons);
+  // Call the new function to create speed sliders
+  create_speed_sliders(screen_buttons);
 
-    // ===== Fwd/Rev Toggle Button =====
-    lv_obj_t *toggle_FwdRev = lv_btn_create(screen_buttons);
-    lv_obj_set_size(toggle_FwdRev, 80, 40);
-    lv_obj_align(toggle_FwdRev, LV_ALIGN_TOP_RIGHT, -20, 180);
+  // ===== Fwd/Rev Toggle Button =====
+  lv_obj_t *toggle_FwdRev = lv_btn_create(screen_buttons);
+  lv_obj_set_size(toggle_FwdRev, 80, 40);
+  lv_obj_align(toggle_FwdRev, LV_ALIGN_TOP_RIGHT, -20, 180);
 
-    lv_obj_t *toggle_label = lv_label_create(toggle_FwdRev);
-    lv_label_set_text(toggle_label, "Fwd");
-    lv_obj_center(toggle_label);
+  lv_obj_t *toggle_label = lv_label_create(toggle_FwdRev);
+  lv_label_set_text(toggle_label, "Fwd");
+  lv_obj_center(toggle_label);
 
-    // Set direction
-    lv_obj_add_event_cb(toggle_FwdRev, toggle_fwdrev_cb, LV_EVENT_CLICKED, NULL);
+  // Set direction
+  lv_obj_add_event_cb(toggle_FwdRev, toggle_fwdrev_cb, LV_EVENT_CLICKED, NULL);
 }
-
 
 // ===== test movement functions =====
 

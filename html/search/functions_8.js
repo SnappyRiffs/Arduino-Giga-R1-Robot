@@ -1,5 +1,6 @@
 var searchData=
 [
-  ['test_5fbtnm_5fevent_5fcb_0',['test_btnm_event_cb',['../_arduino_giga_lvgl_display_8ino.html#a387364b391da0c6e0e19cbdddd28b77a',1,'ArduinoGigaLvglDisplay.ino']]],
-  ['toggle_5ffwdrev_5fcb_1',['toggle_fwdrev_cb',['../_arduino_giga_lvgl_display_8ino.html#a5c854330b94e76f43e26164660df409c',1,'ArduinoGigaLvglDisplay.ino']]]
+  ['set_5fbtnm_5fbg_5fcolors_0',['set_btnm_bg_colors',['../_arduino_giga_lvgl_display_8ino.html#a6fbd991f948fc782ccc13e510b824d91',1,'ArduinoGigaLvglDisplay.ino']]],
+  ['setup_1',['setup',['../_arduino_giga_lvgl_display_8ino.html#a4fc01d736fe50cf5b977f755b675f11d',1,'ArduinoGigaLvglDisplay.ino']]],
+  ['slider_5fevent_5fcb_2',['slider_event_cb',['../_arduino_giga_lvgl_display_8ino.html#accf9c682319e11f61db68997b6938fdc',1,'ArduinoGigaLvglDisplay.ino']]]
 ];

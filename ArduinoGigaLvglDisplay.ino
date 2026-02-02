@@ -3,14 +3,19 @@
  * @author Jadon Jung (jadonjung3@gmail.com)
  * @brief Arduino Giga LVGL Display For Robot Car
  * @version 1.0
- * @date 2025-11-30
+ * @date 2026-01-02
  *
  * @copyright Copyright (c) 2026
  *
  */
 
-#include <Arduino_GigaDisplayTouch.h>
 
+/**
+ * @defgroup Imports All the imports needed
+ * @brief Includes all necessary libraries and headers for LVGL and Arduino functionality.
+ *
+ */
+#include <Arduino_GigaDisplayTouch.h>
 // #include <lv_api_map_v8.h>
 #include <lv_api_map_v9_0.h>
 #include <lv_api_map_v9_1.h>
@@ -31,6 +36,8 @@
 #include "Arduino_GigaDisplayTouch.h"
 #include "Arduino_H7_Video.h"
 #include <vector>
+/** @} */ // end of Imports
+
 /**
  * @defgroup Motor_Pins Motor control pin definitions
  * @brief Initialize motor control pins

@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['related_20objects_0',['Display-related objects',['../group___display___group.html',1,'']]],
-  ['related_20variables_1',['Message-related variables',['../group___msg___group.html',1,'']]]
+  ['motor_20control_20pin_20definitions_0',['Motor control pin definitions',['../group___motor___pins.html',1,'']]]
 ];

@@ -16,6 +16,7 @@
                 "C:\\Users\\Snapp\\Documents\\Arduino\\libraries\\Arduino_GigaDisplayTouch\\src",
                 "C:\\Users\\Snapp\\AppData\\Local\\Arduino15\\packages\\arduino\\hardware\\mbed_giga\\4.4.1\\libraries\\Wire",
                 "C:\\Users\\Snapp\\Documents\\Arduino\\libraries\\lvgl\\src",
+                "C:\\Users\\Snapp\\Documents\\Arduino\\libraries\\Arduino_robot_project_library\\src",
                 "C:\\Users\\Snapp\\AppData\\Local\\Arduino15\\packages\\arduino\\hardware\\mbed_giga\\4.4.1\\libraries\\Arduino_H7_Video\\src",
                 "C:\\Users\\Snapp\\AppData\\Local\\Arduino15\\packages\\arduino\\hardware\\mbed_giga\\4.4.1\\libraries\\Portenta_SDRAM\\src",
                 "C:\\Users\\Snapp\\AppData\\Local\\Arduino15\\packages\\arduino\\hardware\\mbed_giga\\4.4.1\\libraries\\ea_malloc",
@@ -26,8 +27,7 @@
                 "c:\\users\\snapp\\appdata\\local\\arduino15\\packages\\arduino\\tools\\arm-none-eabi-gcc\\7-2017q4\\arm-none-eabi\\include\\c++\\7.2.1\\backward",
                 "c:\\users\\snapp\\appdata\\local\\arduino15\\packages\\arduino\\tools\\arm-none-eabi-gcc\\7-2017q4\\lib\\gcc\\arm-none-eabi\\7.2.1\\include",
                 "c:\\users\\snapp\\appdata\\local\\arduino15\\packages\\arduino\\tools\\arm-none-eabi-gcc\\7-2017q4\\lib\\gcc\\arm-none-eabi\\7.2.1\\include-fixed",
-                "c:\\users\\snapp\\appdata\\local\\arduino15\\packages\\arduino\\tools\\arm-none-eabi-gcc\\7-2017q4\\arm-none-eabi\\include",
-                "c:\\Users\\Snapp\\Documents\\Arduino\\libraries\\Arduino_robot_project_library\\src"
+                "c:\\users\\snapp\\appdata\\local\\arduino15\\packages\\arduino\\tools\\arm-none-eabi-gcc\\7-2017q4\\arm-none-eabi\\include"
             ],
             "forcedInclude": [
                 "C:\\Users\\Snapp\\AppData\\Local\\Arduino15\\packages\\arduino\\hardware\\mbed_giga\\4.4.1\\cores\\arduino\\Arduino.h"
