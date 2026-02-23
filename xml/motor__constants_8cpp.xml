@@ -1,0 +1,34 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.15.0" xml:lang="en-US">
+  <compounddef id="motor__constants_8cpp" kind="file" language="C++">
+    <compoundname>motor_constants.cpp</compoundname>
+    <includes refid="motor__constants_8h" local="yes">motor_constants.h</includes>
+    <incdepgraph>
+      <node id="1">
+        <label>C:/Users/Snapp/OneDrive/Arduino/libraries/Arduino_robot_project_library/src/motor_constants.cpp</label>
+        <link refid="motor__constants_8cpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>motor_constants.h</label>
+        <link refid="motor__constants_8h"/>
+      </node>
+    </incdepgraph>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#include<sp/>&quot;<ref refid="motor__constants_8h" kindref="compound">motor_constants.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Constructor</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4" refid="classmotor__constants_1ace352cb444a09a5e58ffffdb933bd945" refkind="member"><highlight class="normal"><ref refid="classmotor__constants_1ace352cb444a09a5e58ffffdb933bd945" kindref="member">motor_constants::motor_constants</ref>()</highlight></codeline>
+<codeline lineno="5"><highlight class="normal"><sp/><sp/><sp/><sp/>:<sp/><ref refid="classmotor__constants_1af83643f00e48ca7329566e17246a2c83" kindref="member">motor_speed</ref>(0),</highlight></codeline>
+<codeline lineno="6"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classmotor__constants_1a55499ee0a25a1f7a3024cea72541543a" kindref="member">motor_direction</ref>(0)</highlight></codeline>
+<codeline lineno="7"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="8"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="C:/Users/Snapp/OneDrive/Arduino/libraries/Arduino_robot_project_library/src/motor_constants.cpp"/>
+  </compounddef>
+</doxygen>

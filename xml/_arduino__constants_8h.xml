@@ -1,0 +1,68 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.15.0" xml:lang="en-US">
+  <compounddef id="_arduino__constants_8h" kind="file" language="C++">
+    <compoundname>Arduino_constants.h</compoundname>
+    <includes local="yes">Arduino_GigaDisplayTouch.h</includes>
+    <includes local="yes">Arduino_H7_Video.h</includes>
+    <includedby refid="_arduino_giga_lvgl_display_8ino" local="no">ArduinoGigaLvglDisplay.ino</includedby>
+    <includedby refid="_arduino__constants_8cpp" local="yes">C:/Users/Snapp/OneDrive/Arduino/libraries/Arduino_robot_project_library/src/Arduino_constants.cpp</includedby>
+    <incdepgraph>
+      <node id="2">
+        <label>Arduino_GigaDisplayTouch.h</label>
+      </node>
+      <node id="3">
+        <label>Arduino_H7_Video.h</label>
+      </node>
+      <node id="1">
+        <label>C:/Users/Snapp/OneDrive/Arduino/libraries/Arduino_robot_project_library/src/Arduino_constants.h</label>
+        <link refid="_arduino__constants_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="2">
+        <label>ArduinoGigaLvglDisplay.ino</label>
+        <link refid="_arduino_giga_lvgl_display_8ino"/>
+      </node>
+      <node id="3">
+        <label>C:/Users/Snapp/OneDrive/Arduino/libraries/Arduino_robot_project_library/src/Arduino_constants.cpp</label>
+        <link refid="_arduino__constants_8cpp"/>
+      </node>
+      <node id="1">
+        <label>C:/Users/Snapp/OneDrive/Arduino/libraries/Arduino_robot_project_library/src/Arduino_constants.h</label>
+        <link refid="_arduino__constants_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="class_arduino__constants" prot="public">Arduino_constants</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>ARDUINO_CONSTANTS_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ARDUINO_CONSTANTS_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;Arduino_GigaDisplayTouch.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;Arduino_H7_Video.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight></codeline>
+<codeline lineno="7" refid="class_arduino__constants" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_arduino__constants_1a0e89462bf0c8d4e3f8666503eba816e8" kindref="member">Arduino_constants</ref><sp/>{</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="9" refid="class_arduino__constants_1ae43c82f3708c54a2bf430275a03df168" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>Arduino_H7_Video<sp/><ref refid="class_arduino__constants_1ae43c82f3708c54a2bf430275a03df168" kindref="member">Display</ref>;</highlight></codeline>
+<codeline lineno="10" refid="class_arduino__constants_1a3159622c676cfc976b52891ce9bb9025" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>Arduino_GigaDisplayTouch<sp/><ref refid="class_arduino__constants_1a3159622c676cfc976b52891ce9bb9025" kindref="member">TouchDetector</ref>;</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Constructor</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_arduino__constants_1a0e89462bf0c8d4e3f8666503eba816e8" kindref="member">Arduino_constants</ref>();</highlight></codeline>
+<codeline lineno="14"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="C:/Users/Snapp/OneDrive/Arduino/libraries/Arduino_robot_project_library/src/Arduino_constants.h"/>
+  </compounddef>
+</doxygen>

@@ -1,7 +1,8 @@
 var searchData=
 [
-  ['ena_5fa_0',['ENA_A',['../_arduino_giga_lvgl_display_8ino.html#a448921cced6d8ecae8e0ea9dc739dcea',1,'ArduinoGigaLvglDisplay.ino']]],
-  ['ena_5fb_1',['ENA_B',['../_arduino_giga_lvgl_display_8ino.html#a51076b14694e306a6194047c53593a31',1,'ArduinoGigaLvglDisplay.ino']]],
-  ['enb_5fa_2',['ENB_A',['../_arduino_giga_lvgl_display_8ino.html#af062d7609355335ffce63fa23bfed5f7',1,'ArduinoGigaLvglDisplay.ino']]],
-  ['enb_5fb_3',['ENB_B',['../_arduino_giga_lvgl_display_8ino.html#a4763be0e77388074ff071965028a76ba',1,'ArduinoGigaLvglDisplay.ino']]]
+  ['motor_5fdirection_0',['motor_direction',['../classmotor__constants.html#a55499ee0a25a1f7a3024cea72541543a',1,'motor_constants']]],
+  ['motor_5fspeed_1',['motor_speed',['../classmotor__constants.html#af83643f00e48ca7329566e17246a2c83',1,'motor_constants']]],
+  ['msg_5fduration_2',['msg_duration',['../classmsg__constants.html#a906d9eb01bc55cbf7c1dd4d0f8dbfde0',1,'msg_constants']]],
+  ['msg_5flabel_3',['msg_label',['../classmsg__constants.html#a2a1a0fb8a3fbdfa803e8a9c87bde21a3',1,'msg_constants']]],
+  ['msg_5fstart_5ftime_4',['msg_start_time',['../classmsg__constants.html#ac2513d9d541bdbe4554122d496c4bc9d',1,'msg_constants']]]
 ];

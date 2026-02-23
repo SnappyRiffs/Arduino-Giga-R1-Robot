@@ -3,12 +3,11 @@
  * @author Jadon Jung (jadonjung3@gmail.com)
  * @brief Arduino Giga LVGL Display For Robot Car
  * @version 1.0
- * @date 2026-01-02
+ * @date 2026-02-22
  *
  * @copyright Copyright (c) 2026
- *
+ * 
  */
-
 
 /**
  * @defgroup Imports All the imports needed
@@ -43,19 +42,22 @@
  * @brief Initialize motor control pins
  *
  */
-const int ENB_B = 13;
-const int IN4_B = 12;
-const int IN3_B = 11;
-const int IN2_B = 10;
-const int IN1_B = 9;
-const int ENA_B = 8;
+enum MotorPins
+{
+  ENB_B = 13,
+  IN4_B = 12,
+  IN3_B = 11,
+  IN2_B = 10,
+  IN1_B = 9,
+  ENA_B = 8,
 
-const int ENB_A = 7;
-const int IN4_A = 6;
-const int IN3_A = 5;
-const int IN2_A = 4;
-const int IN1_A = 3;
-const int ENA_A = 2;
+  ENB_A = 7,
+  IN4_A = 6,
+  IN3_A = 5,
+  IN2_A = 4,
+  IN1_A = 3,
+  ENA_A = 2
+};
 /** @} */ // end of Motor_Pins
 
 // ===== Shared label + vector logic =====
@@ -63,29 +65,28 @@ const int ENA_A = 2;
  * @brief Applies the selected movement mode and direction.
  * This function creates a temporary message label on the screen
  * indicating the applied mode and direction. It also appends the
- * direction to the global program vector for later execution.
+ * direction to the other_constants::program vector for later execution.
  * @param mode_name mode of movement
  * @param direction direction of movement
  */
 static void apply_mode(const char *mode_name, const char *direction)
 {
-  if (msg_label != NULL)
+  if (msg_constants::msg_label != NULL)
   {
-    lv_obj_del(msg_label);
-    msg_label = NULL;
+    lv_obj_del(msg_constants::msg_label);
+    msg_constants::msg_label = NULL;
   }
 
-  msg_label = lv_label_create(lv_scr_act());
-
+  msg_constants::msg_label = lv_label_create(lv_scr_act());
   char buffer[64];
   snprintf(buffer, sizeof(buffer), "Applied %s Mode: %s.", mode_name, direction);
-  lv_label_set_text(msg_label, buffer);
+  lv_label_set_text(msg_constants::msg_label, buffer);
 
-  program.push_back(direction);
+  other_constants::program.push_back(direction);
 
-  lv_obj_set_style_text_font(msg_label, &lv_font_montserrat_24, 0);
-  lv_obj_align(msg_label, LV_ALIGN_BOTTOM_MID, 0, -20);
-  msg_start_time = millis();
+  lv_obj_set_style_text_font(msg_constants::msg_label, &lv_font_montserrat_24, 0);
+  lv_obj_align(msg_constants::msg_label, LV_ALIGN_BOTTOM_MID, 0, -20);
+  msg_constants::msg_start_time = millis();
 }
 
 // ===== Run Program (special) =====
@@ -107,28 +108,27 @@ static void apply_mode(const char *mode_name, const char *direction)
  */
 static void btn_Run_Program_event_cb(lv_event_t *e)
 {
-  if (msg_label != NULL)
+  if (msg_constants::msg_label != NULL)
   {
-    lv_obj_del(msg_label);
-    msg_label = NULL;
+    lv_obj_del(msg_constants::msg_label);
+    msg_constants::msg_label = NULL;
   }
 
-  msg_label = lv_label_create(lv_scr_act());
-  lv_label_set_text(msg_label, "Applied program!");
-
+  msg_constants::msg_label = lv_label_create(lv_scr_act());
+  lv_label_set_text(msg_constants::msg_label, "Applied program!");
   // Print program to Serial Monitor (for debugging)
-  for (auto p : program)
+  for (auto p : other_constants::program)
   {
     Serial.println(p);
   }
   Serial.println();
 
   delay(500);
-  program.clear();
+  other_constants::program.clear();
 
-  lv_obj_set_style_text_font(msg_label, &lv_font_montserrat_24, 0);
-  lv_obj_align(msg_label, LV_ALIGN_BOTTOM_MID, 0, -20);
-  msg_start_time = millis();
+  lv_obj_set_style_text_font(msg_constants::msg_label, &lv_font_montserrat_24, 0);
+  lv_obj_align(msg_constants::msg_label, LV_ALIGN_BOTTOM_MID, 0, -20);
+  msg_constants::msg_start_time = millis();
 }
 
 // ======== CALLBACK DECLARATIONS ========
@@ -156,37 +156,37 @@ static void toggle_fwdrev_cb(lv_event_t *e);
 static void main_btnm_event_cb(lv_event_t *e)
 {
   lv_obj_t *btnm = (lv_obj_t *)lv_event_get_target(e);
-  const char *txt = lv_btnmatrix_get_btn_text(
+  const char *dir_txt = lv_btnmatrix_get_btn_text(
       btnm, lv_btnmatrix_get_selected_btn(btnm));
 
-  if (txt == NULL)
+  if (dir_txt == NULL)
     return;
 
-  if (strcmp(txt, "Forward") == 0 || strcmp(txt, "Backward") == 0)
+  if (strcmp(dir_txt, "Forward") == 0 || strcmp(dir_txt, "Backward") == 0)
   {
-    apply_mode("Straight", txt);
+    apply_mode("Straight", dir_txt);
   }
-  else if (strcmp(txt, "Left") == 0 || strcmp(txt, "Right") == 0)
+  else if (strcmp(dir_txt, "Left") == 0 || strcmp(dir_txt, "Right") == 0)
   {
-    apply_mode("Sideways", txt);
+    apply_mode("Sideways", dir_txt);
   }
-  else if (strcmp(txt, "45") == 0 || strcmp(txt, "135") == 0 || strcmp(txt, "225") == 0 || strcmp(txt, "315") == 0)
+  else if (strcmp(dir_txt, "45") == 0 || strcmp(dir_txt, "135") == 0 || strcmp(dir_txt, "225") == 0 || strcmp(dir_txt, "315") == 0)
   {
-    apply_mode("Diagonal", txt);
+    apply_mode("Diagonal", dir_txt);
   }
-  else if (strcmp(txt, "Right Fwd") == 0 || strcmp(txt, "Right Bwd") == 0 || strcmp(txt, "Left Fwd") == 0 || strcmp(txt, "Left Bwd") == 0)
+  else if (strcmp(dir_txt, "Right Fwd") == 0 || strcmp(dir_txt, "Right Bwd") == 0 || strcmp(dir_txt, "Left Fwd") == 0 || strcmp(dir_txt, "Left Bwd") == 0)
   {
-    apply_mode("Pivot", txt);
+    apply_mode("Pivot", dir_txt);
   }
-  else if (strcmp(txt, "Front Right") == 0 || strcmp(txt, "Front Left") == 0 || strcmp(txt, "Rear Right") == 0 || strcmp(txt, "Rear Left") == 0)
+  else if (strcmp(dir_txt, "Front Right") == 0 || strcmp(dir_txt, "Front Left") == 0 || strcmp(dir_txt, "Rear Right") == 0 || strcmp(dir_txt, "Rear Left") == 0)
   {
-    apply_mode("Pivot Sideways", txt);
+    apply_mode("Pivot Sideways", dir_txt);
   }
-  else if (strcmp(txt, "CCW") == 0 || strcmp(txt, "CW") == 0)
+  else if (strcmp(dir_txt, "CCW") == 0 || strcmp(dir_txt, "CW") == 0)
   {
-    apply_mode("Rotate", txt);
+    apply_mode("Rotate", dir_txt);
   }
-  else if (strcmp(txt, "Prgm Car") == 0)
+  else if (strcmp(dir_txt, "Prgm Car") == 0)
   {
     btn_Run_Program_event_cb(e);
   }
@@ -216,22 +216,22 @@ static void test_btnm_event_cb(lv_event_t *e)
   if (strcmp(txt, "FL") == 0)
   {
     Serial.println("Front Left test Move");
-    FL_move(motor_speed * motor_direction);
+    FL_move(motor_constants::motor_speed * motor_constants::motor_direction);
   }
   else if (strcmp(txt, "FR") == 0)
   {
     Serial.println("Front Right test Move");
-    FR_move(motor_speed * motor_direction);
+    FR_move(motor_constants::motor_speed * motor_constants::motor_direction);
   }
   else if (strcmp(txt, "RL") == 0)
   {
     Serial.println("Rear Left test Move");
-    RL_move(motor_speed * motor_direction);
+    RL_move(motor_constants::motor_speed * motor_constants::motor_direction);
   }
   else if (strcmp(txt, "RR") == 0)
   {
     Serial.println("Rear Right test Move");
-    RR_move(motor_speed * motor_direction);
+    RR_move(motor_constants::motor_speed * motor_constants::motor_direction);
   }
 
   delay(500);
@@ -259,22 +259,22 @@ static void toggle_fwdrev_cb(lv_event_t *e)
   lv_obj_t *label = lv_obj_get_child(btn, 0);
 
   const char *txt = lv_label_get_text(label);
-
-  if (strcmp(txt, "Fwd") == 0) // If txt is "Fwd", change to "Rev" and assign motor_direction 1
+  // If txt is "Fwd", change to "Rev" and assign motor_direction 1 else change to "Fwd" and assign motor_direction -1
+  if (strcmp(txt, "Fwd") == 0)
   {
     lv_label_set_text(label, "Rev");
-    motor_direction = 1;
+    motor_constants::motor_direction = 1;
   }
-  strcpy else // If txt is "Rev", change to "Fwd" and assign motor_direction -1
+  else
   {
     lv_label_set_text(label, "Fwd");
-    motor_direction = -1;
+    motor_constants::motor_direction = -1;
   }
 
   Serial.print("Mode: ");
   Serial.println(lv_label_get_text(label));
   Serial.print("Direction set to ");
-  Serial.println(motor_direction);
+  Serial.println(motor_constants::motor_direction);
 }
 
 // ======== SLIDER CALLBACK ========
@@ -300,7 +300,7 @@ static void slider_event_cb(lv_event_t *e)
   const char *name = (const char *)lv_event_get_user_data(e);
   Serial.print(name);
   Serial.print(" speed set to ");
-  Serial.println(motor_speed);
+  Serial.println(motor_constants::motor_speed);
 }
 
 // ======== UI CREATION FUNCTION ========
@@ -414,15 +414,15 @@ void create_speed_sliders(lv_obj_t *parent)
  */
 void create_ui()
 {
-  screen_buttons = lv_obj_create(NULL);
-  create_main_button_matrix(screen_buttons);
-  create_test_button_matrix(screen_buttons);
+  other_constants::screen_buttons = lv_obj_create(NULL);
+  create_main_button_matrix(other_constants::screen_buttons);
+  create_test_button_matrix(other_constants::screen_buttons);
 
   // Call the new function to create speed sliders
-  create_speed_sliders(screen_buttons);
+  create_speed_sliders(other_constants::screen_buttons);
 
   // ===== Fwd/Rev Toggle Button =====
-  lv_obj_t *toggle_FwdRev = lv_btn_create(screen_buttons);
+  lv_obj_t *toggle_FwdRev = lv_btn_create(other_constants::screen_buttons);
   lv_obj_set_size(toggle_FwdRev, 80, 40);
   lv_obj_align(toggle_FwdRev, LV_ALIGN_TOP_RIGHT, -20, 180);
 
@@ -445,15 +445,15 @@ void FR_move(int speed)
 {
   if (speed >= 0)
   {
-    digitalWrite(IN1_B, HIGH);
-    digitalWrite(IN2_B, LOW);
-    analogWrite(ENA_B, speed);
+    digitalWrite(MotorPins::IN1_B, HIGH);
+    digitalWrite(MotorPins::IN2_B, LOW);
+    analogWrite(MotorPins::ENA_B, speed);
   }
   else
   {
-    digitalWrite(IN1_B, LOW);
-    digitalWrite(IN2_B, HIGH);
-    analogWrite(ENA_B, -speed);
+    digitalWrite(MotorPins::IN1_B, LOW);
+    digitalWrite(MotorPins::IN2_B, HIGH);
+    analogWrite(MotorPins::ENA_B, -speed);
   }
 }
 
@@ -466,15 +466,15 @@ void FL_move(int speed)
 {
   if (speed >= 0)
   {
-    digitalWrite(IN3_B, HIGH);
-    digitalWrite(IN4_B, LOW);
-    analogWrite(ENB_B, speed);
+    digitalWrite(MotorPins::IN3_B, HIGH);
+    digitalWrite(MotorPins::IN4_B, LOW);
+    analogWrite(MotorPins::ENB_B, speed);
   }
   else
   {
-    digitalWrite(IN3_B, LOW);
-    digitalWrite(IN4_B, HIGH);
-    analogWrite(ENB_B, -speed);
+    digitalWrite(MotorPins::IN3_B, LOW);
+    digitalWrite(MotorPins::IN4_B, HIGH);
+    analogWrite(MotorPins::ENB_B, -speed);
   }
 }
 
@@ -487,15 +487,15 @@ void RR_move(int speed)
 {
   if (speed >= 0)
   {
-    digitalWrite(IN1_A, HIGH);
-    digitalWrite(IN2_A, LOW);
-    analogWrite(ENA_A, speed);
+    digitalWrite(MotorPins::IN1_A, HIGH);
+    digitalWrite(MotorPins::IN2_A, LOW);
+    analogWrite(MotorPins::ENA_A, speed);
   }
   else
   {
-    digitalWrite(IN1_A, LOW);
-    digitalWrite(IN2_A, HIGH);
-    analogWrite(ENA_A, -speed);
+    digitalWrite(MotorPins::IN1_A, LOW);
+    digitalWrite(MotorPins::IN2_A, HIGH);
+    analogWrite(MotorPins::ENA_A, -speed);
   }
 }
 
@@ -508,15 +508,15 @@ void RL_move(int speed)
 {
   if (speed >= 0)
   {
-    digitalWrite(IN3_A, HIGH);
-    digitalWrite(IN4_A, LOW);
-    analogWrite(ENB_A, speed);
+    digitalWrite(MotorPins::IN3_A, HIGH);
+    digitalWrite(MotorPins::IN4_A, LOW);
+    analogWrite(MotorPins::ENB_A, speed);
   }
   else
   {
-    digitalWrite(IN3_A, LOW);
-    digitalWrite(IN4_A, HIGH);
-    analogWrite(ENB_A, -speed);
+    digitalWrite(MotorPins::IN3_A, LOW);
+    digitalWrite(MotorPins::IN4_A, HIGH);
+    analogWrite(MotorPins::ENB_A, -speed);
   }
 }
 
@@ -526,11 +526,11 @@ void setup()
   delay(3000);
   Serial.begin(115200);
 
-  Display.begin();
-  TouchDetector.begin();
+  Arduino_constants::Display.begin();
+  Arduino_constants::TouchDetector.begin();
 
   create_ui();
-  lv_scr_load(screen_buttons);
+  lv_scr_load(other_constants::screen_buttons);
 }
 
 void loop()

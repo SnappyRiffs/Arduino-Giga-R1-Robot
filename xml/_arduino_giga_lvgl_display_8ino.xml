@@ -1,0 +1,1156 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.15.0" xml:lang="en-US">
+  <compounddef id="_arduino_giga_lvgl_display_8ino" kind="file" language="C++">
+    <compoundname>ArduinoGigaLvglDisplay.ino</compoundname>
+    <includes local="no">Arduino_GigaDisplayTouch.h</includes>
+    <includes local="no">lv_api_map_v9_0.h</includes>
+    <includes local="no">lv_api_map_v9_1.h</includes>
+    <includes local="no">lv_api_map_v9_2.h</includes>
+    <includes local="no">lv_api_map_v9_3.h</includes>
+    <includes local="no">lv_conf_internal.h</includes>
+    <includes local="no">lv_conf_kconfig.h</includes>
+    <includes local="no">lv_init.h</includes>
+    <includes local="no">lvgl_private.h</includes>
+    <includes local="no">lvgl.h</includes>
+    <includes refid="_arduino__constants_8h" local="no">Arduino_constants.h</includes>
+    <includes refid="motor__constants_8h" local="no">motor_constants.h</includes>
+    <includes refid="msg__constants_8h" local="no">msg_constants.h</includes>
+    <includes refid="other__constants_8h" local="no">other_constants.h</includes>
+    <includes local="yes">Arduino_H7_Video.h</includes>
+    <includes local="no">vector</includes>
+    <incdepgraph>
+      <node id="2">
+        <label>Arduino_GigaDisplayTouch.h</label>
+      </node>
+      <node id="13">
+        <label>Arduino_H7_Video.h</label>
+      </node>
+      <node id="1">
+        <label>ArduinoGigaLvglDisplay.ino</label>
+        <link refid="_arduino_giga_lvgl_display_8ino"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+      </node>
+      <node id="12">
+        <label>Arduino_constants.h</label>
+        <link refid="_arduino__constants_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+      </node>
+      <node id="14">
+        <label>motor_constants.h</label>
+        <link refid="motor__constants_8h"/>
+      </node>
+      <node id="15">
+        <label>msg_constants.h</label>
+        <link refid="msg__constants_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+      </node>
+      <node id="16">
+        <label>other_constants.h</label>
+        <link refid="other__constants_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>lv_api_map_v9_0.h</label>
+      </node>
+      <node id="4">
+        <label>lv_api_map_v9_1.h</label>
+      </node>
+      <node id="5">
+        <label>lv_api_map_v9_2.h</label>
+      </node>
+      <node id="6">
+        <label>lv_api_map_v9_3.h</label>
+      </node>
+      <node id="7">
+        <label>lv_conf_internal.h</label>
+      </node>
+      <node id="8">
+        <label>lv_conf_kconfig.h</label>
+      </node>
+      <node id="9">
+        <label>lv_init.h</label>
+      </node>
+      <node id="11">
+        <label>lvgl.h</label>
+      </node>
+      <node id="10">
+        <label>lvgl_private.h</label>
+      </node>
+      <node id="17">
+        <label>vector</label>
+      </node>
+    </incdepgraph>
+    <sectiondef kind="enum">
+      <memberdef kind="enum" id="_arduino_giga_lvgl_display_8ino_1a09c202aa2681c1591f47ade0fd9f93be" prot="public" static="no" strong="no">
+        <type></type>
+        <name>MotorPins</name>
+        <enumvalue id="_arduino_giga_lvgl_display_8ino_1a09c202aa2681c1591f47ade0fd9f93beafac329d5db4efdbf0c8d2d7d3de466a9" prot="public">
+          <name>ENB_B</name>
+          <initializer>= 13</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_arduino_giga_lvgl_display_8ino_1a09c202aa2681c1591f47ade0fd9f93bea2047c5c4b4b18be0602eb80f9b4a1768" prot="public">
+          <name>IN4_B</name>
+          <initializer>= 12</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_arduino_giga_lvgl_display_8ino_1a09c202aa2681c1591f47ade0fd9f93bea6ed09eef66c4f29e12b322f4d83cae56" prot="public">
+          <name>IN3_B</name>
+          <initializer>= 11</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_arduino_giga_lvgl_display_8ino_1a09c202aa2681c1591f47ade0fd9f93bea859b5cc7d0a7874c0d8a05ddfe033866" prot="public">
+          <name>IN2_B</name>
+          <initializer>= 10</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_arduino_giga_lvgl_display_8ino_1a09c202aa2681c1591f47ade0fd9f93bea73a3f9b58bcbefe98e6d5cec2e9088a5" prot="public">
+          <name>IN1_B</name>
+          <initializer>= 9</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_arduino_giga_lvgl_display_8ino_1a09c202aa2681c1591f47ade0fd9f93bea4fd12e00eb66efa116b4e9769045508c" prot="public">
+          <name>ENA_B</name>
+          <initializer>= 8</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_arduino_giga_lvgl_display_8ino_1a09c202aa2681c1591f47ade0fd9f93beab601c6a9dbd4c1a3b70d8a84de3bd012" prot="public">
+          <name>ENB_A</name>
+          <initializer>= 7</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_arduino_giga_lvgl_display_8ino_1a09c202aa2681c1591f47ade0fd9f93bea93d7c651df7bde50e2382ad65e25c40a" prot="public">
+          <name>IN4_A</name>
+          <initializer>= 6</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_arduino_giga_lvgl_display_8ino_1a09c202aa2681c1591f47ade0fd9f93bea9d9477ff2adcb5d4e3b7f2912bc459db" prot="public">
+          <name>IN3_A</name>
+          <initializer>= 5</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_arduino_giga_lvgl_display_8ino_1a09c202aa2681c1591f47ade0fd9f93bea542f6a0db31278731d93bec3ed4151af" prot="public">
+          <name>IN2_A</name>
+          <initializer>= 4</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_arduino_giga_lvgl_display_8ino_1a09c202aa2681c1591f47ade0fd9f93bea115a61482486b39c89389f48bc9a36be" prot="public">
+          <name>IN1_A</name>
+          <initializer>= 3</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_arduino_giga_lvgl_display_8ino_1a09c202aa2681c1591f47ade0fd9f93bea8ca39e084c4680aee4c18e3094761422" prot="public">
+          <name>ENA_A</name>
+          <initializer>= 2</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ArduinoGigaLvglDisplay.ino" line="45" column="1" bodyfile="ArduinoGigaLvglDisplay.ino" bodystart="46" bodyend="60"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="func">
+      <memberdef kind="function" id="_arduino_giga_lvgl_display_8ino_1a0397ddbe4d2bddb9d77afbb47acf56f0" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>static void apply_mode</definition>
+        <argsstring>(const char *mode_name, const char *direction)</argsstring>
+        <name>apply_mode</name>
+        <param>
+          <type>const char *</type>
+          <declname>mode_name</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>direction</declname>
+        </param>
+        <briefdescription>
+<para>Applies the selected movement mode and direction. This function creates a temporary message label on the screen indicating the applied mode and direction. It also appends the direction to the <ref refid="classother__constants_1a522b12f820f2390f63de34235a38942e" kindref="member">other_constants::program</ref> vector for later execution. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>mode_name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>mode of movement </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>direction</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>direction of movement </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ArduinoGigaLvglDisplay.ino" line="72" column="13" bodyfile="ArduinoGigaLvglDisplay.ino" bodystart="72" bodyend="90"/>
+      </memberdef>
+      <memberdef kind="function" id="_arduino_giga_lvgl_display_8ino_1a599fa16066a270f3a22e7de32fbb250f" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>static void btn_Run_Program_event_cb</definition>
+        <argsstring>(lv_event_t *e)</argsstring>
+        <name>btn_Run_Program_event_cb</name>
+        <param>
+          <type>lv_event_t *</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+<para>Handles the &quot;Run Program&quot; button event. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This callback is triggered when the user presses the <bold>Prgm Car</bold> button in the button matrix. It displays a temporary &quot;Applied program!&quot; message on the screen, prints all stored program steps to the serial monitor, clears the program list, and records the timestamp so the message can be removed later.</para>
+<para>The function also deletes any previous message label before creating a new one.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>e</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to the LVGL event descriptor. Contains information about the event and the object that triggered it, although this callback does not use it directly. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ArduinoGigaLvglDisplay.ino" line="109" column="13" bodyfile="ArduinoGigaLvglDisplay.ino" bodystart="109" bodyend="132"/>
+      </memberdef>
+      <memberdef kind="function" id="_arduino_giga_lvgl_display_8ino_1a6b08dca515fd8dd9eaec4b80e83e7e6a" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>static void main_btnm_event_cb</definition>
+        <argsstring>(lv_event_t *e)</argsstring>
+        <name>main_btnm_event_cb</name>
+        <param>
+          <type>lv_event_t *</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+<para>Handles all main directional and mode selection button events. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This callback is triggered whenever a button in the primary button matrix is pressed. It reads the button&apos;s text label and maps it to a specific movement mode (Straight, Sideways, Diagonal, Pivot, Pivot Sideways, Rotate). The corresponding mode and direction string are then forwarded to <ref refid="_arduino_giga_lvgl_display_8ino_1a0397ddbe4d2bddb9d77afbb47acf56f0" kindref="member">apply_mode()</ref>.</para>
+<para>If the selected button is &quot;Prgm Car&quot;, this function instead triggers the special program execution callback <ref refid="_arduino_giga_lvgl_display_8ino_1a599fa16066a270f3a22e7de32fbb250f" kindref="member">btn_Run_Program_event_cb()</ref>.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>e</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to the LVGL event descriptor containing details about the button press event (e.g., target object). </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ArduinoGigaLvglDisplay.ino" line="156" column="13" bodyfile="ArduinoGigaLvglDisplay.ino" bodystart="156" bodyend="193" declfile="ArduinoGigaLvglDisplay.ino" declline="135" declcolumn="13"/>
+      </memberdef>
+      <memberdef kind="function" id="_arduino_giga_lvgl_display_8ino_1a387364b391da0c6e0e19cbdddd28b77a" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>static void test_btnm_event_cb</definition>
+        <argsstring>(lv_event_t *e)</argsstring>
+        <name>test_btnm_event_cb</name>
+        <param>
+          <type>lv_event_t *</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+<para>Handles individual test control button events. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Triggered when a test control button (FL, FR, RL, RR) is pressed. This callback identifies which test was selected and calls the appropriate test movement function using the current global speed and direction values.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>e</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to the LVGL event descriptor. Used to determine which button in the test control matrix was pressed. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ArduinoGigaLvglDisplay.ino" line="207" column="13" bodyfile="ArduinoGigaLvglDisplay.ino" bodystart="207" bodyend="238" declfile="ArduinoGigaLvglDisplay.ino" declline="136" declcolumn="13"/>
+      </memberdef>
+      <memberdef kind="function" id="_arduino_giga_lvgl_display_8ino_1accf9c682319e11f61db68997b6938fdc" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>static void slider_event_cb</definition>
+        <argsstring>(lv_event_t *e)</argsstring>
+        <name>slider_event_cb</name>
+        <param>
+          <type>lv_event_t *</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+<para>Updates the global speed variable when a slider is moved. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This callback is triggered whenever the user interacts with a speed slider. It reads the slider&apos;s current value and assigns it to the global speed variable.</para>
+<para>If user data is attached to the event (typically a string naming the slider), that label is printed to the serial monitor for clarity.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>e</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to the LVGL event descriptor. Used to access the slider object and optional user data. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ArduinoGigaLvglDisplay.ino" line="294" column="13" bodyfile="ArduinoGigaLvglDisplay.ino" bodystart="294" bodyend="304" declfile="ArduinoGigaLvglDisplay.ino" declline="137" declcolumn="13"/>
+      </memberdef>
+      <memberdef kind="function" id="_arduino_giga_lvgl_display_8ino_1a5c854330b94e76f43e26164660df409c" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>static void toggle_fwdrev_cb</definition>
+        <argsstring>(lv_event_t *e)</argsstring>
+        <name>toggle_fwdrev_cb</name>
+        <param>
+          <type>lv_event_t *</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+<para>Handles toggling between Forward and Reverse. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>When the toggle button is pressed, this callback swaps the label between &quot;Fwd&quot; and &quot;Rev&quot; and updates the global direction variable accordingly:<itemizedlist>
+<listitem><para>&quot;Fwd&quot; → direction = -1</para>
+</listitem><listitem><para>&quot;Rev&quot; → direction = 1</para>
+</listitem></itemizedlist>
+</para>
+<para>A message is printed to the serial monitor showing the new mode and numeric direction.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>e</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to the LVGL event descriptor. Provides access to the toggle button object. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ArduinoGigaLvglDisplay.ino" line="256" column="13" bodyfile="ArduinoGigaLvglDisplay.ino" bodystart="256" bodyend="278" declfile="ArduinoGigaLvglDisplay.ino" declline="138" declcolumn="13"/>
+      </memberdef>
+      <memberdef kind="function" id="_arduino_giga_lvgl_display_8ino_1a6fbd991f948fc782ccc13e510b824d91" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void set_btnm_bg_colors</definition>
+        <argsstring>(lv_obj_t *btnm, uint32_t normal, uint32_t pressed)</argsstring>
+        <name>set_btnm_bg_colors</name>
+        <param>
+          <type>lv_obj_t *</type>
+          <declname>btnm</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>normal</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>pressed</declname>
+        </param>
+        <briefdescription>
+<para>Set the btnm bg colors object. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>btnm</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>button map object </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>normal</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>color at normal state </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>pressed</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>color at pressed state </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ArduinoGigaLvglDisplay.ino" line="314" column="6" bodyfile="ArduinoGigaLvglDisplay.ino" bodystart="314" bodyend="320"/>
+      </memberdef>
+      <memberdef kind="function" id="_arduino_giga_lvgl_display_8ino_1a9965ed6b6152697e6db85d37dfe41720" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void create_main_button_matrix</definition>
+        <argsstring>(lv_obj_t *screen_buttons)</argsstring>
+        <name>create_main_button_matrix</name>
+        <param>
+          <type>lv_obj_t *</type>
+          <declname>screen_buttons</declname>
+        </param>
+        <briefdescription>
+<para>Create the main button matrix object. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>screen_buttons</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>parent screen object Runs the btnm_event_cb on button press </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ArduinoGigaLvglDisplay.ino" line="328" column="6" bodyfile="ArduinoGigaLvglDisplay.ino" bodystart="328" bodyend="347"/>
+      </memberdef>
+      <memberdef kind="function" id="_arduino_giga_lvgl_display_8ino_1aecc909a3f155365b24a95ec0ffef19d3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void create_test_button_matrix</definition>
+        <argsstring>(lv_obj_t *screen_buttons)</argsstring>
+        <name>create_test_button_matrix</name>
+        <param>
+          <type>lv_obj_t *</type>
+          <declname>screen_buttons</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ArduinoGigaLvglDisplay.ino" line="350" column="6" bodyfile="ArduinoGigaLvglDisplay.ino" bodystart="350" bodyend="362"/>
+      </memberdef>
+      <memberdef kind="function" id="_arduino_giga_lvgl_display_8ino_1ad5dca755f09c580eccadbdd097c4d57d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void create_speed_sliders</definition>
+        <argsstring>(lv_obj_t *parent)</argsstring>
+        <name>create_speed_sliders</name>
+        <param>
+          <type>lv_obj_t *</type>
+          <declname>parent</declname>
+        </param>
+        <briefdescription>
+<para>Create a speed sliders object. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>parent</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>parent screen object Creates 4 sliders for FR, FL, RR, RL with labels and value displays </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ArduinoGigaLvglDisplay.ino" line="371" column="6" bodyfile="ArduinoGigaLvglDisplay.ino" bodystart="371" bodyend="410"/>
+      </memberdef>
+      <memberdef kind="function" id="_arduino_giga_lvgl_display_8ino_1a1887246f5467ff145cd963e98fc2258e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void create_ui</definition>
+        <argsstring>()</argsstring>
+        <name>create_ui</name>
+        <briefdescription>
+<para>Create the main UI. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ArduinoGigaLvglDisplay.ino" line="415" column="6" bodyfile="ArduinoGigaLvglDisplay.ino" bodystart="415" bodyend="435"/>
+      </memberdef>
+      <memberdef kind="function" id="_arduino_giga_lvgl_display_8ino_1a1d1a4db533ab78b9a2a06a09ba8a3bba" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void FR_move</definition>
+        <argsstring>(int speed)</argsstring>
+        <name>FR_move</name>
+        <param>
+          <type>int</type>
+          <declname>speed</declname>
+        </param>
+        <briefdescription>
+<para>Moves the front-right (FR) motor at the specified speed. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>speed</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Speed of movement (-255 to 255) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ArduinoGigaLvglDisplay.ino" line="444" column="6" bodyfile="ArduinoGigaLvglDisplay.ino" bodystart="444" bodyend="458"/>
+      </memberdef>
+      <memberdef kind="function" id="_arduino_giga_lvgl_display_8ino_1a89702714cf6f17fb069f22e5f1f36d97" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void FL_move</definition>
+        <argsstring>(int speed)</argsstring>
+        <name>FL_move</name>
+        <param>
+          <type>int</type>
+          <declname>speed</declname>
+        </param>
+        <briefdescription>
+<para>Moves the front-left (FL) motor at the specified speed. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>speed</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Speed of movement (-255 to 255) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ArduinoGigaLvglDisplay.ino" line="465" column="6" bodyfile="ArduinoGigaLvglDisplay.ino" bodystart="465" bodyend="479"/>
+      </memberdef>
+      <memberdef kind="function" id="_arduino_giga_lvgl_display_8ino_1a72d3ab08a583fa7cbdf7e3db1cb9ee5f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void RR_move</definition>
+        <argsstring>(int speed)</argsstring>
+        <name>RR_move</name>
+        <param>
+          <type>int</type>
+          <declname>speed</declname>
+        </param>
+        <briefdescription>
+<para>Moves the rear-right (RR) motor at the specified speed. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>speed</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Speed of movement (-255 to 255) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ArduinoGigaLvglDisplay.ino" line="486" column="6" bodyfile="ArduinoGigaLvglDisplay.ino" bodystart="486" bodyend="500"/>
+      </memberdef>
+      <memberdef kind="function" id="_arduino_giga_lvgl_display_8ino_1ac5e4ea79ee09f85143f444ee9d22cea6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void RL_move</definition>
+        <argsstring>(int speed)</argsstring>
+        <name>RL_move</name>
+        <param>
+          <type>int</type>
+          <declname>speed</declname>
+        </param>
+        <briefdescription>
+<para>Moves the rear-left (RL) motor at the specified speed. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>speed</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Speed of movement (-255 to 255) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ArduinoGigaLvglDisplay.ino" line="507" column="6" bodyfile="ArduinoGigaLvglDisplay.ino" bodystart="507" bodyend="521"/>
+      </memberdef>
+      <memberdef kind="function" id="_arduino_giga_lvgl_display_8ino_1a4fc01d736fe50cf5b977f755b675f11d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void setup</definition>
+        <argsstring>()</argsstring>
+        <name>setup</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ArduinoGigaLvglDisplay.ino" line="524" column="6" bodyfile="ArduinoGigaLvglDisplay.ino" bodystart="524" bodyend="534"/>
+      </memberdef>
+      <memberdef kind="function" id="_arduino_giga_lvgl_display_8ino_1afe461d27b9c48d5921c00d521181f12f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void loop</definition>
+        <argsstring>()</argsstring>
+        <name>loop</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ArduinoGigaLvglDisplay.ino" line="536" column="6" bodyfile="ArduinoGigaLvglDisplay.ino" bodystart="536" bodyend="545"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>Arduino Giga LVGL Display For Robot Car. </para>
+    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="author"><para>Jadon Jung (<ulink url="mailto:jadonjung3@gmail.com">jadonjung3@gmail.com</ulink>) </para>
+</simplesect>
+<simplesect kind="version"><para>1.0 </para>
+</simplesect>
+<simplesect kind="date"><para>2026-02-22</para>
+</simplesect>
+<simplesect kind="copyright"><para>Copyright (c) 2026 </para>
+</simplesect>
+</para>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;Arduino_GigaDisplayTouch.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="comment">//<sp/>#include<sp/>&lt;lv_api_map_v8.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;lv_api_map_v9_0.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;lv_api_map_v9_1.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;lv_api_map_v9_2.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;lv_api_map_v9_3.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;lv_conf_internal.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;lv_conf_kconfig.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;lv_init.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;lvgl_private.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;lvgl.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="_arduino__constants_8h" kindref="compound">Arduino_constants.h</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="motor__constants_8h" kindref="compound">motor_constants.h</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="msg__constants_8h" kindref="compound">msg_constants.h</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="other__constants_8h" kindref="compound">other_constants.h</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;lvgl.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;Arduino_GigaDisplayTouch.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;Arduino_H7_Video.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;vector&gt;</highlight><highlight class="normal"><sp/></highlight><highlight class="comment">//<sp/>end<sp/>of<sp/>Imports</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight></codeline>
+<codeline lineno="45" refid="_arduino_giga_lvgl_display_8ino_1a09c202aa2681c1591f47ade0fd9f93be" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="_arduino_giga_lvgl_display_8ino_1a09c202aa2681c1591f47ade0fd9f93be" kindref="member">MotorPins</ref></highlight></codeline>
+<codeline lineno="46"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="47" refid="_arduino_giga_lvgl_display_8ino_1a09c202aa2681c1591f47ade0fd9f93beafac329d5db4efdbf0c8d2d7d3de466a9" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="_arduino_giga_lvgl_display_8ino_1a09c202aa2681c1591f47ade0fd9f93beafac329d5db4efdbf0c8d2d7d3de466a9" kindref="member">ENB_B</ref><sp/>=<sp/>13,</highlight></codeline>
+<codeline lineno="48" refid="_arduino_giga_lvgl_display_8ino_1a09c202aa2681c1591f47ade0fd9f93bea2047c5c4b4b18be0602eb80f9b4a1768" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="_arduino_giga_lvgl_display_8ino_1a09c202aa2681c1591f47ade0fd9f93bea2047c5c4b4b18be0602eb80f9b4a1768" kindref="member">IN4_B</ref><sp/>=<sp/>12,</highlight></codeline>
+<codeline lineno="49" refid="_arduino_giga_lvgl_display_8ino_1a09c202aa2681c1591f47ade0fd9f93bea6ed09eef66c4f29e12b322f4d83cae56" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="_arduino_giga_lvgl_display_8ino_1a09c202aa2681c1591f47ade0fd9f93bea6ed09eef66c4f29e12b322f4d83cae56" kindref="member">IN3_B</ref><sp/>=<sp/>11,</highlight></codeline>
+<codeline lineno="50" refid="_arduino_giga_lvgl_display_8ino_1a09c202aa2681c1591f47ade0fd9f93bea859b5cc7d0a7874c0d8a05ddfe033866" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="_arduino_giga_lvgl_display_8ino_1a09c202aa2681c1591f47ade0fd9f93bea859b5cc7d0a7874c0d8a05ddfe033866" kindref="member">IN2_B</ref><sp/>=<sp/>10,</highlight></codeline>
+<codeline lineno="51" refid="_arduino_giga_lvgl_display_8ino_1a09c202aa2681c1591f47ade0fd9f93bea73a3f9b58bcbefe98e6d5cec2e9088a5" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="_arduino_giga_lvgl_display_8ino_1a09c202aa2681c1591f47ade0fd9f93bea73a3f9b58bcbefe98e6d5cec2e9088a5" kindref="member">IN1_B</ref><sp/>=<sp/>9,</highlight></codeline>
+<codeline lineno="52" refid="_arduino_giga_lvgl_display_8ino_1a09c202aa2681c1591f47ade0fd9f93bea4fd12e00eb66efa116b4e9769045508c" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="_arduino_giga_lvgl_display_8ino_1a09c202aa2681c1591f47ade0fd9f93bea4fd12e00eb66efa116b4e9769045508c" kindref="member">ENA_B</ref><sp/>=<sp/>8,</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight></codeline>
+<codeline lineno="54" refid="_arduino_giga_lvgl_display_8ino_1a09c202aa2681c1591f47ade0fd9f93beab601c6a9dbd4c1a3b70d8a84de3bd012" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="_arduino_giga_lvgl_display_8ino_1a09c202aa2681c1591f47ade0fd9f93beab601c6a9dbd4c1a3b70d8a84de3bd012" kindref="member">ENB_A</ref><sp/>=<sp/>7,</highlight></codeline>
+<codeline lineno="55" refid="_arduino_giga_lvgl_display_8ino_1a09c202aa2681c1591f47ade0fd9f93bea93d7c651df7bde50e2382ad65e25c40a" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="_arduino_giga_lvgl_display_8ino_1a09c202aa2681c1591f47ade0fd9f93bea93d7c651df7bde50e2382ad65e25c40a" kindref="member">IN4_A</ref><sp/>=<sp/>6,</highlight></codeline>
+<codeline lineno="56" refid="_arduino_giga_lvgl_display_8ino_1a09c202aa2681c1591f47ade0fd9f93bea9d9477ff2adcb5d4e3b7f2912bc459db" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="_arduino_giga_lvgl_display_8ino_1a09c202aa2681c1591f47ade0fd9f93bea9d9477ff2adcb5d4e3b7f2912bc459db" kindref="member">IN3_A</ref><sp/>=<sp/>5,</highlight></codeline>
+<codeline lineno="57" refid="_arduino_giga_lvgl_display_8ino_1a09c202aa2681c1591f47ade0fd9f93bea542f6a0db31278731d93bec3ed4151af" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="_arduino_giga_lvgl_display_8ino_1a09c202aa2681c1591f47ade0fd9f93bea542f6a0db31278731d93bec3ed4151af" kindref="member">IN2_A</ref><sp/>=<sp/>4,</highlight></codeline>
+<codeline lineno="58" refid="_arduino_giga_lvgl_display_8ino_1a09c202aa2681c1591f47ade0fd9f93bea115a61482486b39c89389f48bc9a36be" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="_arduino_giga_lvgl_display_8ino_1a09c202aa2681c1591f47ade0fd9f93bea115a61482486b39c89389f48bc9a36be" kindref="member">IN1_A</ref><sp/>=<sp/>3,</highlight></codeline>
+<codeline lineno="59" refid="_arduino_giga_lvgl_display_8ino_1a09c202aa2681c1591f47ade0fd9f93bea8ca39e084c4680aee4c18e3094761422" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="_arduino_giga_lvgl_display_8ino_1a09c202aa2681c1591f47ade0fd9f93bea8ca39e084c4680aee4c18e3094761422" kindref="member">ENA_A</ref><sp/>=<sp/>2</highlight></codeline>
+<codeline lineno="60"><highlight class="normal">};<sp/></highlight><highlight class="comment">//<sp/>end<sp/>of<sp/>Motor_Pins</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight><highlight class="comment">//<sp/>=====<sp/>Shared<sp/>label<sp/>+<sp/>vector<sp/>logic<sp/>=====</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="72" refid="_arduino_giga_lvgl_display_8ino_1a0397ddbe4d2bddb9d77afbb47acf56f0" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_arduino_giga_lvgl_display_8ino_1a0397ddbe4d2bddb9d77afbb47acf56f0" kindref="member">apply_mode</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*mode_name,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*direction)</highlight></codeline>
+<codeline lineno="73"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="classmsg__constants_1a2a1a0fb8a3fbdfa803e8a9c87bde21a3" kindref="member">msg_constants::msg_label</ref><sp/>!=<sp/>NULL)</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/>lv_obj_del(<ref refid="classmsg__constants_1a2a1a0fb8a3fbdfa803e8a9c87bde21a3" kindref="member">msg_constants::msg_label</ref>);</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classmsg__constants_1a2a1a0fb8a3fbdfa803e8a9c87bde21a3" kindref="member">msg_constants::msg_label</ref><sp/>=<sp/>NULL;</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"></highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><ref refid="classmsg__constants_1a2a1a0fb8a3fbdfa803e8a9c87bde21a3" kindref="member">msg_constants::msg_label</ref><sp/>=<sp/>lv_label_create(lv_scr_act());</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>buffer[64];</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/>snprintf(buffer,<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(buffer),<sp/></highlight><highlight class="stringliteral">&quot;Applied<sp/>%s<sp/>Mode:<sp/>%s.&quot;</highlight><highlight class="normal">,<sp/>mode_name,<sp/>direction);</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/>lv_label_set_text(<ref refid="classmsg__constants_1a2a1a0fb8a3fbdfa803e8a9c87bde21a3" kindref="member">msg_constants::msg_label</ref>,<sp/>buffer);</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"></highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><ref refid="classother__constants_1a522b12f820f2390f63de34235a38942e" kindref="member">other_constants::program</ref>.push_back(direction);</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"></highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/>lv_obj_set_style_text_font(<ref refid="classmsg__constants_1a2a1a0fb8a3fbdfa803e8a9c87bde21a3" kindref="member">msg_constants::msg_label</ref>,<sp/>&amp;lv_font_montserrat_24,<sp/>0);</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/>lv_obj_align(<ref refid="classmsg__constants_1a2a1a0fb8a3fbdfa803e8a9c87bde21a3" kindref="member">msg_constants::msg_label</ref>,<sp/>LV_ALIGN_BOTTOM_MID,<sp/>0,<sp/>-20);</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><ref refid="classmsg__constants_1ac2513d9d541bdbe4554122d496c4bc9d" kindref="member">msg_constants::msg_start_time</ref><sp/>=<sp/>millis();</highlight></codeline>
+<codeline lineno="90"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"></highlight></codeline>
+<codeline lineno="92"><highlight class="normal"></highlight><highlight class="comment">//<sp/>=====<sp/>Run<sp/>Program<sp/>(special)<sp/>=====</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="109" refid="_arduino_giga_lvgl_display_8ino_1a599fa16066a270f3a22e7de32fbb250f" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_arduino_giga_lvgl_display_8ino_1a599fa16066a270f3a22e7de32fbb250f" kindref="member">btn_Run_Program_event_cb</ref>(lv_event_t<sp/>*e)</highlight></codeline>
+<codeline lineno="110"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="classmsg__constants_1a2a1a0fb8a3fbdfa803e8a9c87bde21a3" kindref="member">msg_constants::msg_label</ref><sp/>!=<sp/>NULL)</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/>lv_obj_del(<ref refid="classmsg__constants_1a2a1a0fb8a3fbdfa803e8a9c87bde21a3" kindref="member">msg_constants::msg_label</ref>);</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classmsg__constants_1a2a1a0fb8a3fbdfa803e8a9c87bde21a3" kindref="member">msg_constants::msg_label</ref><sp/>=<sp/>NULL;</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"></highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><ref refid="classmsg__constants_1a2a1a0fb8a3fbdfa803e8a9c87bde21a3" kindref="member">msg_constants::msg_label</ref><sp/>=<sp/>lv_label_create(lv_scr_act());</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/>lv_label_set_text(<ref refid="classmsg__constants_1a2a1a0fb8a3fbdfa803e8a9c87bde21a3" kindref="member">msg_constants::msg_label</ref>,<sp/></highlight><highlight class="stringliteral">&quot;Applied<sp/>program!&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Print<sp/>program<sp/>to<sp/>Serial<sp/>Monitor<sp/>(for<sp/>debugging)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>p<sp/>:<sp/><ref refid="classother__constants_1a522b12f820f2390f63de34235a38942e" kindref="member">other_constants::program</ref>)</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/>Serial.println(p);</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/>Serial.println();</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"></highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/>delay(500);</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/><ref refid="classother__constants_1a522b12f820f2390f63de34235a38942e" kindref="member">other_constants::program</ref>.clear();</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"></highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/>lv_obj_set_style_text_font(<ref refid="classmsg__constants_1a2a1a0fb8a3fbdfa803e8a9c87bde21a3" kindref="member">msg_constants::msg_label</ref>,<sp/>&amp;lv_font_montserrat_24,<sp/>0);</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/>lv_obj_align(<ref refid="classmsg__constants_1a2a1a0fb8a3fbdfa803e8a9c87bde21a3" kindref="member">msg_constants::msg_label</ref>,<sp/>LV_ALIGN_BOTTOM_MID,<sp/>0,<sp/>-20);</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/><ref refid="classmsg__constants_1ac2513d9d541bdbe4554122d496c4bc9d" kindref="member">msg_constants::msg_start_time</ref><sp/>=<sp/>millis();</highlight></codeline>
+<codeline lineno="132"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"></highlight></codeline>
+<codeline lineno="134"><highlight class="normal"></highlight><highlight class="comment">//<sp/>========<sp/>CALLBACK<sp/>DECLARATIONS<sp/>========</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="135"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_arduino_giga_lvgl_display_8ino_1a6b08dca515fd8dd9eaec4b80e83e7e6a" kindref="member">main_btnm_event_cb</ref>(lv_event_t<sp/>*e);</highlight></codeline>
+<codeline lineno="136"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_arduino_giga_lvgl_display_8ino_1a387364b391da0c6e0e19cbdddd28b77a" kindref="member">test_btnm_event_cb</ref>(lv_event_t<sp/>*e);</highlight></codeline>
+<codeline lineno="137"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_arduino_giga_lvgl_display_8ino_1accf9c682319e11f61db68997b6938fdc" kindref="member">slider_event_cb</ref>(lv_event_t<sp/>*e);</highlight></codeline>
+<codeline lineno="138"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_arduino_giga_lvgl_display_8ino_1a5c854330b94e76f43e26164660df409c" kindref="member">toggle_fwdrev_cb</ref>(lv_event_t<sp/>*e);</highlight></codeline>
+<codeline lineno="139"><highlight class="normal"></highlight></codeline>
+<codeline lineno="140"><highlight class="normal"></highlight><highlight class="comment">//<sp/>========<sp/>MAIN<sp/>BUTTON<sp/>CALLBACK<sp/>========</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="156" refid="_arduino_giga_lvgl_display_8ino_1a6b08dca515fd8dd9eaec4b80e83e7e6a" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_arduino_giga_lvgl_display_8ino_1a6b08dca515fd8dd9eaec4b80e83e7e6a" kindref="member">main_btnm_event_cb</ref>(lv_event_t<sp/>*e)</highlight></codeline>
+<codeline lineno="157"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="158"><highlight class="normal"><sp/><sp/>lv_obj_t<sp/>*btnm<sp/>=<sp/>(lv_obj_t<sp/>*)lv_event_get_target(e);</highlight></codeline>
+<codeline lineno="159"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*dir_txt<sp/>=<sp/>lv_btnmatrix_get_btn_text(</highlight></codeline>
+<codeline lineno="160"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>btnm,<sp/>lv_btnmatrix_get_selected_btn(btnm));</highlight></codeline>
+<codeline lineno="161"><highlight class="normal"></highlight></codeline>
+<codeline lineno="162"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(dir_txt<sp/>==<sp/>NULL)</highlight></codeline>
+<codeline lineno="163"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="164"><highlight class="normal"></highlight></codeline>
+<codeline lineno="165"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(strcmp(dir_txt,<sp/></highlight><highlight class="stringliteral">&quot;Forward&quot;</highlight><highlight class="normal">)<sp/>==<sp/>0<sp/>||<sp/>strcmp(dir_txt,<sp/></highlight><highlight class="stringliteral">&quot;Backward&quot;</highlight><highlight class="normal">)<sp/>==<sp/>0)</highlight></codeline>
+<codeline lineno="166"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="167"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_arduino_giga_lvgl_display_8ino_1a0397ddbe4d2bddb9d77afbb47acf56f0" kindref="member">apply_mode</ref>(</highlight><highlight class="stringliteral">&quot;Straight&quot;</highlight><highlight class="normal">,<sp/>dir_txt);</highlight></codeline>
+<codeline lineno="168"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="169"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(strcmp(dir_txt,<sp/></highlight><highlight class="stringliteral">&quot;Left&quot;</highlight><highlight class="normal">)<sp/>==<sp/>0<sp/>||<sp/>strcmp(dir_txt,<sp/></highlight><highlight class="stringliteral">&quot;Right&quot;</highlight><highlight class="normal">)<sp/>==<sp/>0)</highlight></codeline>
+<codeline lineno="170"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="171"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_arduino_giga_lvgl_display_8ino_1a0397ddbe4d2bddb9d77afbb47acf56f0" kindref="member">apply_mode</ref>(</highlight><highlight class="stringliteral">&quot;Sideways&quot;</highlight><highlight class="normal">,<sp/>dir_txt);</highlight></codeline>
+<codeline lineno="172"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="173"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(strcmp(dir_txt,<sp/></highlight><highlight class="stringliteral">&quot;45&quot;</highlight><highlight class="normal">)<sp/>==<sp/>0<sp/>||<sp/>strcmp(dir_txt,<sp/></highlight><highlight class="stringliteral">&quot;135&quot;</highlight><highlight class="normal">)<sp/>==<sp/>0<sp/>||<sp/>strcmp(dir_txt,<sp/></highlight><highlight class="stringliteral">&quot;225&quot;</highlight><highlight class="normal">)<sp/>==<sp/>0<sp/>||<sp/>strcmp(dir_txt,<sp/></highlight><highlight class="stringliteral">&quot;315&quot;</highlight><highlight class="normal">)<sp/>==<sp/>0)</highlight></codeline>
+<codeline lineno="174"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="175"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_arduino_giga_lvgl_display_8ino_1a0397ddbe4d2bddb9d77afbb47acf56f0" kindref="member">apply_mode</ref>(</highlight><highlight class="stringliteral">&quot;Diagonal&quot;</highlight><highlight class="normal">,<sp/>dir_txt);</highlight></codeline>
+<codeline lineno="176"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="177"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(strcmp(dir_txt,<sp/></highlight><highlight class="stringliteral">&quot;Right<sp/>Fwd&quot;</highlight><highlight class="normal">)<sp/>==<sp/>0<sp/>||<sp/>strcmp(dir_txt,<sp/></highlight><highlight class="stringliteral">&quot;Right<sp/>Bwd&quot;</highlight><highlight class="normal">)<sp/>==<sp/>0<sp/>||<sp/>strcmp(dir_txt,<sp/></highlight><highlight class="stringliteral">&quot;Left<sp/>Fwd&quot;</highlight><highlight class="normal">)<sp/>==<sp/>0<sp/>||<sp/>strcmp(dir_txt,<sp/></highlight><highlight class="stringliteral">&quot;Left<sp/>Bwd&quot;</highlight><highlight class="normal">)<sp/>==<sp/>0)</highlight></codeline>
+<codeline lineno="178"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="179"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_arduino_giga_lvgl_display_8ino_1a0397ddbe4d2bddb9d77afbb47acf56f0" kindref="member">apply_mode</ref>(</highlight><highlight class="stringliteral">&quot;Pivot&quot;</highlight><highlight class="normal">,<sp/>dir_txt);</highlight></codeline>
+<codeline lineno="180"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="181"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(strcmp(dir_txt,<sp/></highlight><highlight class="stringliteral">&quot;Front<sp/>Right&quot;</highlight><highlight class="normal">)<sp/>==<sp/>0<sp/>||<sp/>strcmp(dir_txt,<sp/></highlight><highlight class="stringliteral">&quot;Front<sp/>Left&quot;</highlight><highlight class="normal">)<sp/>==<sp/>0<sp/>||<sp/>strcmp(dir_txt,<sp/></highlight><highlight class="stringliteral">&quot;Rear<sp/>Right&quot;</highlight><highlight class="normal">)<sp/>==<sp/>0<sp/>||<sp/>strcmp(dir_txt,<sp/></highlight><highlight class="stringliteral">&quot;Rear<sp/>Left&quot;</highlight><highlight class="normal">)<sp/>==<sp/>0)</highlight></codeline>
+<codeline lineno="182"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="183"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_arduino_giga_lvgl_display_8ino_1a0397ddbe4d2bddb9d77afbb47acf56f0" kindref="member">apply_mode</ref>(</highlight><highlight class="stringliteral">&quot;Pivot<sp/>Sideways&quot;</highlight><highlight class="normal">,<sp/>dir_txt);</highlight></codeline>
+<codeline lineno="184"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="185"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(strcmp(dir_txt,<sp/></highlight><highlight class="stringliteral">&quot;CCW&quot;</highlight><highlight class="normal">)<sp/>==<sp/>0<sp/>||<sp/>strcmp(dir_txt,<sp/></highlight><highlight class="stringliteral">&quot;CW&quot;</highlight><highlight class="normal">)<sp/>==<sp/>0)</highlight></codeline>
+<codeline lineno="186"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="187"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_arduino_giga_lvgl_display_8ino_1a0397ddbe4d2bddb9d77afbb47acf56f0" kindref="member">apply_mode</ref>(</highlight><highlight class="stringliteral">&quot;Rotate&quot;</highlight><highlight class="normal">,<sp/>dir_txt);</highlight></codeline>
+<codeline lineno="188"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="189"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(strcmp(dir_txt,<sp/></highlight><highlight class="stringliteral">&quot;Prgm<sp/>Car&quot;</highlight><highlight class="normal">)<sp/>==<sp/>0)</highlight></codeline>
+<codeline lineno="190"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="191"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_arduino_giga_lvgl_display_8ino_1a599fa16066a270f3a22e7de32fbb250f" kindref="member">btn_Run_Program_event_cb</ref>(e);</highlight></codeline>
+<codeline lineno="192"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="193"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="194"><highlight class="normal"></highlight></codeline>
+<codeline lineno="195"><highlight class="normal"></highlight><highlight class="comment">//<sp/>========<sp/>test<sp/>CONTROL<sp/>BUTTON<sp/>CALLBACK<sp/>========</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="207" refid="_arduino_giga_lvgl_display_8ino_1a387364b391da0c6e0e19cbdddd28b77a" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_arduino_giga_lvgl_display_8ino_1a387364b391da0c6e0e19cbdddd28b77a" kindref="member">test_btnm_event_cb</ref>(lv_event_t<sp/>*e)</highlight></codeline>
+<codeline lineno="208"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="209"><highlight class="normal"><sp/><sp/>lv_obj_t<sp/>*btnm<sp/>=<sp/>(lv_obj_t<sp/>*)lv_event_get_target(e);</highlight></codeline>
+<codeline lineno="210"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*txt<sp/>=<sp/>lv_btnmatrix_get_btn_text(</highlight></codeline>
+<codeline lineno="211"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>btnm,<sp/>lv_btnmatrix_get_selected_btn(btnm));</highlight></codeline>
+<codeline lineno="212"><highlight class="normal"></highlight></codeline>
+<codeline lineno="213"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(txt<sp/>==<sp/>NULL)</highlight></codeline>
+<codeline lineno="214"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="215"><highlight class="normal"></highlight></codeline>
+<codeline lineno="216"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(strcmp(txt,<sp/></highlight><highlight class="stringliteral">&quot;FL&quot;</highlight><highlight class="normal">)<sp/>==<sp/>0)</highlight></codeline>
+<codeline lineno="217"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="218"><highlight class="normal"><sp/><sp/><sp/><sp/>Serial.println(</highlight><highlight class="stringliteral">&quot;Front<sp/>Left<sp/>test<sp/>Move&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="219"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_arduino_giga_lvgl_display_8ino_1a89702714cf6f17fb069f22e5f1f36d97" kindref="member">FL_move</ref>(<ref refid="classmotor__constants_1af83643f00e48ca7329566e17246a2c83" kindref="member">motor_constants::motor_speed</ref><sp/>*<sp/><ref refid="classmotor__constants_1a55499ee0a25a1f7a3024cea72541543a" kindref="member">motor_constants::motor_direction</ref>);</highlight></codeline>
+<codeline lineno="220"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="221"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(strcmp(txt,<sp/></highlight><highlight class="stringliteral">&quot;FR&quot;</highlight><highlight class="normal">)<sp/>==<sp/>0)</highlight></codeline>
+<codeline lineno="222"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="223"><highlight class="normal"><sp/><sp/><sp/><sp/>Serial.println(</highlight><highlight class="stringliteral">&quot;Front<sp/>Right<sp/>test<sp/>Move&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="224"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_arduino_giga_lvgl_display_8ino_1a1d1a4db533ab78b9a2a06a09ba8a3bba" kindref="member">FR_move</ref>(<ref refid="classmotor__constants_1af83643f00e48ca7329566e17246a2c83" kindref="member">motor_constants::motor_speed</ref><sp/>*<sp/><ref refid="classmotor__constants_1a55499ee0a25a1f7a3024cea72541543a" kindref="member">motor_constants::motor_direction</ref>);</highlight></codeline>
+<codeline lineno="225"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="226"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(strcmp(txt,<sp/></highlight><highlight class="stringliteral">&quot;RL&quot;</highlight><highlight class="normal">)<sp/>==<sp/>0)</highlight></codeline>
+<codeline lineno="227"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="228"><highlight class="normal"><sp/><sp/><sp/><sp/>Serial.println(</highlight><highlight class="stringliteral">&quot;Rear<sp/>Left<sp/>test<sp/>Move&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="229"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_arduino_giga_lvgl_display_8ino_1ac5e4ea79ee09f85143f444ee9d22cea6" kindref="member">RL_move</ref>(<ref refid="classmotor__constants_1af83643f00e48ca7329566e17246a2c83" kindref="member">motor_constants::motor_speed</ref><sp/>*<sp/><ref refid="classmotor__constants_1a55499ee0a25a1f7a3024cea72541543a" kindref="member">motor_constants::motor_direction</ref>);</highlight></codeline>
+<codeline lineno="230"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="231"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(strcmp(txt,<sp/></highlight><highlight class="stringliteral">&quot;RR&quot;</highlight><highlight class="normal">)<sp/>==<sp/>0)</highlight></codeline>
+<codeline lineno="232"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="233"><highlight class="normal"><sp/><sp/><sp/><sp/>Serial.println(</highlight><highlight class="stringliteral">&quot;Rear<sp/>Right<sp/>test<sp/>Move&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="234"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_arduino_giga_lvgl_display_8ino_1a72d3ab08a583fa7cbdf7e3db1cb9ee5f" kindref="member">RR_move</ref>(<ref refid="classmotor__constants_1af83643f00e48ca7329566e17246a2c83" kindref="member">motor_constants::motor_speed</ref><sp/>*<sp/><ref refid="classmotor__constants_1a55499ee0a25a1f7a3024cea72541543a" kindref="member">motor_constants::motor_direction</ref>);</highlight></codeline>
+<codeline lineno="235"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="236"><highlight class="normal"></highlight></codeline>
+<codeline lineno="237"><highlight class="normal"><sp/><sp/>delay(500);</highlight></codeline>
+<codeline lineno="238"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="239"><highlight class="normal"></highlight></codeline>
+<codeline lineno="240"><highlight class="normal"></highlight><highlight class="comment">//<sp/>========<sp/>FWD/REV<sp/>TOGGLE<sp/>CALLBACK<sp/>========</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="256" refid="_arduino_giga_lvgl_display_8ino_1a5c854330b94e76f43e26164660df409c" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_arduino_giga_lvgl_display_8ino_1a5c854330b94e76f43e26164660df409c" kindref="member">toggle_fwdrev_cb</ref>(lv_event_t<sp/>*e)</highlight></codeline>
+<codeline lineno="257"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="258"><highlight class="normal"><sp/><sp/>lv_obj_t<sp/>*btn<sp/>=<sp/>(lv_obj_t<sp/>*)lv_event_get_target(e);</highlight></codeline>
+<codeline lineno="259"><highlight class="normal"><sp/><sp/>lv_obj_t<sp/>*label<sp/>=<sp/>lv_obj_get_child(btn,<sp/>0);</highlight></codeline>
+<codeline lineno="260"><highlight class="normal"></highlight></codeline>
+<codeline lineno="261"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*txt<sp/>=<sp/>lv_label_get_text(label);</highlight></codeline>
+<codeline lineno="262"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>If<sp/>txt<sp/>is<sp/>&quot;Fwd&quot;,<sp/>change<sp/>to<sp/>&quot;Rev&quot;<sp/>and<sp/>assign<sp/>motor_direction<sp/>1<sp/>else<sp/>change<sp/>to<sp/>&quot;Fwd&quot;<sp/>and<sp/>assign<sp/>motor_direction<sp/>-1</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="263"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(strcmp(txt,<sp/></highlight><highlight class="stringliteral">&quot;Fwd&quot;</highlight><highlight class="normal">)<sp/>==<sp/>0)</highlight></codeline>
+<codeline lineno="264"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="265"><highlight class="normal"><sp/><sp/><sp/><sp/>lv_label_set_text(label,<sp/></highlight><highlight class="stringliteral">&quot;Rev&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="266"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classmotor__constants_1a55499ee0a25a1f7a3024cea72541543a" kindref="member">motor_constants::motor_direction</ref><sp/>=<sp/>1;</highlight></codeline>
+<codeline lineno="267"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="268"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="269"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="270"><highlight class="normal"><sp/><sp/><sp/><sp/>lv_label_set_text(label,<sp/></highlight><highlight class="stringliteral">&quot;Fwd&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="271"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classmotor__constants_1a55499ee0a25a1f7a3024cea72541543a" kindref="member">motor_constants::motor_direction</ref><sp/>=<sp/>-1;</highlight></codeline>
+<codeline lineno="272"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="273"><highlight class="normal"></highlight></codeline>
+<codeline lineno="274"><highlight class="normal"><sp/><sp/>Serial.print(</highlight><highlight class="stringliteral">&quot;Mode:<sp/>&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="275"><highlight class="normal"><sp/><sp/>Serial.println(lv_label_get_text(label));</highlight></codeline>
+<codeline lineno="276"><highlight class="normal"><sp/><sp/>Serial.print(</highlight><highlight class="stringliteral">&quot;Direction<sp/>set<sp/>to<sp/>&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="277"><highlight class="normal"><sp/><sp/>Serial.println(<ref refid="classmotor__constants_1a55499ee0a25a1f7a3024cea72541543a" kindref="member">motor_constants::motor_direction</ref>);</highlight></codeline>
+<codeline lineno="278"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="279"><highlight class="normal"></highlight></codeline>
+<codeline lineno="280"><highlight class="normal"></highlight><highlight class="comment">//<sp/>========<sp/>SLIDER<sp/>CALLBACK<sp/>========</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="294" refid="_arduino_giga_lvgl_display_8ino_1accf9c682319e11f61db68997b6938fdc" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_arduino_giga_lvgl_display_8ino_1accf9c682319e11f61db68997b6938fdc" kindref="member">slider_event_cb</ref>(lv_event_t<sp/>*e)</highlight></codeline>
+<codeline lineno="295"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="296"><highlight class="normal"><sp/><sp/>lv_obj_t<sp/>*slider<sp/>=<sp/>(lv_obj_t<sp/>*)lv_event_get_target(e);</highlight></codeline>
+<codeline lineno="297"><highlight class="normal"><sp/><sp/>motor_speed<sp/>=<sp/>lv_slider_get_value(slider);</highlight></codeline>
+<codeline lineno="298"><highlight class="normal"></highlight></codeline>
+<codeline lineno="299"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Identify<sp/>which<sp/>slider<sp/>this<sp/>is<sp/>(optional,<sp/>if<sp/>you<sp/>name<sp/>them)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="300"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*name<sp/>=<sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*)lv_event_get_user_data(e);</highlight></codeline>
+<codeline lineno="301"><highlight class="normal"><sp/><sp/>Serial.print(name);</highlight></codeline>
+<codeline lineno="302"><highlight class="normal"><sp/><sp/>Serial.print(</highlight><highlight class="stringliteral">&quot;<sp/>speed<sp/>set<sp/>to<sp/>&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="303"><highlight class="normal"><sp/><sp/>Serial.println(<ref refid="classmotor__constants_1af83643f00e48ca7329566e17246a2c83" kindref="member">motor_constants::motor_speed</ref>);</highlight></codeline>
+<codeline lineno="304"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="305"><highlight class="normal"></highlight></codeline>
+<codeline lineno="306"><highlight class="normal"></highlight><highlight class="comment">//<sp/>========<sp/>UI<sp/>CREATION<sp/>FUNCTION<sp/>========</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="314" refid="_arduino_giga_lvgl_display_8ino_1a6fbd991f948fc782ccc13e510b824d91" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_arduino_giga_lvgl_display_8ino_1a6fbd991f948fc782ccc13e510b824d91" kindref="member">set_btnm_bg_colors</ref>(lv_obj_t<sp/>*btnm,<sp/>uint32_t<sp/>normal,<sp/>uint32_t<sp/>pressed)</highlight></codeline>
+<codeline lineno="315"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="316"><highlight class="normal"><sp/><sp/>lv_obj_set_style_bg_color(btnm,<sp/>lv_color_hex(normal),<sp/>LV_PART_ITEMS);</highlight></codeline>
+<codeline lineno="317"><highlight class="normal"><sp/><sp/>lv_obj_set_style_bg_opa(btnm,<sp/>LV_OPA_COVER,<sp/>LV_PART_ITEMS);</highlight></codeline>
+<codeline lineno="318"><highlight class="normal"><sp/><sp/>lv_obj_set_style_bg_color(btnm,<sp/>lv_color_hex(pressed),<sp/>LV_PART_ITEMS<sp/>|<sp/>LV_STATE_PRESSED);</highlight></codeline>
+<codeline lineno="319"><highlight class="normal"><sp/><sp/>lv_obj_set_style_bg_opa(btnm,<sp/>LV_OPA_COVER,<sp/>LV_PART_ITEMS<sp/>|<sp/>LV_STATE_PRESSED);</highlight></codeline>
+<codeline lineno="320"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="321"><highlight class="normal"></highlight></codeline>
+<codeline lineno="322"><highlight class="normal"></highlight><highlight class="comment">//<sp/>=====<sp/>Main<sp/>Button<sp/>Matrix<sp/>=====</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="328" refid="_arduino_giga_lvgl_display_8ino_1a9965ed6b6152697e6db85d37dfe41720" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_arduino_giga_lvgl_display_8ino_1a9965ed6b6152697e6db85d37dfe41720" kindref="member">create_main_button_matrix</ref>(lv_obj_t<sp/>*screen_buttons)</highlight></codeline>
+<codeline lineno="329"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="330"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*btnm_map[]<sp/>=<sp/>{</highlight></codeline>
+<codeline lineno="331"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;Forward&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;Backward&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;Left&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;Right&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;\n&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="332"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;45&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;135&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;225&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;315&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;\n&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="333"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;Right<sp/>Fwd&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;Right<sp/>Bwd&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;Left<sp/>Fwd&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;Left<sp/>Bwd&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;\n&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="334"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;Front<sp/>Right&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;Front<sp/>Left&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;Rear<sp/>Right&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;Rear<sp/>Left&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;\n&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="335"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;CCW&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;CW&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;Prgm<sp/>Car&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;&quot;</highlight><highlight class="normal">};</highlight></codeline>
+<codeline lineno="336"><highlight class="normal"></highlight></codeline>
+<codeline lineno="337"><highlight class="normal"><sp/><sp/>lv_obj_t<sp/>*btnm<sp/>=<sp/>lv_btnmatrix_create(screen_buttons);</highlight></codeline>
+<codeline lineno="338"><highlight class="normal"><sp/><sp/>lv_btnmatrix_set_map(btnm,<sp/>btnm_map);</highlight></codeline>
+<codeline lineno="339"><highlight class="normal"><sp/><sp/>lv_obj_set_size(btnm,<sp/>460,<sp/>300);</highlight></codeline>
+<codeline lineno="340"><highlight class="normal"><sp/><sp/>lv_obj_align(btnm,<sp/>LV_ALIGN_TOP_LEFT,<sp/>10,<sp/>0);</highlight></codeline>
+<codeline lineno="341"><highlight class="normal"></highlight></codeline>
+<codeline lineno="342"><highlight class="normal"><sp/><sp/><ref refid="_arduino_giga_lvgl_display_8ino_1a6fbd991f948fc782ccc13e510b824d91" kindref="member">set_btnm_bg_colors</ref>(btnm,<sp/>0x008800,<sp/>0xe74c3c);</highlight></codeline>
+<codeline lineno="343"><highlight class="normal"></highlight></codeline>
+<codeline lineno="344"><highlight class="normal"><sp/><sp/>lv_obj_set_style_text_color(btnm,<sp/>lv_color_hex(0xffffff),<sp/>LV_PART_ITEMS);</highlight></codeline>
+<codeline lineno="345"><highlight class="normal"></highlight></codeline>
+<codeline lineno="346"><highlight class="normal"><sp/><sp/>lv_obj_add_event_cb(btnm,<sp/><ref refid="_arduino_giga_lvgl_display_8ino_1a6b08dca515fd8dd9eaec4b80e83e7e6a" kindref="member">main_btnm_event_cb</ref>,<sp/>LV_EVENT_VALUE_CHANGED,<sp/>NULL);</highlight></codeline>
+<codeline lineno="347"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="348"><highlight class="normal"></highlight></codeline>
+<codeline lineno="349"><highlight class="normal"></highlight><highlight class="comment">//<sp/>=====<sp/>Test<sp/>Button<sp/>Matrix<sp/>=====</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="350" refid="_arduino_giga_lvgl_display_8ino_1aecc909a3f155365b24a95ec0ffef19d3" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_arduino_giga_lvgl_display_8ino_1aecc909a3f155365b24a95ec0ffef19d3" kindref="member">create_test_button_matrix</ref>(lv_obj_t<sp/>*screen_buttons)</highlight></codeline>
+<codeline lineno="351"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="352"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*test_btnm_map[]<sp/>=<sp/>{</highlight><highlight class="stringliteral">&quot;FL&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;FR&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;\n&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;RL&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;RR&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;&quot;</highlight><highlight class="normal">};</highlight></codeline>
+<codeline lineno="353"><highlight class="normal"><sp/><sp/>lv_obj_t<sp/>*test_btnm<sp/>=<sp/>lv_btnmatrix_create(screen_buttons);</highlight></codeline>
+<codeline lineno="354"><highlight class="normal"><sp/><sp/>lv_btnmatrix_set_map(test_btnm,<sp/>test_btnm_map);</highlight></codeline>
+<codeline lineno="355"><highlight class="normal"></highlight></codeline>
+<codeline lineno="356"><highlight class="normal"><sp/><sp/>lv_obj_set_size(test_btnm,<sp/>200,<sp/>120);</highlight></codeline>
+<codeline lineno="357"><highlight class="normal"><sp/><sp/>lv_obj_align(test_btnm,<sp/>LV_ALIGN_BOTTOM_LEFT,<sp/>20,<sp/>-20);</highlight></codeline>
+<codeline lineno="358"><highlight class="normal"></highlight></codeline>
+<codeline lineno="359"><highlight class="normal"><sp/><sp/><ref refid="_arduino_giga_lvgl_display_8ino_1a6fbd991f948fc782ccc13e510b824d91" kindref="member">set_btnm_bg_colors</ref>(test_btnm,<sp/>0x5555ff,<sp/>0xe74c3c);</highlight></codeline>
+<codeline lineno="360"><highlight class="normal"></highlight></codeline>
+<codeline lineno="361"><highlight class="normal"><sp/><sp/>lv_obj_add_event_cb(test_btnm,<sp/><ref refid="_arduino_giga_lvgl_display_8ino_1a387364b391da0c6e0e19cbdddd28b77a" kindref="member">test_btnm_event_cb</ref>,<sp/>LV_EVENT_VALUE_CHANGED,<sp/>NULL);</highlight></codeline>
+<codeline lineno="362"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="363"><highlight class="normal"></highlight></codeline>
+<codeline lineno="370"><highlight class="normal"></highlight><highlight class="comment">//<sp/>=====<sp/>Speed<sp/>Sliders<sp/>=====</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="371" refid="_arduino_giga_lvgl_display_8ino_1ad5dca755f09c580eccadbdd097c4d57d" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_arduino_giga_lvgl_display_8ino_1ad5dca755f09c580eccadbdd097c4d57d" kindref="member">create_speed_sliders</ref>(lv_obj_t<sp/>*parent)</highlight></codeline>
+<codeline lineno="372"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="373"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*labels[]<sp/>=<sp/>{</highlight><highlight class="stringliteral">&quot;FR&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;FL&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;RR&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;RL&quot;</highlight><highlight class="normal">};</highlight></codeline>
+<codeline lineno="374"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>y_positions[]<sp/>=<sp/>{20,<sp/>60,<sp/>100,<sp/>140};</highlight></codeline>
+<codeline lineno="375"><highlight class="normal"></highlight></codeline>
+<codeline lineno="376"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>4;<sp/>i++)</highlight></codeline>
+<codeline lineno="377"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="378"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Create<sp/>label</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="379"><highlight class="normal"><sp/><sp/><sp/><sp/>lv_obj_t<sp/>*label<sp/>=<sp/>lv_label_create(parent);</highlight></codeline>
+<codeline lineno="380"><highlight class="normal"><sp/><sp/><sp/><sp/>lv_label_set_text(label,<sp/>labels[i]);</highlight></codeline>
+<codeline lineno="381"><highlight class="normal"><sp/><sp/><sp/><sp/>lv_obj_align(label,<sp/>LV_ALIGN_TOP_RIGHT,<sp/>-230,<sp/>y_positions[i]);</highlight></codeline>
+<codeline lineno="382"><highlight class="normal"></highlight></codeline>
+<codeline lineno="383"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Create<sp/>slider</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="384"><highlight class="normal"><sp/><sp/><sp/><sp/>lv_obj_t<sp/>*slider<sp/>=<sp/>lv_slider_create(parent);</highlight></codeline>
+<codeline lineno="385"><highlight class="normal"><sp/><sp/><sp/><sp/>lv_slider_set_range(slider,<sp/>0,<sp/>255);</highlight></codeline>
+<codeline lineno="386"><highlight class="normal"><sp/><sp/><sp/><sp/>lv_obj_set_size(slider,<sp/>150,<sp/>20);</highlight></codeline>
+<codeline lineno="387"><highlight class="normal"><sp/><sp/><sp/><sp/>lv_obj_align_to(slider,<sp/>label,<sp/>LV_ALIGN_OUT_RIGHT_MID,<sp/>15,<sp/>0);</highlight></codeline>
+<codeline lineno="388"><highlight class="normal"></highlight></codeline>
+<codeline lineno="389"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Create<sp/>value<sp/>label</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="390"><highlight class="normal"><sp/><sp/><sp/><sp/>lv_obj_t<sp/>*value_label<sp/>=<sp/>lv_label_create(parent);</highlight></codeline>
+<codeline lineno="391"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>buf[4];</highlight></codeline>
+<codeline lineno="392"><highlight class="normal"><sp/><sp/><sp/><sp/>snprintf(buf,<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(buf),<sp/></highlight><highlight class="stringliteral">&quot;%d&quot;</highlight><highlight class="normal">,<sp/>lv_slider_get_value(slider));</highlight></codeline>
+<codeline lineno="393"><highlight class="normal"><sp/><sp/><sp/><sp/>lv_label_set_text(value_label,<sp/>buf);</highlight></codeline>
+<codeline lineno="394"><highlight class="normal"><sp/><sp/><sp/><sp/>lv_obj_align_to(value_label,<sp/>slider,<sp/>LV_ALIGN_OUT_RIGHT_MID,<sp/>15,<sp/>0);</highlight></codeline>
+<codeline lineno="395"><highlight class="normal"></highlight></codeline>
+<codeline lineno="396"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Add<sp/>event<sp/>callback<sp/>that<sp/>updates<sp/>the<sp/>value<sp/>label</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="397"><highlight class="normal"><sp/><sp/><sp/><sp/>lv_obj_add_event_cb(</highlight></codeline>
+<codeline lineno="398"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>slider,<sp/>[](lv_event_t<sp/>*e)</highlight></codeline>
+<codeline lineno="399"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="400"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>lv_obj_t*<sp/>s<sp/>=<sp/>(lv_obj_t*)lv_event_get_target(e);</highlight></codeline>
+<codeline lineno="401"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>lv_obj_t*<sp/>val_lbl<sp/>=<sp/>(lv_obj_t*)lv_event_get_user_data(e);</highlight></codeline>
+<codeline lineno="402"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>buf[4];<sp/></highlight><highlight class="comment">//<sp/>Buffer<sp/>to<sp/>hold<sp/>the<sp/>string<sp/>representation<sp/>of<sp/>the<sp/>slider<sp/>value<sp/>(3<sp/>digits<sp/>+<sp/>null<sp/>terminator)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="403"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>snprintf(buf,<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(buf),<sp/></highlight><highlight class="stringliteral">&quot;%d&quot;</highlight><highlight class="normal">,<sp/>lv_slider_get_value(s));</highlight></codeline>
+<codeline lineno="404"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>lv_label_set_text(val_lbl,<sp/>buf);<sp/>},</highlight></codeline>
+<codeline lineno="405"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>LV_EVENT_VALUE_CHANGED,<sp/>value_label);</highlight></codeline>
+<codeline lineno="406"><highlight class="normal"></highlight></codeline>
+<codeline lineno="407"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Add<sp/>slider<sp/>event<sp/>callback<sp/>to<sp/>update<sp/>speed</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="408"><highlight class="normal"><sp/><sp/><sp/><sp/>lv_obj_add_event_cb(slider,<sp/><ref refid="_arduino_giga_lvgl_display_8ino_1accf9c682319e11f61db68997b6938fdc" kindref="member">slider_event_cb</ref>,<sp/>LV_EVENT_VALUE_CHANGED,<sp/>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*)labels[i]);</highlight></codeline>
+<codeline lineno="409"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="410"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="415" refid="_arduino_giga_lvgl_display_8ino_1a1887246f5467ff145cd963e98fc2258e" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_arduino_giga_lvgl_display_8ino_1a1887246f5467ff145cd963e98fc2258e" kindref="member">create_ui</ref>()</highlight></codeline>
+<codeline lineno="416"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="417"><highlight class="normal"><sp/><sp/><ref refid="classother__constants_1a6cb0844b817ba598ef84d337e3fd132f" kindref="member">other_constants::screen_buttons</ref><sp/>=<sp/>lv_obj_create(NULL);</highlight></codeline>
+<codeline lineno="418"><highlight class="normal"><sp/><sp/><ref refid="_arduino_giga_lvgl_display_8ino_1a9965ed6b6152697e6db85d37dfe41720" kindref="member">create_main_button_matrix</ref>(<ref refid="classother__constants_1a6cb0844b817ba598ef84d337e3fd132f" kindref="member">other_constants::screen_buttons</ref>);</highlight></codeline>
+<codeline lineno="419"><highlight class="normal"><sp/><sp/><ref refid="_arduino_giga_lvgl_display_8ino_1aecc909a3f155365b24a95ec0ffef19d3" kindref="member">create_test_button_matrix</ref>(<ref refid="classother__constants_1a6cb0844b817ba598ef84d337e3fd132f" kindref="member">other_constants::screen_buttons</ref>);</highlight></codeline>
+<codeline lineno="420"><highlight class="normal"></highlight></codeline>
+<codeline lineno="421"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Call<sp/>the<sp/>new<sp/>function<sp/>to<sp/>create<sp/>speed<sp/>sliders</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="422"><highlight class="normal"><sp/><sp/><ref refid="_arduino_giga_lvgl_display_8ino_1ad5dca755f09c580eccadbdd097c4d57d" kindref="member">create_speed_sliders</ref>(<ref refid="classother__constants_1a6cb0844b817ba598ef84d337e3fd132f" kindref="member">other_constants::screen_buttons</ref>);</highlight></codeline>
+<codeline lineno="423"><highlight class="normal"></highlight></codeline>
+<codeline lineno="424"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>=====<sp/>Fwd/Rev<sp/>Toggle<sp/>Button<sp/>=====</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="425"><highlight class="normal"><sp/><sp/>lv_obj_t<sp/>*toggle_FwdRev<sp/>=<sp/>lv_btn_create(<ref refid="classother__constants_1a6cb0844b817ba598ef84d337e3fd132f" kindref="member">other_constants::screen_buttons</ref>);</highlight></codeline>
+<codeline lineno="426"><highlight class="normal"><sp/><sp/>lv_obj_set_size(toggle_FwdRev,<sp/>80,<sp/>40);</highlight></codeline>
+<codeline lineno="427"><highlight class="normal"><sp/><sp/>lv_obj_align(toggle_FwdRev,<sp/>LV_ALIGN_TOP_RIGHT,<sp/>-20,<sp/>180);</highlight></codeline>
+<codeline lineno="428"><highlight class="normal"></highlight></codeline>
+<codeline lineno="429"><highlight class="normal"><sp/><sp/>lv_obj_t<sp/>*toggle_label<sp/>=<sp/>lv_label_create(toggle_FwdRev);</highlight></codeline>
+<codeline lineno="430"><highlight class="normal"><sp/><sp/>lv_label_set_text(toggle_label,<sp/></highlight><highlight class="stringliteral">&quot;Fwd&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="431"><highlight class="normal"><sp/><sp/>lv_obj_center(toggle_label);</highlight></codeline>
+<codeline lineno="432"><highlight class="normal"></highlight></codeline>
+<codeline lineno="433"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Set<sp/>direction</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="434"><highlight class="normal"><sp/><sp/>lv_obj_add_event_cb(toggle_FwdRev,<sp/><ref refid="_arduino_giga_lvgl_display_8ino_1a5c854330b94e76f43e26164660df409c" kindref="member">toggle_fwdrev_cb</ref>,<sp/>LV_EVENT_CLICKED,<sp/>NULL);</highlight></codeline>
+<codeline lineno="435"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="436"><highlight class="normal"></highlight></codeline>
+<codeline lineno="437"><highlight class="normal"></highlight><highlight class="comment">//<sp/>=====<sp/>test<sp/>movement<sp/>functions<sp/>=====</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="438"><highlight class="normal"></highlight></codeline>
+<codeline lineno="444" refid="_arduino_giga_lvgl_display_8ino_1a1d1a4db533ab78b9a2a06a09ba8a3bba" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_arduino_giga_lvgl_display_8ino_1a1d1a4db533ab78b9a2a06a09ba8a3bba" kindref="member">FR_move</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>speed)</highlight></codeline>
+<codeline lineno="445"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="446"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(speed<sp/>&gt;=<sp/>0)</highlight></codeline>
+<codeline lineno="447"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="448"><highlight class="normal"><sp/><sp/><sp/><sp/>digitalWrite(<ref refid="_arduino_giga_lvgl_display_8ino_1a09c202aa2681c1591f47ade0fd9f93bea73a3f9b58bcbefe98e6d5cec2e9088a5" kindref="member">MotorPins::IN1_B</ref>,<sp/>HIGH);</highlight></codeline>
+<codeline lineno="449"><highlight class="normal"><sp/><sp/><sp/><sp/>digitalWrite(<ref refid="_arduino_giga_lvgl_display_8ino_1a09c202aa2681c1591f47ade0fd9f93bea859b5cc7d0a7874c0d8a05ddfe033866" kindref="member">MotorPins::IN2_B</ref>,<sp/>LOW);</highlight></codeline>
+<codeline lineno="450"><highlight class="normal"><sp/><sp/><sp/><sp/>analogWrite(<ref refid="_arduino_giga_lvgl_display_8ino_1a09c202aa2681c1591f47ade0fd9f93bea4fd12e00eb66efa116b4e9769045508c" kindref="member">MotorPins::ENA_B</ref>,<sp/>speed);</highlight></codeline>
+<codeline lineno="451"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="452"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="453"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="454"><highlight class="normal"><sp/><sp/><sp/><sp/>digitalWrite(<ref refid="_arduino_giga_lvgl_display_8ino_1a09c202aa2681c1591f47ade0fd9f93bea73a3f9b58bcbefe98e6d5cec2e9088a5" kindref="member">MotorPins::IN1_B</ref>,<sp/>LOW);</highlight></codeline>
+<codeline lineno="455"><highlight class="normal"><sp/><sp/><sp/><sp/>digitalWrite(<ref refid="_arduino_giga_lvgl_display_8ino_1a09c202aa2681c1591f47ade0fd9f93bea859b5cc7d0a7874c0d8a05ddfe033866" kindref="member">MotorPins::IN2_B</ref>,<sp/>HIGH);</highlight></codeline>
+<codeline lineno="456"><highlight class="normal"><sp/><sp/><sp/><sp/>analogWrite(<ref refid="_arduino_giga_lvgl_display_8ino_1a09c202aa2681c1591f47ade0fd9f93bea4fd12e00eb66efa116b4e9769045508c" kindref="member">MotorPins::ENA_B</ref>,<sp/>-speed);</highlight></codeline>
+<codeline lineno="457"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="458"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="459"><highlight class="normal"></highlight></codeline>
+<codeline lineno="465" refid="_arduino_giga_lvgl_display_8ino_1a89702714cf6f17fb069f22e5f1f36d97" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_arduino_giga_lvgl_display_8ino_1a89702714cf6f17fb069f22e5f1f36d97" kindref="member">FL_move</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>speed)</highlight></codeline>
+<codeline lineno="466"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="467"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(speed<sp/>&gt;=<sp/>0)</highlight></codeline>
+<codeline lineno="468"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="469"><highlight class="normal"><sp/><sp/><sp/><sp/>digitalWrite(<ref refid="_arduino_giga_lvgl_display_8ino_1a09c202aa2681c1591f47ade0fd9f93bea6ed09eef66c4f29e12b322f4d83cae56" kindref="member">MotorPins::IN3_B</ref>,<sp/>HIGH);</highlight></codeline>
+<codeline lineno="470"><highlight class="normal"><sp/><sp/><sp/><sp/>digitalWrite(<ref refid="_arduino_giga_lvgl_display_8ino_1a09c202aa2681c1591f47ade0fd9f93bea2047c5c4b4b18be0602eb80f9b4a1768" kindref="member">MotorPins::IN4_B</ref>,<sp/>LOW);</highlight></codeline>
+<codeline lineno="471"><highlight class="normal"><sp/><sp/><sp/><sp/>analogWrite(<ref refid="_arduino_giga_lvgl_display_8ino_1a09c202aa2681c1591f47ade0fd9f93beafac329d5db4efdbf0c8d2d7d3de466a9" kindref="member">MotorPins::ENB_B</ref>,<sp/>speed);</highlight></codeline>
+<codeline lineno="472"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="473"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="474"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="475"><highlight class="normal"><sp/><sp/><sp/><sp/>digitalWrite(<ref refid="_arduino_giga_lvgl_display_8ino_1a09c202aa2681c1591f47ade0fd9f93bea6ed09eef66c4f29e12b322f4d83cae56" kindref="member">MotorPins::IN3_B</ref>,<sp/>LOW);</highlight></codeline>
+<codeline lineno="476"><highlight class="normal"><sp/><sp/><sp/><sp/>digitalWrite(<ref refid="_arduino_giga_lvgl_display_8ino_1a09c202aa2681c1591f47ade0fd9f93bea2047c5c4b4b18be0602eb80f9b4a1768" kindref="member">MotorPins::IN4_B</ref>,<sp/>HIGH);</highlight></codeline>
+<codeline lineno="477"><highlight class="normal"><sp/><sp/><sp/><sp/>analogWrite(<ref refid="_arduino_giga_lvgl_display_8ino_1a09c202aa2681c1591f47ade0fd9f93beafac329d5db4efdbf0c8d2d7d3de466a9" kindref="member">MotorPins::ENB_B</ref>,<sp/>-speed);</highlight></codeline>
+<codeline lineno="478"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="479"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="480"><highlight class="normal"></highlight></codeline>
+<codeline lineno="486" refid="_arduino_giga_lvgl_display_8ino_1a72d3ab08a583fa7cbdf7e3db1cb9ee5f" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_arduino_giga_lvgl_display_8ino_1a72d3ab08a583fa7cbdf7e3db1cb9ee5f" kindref="member">RR_move</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>speed)</highlight></codeline>
+<codeline lineno="487"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="488"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(speed<sp/>&gt;=<sp/>0)</highlight></codeline>
+<codeline lineno="489"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="490"><highlight class="normal"><sp/><sp/><sp/><sp/>digitalWrite(<ref refid="_arduino_giga_lvgl_display_8ino_1a09c202aa2681c1591f47ade0fd9f93bea115a61482486b39c89389f48bc9a36be" kindref="member">MotorPins::IN1_A</ref>,<sp/>HIGH);</highlight></codeline>
+<codeline lineno="491"><highlight class="normal"><sp/><sp/><sp/><sp/>digitalWrite(<ref refid="_arduino_giga_lvgl_display_8ino_1a09c202aa2681c1591f47ade0fd9f93bea542f6a0db31278731d93bec3ed4151af" kindref="member">MotorPins::IN2_A</ref>,<sp/>LOW);</highlight></codeline>
+<codeline lineno="492"><highlight class="normal"><sp/><sp/><sp/><sp/>analogWrite(<ref refid="_arduino_giga_lvgl_display_8ino_1a09c202aa2681c1591f47ade0fd9f93bea8ca39e084c4680aee4c18e3094761422" kindref="member">MotorPins::ENA_A</ref>,<sp/>speed);</highlight></codeline>
+<codeline lineno="493"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="494"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="495"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="496"><highlight class="normal"><sp/><sp/><sp/><sp/>digitalWrite(<ref refid="_arduino_giga_lvgl_display_8ino_1a09c202aa2681c1591f47ade0fd9f93bea115a61482486b39c89389f48bc9a36be" kindref="member">MotorPins::IN1_A</ref>,<sp/>LOW);</highlight></codeline>
+<codeline lineno="497"><highlight class="normal"><sp/><sp/><sp/><sp/>digitalWrite(<ref refid="_arduino_giga_lvgl_display_8ino_1a09c202aa2681c1591f47ade0fd9f93bea542f6a0db31278731d93bec3ed4151af" kindref="member">MotorPins::IN2_A</ref>,<sp/>HIGH);</highlight></codeline>
+<codeline lineno="498"><highlight class="normal"><sp/><sp/><sp/><sp/>analogWrite(<ref refid="_arduino_giga_lvgl_display_8ino_1a09c202aa2681c1591f47ade0fd9f93bea8ca39e084c4680aee4c18e3094761422" kindref="member">MotorPins::ENA_A</ref>,<sp/>-speed);</highlight></codeline>
+<codeline lineno="499"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="500"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="501"><highlight class="normal"></highlight></codeline>
+<codeline lineno="507" refid="_arduino_giga_lvgl_display_8ino_1ac5e4ea79ee09f85143f444ee9d22cea6" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_arduino_giga_lvgl_display_8ino_1ac5e4ea79ee09f85143f444ee9d22cea6" kindref="member">RL_move</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>speed)</highlight></codeline>
+<codeline lineno="508"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="509"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(speed<sp/>&gt;=<sp/>0)</highlight></codeline>
+<codeline lineno="510"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="511"><highlight class="normal"><sp/><sp/><sp/><sp/>digitalWrite(<ref refid="_arduino_giga_lvgl_display_8ino_1a09c202aa2681c1591f47ade0fd9f93bea9d9477ff2adcb5d4e3b7f2912bc459db" kindref="member">MotorPins::IN3_A</ref>,<sp/>HIGH);</highlight></codeline>
+<codeline lineno="512"><highlight class="normal"><sp/><sp/><sp/><sp/>digitalWrite(<ref refid="_arduino_giga_lvgl_display_8ino_1a09c202aa2681c1591f47ade0fd9f93bea93d7c651df7bde50e2382ad65e25c40a" kindref="member">MotorPins::IN4_A</ref>,<sp/>LOW);</highlight></codeline>
+<codeline lineno="513"><highlight class="normal"><sp/><sp/><sp/><sp/>analogWrite(<ref refid="_arduino_giga_lvgl_display_8ino_1a09c202aa2681c1591f47ade0fd9f93beab601c6a9dbd4c1a3b70d8a84de3bd012" kindref="member">MotorPins::ENB_A</ref>,<sp/>speed);</highlight></codeline>
+<codeline lineno="514"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="515"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="516"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="517"><highlight class="normal"><sp/><sp/><sp/><sp/>digitalWrite(<ref refid="_arduino_giga_lvgl_display_8ino_1a09c202aa2681c1591f47ade0fd9f93bea9d9477ff2adcb5d4e3b7f2912bc459db" kindref="member">MotorPins::IN3_A</ref>,<sp/>LOW);</highlight></codeline>
+<codeline lineno="518"><highlight class="normal"><sp/><sp/><sp/><sp/>digitalWrite(<ref refid="_arduino_giga_lvgl_display_8ino_1a09c202aa2681c1591f47ade0fd9f93bea93d7c651df7bde50e2382ad65e25c40a" kindref="member">MotorPins::IN4_A</ref>,<sp/>HIGH);</highlight></codeline>
+<codeline lineno="519"><highlight class="normal"><sp/><sp/><sp/><sp/>analogWrite(<ref refid="_arduino_giga_lvgl_display_8ino_1a09c202aa2681c1591f47ade0fd9f93beab601c6a9dbd4c1a3b70d8a84de3bd012" kindref="member">MotorPins::ENB_A</ref>,<sp/>-speed);</highlight></codeline>
+<codeline lineno="520"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="521"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="522"><highlight class="normal"></highlight></codeline>
+<codeline lineno="523"><highlight class="normal"></highlight><highlight class="comment">//<sp/>=====<sp/>Setup<sp/>&amp;<sp/>loop<sp/>=====</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="524" refid="_arduino_giga_lvgl_display_8ino_1a4fc01d736fe50cf5b977f755b675f11d" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_arduino_giga_lvgl_display_8ino_1a4fc01d736fe50cf5b977f755b675f11d" kindref="member">setup</ref>()</highlight></codeline>
+<codeline lineno="525"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="526"><highlight class="normal"><sp/><sp/>delay(3000);</highlight></codeline>
+<codeline lineno="527"><highlight class="normal"><sp/><sp/>Serial.begin(115200);</highlight></codeline>
+<codeline lineno="528"><highlight class="normal"></highlight></codeline>
+<codeline lineno="529"><highlight class="normal"><sp/><sp/><ref refid="class_arduino__constants_1ae43c82f3708c54a2bf430275a03df168" kindref="member">Arduino_constants::Display</ref>.begin();</highlight></codeline>
+<codeline lineno="530"><highlight class="normal"><sp/><sp/><ref refid="class_arduino__constants_1a3159622c676cfc976b52891ce9bb9025" kindref="member">Arduino_constants::TouchDetector</ref>.begin();</highlight></codeline>
+<codeline lineno="531"><highlight class="normal"></highlight></codeline>
+<codeline lineno="532"><highlight class="normal"><sp/><sp/><ref refid="_arduino_giga_lvgl_display_8ino_1a1887246f5467ff145cd963e98fc2258e" kindref="member">create_ui</ref>();</highlight></codeline>
+<codeline lineno="533"><highlight class="normal"><sp/><sp/>lv_scr_load(<ref refid="classother__constants_1a6cb0844b817ba598ef84d337e3fd132f" kindref="member">other_constants::screen_buttons</ref>);</highlight></codeline>
+<codeline lineno="534"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="535"><highlight class="normal"></highlight></codeline>
+<codeline lineno="536" refid="_arduino_giga_lvgl_display_8ino_1afe461d27b9c48d5921c00d521181f12f" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_arduino_giga_lvgl_display_8ino_1afe461d27b9c48d5921c00d521181f12f" kindref="member">loop</ref>()</highlight></codeline>
+<codeline lineno="537"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="538"><highlight class="normal"><sp/><sp/>lv_timer_handler();</highlight></codeline>
+<codeline lineno="539"><highlight class="normal"></highlight></codeline>
+<codeline lineno="540"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(msg_label<sp/>!=<sp/>NULL<sp/>&amp;&amp;<sp/>(millis()<sp/>-<sp/>msg_start_time<sp/>&gt;<sp/>msg_duration))</highlight></codeline>
+<codeline lineno="541"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="542"><highlight class="normal"><sp/><sp/><sp/><sp/>lv_obj_del(msg_label);</highlight></codeline>
+<codeline lineno="543"><highlight class="normal"><sp/><sp/><sp/><sp/>msg_label<sp/>=<sp/>NULL;</highlight></codeline>
+<codeline lineno="544"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="545"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="ArduinoGigaLvglDisplay.ino"/>
+  </compounddef>
+</doxygen>

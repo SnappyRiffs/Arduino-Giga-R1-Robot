@@ -1,0 +1,84 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.15.0" xml:lang="en-US">
+  <compounddef id="other__constants_8cpp" kind="file" language="C++">
+    <compoundname>other_constants.cpp</compoundname>
+    <includes refid="other__constants_8h" local="yes">other_constants.h</includes>
+    <incdepgraph>
+      <node id="1">
+        <label>C:/Users/Snapp/OneDrive/Arduino/libraries/Arduino_robot_project_library/src/other_constants.cpp</label>
+        <link refid="other__constants_8cpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>other_constants.h</label>
+        <link refid="other__constants_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>lv_api_map_v9_0.h</label>
+      </node>
+      <node id="4">
+        <label>lv_api_map_v9_1.h</label>
+      </node>
+      <node id="5">
+        <label>lv_api_map_v9_2.h</label>
+      </node>
+      <node id="6">
+        <label>lv_api_map_v9_3.h</label>
+      </node>
+      <node id="7">
+        <label>lv_conf_internal.h</label>
+      </node>
+      <node id="8">
+        <label>lv_conf_kconfig.h</label>
+      </node>
+      <node id="9">
+        <label>lv_init.h</label>
+      </node>
+      <node id="11">
+        <label>lvgl.h</label>
+      </node>
+      <node id="10">
+        <label>lvgl_private.h</label>
+      </node>
+      <node id="12">
+        <label>vector</label>
+      </node>
+    </incdepgraph>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#include<sp/>&quot;<ref refid="other__constants_8h" kindref="compound">other_constants.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Constructor</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4" refid="classother__constants_1af6f2024700208601083c22c1c08476ed" refkind="member"><highlight class="normal"><ref refid="classother__constants_1af6f2024700208601083c22c1c08476ed" kindref="member">other_constants::other_constants</ref>()</highlight></codeline>
+<codeline lineno="5"><highlight class="normal"><sp/><sp/><sp/><sp/>:<sp/><ref refid="classother__constants_1a6cb0844b817ba598ef84d337e3fd132f" kindref="member">screen_buttons</ref>(nullptr),</highlight></codeline>
+<codeline lineno="6"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classother__constants_1a522b12f820f2390f63de34235a38942e" kindref="member">program</ref>()</highlight></codeline>
+<codeline lineno="7"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="8"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="C:/Users/Snapp/OneDrive/Arduino/libraries/Arduino_robot_project_library/src/other_constants.cpp"/>
+  </compounddef>
+</doxygen>

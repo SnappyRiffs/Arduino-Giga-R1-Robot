@@ -1,0 +1,19 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.15.0" xml:lang="en-US">
+  <compounddef id="dir_b7e4d3e8d15aa1f9b8e281de69460ad6" kind="dir">
+    <compoundname>C:/Users/Snapp/OneDrive/Arduino/libraries/Arduino_robot_project_library/src</compoundname>
+    <innerfile refid="_arduino__constants_8cpp">Arduino_constants.cpp</innerfile>
+    <innerfile refid="_arduino__constants_8h">Arduino_constants.h</innerfile>
+    <innerfile refid="motor__constants_8cpp">motor_constants.cpp</innerfile>
+    <innerfile refid="motor__constants_8h">motor_constants.h</innerfile>
+    <innerfile refid="msg__constants_8cpp">msg_constants.cpp</innerfile>
+    <innerfile refid="msg__constants_8h">msg_constants.h</innerfile>
+    <innerfile refid="other__constants_8cpp">other_constants.cpp</innerfile>
+    <innerfile refid="other__constants_8h">other_constants.h</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/Snapp/OneDrive/Arduino/libraries/Arduino_robot_project_library/src/"/>
+  </compounddef>
+</doxygen>

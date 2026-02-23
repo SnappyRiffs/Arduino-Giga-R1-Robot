@@ -1,0 +1,47 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.15.0" xml:lang="en-US">
+  <compounddef id="motor__constants_8h" kind="file" language="C++">
+    <compoundname>motor_constants.h</compoundname>
+    <includedby refid="_arduino_giga_lvgl_display_8ino" local="no">ArduinoGigaLvglDisplay.ino</includedby>
+    <includedby refid="motor__constants_8cpp" local="yes">C:/Users/Snapp/OneDrive/Arduino/libraries/Arduino_robot_project_library/src/motor_constants.cpp</includedby>
+    <invincdepgraph>
+      <node id="2">
+        <label>ArduinoGigaLvglDisplay.ino</label>
+        <link refid="_arduino_giga_lvgl_display_8ino"/>
+      </node>
+      <node id="3">
+        <label>C:/Users/Snapp/OneDrive/Arduino/libraries/Arduino_robot_project_library/src/motor_constants.cpp</label>
+        <link refid="motor__constants_8cpp"/>
+      </node>
+      <node id="1">
+        <label>C:/Users/Snapp/OneDrive/Arduino/libraries/Arduino_robot_project_library/src/motor_constants.h</label>
+        <link refid="motor__constants_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="classmotor__constants" prot="public">motor_constants</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>MOTOR_CONSTANTS_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MOTOR_CONSTANTS_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4" refid="classmotor__constants" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classmotor__constants_1ace352cb444a09a5e58ffffdb933bd945" kindref="member">motor_constants</ref><sp/>{</highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="6" refid="classmotor__constants_1af83643f00e48ca7329566e17246a2c83" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classmotor__constants_1af83643f00e48ca7329566e17246a2c83" kindref="member">motor_speed</ref>;</highlight></codeline>
+<codeline lineno="7" refid="classmotor__constants_1a55499ee0a25a1f7a3024cea72541543a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classmotor__constants_1a55499ee0a25a1f7a3024cea72541543a" kindref="member">motor_direction</ref>;</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Constructor</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classmotor__constants_1ace352cb444a09a5e58ffffdb933bd945" kindref="member">motor_constants</ref>();</highlight></codeline>
+<codeline lineno="11"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="C:/Users/Snapp/OneDrive/Arduino/libraries/Arduino_robot_project_library/src/motor_constants.h"/>
+  </compounddef>
+</doxygen>

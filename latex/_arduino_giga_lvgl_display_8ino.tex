@@ -28,11 +28,31 @@ Include dependency graph for Arduino\+Giga\+Lvgl\+Display.\+ino\+:\nopagebreak
 \includegraphics[width=350pt]{_arduino_giga_lvgl_display_8ino__incl}
 \end{center}
 \end{figure}
+\doxysubsubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{_arduino_giga_lvgl_display_8ino_a09c202aa2681c1591f47ade0fd9f93be}{Motor\+Pins}} \{ \newline
+\mbox{\hyperlink{_arduino_giga_lvgl_display_8ino_a09c202aa2681c1591f47ade0fd9f93beafac329d5db4efdbf0c8d2d7d3de466a9}{ENB\+\_\+B}} = 13
+, \mbox{\hyperlink{_arduino_giga_lvgl_display_8ino_a09c202aa2681c1591f47ade0fd9f93bea2047c5c4b4b18be0602eb80f9b4a1768}{IN4\+\_\+B}} = 12
+, \mbox{\hyperlink{_arduino_giga_lvgl_display_8ino_a09c202aa2681c1591f47ade0fd9f93bea6ed09eef66c4f29e12b322f4d83cae56}{IN3\+\_\+B}} = 11
+, \mbox{\hyperlink{_arduino_giga_lvgl_display_8ino_a09c202aa2681c1591f47ade0fd9f93bea859b5cc7d0a7874c0d8a05ddfe033866}{IN2\+\_\+B}} = 10
+, \newline
+\mbox{\hyperlink{_arduino_giga_lvgl_display_8ino_a09c202aa2681c1591f47ade0fd9f93bea73a3f9b58bcbefe98e6d5cec2e9088a5}{IN1\+\_\+B}} = 9
+, \mbox{\hyperlink{_arduino_giga_lvgl_display_8ino_a09c202aa2681c1591f47ade0fd9f93bea4fd12e00eb66efa116b4e9769045508c}{ENA\+\_\+B}} = 8
+, \mbox{\hyperlink{_arduino_giga_lvgl_display_8ino_a09c202aa2681c1591f47ade0fd9f93beab601c6a9dbd4c1a3b70d8a84de3bd012}{ENB\+\_\+A}} = 7
+, \mbox{\hyperlink{_arduino_giga_lvgl_display_8ino_a09c202aa2681c1591f47ade0fd9f93bea93d7c651df7bde50e2382ad65e25c40a}{IN4\+\_\+A}} = 6
+, \newline
+\mbox{\hyperlink{_arduino_giga_lvgl_display_8ino_a09c202aa2681c1591f47ade0fd9f93bea9d9477ff2adcb5d4e3b7f2912bc459db}{IN3\+\_\+A}} = 5
+, \mbox{\hyperlink{_arduino_giga_lvgl_display_8ino_a09c202aa2681c1591f47ade0fd9f93bea542f6a0db31278731d93bec3ed4151af}{IN2\+\_\+A}} = 4
+, \mbox{\hyperlink{_arduino_giga_lvgl_display_8ino_a09c202aa2681c1591f47ade0fd9f93bea115a61482486b39c89389f48bc9a36be}{IN1\+\_\+A}} = 3
+, \mbox{\hyperlink{_arduino_giga_lvgl_display_8ino_a09c202aa2681c1591f47ade0fd9f93bea8ca39e084c4680aee4c18e3094761422}{ENA\+\_\+A}} = 2
+ \}
+\end{DoxyCompactItemize}
 \doxysubsubsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
 static void \mbox{\hyperlink{_arduino_giga_lvgl_display_8ino_a0397ddbe4d2bddb9d77afbb47acf56f0}{apply\+\_\+mode}} (const char \texorpdfstring{$\ast$}{*}mode\+\_\+name, const char \texorpdfstring{$\ast$}{*}direction)
-\begin{DoxyCompactList}\small\item\em Applies the selected movement mode and direction. This function creates a temporary message label on the screen indicating the applied mode and direction. It also appends the direction to the global program vector for later execution. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Applies the selected movement mode and direction. This function creates a temporary message label on the screen indicating the applied mode and direction. It also appends the direction to the \doxylink{classother__constants_a522b12f820f2390f63de34235a38942e}{other\+\_\+constants\+::program} vector for later execution. \end{DoxyCompactList}\item 
 static void \mbox{\hyperlink{_arduino_giga_lvgl_display_8ino_a599fa16066a270f3a22e7de32fbb250f}{btn\+\_\+\+Run\+\_\+\+Program\+\_\+event\+\_\+cb}} (lv\+\_\+event\+\_\+t \texorpdfstring{$\ast$}{*}e)
 \begin{DoxyCompactList}\small\item\em Handles the "{}\+Run Program"{} button event. \end{DoxyCompactList}\item 
 static void \mbox{\hyperlink{_arduino_giga_lvgl_display_8ino_a6b08dca515fd8dd9eaec4b80e83e7e6a}{main\+\_\+btnm\+\_\+event\+\_\+cb}} (lv\+\_\+event\+\_\+t \texorpdfstring{$\ast$}{*}e)
@@ -65,33 +85,6 @@ void \mbox{\hyperlink{_arduino_giga_lvgl_display_8ino_a4fc01d736fe50cf5b977f755b
 \item 
 void \mbox{\hyperlink{_arduino_giga_lvgl_display_8ino_afe461d27b9c48d5921c00d521181f12f}{loop}} ()
 \end{DoxyCompactItemize}
-\doxysubsubsection*{Variables}
-\begin{DoxyCompactItemize}
-\item 
-const int \mbox{\hyperlink{_arduino_giga_lvgl_display_8ino_a4763be0e77388074ff071965028a76ba}{ENB\+\_\+B}} = 13
-\item 
-const int \mbox{\hyperlink{_arduino_giga_lvgl_display_8ino_a2bf2794b643a821a4a1ee3fce9a17b39}{IN4\+\_\+B}} = 12
-\item 
-const int \mbox{\hyperlink{_arduino_giga_lvgl_display_8ino_a0eff9fd47f52060c179765fc406c824f}{IN3\+\_\+B}} = 11
-\item 
-const int \mbox{\hyperlink{_arduino_giga_lvgl_display_8ino_a9570059ff6b742c8040a32962d0d5a37}{IN2\+\_\+B}} = 10
-\item 
-const int \mbox{\hyperlink{_arduino_giga_lvgl_display_8ino_ac74564e770f6c90dbf7dd71476f5114e}{IN1\+\_\+B}} = 9
-\item 
-const int \mbox{\hyperlink{_arduino_giga_lvgl_display_8ino_a51076b14694e306a6194047c53593a31}{ENA\+\_\+B}} = 8
-\item 
-const int \mbox{\hyperlink{_arduino_giga_lvgl_display_8ino_af062d7609355335ffce63fa23bfed5f7}{ENB\+\_\+A}} = 7
-\item 
-const int \mbox{\hyperlink{_arduino_giga_lvgl_display_8ino_a7bc7d13c97218d43553bd1bdde068e9d}{IN4\+\_\+A}} = 6
-\item 
-const int \mbox{\hyperlink{_arduino_giga_lvgl_display_8ino_a5c616be1a0da4e4851766ab26fdc106b}{IN3\+\_\+A}} = 5
-\item 
-const int \mbox{\hyperlink{_arduino_giga_lvgl_display_8ino_a0a2da1fa43e204f03999bfcd82e2ce93}{IN2\+\_\+A}} = 4
-\item 
-const int \mbox{\hyperlink{_arduino_giga_lvgl_display_8ino_a2f8c3e5c64df336aadd989def65390df}{IN1\+\_\+A}} = 3
-\item 
-const int \mbox{\hyperlink{_arduino_giga_lvgl_display_8ino_a448921cced6d8ecae8e0ea9dc739dcea}{ENA\+\_\+A}} = 2
-\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
@@ -104,7 +97,7 @@ Jadon Jung (\href{mailto:jadonjung3@gmail.com}{\texttt{jadonjung3@gmail.\+com}})
 1.\+0 
 \end{DoxyVersion}
 \begin{DoxyDate}{Date}
-2026-\/01-\/02
+2026-\/02-\/22
 \end{DoxyDate}
 \begin{DoxyCopyright}{Copyright}
 Copyright (c) 2026 
@@ -112,6 +105,71 @@ Copyright (c) 2026
 
 
 Definition in file \mbox{\hyperlink{_arduino_giga_lvgl_display_8ino_source}{Arduino\+Giga\+Lvgl\+Display.\+ino}}.
+
+
+
+\label{doc-enum-members}
+\Hypertarget{_arduino_giga_lvgl_display_8ino_doc-enum-members}
+\doxysubsection{Enumeration Type Documentation}
+\Hypertarget{_arduino_giga_lvgl_display_8ino_a09c202aa2681c1591f47ade0fd9f93be}\index{ArduinoGigaLvglDisplay.ino@{ArduinoGigaLvglDisplay.ino}!MotorPins@{MotorPins}}
+\index{MotorPins@{MotorPins}!ArduinoGigaLvglDisplay.ino@{ArduinoGigaLvglDisplay.ino}}
+\doxysubsubsection{\texorpdfstring{MotorPins}{MotorPins}}
+{\footnotesize\ttfamily \label{_arduino_giga_lvgl_display_8ino_a09c202aa2681c1591f47ade0fd9f93be} 
+enum \mbox{\hyperlink{_arduino_giga_lvgl_display_8ino_a09c202aa2681c1591f47ade0fd9f93be}{Motor\+Pins}}}
+
+\begin{DoxyEnumFields}[2]{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ENB\_B@{ENB\_B}!ArduinoGigaLvglDisplay.ino@{ArduinoGigaLvglDisplay.ino}}\index{ArduinoGigaLvglDisplay.ino@{ArduinoGigaLvglDisplay.ino}!ENB\_B@{ENB\_B}}}\Hypertarget{_arduino_giga_lvgl_display_8ino_a09c202aa2681c1591f47ade0fd9f93beafac329d5db4efdbf0c8d2d7d3de466a9}\label{_arduino_giga_lvgl_display_8ino_a09c202aa2681c1591f47ade0fd9f93beafac329d5db4efdbf0c8d2d7d3de466a9} 
+ENB\+\_\+B&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{IN4\_B@{IN4\_B}!ArduinoGigaLvglDisplay.ino@{ArduinoGigaLvglDisplay.ino}}\index{ArduinoGigaLvglDisplay.ino@{ArduinoGigaLvglDisplay.ino}!IN4\_B@{IN4\_B}}}\Hypertarget{_arduino_giga_lvgl_display_8ino_a09c202aa2681c1591f47ade0fd9f93bea2047c5c4b4b18be0602eb80f9b4a1768}\label{_arduino_giga_lvgl_display_8ino_a09c202aa2681c1591f47ade0fd9f93bea2047c5c4b4b18be0602eb80f9b4a1768} 
+IN4\+\_\+B&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{IN3\_B@{IN3\_B}!ArduinoGigaLvglDisplay.ino@{ArduinoGigaLvglDisplay.ino}}\index{ArduinoGigaLvglDisplay.ino@{ArduinoGigaLvglDisplay.ino}!IN3\_B@{IN3\_B}}}\Hypertarget{_arduino_giga_lvgl_display_8ino_a09c202aa2681c1591f47ade0fd9f93bea6ed09eef66c4f29e12b322f4d83cae56}\label{_arduino_giga_lvgl_display_8ino_a09c202aa2681c1591f47ade0fd9f93bea6ed09eef66c4f29e12b322f4d83cae56} 
+IN3\+\_\+B&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{IN2\_B@{IN2\_B}!ArduinoGigaLvglDisplay.ino@{ArduinoGigaLvglDisplay.ino}}\index{ArduinoGigaLvglDisplay.ino@{ArduinoGigaLvglDisplay.ino}!IN2\_B@{IN2\_B}}}\Hypertarget{_arduino_giga_lvgl_display_8ino_a09c202aa2681c1591f47ade0fd9f93bea859b5cc7d0a7874c0d8a05ddfe033866}\label{_arduino_giga_lvgl_display_8ino_a09c202aa2681c1591f47ade0fd9f93bea859b5cc7d0a7874c0d8a05ddfe033866} 
+IN2\+\_\+B&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{IN1\_B@{IN1\_B}!ArduinoGigaLvglDisplay.ino@{ArduinoGigaLvglDisplay.ino}}\index{ArduinoGigaLvglDisplay.ino@{ArduinoGigaLvglDisplay.ino}!IN1\_B@{IN1\_B}}}\Hypertarget{_arduino_giga_lvgl_display_8ino_a09c202aa2681c1591f47ade0fd9f93bea73a3f9b58bcbefe98e6d5cec2e9088a5}\label{_arduino_giga_lvgl_display_8ino_a09c202aa2681c1591f47ade0fd9f93bea73a3f9b58bcbefe98e6d5cec2e9088a5} 
+IN1\+\_\+B&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ENA\_B@{ENA\_B}!ArduinoGigaLvglDisplay.ino@{ArduinoGigaLvglDisplay.ino}}\index{ArduinoGigaLvglDisplay.ino@{ArduinoGigaLvglDisplay.ino}!ENA\_B@{ENA\_B}}}\Hypertarget{_arduino_giga_lvgl_display_8ino_a09c202aa2681c1591f47ade0fd9f93bea4fd12e00eb66efa116b4e9769045508c}\label{_arduino_giga_lvgl_display_8ino_a09c202aa2681c1591f47ade0fd9f93bea4fd12e00eb66efa116b4e9769045508c} 
+ENA\+\_\+B&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ENB\_A@{ENB\_A}!ArduinoGigaLvglDisplay.ino@{ArduinoGigaLvglDisplay.ino}}\index{ArduinoGigaLvglDisplay.ino@{ArduinoGigaLvglDisplay.ino}!ENB\_A@{ENB\_A}}}\Hypertarget{_arduino_giga_lvgl_display_8ino_a09c202aa2681c1591f47ade0fd9f93beab601c6a9dbd4c1a3b70d8a84de3bd012}\label{_arduino_giga_lvgl_display_8ino_a09c202aa2681c1591f47ade0fd9f93beab601c6a9dbd4c1a3b70d8a84de3bd012} 
+ENB\+\_\+A&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{IN4\_A@{IN4\_A}!ArduinoGigaLvglDisplay.ino@{ArduinoGigaLvglDisplay.ino}}\index{ArduinoGigaLvglDisplay.ino@{ArduinoGigaLvglDisplay.ino}!IN4\_A@{IN4\_A}}}\Hypertarget{_arduino_giga_lvgl_display_8ino_a09c202aa2681c1591f47ade0fd9f93bea93d7c651df7bde50e2382ad65e25c40a}\label{_arduino_giga_lvgl_display_8ino_a09c202aa2681c1591f47ade0fd9f93bea93d7c651df7bde50e2382ad65e25c40a} 
+IN4\+\_\+A&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{IN3\_A@{IN3\_A}!ArduinoGigaLvglDisplay.ino@{ArduinoGigaLvglDisplay.ino}}\index{ArduinoGigaLvglDisplay.ino@{ArduinoGigaLvglDisplay.ino}!IN3\_A@{IN3\_A}}}\Hypertarget{_arduino_giga_lvgl_display_8ino_a09c202aa2681c1591f47ade0fd9f93bea9d9477ff2adcb5d4e3b7f2912bc459db}\label{_arduino_giga_lvgl_display_8ino_a09c202aa2681c1591f47ade0fd9f93bea9d9477ff2adcb5d4e3b7f2912bc459db} 
+IN3\+\_\+A&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{IN2\_A@{IN2\_A}!ArduinoGigaLvglDisplay.ino@{ArduinoGigaLvglDisplay.ino}}\index{ArduinoGigaLvglDisplay.ino@{ArduinoGigaLvglDisplay.ino}!IN2\_A@{IN2\_A}}}\Hypertarget{_arduino_giga_lvgl_display_8ino_a09c202aa2681c1591f47ade0fd9f93bea542f6a0db31278731d93bec3ed4151af}\label{_arduino_giga_lvgl_display_8ino_a09c202aa2681c1591f47ade0fd9f93bea542f6a0db31278731d93bec3ed4151af} 
+IN2\+\_\+A&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{IN1\_A@{IN1\_A}!ArduinoGigaLvglDisplay.ino@{ArduinoGigaLvglDisplay.ino}}\index{ArduinoGigaLvglDisplay.ino@{ArduinoGigaLvglDisplay.ino}!IN1\_A@{IN1\_A}}}\Hypertarget{_arduino_giga_lvgl_display_8ino_a09c202aa2681c1591f47ade0fd9f93bea115a61482486b39c89389f48bc9a36be}\label{_arduino_giga_lvgl_display_8ino_a09c202aa2681c1591f47ade0fd9f93bea115a61482486b39c89389f48bc9a36be} 
+IN1\+\_\+A&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ENA\_A@{ENA\_A}!ArduinoGigaLvglDisplay.ino@{ArduinoGigaLvglDisplay.ino}}\index{ArduinoGigaLvglDisplay.ino@{ArduinoGigaLvglDisplay.ino}!ENA\_A@{ENA\_A}}}\Hypertarget{_arduino_giga_lvgl_display_8ino_a09c202aa2681c1591f47ade0fd9f93bea8ca39e084c4680aee4c18e3094761422}\label{_arduino_giga_lvgl_display_8ino_a09c202aa2681c1591f47ade0fd9f93bea8ca39e084c4680aee4c18e3094761422} 
+ENA\+\_\+A&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+Definition at line \mbox{\hyperlink{_arduino_giga_lvgl_display_8ino_source_l00045}{45}} of file \mbox{\hyperlink{_arduino_giga_lvgl_display_8ino_source}{Arduino\+Giga\+Lvgl\+Display.\+ino}}.
 
 
 
@@ -126,7 +184,7 @@ void apply\+\_\+mode (\begin{DoxyParamCaption}\item[{const char \texorpdfstring{
 
 
 
-Applies the selected movement mode and direction. This function creates a temporary message label on the screen indicating the applied mode and direction. It also appends the direction to the global program vector for later execution. 
+Applies the selected movement mode and direction. This function creates a temporary message label on the screen indicating the applied mode and direction. It also appends the direction to the \doxylink{classother__constants_a522b12f820f2390f63de34235a38942e}{other\+\_\+constants\+::program} vector for later execution. 
 
 
 \begin{DoxyParams}{Parameters}
@@ -137,7 +195,7 @@ Applies the selected movement mode and direction. This function creates a tempor
 \end{DoxyParams}
 
 
-Definition at line \mbox{\hyperlink{_arduino_giga_lvgl_display_8ino_source_l00070}{70}} of file \mbox{\hyperlink{_arduino_giga_lvgl_display_8ino_source}{Arduino\+Giga\+Lvgl\+Display.\+ino}}.
+Definition at line \mbox{\hyperlink{_arduino_giga_lvgl_display_8ino_source_l00072}{72}} of file \mbox{\hyperlink{_arduino_giga_lvgl_display_8ino_source}{Arduino\+Giga\+Lvgl\+Display.\+ino}}.
 
 \Hypertarget{_arduino_giga_lvgl_display_8ino_a599fa16066a270f3a22e7de32fbb250f}\index{ArduinoGigaLvglDisplay.ino@{ArduinoGigaLvglDisplay.ino}!btn\_Run\_Program\_event\_cb@{btn\_Run\_Program\_event\_cb}}
 \index{btn\_Run\_Program\_event\_cb@{btn\_Run\_Program\_event\_cb}!ArduinoGigaLvglDisplay.ino@{ArduinoGigaLvglDisplay.ino}}
@@ -160,7 +218,7 @@ The function also deletes any previous message label before creating a new one.
 \end{DoxyParams}
 
 
-Definition at line \mbox{\hyperlink{_arduino_giga_lvgl_display_8ino_source_l00108}{108}} of file \mbox{\hyperlink{_arduino_giga_lvgl_display_8ino_source}{Arduino\+Giga\+Lvgl\+Display.\+ino}}.
+Definition at line \mbox{\hyperlink{_arduino_giga_lvgl_display_8ino_source_l00109}{109}} of file \mbox{\hyperlink{_arduino_giga_lvgl_display_8ino_source}{Arduino\+Giga\+Lvgl\+Display.\+ino}}.
 
 \Hypertarget{_arduino_giga_lvgl_display_8ino_a9965ed6b6152697e6db85d37dfe41720}\index{ArduinoGigaLvglDisplay.ino@{ArduinoGigaLvglDisplay.ino}!create\_main\_button\_matrix@{create\_main\_button\_matrix}}
 \index{create\_main\_button\_matrix@{create\_main\_button\_matrix}!ArduinoGigaLvglDisplay.ino@{ArduinoGigaLvglDisplay.ino}}
@@ -436,129 +494,4 @@ A message is printed to the serial monitor showing the new mode and numeric dire
 
 
 Definition at line \mbox{\hyperlink{_arduino_giga_lvgl_display_8ino_source_l00256}{256}} of file \mbox{\hyperlink{_arduino_giga_lvgl_display_8ino_source}{Arduino\+Giga\+Lvgl\+Display.\+ino}}.
-
-
-
-\label{doc-var-members}
-\Hypertarget{_arduino_giga_lvgl_display_8ino_doc-var-members}
-\doxysubsection{Variable Documentation}
-\Hypertarget{_arduino_giga_lvgl_display_8ino_a448921cced6d8ecae8e0ea9dc739dcea}\index{ArduinoGigaLvglDisplay.ino@{ArduinoGigaLvglDisplay.ino}!ENA\_A@{ENA\_A}}
-\index{ENA\_A@{ENA\_A}!ArduinoGigaLvglDisplay.ino@{ArduinoGigaLvglDisplay.ino}}
-\doxysubsubsection{\texorpdfstring{ENA\_A}{ENA\_A}}
-{\footnotesize\ttfamily \label{_arduino_giga_lvgl_display_8ino_a448921cced6d8ecae8e0ea9dc739dcea} 
-const int ENA\+\_\+A = 2}
-
-
-
-Definition at line \mbox{\hyperlink{_arduino_giga_lvgl_display_8ino_source_l00058}{58}} of file \mbox{\hyperlink{_arduino_giga_lvgl_display_8ino_source}{Arduino\+Giga\+Lvgl\+Display.\+ino}}.
-
-\Hypertarget{_arduino_giga_lvgl_display_8ino_a51076b14694e306a6194047c53593a31}\index{ArduinoGigaLvglDisplay.ino@{ArduinoGigaLvglDisplay.ino}!ENA\_B@{ENA\_B}}
-\index{ENA\_B@{ENA\_B}!ArduinoGigaLvglDisplay.ino@{ArduinoGigaLvglDisplay.ino}}
-\doxysubsubsection{\texorpdfstring{ENA\_B}{ENA\_B}}
-{\footnotesize\ttfamily \label{_arduino_giga_lvgl_display_8ino_a51076b14694e306a6194047c53593a31} 
-const int ENA\+\_\+B = 8}
-
-
-
-Definition at line \mbox{\hyperlink{_arduino_giga_lvgl_display_8ino_source_l00051}{51}} of file \mbox{\hyperlink{_arduino_giga_lvgl_display_8ino_source}{Arduino\+Giga\+Lvgl\+Display.\+ino}}.
-
-\Hypertarget{_arduino_giga_lvgl_display_8ino_af062d7609355335ffce63fa23bfed5f7}\index{ArduinoGigaLvglDisplay.ino@{ArduinoGigaLvglDisplay.ino}!ENB\_A@{ENB\_A}}
-\index{ENB\_A@{ENB\_A}!ArduinoGigaLvglDisplay.ino@{ArduinoGigaLvglDisplay.ino}}
-\doxysubsubsection{\texorpdfstring{ENB\_A}{ENB\_A}}
-{\footnotesize\ttfamily \label{_arduino_giga_lvgl_display_8ino_af062d7609355335ffce63fa23bfed5f7} 
-const int ENB\+\_\+A = 7}
-
-
-
-Definition at line \mbox{\hyperlink{_arduino_giga_lvgl_display_8ino_source_l00053}{53}} of file \mbox{\hyperlink{_arduino_giga_lvgl_display_8ino_source}{Arduino\+Giga\+Lvgl\+Display.\+ino}}.
-
-\Hypertarget{_arduino_giga_lvgl_display_8ino_a4763be0e77388074ff071965028a76ba}\index{ArduinoGigaLvglDisplay.ino@{ArduinoGigaLvglDisplay.ino}!ENB\_B@{ENB\_B}}
-\index{ENB\_B@{ENB\_B}!ArduinoGigaLvglDisplay.ino@{ArduinoGigaLvglDisplay.ino}}
-\doxysubsubsection{\texorpdfstring{ENB\_B}{ENB\_B}}
-{\footnotesize\ttfamily \label{_arduino_giga_lvgl_display_8ino_a4763be0e77388074ff071965028a76ba} 
-const int ENB\+\_\+B = 13}
-
-
-
-Definition at line \mbox{\hyperlink{_arduino_giga_lvgl_display_8ino_source_l00046}{46}} of file \mbox{\hyperlink{_arduino_giga_lvgl_display_8ino_source}{Arduino\+Giga\+Lvgl\+Display.\+ino}}.
-
-\Hypertarget{_arduino_giga_lvgl_display_8ino_a2f8c3e5c64df336aadd989def65390df}\index{ArduinoGigaLvglDisplay.ino@{ArduinoGigaLvglDisplay.ino}!IN1\_A@{IN1\_A}}
-\index{IN1\_A@{IN1\_A}!ArduinoGigaLvglDisplay.ino@{ArduinoGigaLvglDisplay.ino}}
-\doxysubsubsection{\texorpdfstring{IN1\_A}{IN1\_A}}
-{\footnotesize\ttfamily \label{_arduino_giga_lvgl_display_8ino_a2f8c3e5c64df336aadd989def65390df} 
-const int IN1\+\_\+A = 3}
-
-
-
-Definition at line \mbox{\hyperlink{_arduino_giga_lvgl_display_8ino_source_l00057}{57}} of file \mbox{\hyperlink{_arduino_giga_lvgl_display_8ino_source}{Arduino\+Giga\+Lvgl\+Display.\+ino}}.
-
-\Hypertarget{_arduino_giga_lvgl_display_8ino_ac74564e770f6c90dbf7dd71476f5114e}\index{ArduinoGigaLvglDisplay.ino@{ArduinoGigaLvglDisplay.ino}!IN1\_B@{IN1\_B}}
-\index{IN1\_B@{IN1\_B}!ArduinoGigaLvglDisplay.ino@{ArduinoGigaLvglDisplay.ino}}
-\doxysubsubsection{\texorpdfstring{IN1\_B}{IN1\_B}}
-{\footnotesize\ttfamily \label{_arduino_giga_lvgl_display_8ino_ac74564e770f6c90dbf7dd71476f5114e} 
-const int IN1\+\_\+B = 9}
-
-
-
-Definition at line \mbox{\hyperlink{_arduino_giga_lvgl_display_8ino_source_l00050}{50}} of file \mbox{\hyperlink{_arduino_giga_lvgl_display_8ino_source}{Arduino\+Giga\+Lvgl\+Display.\+ino}}.
-
-\Hypertarget{_arduino_giga_lvgl_display_8ino_a0a2da1fa43e204f03999bfcd82e2ce93}\index{ArduinoGigaLvglDisplay.ino@{ArduinoGigaLvglDisplay.ino}!IN2\_A@{IN2\_A}}
-\index{IN2\_A@{IN2\_A}!ArduinoGigaLvglDisplay.ino@{ArduinoGigaLvglDisplay.ino}}
-\doxysubsubsection{\texorpdfstring{IN2\_A}{IN2\_A}}
-{\footnotesize\ttfamily \label{_arduino_giga_lvgl_display_8ino_a0a2da1fa43e204f03999bfcd82e2ce93} 
-const int IN2\+\_\+A = 4}
-
-
-
-Definition at line \mbox{\hyperlink{_arduino_giga_lvgl_display_8ino_source_l00056}{56}} of file \mbox{\hyperlink{_arduino_giga_lvgl_display_8ino_source}{Arduino\+Giga\+Lvgl\+Display.\+ino}}.
-
-\Hypertarget{_arduino_giga_lvgl_display_8ino_a9570059ff6b742c8040a32962d0d5a37}\index{ArduinoGigaLvglDisplay.ino@{ArduinoGigaLvglDisplay.ino}!IN2\_B@{IN2\_B}}
-\index{IN2\_B@{IN2\_B}!ArduinoGigaLvglDisplay.ino@{ArduinoGigaLvglDisplay.ino}}
-\doxysubsubsection{\texorpdfstring{IN2\_B}{IN2\_B}}
-{\footnotesize\ttfamily \label{_arduino_giga_lvgl_display_8ino_a9570059ff6b742c8040a32962d0d5a37} 
-const int IN2\+\_\+B = 10}
-
-
-
-Definition at line \mbox{\hyperlink{_arduino_giga_lvgl_display_8ino_source_l00049}{49}} of file \mbox{\hyperlink{_arduino_giga_lvgl_display_8ino_source}{Arduino\+Giga\+Lvgl\+Display.\+ino}}.
-
-\Hypertarget{_arduino_giga_lvgl_display_8ino_a5c616be1a0da4e4851766ab26fdc106b}\index{ArduinoGigaLvglDisplay.ino@{ArduinoGigaLvglDisplay.ino}!IN3\_A@{IN3\_A}}
-\index{IN3\_A@{IN3\_A}!ArduinoGigaLvglDisplay.ino@{ArduinoGigaLvglDisplay.ino}}
-\doxysubsubsection{\texorpdfstring{IN3\_A}{IN3\_A}}
-{\footnotesize\ttfamily \label{_arduino_giga_lvgl_display_8ino_a5c616be1a0da4e4851766ab26fdc106b} 
-const int IN3\+\_\+A = 5}
-
-
-
-Definition at line \mbox{\hyperlink{_arduino_giga_lvgl_display_8ino_source_l00055}{55}} of file \mbox{\hyperlink{_arduino_giga_lvgl_display_8ino_source}{Arduino\+Giga\+Lvgl\+Display.\+ino}}.
-
-\Hypertarget{_arduino_giga_lvgl_display_8ino_a0eff9fd47f52060c179765fc406c824f}\index{ArduinoGigaLvglDisplay.ino@{ArduinoGigaLvglDisplay.ino}!IN3\_B@{IN3\_B}}
-\index{IN3\_B@{IN3\_B}!ArduinoGigaLvglDisplay.ino@{ArduinoGigaLvglDisplay.ino}}
-\doxysubsubsection{\texorpdfstring{IN3\_B}{IN3\_B}}
-{\footnotesize\ttfamily \label{_arduino_giga_lvgl_display_8ino_a0eff9fd47f52060c179765fc406c824f} 
-const int IN3\+\_\+B = 11}
-
-
-
-Definition at line \mbox{\hyperlink{_arduino_giga_lvgl_display_8ino_source_l00048}{48}} of file \mbox{\hyperlink{_arduino_giga_lvgl_display_8ino_source}{Arduino\+Giga\+Lvgl\+Display.\+ino}}.
-
-\Hypertarget{_arduino_giga_lvgl_display_8ino_a7bc7d13c97218d43553bd1bdde068e9d}\index{ArduinoGigaLvglDisplay.ino@{ArduinoGigaLvglDisplay.ino}!IN4\_A@{IN4\_A}}
-\index{IN4\_A@{IN4\_A}!ArduinoGigaLvglDisplay.ino@{ArduinoGigaLvglDisplay.ino}}
-\doxysubsubsection{\texorpdfstring{IN4\_A}{IN4\_A}}
-{\footnotesize\ttfamily \label{_arduino_giga_lvgl_display_8ino_a7bc7d13c97218d43553bd1bdde068e9d} 
-const int IN4\+\_\+A = 6}
-
-
-
-Definition at line \mbox{\hyperlink{_arduino_giga_lvgl_display_8ino_source_l00054}{54}} of file \mbox{\hyperlink{_arduino_giga_lvgl_display_8ino_source}{Arduino\+Giga\+Lvgl\+Display.\+ino}}.
-
-\Hypertarget{_arduino_giga_lvgl_display_8ino_a2bf2794b643a821a4a1ee3fce9a17b39}\index{ArduinoGigaLvglDisplay.ino@{ArduinoGigaLvglDisplay.ino}!IN4\_B@{IN4\_B}}
-\index{IN4\_B@{IN4\_B}!ArduinoGigaLvglDisplay.ino@{ArduinoGigaLvglDisplay.ino}}
-\doxysubsubsection{\texorpdfstring{IN4\_B}{IN4\_B}}
-{\footnotesize\ttfamily \label{_arduino_giga_lvgl_display_8ino_a2bf2794b643a821a4a1ee3fce9a17b39} 
-const int IN4\+\_\+B = 12}
-
-
-
-Definition at line \mbox{\hyperlink{_arduino_giga_lvgl_display_8ino_source_l00047}{47}} of file \mbox{\hyperlink{_arduino_giga_lvgl_display_8ino_source}{Arduino\+Giga\+Lvgl\+Display.\+ino}}.
 

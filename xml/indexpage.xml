@@ -1,0 +1,19 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.15.0" xml:lang="en-US">
+  <compounddef id="indexpage" kind="page">
+    <compoundname>index</compoundname>
+    <title>My Project Title</title>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>Welcome to the documentation for my project.</para>
+<sect1 id="index_1autotoc_md0_1s1"><sect2 id="index_1autotoc_md0">
+<title>Overview</title><para>This project does XYZ.</para>
+</sect2></sect1>
+<sect1 id="index_1autotoc_md1_1s1"><sect2 id="index_1autotoc_md1">
+<title>Getting Started</title><para>Instructions go here. </para>
+</sect2></sect1>
+    </detaileddescription>
+    <location file="mainpage.dox"/>
+  </compounddef>
+</doxygen>

@@ -5,19 +5,91 @@ Full-text search=Yes
 Contents file=index.hhc
 Default Window=main
 Default topic=index.html
+Index file=index.hhk
 Language=0x409 English (United States)
 Title=Arduino Giga Project Doxygen
 
 [WINDOWS]
-main="Arduino Giga Project Doxygen","index.hhc",,"index.html","index.html",,,,,0x23520,,0x10387e,,,,,,,,0
+main="Arduino Giga Project Doxygen","index.hhc","index.hhk","index.html","index.html",,,,,0x23520,,0x10387e,,,,,,,,0
 
 [FILES]
+_arduino__constants_8cpp.html
+_arduino__constants_8cpp_source.html
+_arduino__constants_8h.html
+_arduino__constants_8h_source.html
 _arduino_giga_lvgl_display_8ino.html
 _arduino_giga_lvgl_display_8ino_source.html
+annotated.html
+class_arduino__constants-members.html
+class_arduino__constants.html
+classes.html
+classmotor__constants-members.html
+classmotor__constants.html
+classmsg__constants-members.html
+classmsg__constants.html
+classother__constants-members.html
+classother__constants.html
+dir_7c85f99d87a211b4d50ff5aae1f8b318.html
+dir_b7e4d3e8d15aa1f9b8e281de69460ad6.html
+dir_bc0718b08fb2015b8e59c47b2805f60c.html
 doxygen_crawl.html
 files.html
+functions.html
+functions_func.html
+functions_vars.html
+globals.html
+globals_enum.html
+globals_eval.html
+globals_func.html
+graph_legend.html
+group___imports.html
+group___motor___pins.html
 index.html
+mainpage_8dox.html
+motor__constants_8cpp.html
+motor__constants_8cpp_source.html
+motor__constants_8h.html
+motor__constants_8h_source.html
+msg__constants_8cpp.html
+msg__constants_8cpp_source.html
+msg__constants_8h.html
+msg__constants_8h_source.html
+other__constants_8cpp.html
+other__constants_8cpp_source.html
+other__constants_8h.html
+other__constants_8h_source.html
+topics.html
+Arduino_Logo.svg (Small).png
+_arduino__constants_8cpp__incl.pdf
+_arduino__constants_8cpp__incl.png
+_arduino__constants_8h__dep__incl.pdf
+_arduino__constants_8h__dep__incl.png
+_arduino__constants_8h__incl.pdf
+_arduino__constants_8h__incl.png
+_arduino_giga_lvgl_display_8ino__incl.pdf
+_arduino_giga_lvgl_display_8ino__incl.png
+dir_7c85f99d87a211b4d50ff5aae1f8b318_dep.pdf
+dir_7c85f99d87a211b4d50ff5aae1f8b318_dep.png
+dir_b7e4d3e8d15aa1f9b8e281de69460ad6_dep.pdf
+dir_b7e4d3e8d15aa1f9b8e281de69460ad6_dep.png
 doxygen.svg
+graph_legend.png
+motor__constants_8cpp__incl.pdf
+motor__constants_8cpp__incl.png
+motor__constants_8h__dep__incl.pdf
+motor__constants_8h__dep__incl.png
+msg__constants_8cpp__incl.pdf
+msg__constants_8cpp__incl.png
+msg__constants_8h__dep__incl.pdf
+msg__constants_8h__dep__incl.png
+msg__constants_8h__incl.pdf
+msg__constants_8h__incl.png
+other__constants_8cpp__incl.pdf
+other__constants_8cpp__incl.png
+other__constants_8h__dep__incl.pdf
+other__constants_8h__dep__incl.png
+other__constants_8h__incl.pdf
+other__constants_8h__incl.png
 doxygen.css
 dynsections.js
 jquery.js

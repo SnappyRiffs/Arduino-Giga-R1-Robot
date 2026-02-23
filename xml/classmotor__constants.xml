@@ -1,0 +1,63 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.15.0" xml:lang="en-US">
+  <compounddef id="classmotor__constants" kind="class" language="C++" prot="public">
+    <compoundname>motor_constants</compoundname>
+    <includes refid="motor__constants_8h" local="no">motor_constants.h</includes>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="classmotor__constants_1af83643f00e48ca7329566e17246a2c83" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int motor_constants::motor_speed</definition>
+        <argsstring></argsstring>
+        <name>motor_speed</name>
+        <qualifiedname>motor_constants::motor_speed</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Snapp/OneDrive/Arduino/libraries/Arduino_robot_project_library/src/motor_constants.h" line="6" column="9" bodyfile="C:/Users/Snapp/OneDrive/Arduino/libraries/Arduino_robot_project_library/src/motor_constants.h" bodystart="6" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classmotor__constants_1a55499ee0a25a1f7a3024cea72541543a" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int motor_constants::motor_direction</definition>
+        <argsstring></argsstring>
+        <name>motor_direction</name>
+        <qualifiedname>motor_constants::motor_direction</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Snapp/OneDrive/Arduino/libraries/Arduino_robot_project_library/src/motor_constants.h" line="7" column="9" bodyfile="C:/Users/Snapp/OneDrive/Arduino/libraries/Arduino_robot_project_library/src/motor_constants.h" bodystart="7" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classmotor__constants_1ace352cb444a09a5e58ffffdb933bd945" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>motor_constants::motor_constants</definition>
+        <argsstring>()</argsstring>
+        <name>motor_constants</name>
+        <qualifiedname>motor_constants::motor_constants</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Snapp/OneDrive/Arduino/libraries/Arduino_robot_project_library/src/motor_constants.h" line="10" column="5" bodyfile="C:/Users/Snapp/OneDrive/Arduino/libraries/Arduino_robot_project_library/src/motor_constants.cpp" bodystart="4" bodyend="8"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/Snapp/OneDrive/Arduino/libraries/Arduino_robot_project_library/src/motor_constants.h" line="4" column="1" bodyfile="C:/Users/Snapp/OneDrive/Arduino/libraries/Arduino_robot_project_library/src/motor_constants.h" bodystart="4" bodyend="11"/>
+    <listofallmembers>
+      <member refid="classmotor__constants_1ace352cb444a09a5e58ffffdb933bd945" prot="public" virt="non-virtual"><scope>motor_constants</scope><name>motor_constants</name></member>
+      <member refid="classmotor__constants_1a55499ee0a25a1f7a3024cea72541543a" prot="public" virt="non-virtual"><scope>motor_constants</scope><name>motor_direction</name></member>
+      <member refid="classmotor__constants_1af83643f00e48ca7329566e17246a2c83" prot="public" virt="non-virtual"><scope>motor_constants</scope><name>motor_speed</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

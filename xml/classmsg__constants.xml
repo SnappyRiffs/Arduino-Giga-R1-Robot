@@ -1,0 +1,78 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.15.0" xml:lang="en-US">
+  <compounddef id="classmsg__constants" kind="class" language="C++" prot="public">
+    <compoundname>msg_constants</compoundname>
+    <includes refid="msg__constants_8h" local="no">msg_constants.h</includes>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="classmsg__constants_1a2a1a0fb8a3fbdfa803e8a9c87bde21a3" prot="public" static="no" mutable="no">
+        <type>lv_obj_t *</type>
+        <definition>lv_obj_t* msg_constants::msg_label</definition>
+        <argsstring></argsstring>
+        <name>msg_label</name>
+        <qualifiedname>msg_constants::msg_label</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Snapp/OneDrive/Arduino/libraries/Arduino_robot_project_library/src/msg_constants.h" line="16" column="14" bodyfile="C:/Users/Snapp/OneDrive/Arduino/libraries/Arduino_robot_project_library/src/msg_constants.h" bodystart="16" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classmsg__constants_1ac2513d9d541bdbe4554122d496c4bc9d" prot="public" static="no" mutable="no">
+        <type>unsigned long</type>
+        <definition>unsigned long msg_constants::msg_start_time</definition>
+        <argsstring></argsstring>
+        <name>msg_start_time</name>
+        <qualifiedname>msg_constants::msg_start_time</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Snapp/OneDrive/Arduino/libraries/Arduino_robot_project_library/src/msg_constants.h" line="17" column="19" bodyfile="C:/Users/Snapp/OneDrive/Arduino/libraries/Arduino_robot_project_library/src/msg_constants.h" bodystart="17" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classmsg__constants_1a906d9eb01bc55cbf7c1dd4d0f8dbfde0" prot="public" static="no" mutable="no">
+        <type>unsigned long</type>
+        <definition>unsigned long msg_constants::msg_duration</definition>
+        <argsstring></argsstring>
+        <name>msg_duration</name>
+        <qualifiedname>msg_constants::msg_duration</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Snapp/OneDrive/Arduino/libraries/Arduino_robot_project_library/src/msg_constants.h" line="18" column="19" bodyfile="C:/Users/Snapp/OneDrive/Arduino/libraries/Arduino_robot_project_library/src/msg_constants.h" bodystart="18" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classmsg__constants_1a3122ce1618c23c45a2f13616a44fd8fd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>msg_constants::msg_constants</definition>
+        <argsstring>()</argsstring>
+        <name>msg_constants</name>
+        <qualifiedname>msg_constants::msg_constants</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Snapp/OneDrive/Arduino/libraries/Arduino_robot_project_library/src/msg_constants.h" line="21" column="5" bodyfile="C:/Users/Snapp/OneDrive/Arduino/libraries/Arduino_robot_project_library/src/msg_constants.cpp" bodystart="4" bodyend="9"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/Snapp/OneDrive/Arduino/libraries/Arduino_robot_project_library/src/msg_constants.h" line="14" column="1" bodyfile="C:/Users/Snapp/OneDrive/Arduino/libraries/Arduino_robot_project_library/src/msg_constants.h" bodystart="14" bodyend="22"/>
+    <listofallmembers>
+      <member refid="classmsg__constants_1a3122ce1618c23c45a2f13616a44fd8fd" prot="public" virt="non-virtual"><scope>msg_constants</scope><name>msg_constants</name></member>
+      <member refid="classmsg__constants_1a906d9eb01bc55cbf7c1dd4d0f8dbfde0" prot="public" virt="non-virtual"><scope>msg_constants</scope><name>msg_duration</name></member>
+      <member refid="classmsg__constants_1a2a1a0fb8a3fbdfa803e8a9c87bde21a3" prot="public" virt="non-virtual"><scope>msg_constants</scope><name>msg_label</name></member>
+      <member refid="classmsg__constants_1ac2513d9d541bdbe4554122d496c4bc9d" prot="public" virt="non-virtual"><scope>msg_constants</scope><name>msg_start_time</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

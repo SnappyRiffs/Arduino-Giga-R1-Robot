@@ -1,0 +1,118 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.15.0" xml:lang="en-US">
+  <compounddef id="msg__constants_8h" kind="file" language="C++">
+    <compoundname>msg_constants.h</compoundname>
+    <includes local="no">lv_api_map_v9_0.h</includes>
+    <includes local="no">lv_api_map_v9_1.h</includes>
+    <includes local="no">lv_api_map_v9_2.h</includes>
+    <includes local="no">lv_api_map_v9_3.h</includes>
+    <includes local="no">lv_conf_internal.h</includes>
+    <includes local="no">lv_conf_kconfig.h</includes>
+    <includes local="no">lv_init.h</includes>
+    <includes local="no">lvgl_private.h</includes>
+    <includes local="no">lvgl.h</includes>
+    <includedby refid="_arduino_giga_lvgl_display_8ino" local="no">ArduinoGigaLvglDisplay.ino</includedby>
+    <includedby refid="msg__constants_8cpp" local="yes">C:/Users/Snapp/OneDrive/Arduino/libraries/Arduino_robot_project_library/src/msg_constants.cpp</includedby>
+    <incdepgraph>
+      <node id="1">
+        <label>C:/Users/Snapp/OneDrive/Arduino/libraries/Arduino_robot_project_library/src/msg_constants.h</label>
+        <link refid="msg__constants_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>lv_api_map_v9_0.h</label>
+      </node>
+      <node id="3">
+        <label>lv_api_map_v9_1.h</label>
+      </node>
+      <node id="4">
+        <label>lv_api_map_v9_2.h</label>
+      </node>
+      <node id="5">
+        <label>lv_api_map_v9_3.h</label>
+      </node>
+      <node id="6">
+        <label>lv_conf_internal.h</label>
+      </node>
+      <node id="7">
+        <label>lv_conf_kconfig.h</label>
+      </node>
+      <node id="8">
+        <label>lv_init.h</label>
+      </node>
+      <node id="10">
+        <label>lvgl.h</label>
+      </node>
+      <node id="9">
+        <label>lvgl_private.h</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="2">
+        <label>ArduinoGigaLvglDisplay.ino</label>
+        <link refid="_arduino_giga_lvgl_display_8ino"/>
+      </node>
+      <node id="3">
+        <label>C:/Users/Snapp/OneDrive/Arduino/libraries/Arduino_robot_project_library/src/msg_constants.cpp</label>
+        <link refid="msg__constants_8cpp"/>
+      </node>
+      <node id="1">
+        <label>C:/Users/Snapp/OneDrive/Arduino/libraries/Arduino_robot_project_library/src/msg_constants.h</label>
+        <link refid="msg__constants_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="classmsg__constants" prot="public">msg_constants</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>MSG_CONSTANTS_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MSG_CONSTANTS_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;lv_api_map_v9_0.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;lv_api_map_v9_1.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;lv_api_map_v9_2.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;lv_api_map_v9_3.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;lv_conf_internal.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;lv_conf_kconfig.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;lv_init.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;lvgl_private.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;lvgl.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14" refid="classmsg__constants" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classmsg__constants_1a3122ce1618c23c45a2f13616a44fd8fd" kindref="member">msg_constants</ref><sp/>{</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="16" refid="classmsg__constants_1a2a1a0fb8a3fbdfa803e8a9c87bde21a3" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>lv_obj_t<sp/>*<ref refid="classmsg__constants_1a2a1a0fb8a3fbdfa803e8a9c87bde21a3" kindref="member">msg_label</ref>;</highlight></codeline>
+<codeline lineno="17" refid="classmsg__constants_1ac2513d9d541bdbe4554122d496c4bc9d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/><ref refid="classmsg__constants_1ac2513d9d541bdbe4554122d496c4bc9d" kindref="member">msg_start_time</ref>;</highlight></codeline>
+<codeline lineno="18" refid="classmsg__constants_1a906d9eb01bc55cbf7c1dd4d0f8dbfde0" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/><ref refid="classmsg__constants_1a906d9eb01bc55cbf7c1dd4d0f8dbfde0" kindref="member">msg_duration</ref>;</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Constructor</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classmsg__constants_1a3122ce1618c23c45a2f13616a44fd8fd" kindref="member">msg_constants</ref>();</highlight></codeline>
+<codeline lineno="22"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight></codeline>
+    </programlisting>
+    <location file="C:/Users/Snapp/OneDrive/Arduino/libraries/Arduino_robot_project_library/src/msg_constants.h"/>
+  </compounddef>
+</doxygen>

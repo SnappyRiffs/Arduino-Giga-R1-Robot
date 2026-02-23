@@ -1,5 +1,6 @@
 var searchData=
 [
-  ['rl_5fmove_0',['RL_move',['../_arduino_giga_lvgl_display_8ino.html#ac5e4ea79ee09f85143f444ee9d22cea6',1,'ArduinoGigaLvglDisplay.ino']]],
-  ['rr_5fmove_1',['RR_move',['../_arduino_giga_lvgl_display_8ino.html#a72d3ab08a583fa7cbdf7e3db1cb9ee5f',1,'ArduinoGigaLvglDisplay.ino']]]
+  ['pin_20definitions_0',['Motor control pin definitions',['../group___motor___pins.html',1,'']]],
+  ['program_1',['program',['../classother__constants.html#a522b12f820f2390f63de34235a38942e',1,'other_constants']]],
+  ['project_20title_2',['My Project Title',['../index.html',1,'']]]
 ];

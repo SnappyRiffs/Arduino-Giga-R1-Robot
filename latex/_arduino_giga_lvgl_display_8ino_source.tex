@@ -3,90 +3,90 @@
 \begin{DoxyCode}{0}
 \DoxyCodeLine{\Hypertarget{_arduino_giga_lvgl_display_8ino_source_l00001}00001\ }
 \DoxyCodeLine{\Hypertarget{_arduino_giga_lvgl_display_8ino_source_l00011}00011\ }
-\DoxyCodeLine{\Hypertarget{_arduino_giga_lvgl_display_8ino_source_l00012}00012\ }
-\DoxyCodeLine{\Hypertarget{_arduino_giga_lvgl_display_8ino_source_l00018}00018\ \textcolor{preprocessor}{\#include\ <Arduino\_GigaDisplayTouch.h>}}
-\DoxyCodeLine{\Hypertarget{_arduino_giga_lvgl_display_8ino_source_l00019}00019\ \textcolor{comment}{//\ \#include\ <lv\_api\_map\_v8.h>}}
-\DoxyCodeLine{\Hypertarget{_arduino_giga_lvgl_display_8ino_source_l00020}00020\ \textcolor{preprocessor}{\#include\ <lv\_api\_map\_v9\_0.h>}}
-\DoxyCodeLine{\Hypertarget{_arduino_giga_lvgl_display_8ino_source_l00021}00021\ \textcolor{preprocessor}{\#include\ <lv\_api\_map\_v9\_1.h>}}
-\DoxyCodeLine{\Hypertarget{_arduino_giga_lvgl_display_8ino_source_l00022}00022\ \textcolor{preprocessor}{\#include\ <lv\_api\_map\_v9\_2.h>}}
-\DoxyCodeLine{\Hypertarget{_arduino_giga_lvgl_display_8ino_source_l00023}00023\ \textcolor{preprocessor}{\#include\ <lv\_api\_map\_v9\_3.h>}}
-\DoxyCodeLine{\Hypertarget{_arduino_giga_lvgl_display_8ino_source_l00024}00024\ \textcolor{preprocessor}{\#include\ <lv\_conf\_internal.h>}}
-\DoxyCodeLine{\Hypertarget{_arduino_giga_lvgl_display_8ino_source_l00025}00025\ \textcolor{preprocessor}{\#include\ <lv\_conf\_kconfig.h>}}
-\DoxyCodeLine{\Hypertarget{_arduino_giga_lvgl_display_8ino_source_l00026}00026\ \textcolor{preprocessor}{\#include\ <lv\_init.h>}}
-\DoxyCodeLine{\Hypertarget{_arduino_giga_lvgl_display_8ino_source_l00027}00027\ \textcolor{preprocessor}{\#include\ <lvgl\_private.h>}}
-\DoxyCodeLine{\Hypertarget{_arduino_giga_lvgl_display_8ino_source_l00028}00028\ \textcolor{preprocessor}{\#include\ <lvgl.h>}}
-\DoxyCodeLine{\Hypertarget{_arduino_giga_lvgl_display_8ino_source_l00029}00029\ }
-\DoxyCodeLine{\Hypertarget{_arduino_giga_lvgl_display_8ino_source_l00030}00030\ \textcolor{preprocessor}{\#include\ <\mbox{\hyperlink{_arduino__constants_8h}{Arduino\_constants.h}}>}}
-\DoxyCodeLine{\Hypertarget{_arduino_giga_lvgl_display_8ino_source_l00031}00031\ \textcolor{preprocessor}{\#include\ <\mbox{\hyperlink{motor__constants_8h}{motor\_constants.h}}>}}
-\DoxyCodeLine{\Hypertarget{_arduino_giga_lvgl_display_8ino_source_l00032}00032\ \textcolor{preprocessor}{\#include\ <\mbox{\hyperlink{msg__constants_8h}{msg\_constants.h}}>}}
-\DoxyCodeLine{\Hypertarget{_arduino_giga_lvgl_display_8ino_source_l00033}00033\ \textcolor{preprocessor}{\#include\ <\mbox{\hyperlink{other__constants_8h}{other\_constants.h}}>}}
-\DoxyCodeLine{\Hypertarget{_arduino_giga_lvgl_display_8ino_source_l00034}00034\ }
-\DoxyCodeLine{\Hypertarget{_arduino_giga_lvgl_display_8ino_source_l00035}00035\ \textcolor{preprocessor}{\#include\ "{}lvgl.h"{}}}
-\DoxyCodeLine{\Hypertarget{_arduino_giga_lvgl_display_8ino_source_l00036}00036\ \textcolor{preprocessor}{\#include\ "{}Arduino\_GigaDisplayTouch.h"{}}}
-\DoxyCodeLine{\Hypertarget{_arduino_giga_lvgl_display_8ino_source_l00037}00037\ \textcolor{preprocessor}{\#include\ "{}Arduino\_H7\_Video.h"{}}}
-\DoxyCodeLine{\Hypertarget{_arduino_giga_lvgl_display_8ino_source_l00038}00038\ \textcolor{preprocessor}{\#include\ <vector>}\ \textcolor{comment}{//\ end\ of\ Imports}}
-\DoxyCodeLine{\Hypertarget{_arduino_giga_lvgl_display_8ino_source_l00040}00040\ }
-\DoxyCodeLine{\Hypertarget{_arduino_giga_lvgl_display_8ino_source_l00046}\mbox{\hyperlink{_arduino_giga_lvgl_display_8ino_a4763be0e77388074ff071965028a76ba}{00046}}\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{_arduino_giga_lvgl_display_8ino_a4763be0e77388074ff071965028a76ba}{ENB\_B}}\ =\ 13;}
-\DoxyCodeLine{\Hypertarget{_arduino_giga_lvgl_display_8ino_source_l00047}\mbox{\hyperlink{_arduino_giga_lvgl_display_8ino_a2bf2794b643a821a4a1ee3fce9a17b39}{00047}}\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{_arduino_giga_lvgl_display_8ino_a2bf2794b643a821a4a1ee3fce9a17b39}{IN4\_B}}\ =\ 12;}
-\DoxyCodeLine{\Hypertarget{_arduino_giga_lvgl_display_8ino_source_l00048}\mbox{\hyperlink{_arduino_giga_lvgl_display_8ino_a0eff9fd47f52060c179765fc406c824f}{00048}}\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{_arduino_giga_lvgl_display_8ino_a0eff9fd47f52060c179765fc406c824f}{IN3\_B}}\ =\ 11;}
-\DoxyCodeLine{\Hypertarget{_arduino_giga_lvgl_display_8ino_source_l00049}\mbox{\hyperlink{_arduino_giga_lvgl_display_8ino_a9570059ff6b742c8040a32962d0d5a37}{00049}}\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{_arduino_giga_lvgl_display_8ino_a9570059ff6b742c8040a32962d0d5a37}{IN2\_B}}\ =\ 10;}
-\DoxyCodeLine{\Hypertarget{_arduino_giga_lvgl_display_8ino_source_l00050}\mbox{\hyperlink{_arduino_giga_lvgl_display_8ino_ac74564e770f6c90dbf7dd71476f5114e}{00050}}\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{_arduino_giga_lvgl_display_8ino_ac74564e770f6c90dbf7dd71476f5114e}{IN1\_B}}\ =\ 9;}
-\DoxyCodeLine{\Hypertarget{_arduino_giga_lvgl_display_8ino_source_l00051}\mbox{\hyperlink{_arduino_giga_lvgl_display_8ino_a51076b14694e306a6194047c53593a31}{00051}}\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{_arduino_giga_lvgl_display_8ino_a51076b14694e306a6194047c53593a31}{ENA\_B}}\ =\ 8;}
-\DoxyCodeLine{\Hypertarget{_arduino_giga_lvgl_display_8ino_source_l00052}00052\ }
-\DoxyCodeLine{\Hypertarget{_arduino_giga_lvgl_display_8ino_source_l00053}\mbox{\hyperlink{_arduino_giga_lvgl_display_8ino_af062d7609355335ffce63fa23bfed5f7}{00053}}\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{_arduino_giga_lvgl_display_8ino_af062d7609355335ffce63fa23bfed5f7}{ENB\_A}}\ =\ 7;}
-\DoxyCodeLine{\Hypertarget{_arduino_giga_lvgl_display_8ino_source_l00054}\mbox{\hyperlink{_arduino_giga_lvgl_display_8ino_a7bc7d13c97218d43553bd1bdde068e9d}{00054}}\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{_arduino_giga_lvgl_display_8ino_a7bc7d13c97218d43553bd1bdde068e9d}{IN4\_A}}\ =\ 6;}
-\DoxyCodeLine{\Hypertarget{_arduino_giga_lvgl_display_8ino_source_l00055}\mbox{\hyperlink{_arduino_giga_lvgl_display_8ino_a5c616be1a0da4e4851766ab26fdc106b}{00055}}\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{_arduino_giga_lvgl_display_8ino_a5c616be1a0da4e4851766ab26fdc106b}{IN3\_A}}\ =\ 5;}
-\DoxyCodeLine{\Hypertarget{_arduino_giga_lvgl_display_8ino_source_l00056}\mbox{\hyperlink{_arduino_giga_lvgl_display_8ino_a0a2da1fa43e204f03999bfcd82e2ce93}{00056}}\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{_arduino_giga_lvgl_display_8ino_a0a2da1fa43e204f03999bfcd82e2ce93}{IN2\_A}}\ =\ 4;}
-\DoxyCodeLine{\Hypertarget{_arduino_giga_lvgl_display_8ino_source_l00057}\mbox{\hyperlink{_arduino_giga_lvgl_display_8ino_a2f8c3e5c64df336aadd989def65390df}{00057}}\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{_arduino_giga_lvgl_display_8ino_a2f8c3e5c64df336aadd989def65390df}{IN1\_A}}\ =\ 3;}
-\DoxyCodeLine{\Hypertarget{_arduino_giga_lvgl_display_8ino_source_l00058}\mbox{\hyperlink{_arduino_giga_lvgl_display_8ino_a448921cced6d8ecae8e0ea9dc739dcea}{00058}}\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{_arduino_giga_lvgl_display_8ino_a448921cced6d8ecae8e0ea9dc739dcea}{ENA\_A}}\ =\ 2;\ \textcolor{comment}{//\ end\ of\ Motor\_Pins}}
-\DoxyCodeLine{\Hypertarget{_arduino_giga_lvgl_display_8ino_source_l00060}00060\ }
-\DoxyCodeLine{\Hypertarget{_arduino_giga_lvgl_display_8ino_source_l00061}00061\ \textcolor{comment}{//\ =====\ Shared\ label\ +\ vector\ logic\ =====}}
-\DoxyCodeLine{\Hypertarget{_arduino_giga_lvgl_display_8ino_source_l00070}\mbox{\hyperlink{_arduino_giga_lvgl_display_8ino_a0397ddbe4d2bddb9d77afbb47acf56f0}{00070}}\ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{_arduino_giga_lvgl_display_8ino_a0397ddbe4d2bddb9d77afbb47acf56f0}{apply\_mode}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *mode\_name,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *direction)}
-\DoxyCodeLine{\Hypertarget{_arduino_giga_lvgl_display_8ino_source_l00071}00071\ \{}
-\DoxyCodeLine{\Hypertarget{_arduino_giga_lvgl_display_8ino_source_l00072}00072\ \ \ \textcolor{keywordflow}{if}\ (msg\_label\ !=\ NULL)}
-\DoxyCodeLine{\Hypertarget{_arduino_giga_lvgl_display_8ino_source_l00073}00073\ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_arduino_giga_lvgl_display_8ino_source_l00074}00074\ \ \ \ \ lv\_obj\_del(msg\_label);}
-\DoxyCodeLine{\Hypertarget{_arduino_giga_lvgl_display_8ino_source_l00075}00075\ \ \ \ \ msg\_label\ =\ NULL;}
-\DoxyCodeLine{\Hypertarget{_arduino_giga_lvgl_display_8ino_source_l00076}00076\ \ \ \}}
-\DoxyCodeLine{\Hypertarget{_arduino_giga_lvgl_display_8ino_source_l00077}00077\ }
-\DoxyCodeLine{\Hypertarget{_arduino_giga_lvgl_display_8ino_source_l00078}00078\ \ \ msg\_label\ =\ lv\_label\_create(lv\_scr\_act());}
+\DoxyCodeLine{\Hypertarget{_arduino_giga_lvgl_display_8ino_source_l00017}00017\ \textcolor{preprocessor}{\#include\ <Arduino\_GigaDisplayTouch.h>}}
+\DoxyCodeLine{\Hypertarget{_arduino_giga_lvgl_display_8ino_source_l00018}00018\ \textcolor{comment}{//\ \#include\ <lv\_api\_map\_v8.h>}}
+\DoxyCodeLine{\Hypertarget{_arduino_giga_lvgl_display_8ino_source_l00019}00019\ \textcolor{preprocessor}{\#include\ <lv\_api\_map\_v9\_0.h>}}
+\DoxyCodeLine{\Hypertarget{_arduino_giga_lvgl_display_8ino_source_l00020}00020\ \textcolor{preprocessor}{\#include\ <lv\_api\_map\_v9\_1.h>}}
+\DoxyCodeLine{\Hypertarget{_arduino_giga_lvgl_display_8ino_source_l00021}00021\ \textcolor{preprocessor}{\#include\ <lv\_api\_map\_v9\_2.h>}}
+\DoxyCodeLine{\Hypertarget{_arduino_giga_lvgl_display_8ino_source_l00022}00022\ \textcolor{preprocessor}{\#include\ <lv\_api\_map\_v9\_3.h>}}
+\DoxyCodeLine{\Hypertarget{_arduino_giga_lvgl_display_8ino_source_l00023}00023\ \textcolor{preprocessor}{\#include\ <lv\_conf\_internal.h>}}
+\DoxyCodeLine{\Hypertarget{_arduino_giga_lvgl_display_8ino_source_l00024}00024\ \textcolor{preprocessor}{\#include\ <lv\_conf\_kconfig.h>}}
+\DoxyCodeLine{\Hypertarget{_arduino_giga_lvgl_display_8ino_source_l00025}00025\ \textcolor{preprocessor}{\#include\ <lv\_init.h>}}
+\DoxyCodeLine{\Hypertarget{_arduino_giga_lvgl_display_8ino_source_l00026}00026\ \textcolor{preprocessor}{\#include\ <lvgl\_private.h>}}
+\DoxyCodeLine{\Hypertarget{_arduino_giga_lvgl_display_8ino_source_l00027}00027\ \textcolor{preprocessor}{\#include\ <lvgl.h>}}
+\DoxyCodeLine{\Hypertarget{_arduino_giga_lvgl_display_8ino_source_l00028}00028\ }
+\DoxyCodeLine{\Hypertarget{_arduino_giga_lvgl_display_8ino_source_l00029}00029\ \textcolor{preprocessor}{\#include\ <\mbox{\hyperlink{_arduino__constants_8h}{Arduino\_constants.h}}>}}
+\DoxyCodeLine{\Hypertarget{_arduino_giga_lvgl_display_8ino_source_l00030}00030\ \textcolor{preprocessor}{\#include\ <\mbox{\hyperlink{motor__constants_8h}{motor\_constants.h}}>}}
+\DoxyCodeLine{\Hypertarget{_arduino_giga_lvgl_display_8ino_source_l00031}00031\ \textcolor{preprocessor}{\#include\ <\mbox{\hyperlink{msg__constants_8h}{msg\_constants.h}}>}}
+\DoxyCodeLine{\Hypertarget{_arduino_giga_lvgl_display_8ino_source_l00032}00032\ \textcolor{preprocessor}{\#include\ <\mbox{\hyperlink{other__constants_8h}{other\_constants.h}}>}}
+\DoxyCodeLine{\Hypertarget{_arduino_giga_lvgl_display_8ino_source_l00033}00033\ }
+\DoxyCodeLine{\Hypertarget{_arduino_giga_lvgl_display_8ino_source_l00034}00034\ \textcolor{preprocessor}{\#include\ "{}lvgl.h"{}}}
+\DoxyCodeLine{\Hypertarget{_arduino_giga_lvgl_display_8ino_source_l00035}00035\ \textcolor{preprocessor}{\#include\ "{}Arduino\_GigaDisplayTouch.h"{}}}
+\DoxyCodeLine{\Hypertarget{_arduino_giga_lvgl_display_8ino_source_l00036}00036\ \textcolor{preprocessor}{\#include\ "{}Arduino\_H7\_Video.h"{}}}
+\DoxyCodeLine{\Hypertarget{_arduino_giga_lvgl_display_8ino_source_l00037}00037\ \textcolor{preprocessor}{\#include\ <vector>}\ \textcolor{comment}{//\ end\ of\ Imports}}
+\DoxyCodeLine{\Hypertarget{_arduino_giga_lvgl_display_8ino_source_l00039}00039\ }
+\DoxyCodeLine{\Hypertarget{_arduino_giga_lvgl_display_8ino_source_l00045}\mbox{\hyperlink{_arduino_giga_lvgl_display_8ino_a09c202aa2681c1591f47ade0fd9f93be}{00045}}\ \textcolor{keyword}{enum}\ \mbox{\hyperlink{_arduino_giga_lvgl_display_8ino_a09c202aa2681c1591f47ade0fd9f93be}{MotorPins}}}
+\DoxyCodeLine{\Hypertarget{_arduino_giga_lvgl_display_8ino_source_l00046}00046\ \{}
+\DoxyCodeLine{\Hypertarget{_arduino_giga_lvgl_display_8ino_source_l00047}\mbox{\hyperlink{_arduino_giga_lvgl_display_8ino_a09c202aa2681c1591f47ade0fd9f93beafac329d5db4efdbf0c8d2d7d3de466a9}{00047}}\ \ \ \mbox{\hyperlink{_arduino_giga_lvgl_display_8ino_a09c202aa2681c1591f47ade0fd9f93beafac329d5db4efdbf0c8d2d7d3de466a9}{ENB\_B}}\ =\ 13,}
+\DoxyCodeLine{\Hypertarget{_arduino_giga_lvgl_display_8ino_source_l00048}\mbox{\hyperlink{_arduino_giga_lvgl_display_8ino_a09c202aa2681c1591f47ade0fd9f93bea2047c5c4b4b18be0602eb80f9b4a1768}{00048}}\ \ \ \mbox{\hyperlink{_arduino_giga_lvgl_display_8ino_a09c202aa2681c1591f47ade0fd9f93bea2047c5c4b4b18be0602eb80f9b4a1768}{IN4\_B}}\ =\ 12,}
+\DoxyCodeLine{\Hypertarget{_arduino_giga_lvgl_display_8ino_source_l00049}\mbox{\hyperlink{_arduino_giga_lvgl_display_8ino_a09c202aa2681c1591f47ade0fd9f93bea6ed09eef66c4f29e12b322f4d83cae56}{00049}}\ \ \ \mbox{\hyperlink{_arduino_giga_lvgl_display_8ino_a09c202aa2681c1591f47ade0fd9f93bea6ed09eef66c4f29e12b322f4d83cae56}{IN3\_B}}\ =\ 11,}
+\DoxyCodeLine{\Hypertarget{_arduino_giga_lvgl_display_8ino_source_l00050}\mbox{\hyperlink{_arduino_giga_lvgl_display_8ino_a09c202aa2681c1591f47ade0fd9f93bea859b5cc7d0a7874c0d8a05ddfe033866}{00050}}\ \ \ \mbox{\hyperlink{_arduino_giga_lvgl_display_8ino_a09c202aa2681c1591f47ade0fd9f93bea859b5cc7d0a7874c0d8a05ddfe033866}{IN2\_B}}\ =\ 10,}
+\DoxyCodeLine{\Hypertarget{_arduino_giga_lvgl_display_8ino_source_l00051}\mbox{\hyperlink{_arduino_giga_lvgl_display_8ino_a09c202aa2681c1591f47ade0fd9f93bea73a3f9b58bcbefe98e6d5cec2e9088a5}{00051}}\ \ \ \mbox{\hyperlink{_arduino_giga_lvgl_display_8ino_a09c202aa2681c1591f47ade0fd9f93bea73a3f9b58bcbefe98e6d5cec2e9088a5}{IN1\_B}}\ =\ 9,}
+\DoxyCodeLine{\Hypertarget{_arduino_giga_lvgl_display_8ino_source_l00052}\mbox{\hyperlink{_arduino_giga_lvgl_display_8ino_a09c202aa2681c1591f47ade0fd9f93bea4fd12e00eb66efa116b4e9769045508c}{00052}}\ \ \ \mbox{\hyperlink{_arduino_giga_lvgl_display_8ino_a09c202aa2681c1591f47ade0fd9f93bea4fd12e00eb66efa116b4e9769045508c}{ENA\_B}}\ =\ 8,}
+\DoxyCodeLine{\Hypertarget{_arduino_giga_lvgl_display_8ino_source_l00053}00053\ }
+\DoxyCodeLine{\Hypertarget{_arduino_giga_lvgl_display_8ino_source_l00054}\mbox{\hyperlink{_arduino_giga_lvgl_display_8ino_a09c202aa2681c1591f47ade0fd9f93beab601c6a9dbd4c1a3b70d8a84de3bd012}{00054}}\ \ \ \mbox{\hyperlink{_arduino_giga_lvgl_display_8ino_a09c202aa2681c1591f47ade0fd9f93beab601c6a9dbd4c1a3b70d8a84de3bd012}{ENB\_A}}\ =\ 7,}
+\DoxyCodeLine{\Hypertarget{_arduino_giga_lvgl_display_8ino_source_l00055}\mbox{\hyperlink{_arduino_giga_lvgl_display_8ino_a09c202aa2681c1591f47ade0fd9f93bea93d7c651df7bde50e2382ad65e25c40a}{00055}}\ \ \ \mbox{\hyperlink{_arduino_giga_lvgl_display_8ino_a09c202aa2681c1591f47ade0fd9f93bea93d7c651df7bde50e2382ad65e25c40a}{IN4\_A}}\ =\ 6,}
+\DoxyCodeLine{\Hypertarget{_arduino_giga_lvgl_display_8ino_source_l00056}\mbox{\hyperlink{_arduino_giga_lvgl_display_8ino_a09c202aa2681c1591f47ade0fd9f93bea9d9477ff2adcb5d4e3b7f2912bc459db}{00056}}\ \ \ \mbox{\hyperlink{_arduino_giga_lvgl_display_8ino_a09c202aa2681c1591f47ade0fd9f93bea9d9477ff2adcb5d4e3b7f2912bc459db}{IN3\_A}}\ =\ 5,}
+\DoxyCodeLine{\Hypertarget{_arduino_giga_lvgl_display_8ino_source_l00057}\mbox{\hyperlink{_arduino_giga_lvgl_display_8ino_a09c202aa2681c1591f47ade0fd9f93bea542f6a0db31278731d93bec3ed4151af}{00057}}\ \ \ \mbox{\hyperlink{_arduino_giga_lvgl_display_8ino_a09c202aa2681c1591f47ade0fd9f93bea542f6a0db31278731d93bec3ed4151af}{IN2\_A}}\ =\ 4,}
+\DoxyCodeLine{\Hypertarget{_arduino_giga_lvgl_display_8ino_source_l00058}\mbox{\hyperlink{_arduino_giga_lvgl_display_8ino_a09c202aa2681c1591f47ade0fd9f93bea115a61482486b39c89389f48bc9a36be}{00058}}\ \ \ \mbox{\hyperlink{_arduino_giga_lvgl_display_8ino_a09c202aa2681c1591f47ade0fd9f93bea115a61482486b39c89389f48bc9a36be}{IN1\_A}}\ =\ 3,}
+\DoxyCodeLine{\Hypertarget{_arduino_giga_lvgl_display_8ino_source_l00059}\mbox{\hyperlink{_arduino_giga_lvgl_display_8ino_a09c202aa2681c1591f47ade0fd9f93bea8ca39e084c4680aee4c18e3094761422}{00059}}\ \ \ \mbox{\hyperlink{_arduino_giga_lvgl_display_8ino_a09c202aa2681c1591f47ade0fd9f93bea8ca39e084c4680aee4c18e3094761422}{ENA\_A}}\ =\ 2}
+\DoxyCodeLine{\Hypertarget{_arduino_giga_lvgl_display_8ino_source_l00060}00060\ \};\ \textcolor{comment}{//\ end\ of\ Motor\_Pins}}
+\DoxyCodeLine{\Hypertarget{_arduino_giga_lvgl_display_8ino_source_l00062}00062\ }
+\DoxyCodeLine{\Hypertarget{_arduino_giga_lvgl_display_8ino_source_l00063}00063\ \textcolor{comment}{//\ =====\ Shared\ label\ +\ vector\ logic\ =====}}
+\DoxyCodeLine{\Hypertarget{_arduino_giga_lvgl_display_8ino_source_l00072}\mbox{\hyperlink{_arduino_giga_lvgl_display_8ino_a0397ddbe4d2bddb9d77afbb47acf56f0}{00072}}\ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{_arduino_giga_lvgl_display_8ino_a0397ddbe4d2bddb9d77afbb47acf56f0}{apply\_mode}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *mode\_name,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *direction)}
+\DoxyCodeLine{\Hypertarget{_arduino_giga_lvgl_display_8ino_source_l00073}00073\ \{}
+\DoxyCodeLine{\Hypertarget{_arduino_giga_lvgl_display_8ino_source_l00074}00074\ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{classmsg__constants_a2a1a0fb8a3fbdfa803e8a9c87bde21a3}{msg\_constants::msg\_label}}\ !=\ NULL)}
+\DoxyCodeLine{\Hypertarget{_arduino_giga_lvgl_display_8ino_source_l00075}00075\ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_arduino_giga_lvgl_display_8ino_source_l00076}00076\ \ \ \ \ lv\_obj\_del(\mbox{\hyperlink{classmsg__constants_a2a1a0fb8a3fbdfa803e8a9c87bde21a3}{msg\_constants::msg\_label}});}
+\DoxyCodeLine{\Hypertarget{_arduino_giga_lvgl_display_8ino_source_l00077}00077\ \ \ \ \ \mbox{\hyperlink{classmsg__constants_a2a1a0fb8a3fbdfa803e8a9c87bde21a3}{msg\_constants::msg\_label}}\ =\ NULL;}
+\DoxyCodeLine{\Hypertarget{_arduino_giga_lvgl_display_8ino_source_l00078}00078\ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_arduino_giga_lvgl_display_8ino_source_l00079}00079\ }
-\DoxyCodeLine{\Hypertarget{_arduino_giga_lvgl_display_8ino_source_l00080}00080\ \ \ \textcolor{keywordtype}{char}\ buffer[64];}
-\DoxyCodeLine{\Hypertarget{_arduino_giga_lvgl_display_8ino_source_l00081}00081\ \ \ snprintf(buffer,\ \textcolor{keyword}{sizeof}(buffer),\ \textcolor{stringliteral}{"{}Applied\ \%s\ Mode:\ \%s."{}},\ mode\_name,\ direction);}
-\DoxyCodeLine{\Hypertarget{_arduino_giga_lvgl_display_8ino_source_l00082}00082\ \ \ lv\_label\_set\_text(msg\_label,\ buffer);}
-\DoxyCodeLine{\Hypertarget{_arduino_giga_lvgl_display_8ino_source_l00083}00083\ }
-\DoxyCodeLine{\Hypertarget{_arduino_giga_lvgl_display_8ino_source_l00084}00084\ \ \ program.push\_back(direction);}
-\DoxyCodeLine{\Hypertarget{_arduino_giga_lvgl_display_8ino_source_l00085}00085\ }
-\DoxyCodeLine{\Hypertarget{_arduino_giga_lvgl_display_8ino_source_l00086}00086\ \ \ lv\_obj\_set\_style\_text\_font(msg\_label,\ \&lv\_font\_montserrat\_24,\ 0);}
-\DoxyCodeLine{\Hypertarget{_arduino_giga_lvgl_display_8ino_source_l00087}00087\ \ \ lv\_obj\_align(msg\_label,\ LV\_ALIGN\_BOTTOM\_MID,\ 0,\ -\/20);}
-\DoxyCodeLine{\Hypertarget{_arduino_giga_lvgl_display_8ino_source_l00088}00088\ \ \ msg\_start\_time\ =\ millis();}
-\DoxyCodeLine{\Hypertarget{_arduino_giga_lvgl_display_8ino_source_l00089}00089\ \}}
-\DoxyCodeLine{\Hypertarget{_arduino_giga_lvgl_display_8ino_source_l00090}00090\ }
-\DoxyCodeLine{\Hypertarget{_arduino_giga_lvgl_display_8ino_source_l00091}00091\ \textcolor{comment}{//\ =====\ Run\ Program\ (special)\ =====}}
-\DoxyCodeLine{\Hypertarget{_arduino_giga_lvgl_display_8ino_source_l00108}\mbox{\hyperlink{_arduino_giga_lvgl_display_8ino_a599fa16066a270f3a22e7de32fbb250f}{00108}}\ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{_arduino_giga_lvgl_display_8ino_a599fa16066a270f3a22e7de32fbb250f}{btn\_Run\_Program\_event\_cb}}(lv\_event\_t\ *e)}
-\DoxyCodeLine{\Hypertarget{_arduino_giga_lvgl_display_8ino_source_l00109}00109\ \{}
-\DoxyCodeLine{\Hypertarget{_arduino_giga_lvgl_display_8ino_source_l00110}00110\ \ \ \textcolor{keywordflow}{if}\ (msg\_label\ !=\ NULL)}
-\DoxyCodeLine{\Hypertarget{_arduino_giga_lvgl_display_8ino_source_l00111}00111\ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_arduino_giga_lvgl_display_8ino_source_l00112}00112\ \ \ \ \ lv\_obj\_del(msg\_label);}
-\DoxyCodeLine{\Hypertarget{_arduino_giga_lvgl_display_8ino_source_l00113}00113\ \ \ \ \ msg\_label\ =\ NULL;}
-\DoxyCodeLine{\Hypertarget{_arduino_giga_lvgl_display_8ino_source_l00114}00114\ \ \ \}}
-\DoxyCodeLine{\Hypertarget{_arduino_giga_lvgl_display_8ino_source_l00115}00115\ }
-\DoxyCodeLine{\Hypertarget{_arduino_giga_lvgl_display_8ino_source_l00116}00116\ \ \ msg\_label\ =\ lv\_label\_create(lv\_scr\_act());}
-\DoxyCodeLine{\Hypertarget{_arduino_giga_lvgl_display_8ino_source_l00117}00117\ \ \ lv\_label\_set\_text(msg\_label,\ \textcolor{stringliteral}{"{}Applied\ program!"{}});}
-\DoxyCodeLine{\Hypertarget{_arduino_giga_lvgl_display_8ino_source_l00118}00118\ }
+\DoxyCodeLine{\Hypertarget{_arduino_giga_lvgl_display_8ino_source_l00080}00080\ \ \ \mbox{\hyperlink{classmsg__constants_a2a1a0fb8a3fbdfa803e8a9c87bde21a3}{msg\_constants::msg\_label}}\ =\ lv\_label\_create(lv\_scr\_act());}
+\DoxyCodeLine{\Hypertarget{_arduino_giga_lvgl_display_8ino_source_l00081}00081\ \ \ \textcolor{keywordtype}{char}\ buffer[64];}
+\DoxyCodeLine{\Hypertarget{_arduino_giga_lvgl_display_8ino_source_l00082}00082\ \ \ snprintf(buffer,\ \textcolor{keyword}{sizeof}(buffer),\ \textcolor{stringliteral}{"{}Applied\ \%s\ Mode:\ \%s."{}},\ mode\_name,\ direction);}
+\DoxyCodeLine{\Hypertarget{_arduino_giga_lvgl_display_8ino_source_l00083}00083\ \ \ lv\_label\_set\_text(\mbox{\hyperlink{classmsg__constants_a2a1a0fb8a3fbdfa803e8a9c87bde21a3}{msg\_constants::msg\_label}},\ buffer);}
+\DoxyCodeLine{\Hypertarget{_arduino_giga_lvgl_display_8ino_source_l00084}00084\ }
+\DoxyCodeLine{\Hypertarget{_arduino_giga_lvgl_display_8ino_source_l00085}00085\ \ \ \mbox{\hyperlink{classother__constants_a522b12f820f2390f63de34235a38942e}{other\_constants::program}}.push\_back(direction);}
+\DoxyCodeLine{\Hypertarget{_arduino_giga_lvgl_display_8ino_source_l00086}00086\ }
+\DoxyCodeLine{\Hypertarget{_arduino_giga_lvgl_display_8ino_source_l00087}00087\ \ \ lv\_obj\_set\_style\_text\_font(\mbox{\hyperlink{classmsg__constants_a2a1a0fb8a3fbdfa803e8a9c87bde21a3}{msg\_constants::msg\_label}},\ \&lv\_font\_montserrat\_24,\ 0);}
+\DoxyCodeLine{\Hypertarget{_arduino_giga_lvgl_display_8ino_source_l00088}00088\ \ \ lv\_obj\_align(\mbox{\hyperlink{classmsg__constants_a2a1a0fb8a3fbdfa803e8a9c87bde21a3}{msg\_constants::msg\_label}},\ LV\_ALIGN\_BOTTOM\_MID,\ 0,\ -\/20);}
+\DoxyCodeLine{\Hypertarget{_arduino_giga_lvgl_display_8ino_source_l00089}00089\ \ \ \mbox{\hyperlink{classmsg__constants_ac2513d9d541bdbe4554122d496c4bc9d}{msg\_constants::msg\_start\_time}}\ =\ millis();}
+\DoxyCodeLine{\Hypertarget{_arduino_giga_lvgl_display_8ino_source_l00090}00090\ \}}
+\DoxyCodeLine{\Hypertarget{_arduino_giga_lvgl_display_8ino_source_l00091}00091\ }
+\DoxyCodeLine{\Hypertarget{_arduino_giga_lvgl_display_8ino_source_l00092}00092\ \textcolor{comment}{//\ =====\ Run\ Program\ (special)\ =====}}
+\DoxyCodeLine{\Hypertarget{_arduino_giga_lvgl_display_8ino_source_l00109}\mbox{\hyperlink{_arduino_giga_lvgl_display_8ino_a599fa16066a270f3a22e7de32fbb250f}{00109}}\ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{_arduino_giga_lvgl_display_8ino_a599fa16066a270f3a22e7de32fbb250f}{btn\_Run\_Program\_event\_cb}}(lv\_event\_t\ *e)}
+\DoxyCodeLine{\Hypertarget{_arduino_giga_lvgl_display_8ino_source_l00110}00110\ \{}
+\DoxyCodeLine{\Hypertarget{_arduino_giga_lvgl_display_8ino_source_l00111}00111\ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{classmsg__constants_a2a1a0fb8a3fbdfa803e8a9c87bde21a3}{msg\_constants::msg\_label}}\ !=\ NULL)}
+\DoxyCodeLine{\Hypertarget{_arduino_giga_lvgl_display_8ino_source_l00112}00112\ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_arduino_giga_lvgl_display_8ino_source_l00113}00113\ \ \ \ \ lv\_obj\_del(\mbox{\hyperlink{classmsg__constants_a2a1a0fb8a3fbdfa803e8a9c87bde21a3}{msg\_constants::msg\_label}});}
+\DoxyCodeLine{\Hypertarget{_arduino_giga_lvgl_display_8ino_source_l00114}00114\ \ \ \ \ \mbox{\hyperlink{classmsg__constants_a2a1a0fb8a3fbdfa803e8a9c87bde21a3}{msg\_constants::msg\_label}}\ =\ NULL;}
+\DoxyCodeLine{\Hypertarget{_arduino_giga_lvgl_display_8ino_source_l00115}00115\ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_arduino_giga_lvgl_display_8ino_source_l00116}00116\ }
+\DoxyCodeLine{\Hypertarget{_arduino_giga_lvgl_display_8ino_source_l00117}00117\ \ \ \mbox{\hyperlink{classmsg__constants_a2a1a0fb8a3fbdfa803e8a9c87bde21a3}{msg\_constants::msg\_label}}\ =\ lv\_label\_create(lv\_scr\_act());}
+\DoxyCodeLine{\Hypertarget{_arduino_giga_lvgl_display_8ino_source_l00118}00118\ \ \ lv\_label\_set\_text(\mbox{\hyperlink{classmsg__constants_a2a1a0fb8a3fbdfa803e8a9c87bde21a3}{msg\_constants::msg\_label}},\ \textcolor{stringliteral}{"{}Applied\ program!"{}});}
 \DoxyCodeLine{\Hypertarget{_arduino_giga_lvgl_display_8ino_source_l00119}00119\ \ \ \textcolor{comment}{//\ Print\ program\ to\ Serial\ Monitor\ (for\ debugging)}}
-\DoxyCodeLine{\Hypertarget{_arduino_giga_lvgl_display_8ino_source_l00120}00120\ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{auto}\ p\ :\ program)}
+\DoxyCodeLine{\Hypertarget{_arduino_giga_lvgl_display_8ino_source_l00120}00120\ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{auto}\ p\ :\ \mbox{\hyperlink{classother__constants_a522b12f820f2390f63de34235a38942e}{other\_constants::program}})}
 \DoxyCodeLine{\Hypertarget{_arduino_giga_lvgl_display_8ino_source_l00121}00121\ \ \ \{}
 \DoxyCodeLine{\Hypertarget{_arduino_giga_lvgl_display_8ino_source_l00122}00122\ \ \ \ \ Serial.println(p);}
 \DoxyCodeLine{\Hypertarget{_arduino_giga_lvgl_display_8ino_source_l00123}00123\ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_arduino_giga_lvgl_display_8ino_source_l00124}00124\ \ \ Serial.println();}
 \DoxyCodeLine{\Hypertarget{_arduino_giga_lvgl_display_8ino_source_l00125}00125\ }
 \DoxyCodeLine{\Hypertarget{_arduino_giga_lvgl_display_8ino_source_l00126}00126\ \ \ delay(500);}
-\DoxyCodeLine{\Hypertarget{_arduino_giga_lvgl_display_8ino_source_l00127}00127\ \ \ program.clear();}
+\DoxyCodeLine{\Hypertarget{_arduino_giga_lvgl_display_8ino_source_l00127}00127\ \ \ \mbox{\hyperlink{classother__constants_a522b12f820f2390f63de34235a38942e}{other\_constants::program}}.clear();}
 \DoxyCodeLine{\Hypertarget{_arduino_giga_lvgl_display_8ino_source_l00128}00128\ }
-\DoxyCodeLine{\Hypertarget{_arduino_giga_lvgl_display_8ino_source_l00129}00129\ \ \ lv\_obj\_set\_style\_text\_font(msg\_label,\ \&lv\_font\_montserrat\_24,\ 0);}
-\DoxyCodeLine{\Hypertarget{_arduino_giga_lvgl_display_8ino_source_l00130}00130\ \ \ lv\_obj\_align(msg\_label,\ LV\_ALIGN\_BOTTOM\_MID,\ 0,\ -\/20);}
-\DoxyCodeLine{\Hypertarget{_arduino_giga_lvgl_display_8ino_source_l00131}00131\ \ \ msg\_start\_time\ =\ millis();}
+\DoxyCodeLine{\Hypertarget{_arduino_giga_lvgl_display_8ino_source_l00129}00129\ \ \ lv\_obj\_set\_style\_text\_font(\mbox{\hyperlink{classmsg__constants_a2a1a0fb8a3fbdfa803e8a9c87bde21a3}{msg\_constants::msg\_label}},\ \&lv\_font\_montserrat\_24,\ 0);}
+\DoxyCodeLine{\Hypertarget{_arduino_giga_lvgl_display_8ino_source_l00130}00130\ \ \ lv\_obj\_align(\mbox{\hyperlink{classmsg__constants_a2a1a0fb8a3fbdfa803e8a9c87bde21a3}{msg\_constants::msg\_label}},\ LV\_ALIGN\_BOTTOM\_MID,\ 0,\ -\/20);}
+\DoxyCodeLine{\Hypertarget{_arduino_giga_lvgl_display_8ino_source_l00131}00131\ \ \ \mbox{\hyperlink{classmsg__constants_ac2513d9d541bdbe4554122d496c4bc9d}{msg\_constants::msg\_start\_time}}\ =\ millis();}
 \DoxyCodeLine{\Hypertarget{_arduino_giga_lvgl_display_8ino_source_l00132}00132\ \}}
 \DoxyCodeLine{\Hypertarget{_arduino_giga_lvgl_display_8ino_source_l00133}00133\ }
 \DoxyCodeLine{\Hypertarget{_arduino_giga_lvgl_display_8ino_source_l00134}00134\ \textcolor{comment}{//\ ========\ CALLBACK\ DECLARATIONS\ ========}}
@@ -99,37 +99,37 @@
 \DoxyCodeLine{\Hypertarget{_arduino_giga_lvgl_display_8ino_source_l00156}\mbox{\hyperlink{_arduino_giga_lvgl_display_8ino_a6b08dca515fd8dd9eaec4b80e83e7e6a}{00156}}\ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{_arduino_giga_lvgl_display_8ino_a6b08dca515fd8dd9eaec4b80e83e7e6a}{main\_btnm\_event\_cb}}(lv\_event\_t\ *e)}
 \DoxyCodeLine{\Hypertarget{_arduino_giga_lvgl_display_8ino_source_l00157}00157\ \{}
 \DoxyCodeLine{\Hypertarget{_arduino_giga_lvgl_display_8ino_source_l00158}00158\ \ \ lv\_obj\_t\ *btnm\ =\ (lv\_obj\_t\ *)lv\_event\_get\_target(e);}
-\DoxyCodeLine{\Hypertarget{_arduino_giga_lvgl_display_8ino_source_l00159}00159\ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *txt\ =\ lv\_btnmatrix\_get\_btn\_text(}
+\DoxyCodeLine{\Hypertarget{_arduino_giga_lvgl_display_8ino_source_l00159}00159\ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *dir\_txt\ =\ lv\_btnmatrix\_get\_btn\_text(}
 \DoxyCodeLine{\Hypertarget{_arduino_giga_lvgl_display_8ino_source_l00160}00160\ \ \ \ \ \ \ btnm,\ lv\_btnmatrix\_get\_selected\_btn(btnm));}
 \DoxyCodeLine{\Hypertarget{_arduino_giga_lvgl_display_8ino_source_l00161}00161\ }
-\DoxyCodeLine{\Hypertarget{_arduino_giga_lvgl_display_8ino_source_l00162}00162\ \ \ \textcolor{keywordflow}{if}\ (txt\ ==\ NULL)}
+\DoxyCodeLine{\Hypertarget{_arduino_giga_lvgl_display_8ino_source_l00162}00162\ \ \ \textcolor{keywordflow}{if}\ (dir\_txt\ ==\ NULL)}
 \DoxyCodeLine{\Hypertarget{_arduino_giga_lvgl_display_8ino_source_l00163}00163\ \ \ \ \ \textcolor{keywordflow}{return};}
 \DoxyCodeLine{\Hypertarget{_arduino_giga_lvgl_display_8ino_source_l00164}00164\ }
-\DoxyCodeLine{\Hypertarget{_arduino_giga_lvgl_display_8ino_source_l00165}00165\ \ \ \textcolor{keywordflow}{if}\ (strcmp(txt,\ \textcolor{stringliteral}{"{}Forward"{}})\ ==\ 0\ ||\ strcmp(txt,\ \textcolor{stringliteral}{"{}Backward"{}})\ ==\ 0)}
+\DoxyCodeLine{\Hypertarget{_arduino_giga_lvgl_display_8ino_source_l00165}00165\ \ \ \textcolor{keywordflow}{if}\ (strcmp(dir\_txt,\ \textcolor{stringliteral}{"{}Forward"{}})\ ==\ 0\ ||\ strcmp(dir\_txt,\ \textcolor{stringliteral}{"{}Backward"{}})\ ==\ 0)}
 \DoxyCodeLine{\Hypertarget{_arduino_giga_lvgl_display_8ino_source_l00166}00166\ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_arduino_giga_lvgl_display_8ino_source_l00167}00167\ \ \ \ \ \mbox{\hyperlink{_arduino_giga_lvgl_display_8ino_a0397ddbe4d2bddb9d77afbb47acf56f0}{apply\_mode}}(\textcolor{stringliteral}{"{}Straight"{}},\ txt);}
+\DoxyCodeLine{\Hypertarget{_arduino_giga_lvgl_display_8ino_source_l00167}00167\ \ \ \ \ \mbox{\hyperlink{_arduino_giga_lvgl_display_8ino_a0397ddbe4d2bddb9d77afbb47acf56f0}{apply\_mode}}(\textcolor{stringliteral}{"{}Straight"{}},\ dir\_txt);}
 \DoxyCodeLine{\Hypertarget{_arduino_giga_lvgl_display_8ino_source_l00168}00168\ \ \ \}}
-\DoxyCodeLine{\Hypertarget{_arduino_giga_lvgl_display_8ino_source_l00169}00169\ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (strcmp(txt,\ \textcolor{stringliteral}{"{}Left"{}})\ ==\ 0\ ||\ strcmp(txt,\ \textcolor{stringliteral}{"{}Right"{}})\ ==\ 0)}
+\DoxyCodeLine{\Hypertarget{_arduino_giga_lvgl_display_8ino_source_l00169}00169\ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (strcmp(dir\_txt,\ \textcolor{stringliteral}{"{}Left"{}})\ ==\ 0\ ||\ strcmp(dir\_txt,\ \textcolor{stringliteral}{"{}Right"{}})\ ==\ 0)}
 \DoxyCodeLine{\Hypertarget{_arduino_giga_lvgl_display_8ino_source_l00170}00170\ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_arduino_giga_lvgl_display_8ino_source_l00171}00171\ \ \ \ \ \mbox{\hyperlink{_arduino_giga_lvgl_display_8ino_a0397ddbe4d2bddb9d77afbb47acf56f0}{apply\_mode}}(\textcolor{stringliteral}{"{}Sideways"{}},\ txt);}
+\DoxyCodeLine{\Hypertarget{_arduino_giga_lvgl_display_8ino_source_l00171}00171\ \ \ \ \ \mbox{\hyperlink{_arduino_giga_lvgl_display_8ino_a0397ddbe4d2bddb9d77afbb47acf56f0}{apply\_mode}}(\textcolor{stringliteral}{"{}Sideways"{}},\ dir\_txt);}
 \DoxyCodeLine{\Hypertarget{_arduino_giga_lvgl_display_8ino_source_l00172}00172\ \ \ \}}
-\DoxyCodeLine{\Hypertarget{_arduino_giga_lvgl_display_8ino_source_l00173}00173\ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (strcmp(txt,\ \textcolor{stringliteral}{"{}45"{}})\ ==\ 0\ ||\ strcmp(txt,\ \textcolor{stringliteral}{"{}135"{}})\ ==\ 0\ ||\ strcmp(txt,\ \textcolor{stringliteral}{"{}225"{}})\ ==\ 0\ ||\ strcmp(txt,\ \textcolor{stringliteral}{"{}315"{}})\ ==\ 0)}
+\DoxyCodeLine{\Hypertarget{_arduino_giga_lvgl_display_8ino_source_l00173}00173\ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (strcmp(dir\_txt,\ \textcolor{stringliteral}{"{}45"{}})\ ==\ 0\ ||\ strcmp(dir\_txt,\ \textcolor{stringliteral}{"{}135"{}})\ ==\ 0\ ||\ strcmp(dir\_txt,\ \textcolor{stringliteral}{"{}225"{}})\ ==\ 0\ ||\ strcmp(dir\_txt,\ \textcolor{stringliteral}{"{}315"{}})\ ==\ 0)}
 \DoxyCodeLine{\Hypertarget{_arduino_giga_lvgl_display_8ino_source_l00174}00174\ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_arduino_giga_lvgl_display_8ino_source_l00175}00175\ \ \ \ \ \mbox{\hyperlink{_arduino_giga_lvgl_display_8ino_a0397ddbe4d2bddb9d77afbb47acf56f0}{apply\_mode}}(\textcolor{stringliteral}{"{}Diagonal"{}},\ txt);}
+\DoxyCodeLine{\Hypertarget{_arduino_giga_lvgl_display_8ino_source_l00175}00175\ \ \ \ \ \mbox{\hyperlink{_arduino_giga_lvgl_display_8ino_a0397ddbe4d2bddb9d77afbb47acf56f0}{apply\_mode}}(\textcolor{stringliteral}{"{}Diagonal"{}},\ dir\_txt);}
 \DoxyCodeLine{\Hypertarget{_arduino_giga_lvgl_display_8ino_source_l00176}00176\ \ \ \}}
-\DoxyCodeLine{\Hypertarget{_arduino_giga_lvgl_display_8ino_source_l00177}00177\ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (strcmp(txt,\ \textcolor{stringliteral}{"{}Right\ Fwd"{}})\ ==\ 0\ ||\ strcmp(txt,\ \textcolor{stringliteral}{"{}Right\ Bwd"{}})\ ==\ 0\ ||\ strcmp(txt,\ \textcolor{stringliteral}{"{}Left\ Fwd"{}})\ ==\ 0\ ||\ strcmp(txt,\ \textcolor{stringliteral}{"{}Left\ Bwd"{}})\ ==\ 0)}
+\DoxyCodeLine{\Hypertarget{_arduino_giga_lvgl_display_8ino_source_l00177}00177\ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (strcmp(dir\_txt,\ \textcolor{stringliteral}{"{}Right\ Fwd"{}})\ ==\ 0\ ||\ strcmp(dir\_txt,\ \textcolor{stringliteral}{"{}Right\ Bwd"{}})\ ==\ 0\ ||\ strcmp(dir\_txt,\ \textcolor{stringliteral}{"{}Left\ Fwd"{}})\ ==\ 0\ ||\ strcmp(dir\_txt,\ \textcolor{stringliteral}{"{}Left\ Bwd"{}})\ ==\ 0)}
 \DoxyCodeLine{\Hypertarget{_arduino_giga_lvgl_display_8ino_source_l00178}00178\ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_arduino_giga_lvgl_display_8ino_source_l00179}00179\ \ \ \ \ \mbox{\hyperlink{_arduino_giga_lvgl_display_8ino_a0397ddbe4d2bddb9d77afbb47acf56f0}{apply\_mode}}(\textcolor{stringliteral}{"{}Pivot"{}},\ txt);}
+\DoxyCodeLine{\Hypertarget{_arduino_giga_lvgl_display_8ino_source_l00179}00179\ \ \ \ \ \mbox{\hyperlink{_arduino_giga_lvgl_display_8ino_a0397ddbe4d2bddb9d77afbb47acf56f0}{apply\_mode}}(\textcolor{stringliteral}{"{}Pivot"{}},\ dir\_txt);}
 \DoxyCodeLine{\Hypertarget{_arduino_giga_lvgl_display_8ino_source_l00180}00180\ \ \ \}}
-\DoxyCodeLine{\Hypertarget{_arduino_giga_lvgl_display_8ino_source_l00181}00181\ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (strcmp(txt,\ \textcolor{stringliteral}{"{}Front\ Right"{}})\ ==\ 0\ ||\ strcmp(txt,\ \textcolor{stringliteral}{"{}Front\ Left"{}})\ ==\ 0\ ||\ strcmp(txt,\ \textcolor{stringliteral}{"{}Rear\ Right"{}})\ ==\ 0\ ||\ strcmp(txt,\ \textcolor{stringliteral}{"{}Rear\ Left"{}})\ ==\ 0)}
+\DoxyCodeLine{\Hypertarget{_arduino_giga_lvgl_display_8ino_source_l00181}00181\ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (strcmp(dir\_txt,\ \textcolor{stringliteral}{"{}Front\ Right"{}})\ ==\ 0\ ||\ strcmp(dir\_txt,\ \textcolor{stringliteral}{"{}Front\ Left"{}})\ ==\ 0\ ||\ strcmp(dir\_txt,\ \textcolor{stringliteral}{"{}Rear\ Right"{}})\ ==\ 0\ ||\ strcmp(dir\_txt,\ \textcolor{stringliteral}{"{}Rear\ Left"{}})\ ==\ 0)}
 \DoxyCodeLine{\Hypertarget{_arduino_giga_lvgl_display_8ino_source_l00182}00182\ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_arduino_giga_lvgl_display_8ino_source_l00183}00183\ \ \ \ \ \mbox{\hyperlink{_arduino_giga_lvgl_display_8ino_a0397ddbe4d2bddb9d77afbb47acf56f0}{apply\_mode}}(\textcolor{stringliteral}{"{}Pivot\ Sideways"{}},\ txt);}
+\DoxyCodeLine{\Hypertarget{_arduino_giga_lvgl_display_8ino_source_l00183}00183\ \ \ \ \ \mbox{\hyperlink{_arduino_giga_lvgl_display_8ino_a0397ddbe4d2bddb9d77afbb47acf56f0}{apply\_mode}}(\textcolor{stringliteral}{"{}Pivot\ Sideways"{}},\ dir\_txt);}
 \DoxyCodeLine{\Hypertarget{_arduino_giga_lvgl_display_8ino_source_l00184}00184\ \ \ \}}
-\DoxyCodeLine{\Hypertarget{_arduino_giga_lvgl_display_8ino_source_l00185}00185\ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (strcmp(txt,\ \textcolor{stringliteral}{"{}CCW"{}})\ ==\ 0\ ||\ strcmp(txt,\ \textcolor{stringliteral}{"{}CW"{}})\ ==\ 0)}
+\DoxyCodeLine{\Hypertarget{_arduino_giga_lvgl_display_8ino_source_l00185}00185\ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (strcmp(dir\_txt,\ \textcolor{stringliteral}{"{}CCW"{}})\ ==\ 0\ ||\ strcmp(dir\_txt,\ \textcolor{stringliteral}{"{}CW"{}})\ ==\ 0)}
 \DoxyCodeLine{\Hypertarget{_arduino_giga_lvgl_display_8ino_source_l00186}00186\ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_arduino_giga_lvgl_display_8ino_source_l00187}00187\ \ \ \ \ \mbox{\hyperlink{_arduino_giga_lvgl_display_8ino_a0397ddbe4d2bddb9d77afbb47acf56f0}{apply\_mode}}(\textcolor{stringliteral}{"{}Rotate"{}},\ txt);}
+\DoxyCodeLine{\Hypertarget{_arduino_giga_lvgl_display_8ino_source_l00187}00187\ \ \ \ \ \mbox{\hyperlink{_arduino_giga_lvgl_display_8ino_a0397ddbe4d2bddb9d77afbb47acf56f0}{apply\_mode}}(\textcolor{stringliteral}{"{}Rotate"{}},\ dir\_txt);}
 \DoxyCodeLine{\Hypertarget{_arduino_giga_lvgl_display_8ino_source_l00188}00188\ \ \ \}}
-\DoxyCodeLine{\Hypertarget{_arduino_giga_lvgl_display_8ino_source_l00189}00189\ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (strcmp(txt,\ \textcolor{stringliteral}{"{}Prgm\ Car"{}})\ ==\ 0)}
+\DoxyCodeLine{\Hypertarget{_arduino_giga_lvgl_display_8ino_source_l00189}00189\ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (strcmp(dir\_txt,\ \textcolor{stringliteral}{"{}Prgm\ Car"{}})\ ==\ 0)}
 \DoxyCodeLine{\Hypertarget{_arduino_giga_lvgl_display_8ino_source_l00190}00190\ \ \ \{}
 \DoxyCodeLine{\Hypertarget{_arduino_giga_lvgl_display_8ino_source_l00191}00191\ \ \ \ \ \mbox{\hyperlink{_arduino_giga_lvgl_display_8ino_a599fa16066a270f3a22e7de32fbb250f}{btn\_Run\_Program\_event\_cb}}(e);}
 \DoxyCodeLine{\Hypertarget{_arduino_giga_lvgl_display_8ino_source_l00192}00192\ \ \ \}}
@@ -148,22 +148,22 @@
 \DoxyCodeLine{\Hypertarget{_arduino_giga_lvgl_display_8ino_source_l00216}00216\ \ \ \textcolor{keywordflow}{if}\ (strcmp(txt,\ \textcolor{stringliteral}{"{}FL"{}})\ ==\ 0)}
 \DoxyCodeLine{\Hypertarget{_arduino_giga_lvgl_display_8ino_source_l00217}00217\ \ \ \{}
 \DoxyCodeLine{\Hypertarget{_arduino_giga_lvgl_display_8ino_source_l00218}00218\ \ \ \ \ Serial.println(\textcolor{stringliteral}{"{}Front\ Left\ test\ Move"{}});}
-\DoxyCodeLine{\Hypertarget{_arduino_giga_lvgl_display_8ino_source_l00219}00219\ \ \ \ \ \mbox{\hyperlink{_arduino_giga_lvgl_display_8ino_a89702714cf6f17fb069f22e5f1f36d97}{FL\_move}}(motor\_speed\ *\ motor\_direction);}
+\DoxyCodeLine{\Hypertarget{_arduino_giga_lvgl_display_8ino_source_l00219}00219\ \ \ \ \ \mbox{\hyperlink{_arduino_giga_lvgl_display_8ino_a89702714cf6f17fb069f22e5f1f36d97}{FL\_move}}(\mbox{\hyperlink{classmotor__constants_af83643f00e48ca7329566e17246a2c83}{motor\_constants::motor\_speed}}\ *\ \mbox{\hyperlink{classmotor__constants_a55499ee0a25a1f7a3024cea72541543a}{motor\_constants::motor\_direction}});}
 \DoxyCodeLine{\Hypertarget{_arduino_giga_lvgl_display_8ino_source_l00220}00220\ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_arduino_giga_lvgl_display_8ino_source_l00221}00221\ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (strcmp(txt,\ \textcolor{stringliteral}{"{}FR"{}})\ ==\ 0)}
 \DoxyCodeLine{\Hypertarget{_arduino_giga_lvgl_display_8ino_source_l00222}00222\ \ \ \{}
 \DoxyCodeLine{\Hypertarget{_arduino_giga_lvgl_display_8ino_source_l00223}00223\ \ \ \ \ Serial.println(\textcolor{stringliteral}{"{}Front\ Right\ test\ Move"{}});}
-\DoxyCodeLine{\Hypertarget{_arduino_giga_lvgl_display_8ino_source_l00224}00224\ \ \ \ \ \mbox{\hyperlink{_arduino_giga_lvgl_display_8ino_a1d1a4db533ab78b9a2a06a09ba8a3bba}{FR\_move}}(motor\_speed\ *\ motor\_direction);}
+\DoxyCodeLine{\Hypertarget{_arduino_giga_lvgl_display_8ino_source_l00224}00224\ \ \ \ \ \mbox{\hyperlink{_arduino_giga_lvgl_display_8ino_a1d1a4db533ab78b9a2a06a09ba8a3bba}{FR\_move}}(\mbox{\hyperlink{classmotor__constants_af83643f00e48ca7329566e17246a2c83}{motor\_constants::motor\_speed}}\ *\ \mbox{\hyperlink{classmotor__constants_a55499ee0a25a1f7a3024cea72541543a}{motor\_constants::motor\_direction}});}
 \DoxyCodeLine{\Hypertarget{_arduino_giga_lvgl_display_8ino_source_l00225}00225\ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_arduino_giga_lvgl_display_8ino_source_l00226}00226\ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (strcmp(txt,\ \textcolor{stringliteral}{"{}RL"{}})\ ==\ 0)}
 \DoxyCodeLine{\Hypertarget{_arduino_giga_lvgl_display_8ino_source_l00227}00227\ \ \ \{}
 \DoxyCodeLine{\Hypertarget{_arduino_giga_lvgl_display_8ino_source_l00228}00228\ \ \ \ \ Serial.println(\textcolor{stringliteral}{"{}Rear\ Left\ test\ Move"{}});}
-\DoxyCodeLine{\Hypertarget{_arduino_giga_lvgl_display_8ino_source_l00229}00229\ \ \ \ \ \mbox{\hyperlink{_arduino_giga_lvgl_display_8ino_ac5e4ea79ee09f85143f444ee9d22cea6}{RL\_move}}(motor\_speed\ *\ motor\_direction);}
+\DoxyCodeLine{\Hypertarget{_arduino_giga_lvgl_display_8ino_source_l00229}00229\ \ \ \ \ \mbox{\hyperlink{_arduino_giga_lvgl_display_8ino_ac5e4ea79ee09f85143f444ee9d22cea6}{RL\_move}}(\mbox{\hyperlink{classmotor__constants_af83643f00e48ca7329566e17246a2c83}{motor\_constants::motor\_speed}}\ *\ \mbox{\hyperlink{classmotor__constants_a55499ee0a25a1f7a3024cea72541543a}{motor\_constants::motor\_direction}});}
 \DoxyCodeLine{\Hypertarget{_arduino_giga_lvgl_display_8ino_source_l00230}00230\ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_arduino_giga_lvgl_display_8ino_source_l00231}00231\ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (strcmp(txt,\ \textcolor{stringliteral}{"{}RR"{}})\ ==\ 0)}
 \DoxyCodeLine{\Hypertarget{_arduino_giga_lvgl_display_8ino_source_l00232}00232\ \ \ \{}
 \DoxyCodeLine{\Hypertarget{_arduino_giga_lvgl_display_8ino_source_l00233}00233\ \ \ \ \ Serial.println(\textcolor{stringliteral}{"{}Rear\ Right\ test\ Move"{}});}
-\DoxyCodeLine{\Hypertarget{_arduino_giga_lvgl_display_8ino_source_l00234}00234\ \ \ \ \ \mbox{\hyperlink{_arduino_giga_lvgl_display_8ino_a72d3ab08a583fa7cbdf7e3db1cb9ee5f}{RR\_move}}(motor\_speed\ *\ motor\_direction);}
+\DoxyCodeLine{\Hypertarget{_arduino_giga_lvgl_display_8ino_source_l00234}00234\ \ \ \ \ \mbox{\hyperlink{_arduino_giga_lvgl_display_8ino_a72d3ab08a583fa7cbdf7e3db1cb9ee5f}{RR\_move}}(\mbox{\hyperlink{classmotor__constants_af83643f00e48ca7329566e17246a2c83}{motor\_constants::motor\_speed}}\ *\ \mbox{\hyperlink{classmotor__constants_a55499ee0a25a1f7a3024cea72541543a}{motor\_constants::motor\_direction}});}
 \DoxyCodeLine{\Hypertarget{_arduino_giga_lvgl_display_8ino_source_l00235}00235\ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_arduino_giga_lvgl_display_8ino_source_l00236}00236\ }
 \DoxyCodeLine{\Hypertarget{_arduino_giga_lvgl_display_8ino_source_l00237}00237\ \ \ delay(500);}
@@ -176,22 +176,22 @@
 \DoxyCodeLine{\Hypertarget{_arduino_giga_lvgl_display_8ino_source_l00259}00259\ \ \ lv\_obj\_t\ *label\ =\ lv\_obj\_get\_child(btn,\ 0);}
 \DoxyCodeLine{\Hypertarget{_arduino_giga_lvgl_display_8ino_source_l00260}00260\ }
 \DoxyCodeLine{\Hypertarget{_arduino_giga_lvgl_display_8ino_source_l00261}00261\ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *txt\ =\ lv\_label\_get\_text(label);}
-\DoxyCodeLine{\Hypertarget{_arduino_giga_lvgl_display_8ino_source_l00262}00262\ }
-\DoxyCodeLine{\Hypertarget{_arduino_giga_lvgl_display_8ino_source_l00263}00263\ \ \ \textcolor{keywordflow}{if}\ (strcmp(txt,\ \textcolor{stringliteral}{"{}Fwd"{}})\ ==\ 0)\ \textcolor{comment}{//\ If\ txt\ is\ "{}Fwd"{},\ change\ to\ "{}Rev"{}\ and\ assign\ motor\_direction\ 1}}
+\DoxyCodeLine{\Hypertarget{_arduino_giga_lvgl_display_8ino_source_l00262}00262\ \ \ \textcolor{comment}{//\ If\ txt\ is\ "{}Fwd"{},\ change\ to\ "{}Rev"{}\ and\ assign\ motor\_direction\ 1\ else\ change\ to\ "{}Fwd"{}\ and\ assign\ motor\_direction\ -\/1}}
+\DoxyCodeLine{\Hypertarget{_arduino_giga_lvgl_display_8ino_source_l00263}00263\ \ \ \textcolor{keywordflow}{if}\ (strcmp(txt,\ \textcolor{stringliteral}{"{}Fwd"{}})\ ==\ 0)}
 \DoxyCodeLine{\Hypertarget{_arduino_giga_lvgl_display_8ino_source_l00264}00264\ \ \ \{}
 \DoxyCodeLine{\Hypertarget{_arduino_giga_lvgl_display_8ino_source_l00265}00265\ \ \ \ \ lv\_label\_set\_text(label,\ \textcolor{stringliteral}{"{}Rev"{}});}
-\DoxyCodeLine{\Hypertarget{_arduino_giga_lvgl_display_8ino_source_l00266}00266\ \ \ \ \ motor\_direction\ =\ 1;}
+\DoxyCodeLine{\Hypertarget{_arduino_giga_lvgl_display_8ino_source_l00266}00266\ \ \ \ \ \mbox{\hyperlink{classmotor__constants_a55499ee0a25a1f7a3024cea72541543a}{motor\_constants::motor\_direction}}\ =\ 1;}
 \DoxyCodeLine{\Hypertarget{_arduino_giga_lvgl_display_8ino_source_l00267}00267\ \ \ \}}
-\DoxyCodeLine{\Hypertarget{_arduino_giga_lvgl_display_8ino_source_l00268}00268\ \ \ strcpy\ \textcolor{keywordflow}{else}\ \textcolor{comment}{//\ If\ txt\ is\ "{}Rev"{},\ change\ to\ "{}Fwd"{}\ and\ assign\ motor\_direction\ -\/1}}
+\DoxyCodeLine{\Hypertarget{_arduino_giga_lvgl_display_8ino_source_l00268}00268\ \ \ \textcolor{keywordflow}{else}}
 \DoxyCodeLine{\Hypertarget{_arduino_giga_lvgl_display_8ino_source_l00269}00269\ \ \ \{}
 \DoxyCodeLine{\Hypertarget{_arduino_giga_lvgl_display_8ino_source_l00270}00270\ \ \ \ \ lv\_label\_set\_text(label,\ \textcolor{stringliteral}{"{}Fwd"{}});}
-\DoxyCodeLine{\Hypertarget{_arduino_giga_lvgl_display_8ino_source_l00271}00271\ \ \ \ \ motor\_direction\ =\ -\/1;}
+\DoxyCodeLine{\Hypertarget{_arduino_giga_lvgl_display_8ino_source_l00271}00271\ \ \ \ \ \mbox{\hyperlink{classmotor__constants_a55499ee0a25a1f7a3024cea72541543a}{motor\_constants::motor\_direction}}\ =\ -\/1;}
 \DoxyCodeLine{\Hypertarget{_arduino_giga_lvgl_display_8ino_source_l00272}00272\ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_arduino_giga_lvgl_display_8ino_source_l00273}00273\ }
 \DoxyCodeLine{\Hypertarget{_arduino_giga_lvgl_display_8ino_source_l00274}00274\ \ \ Serial.print(\textcolor{stringliteral}{"{}Mode:\ "{}});}
 \DoxyCodeLine{\Hypertarget{_arduino_giga_lvgl_display_8ino_source_l00275}00275\ \ \ Serial.println(lv\_label\_get\_text(label));}
 \DoxyCodeLine{\Hypertarget{_arduino_giga_lvgl_display_8ino_source_l00276}00276\ \ \ Serial.print(\textcolor{stringliteral}{"{}Direction\ set\ to\ "{}});}
-\DoxyCodeLine{\Hypertarget{_arduino_giga_lvgl_display_8ino_source_l00277}00277\ \ \ Serial.println(motor\_direction);}
+\DoxyCodeLine{\Hypertarget{_arduino_giga_lvgl_display_8ino_source_l00277}00277\ \ \ Serial.println(\mbox{\hyperlink{classmotor__constants_a55499ee0a25a1f7a3024cea72541543a}{motor\_constants::motor\_direction}});}
 \DoxyCodeLine{\Hypertarget{_arduino_giga_lvgl_display_8ino_source_l00278}00278\ \}}
 \DoxyCodeLine{\Hypertarget{_arduino_giga_lvgl_display_8ino_source_l00279}00279\ }
 \DoxyCodeLine{\Hypertarget{_arduino_giga_lvgl_display_8ino_source_l00280}00280\ \textcolor{comment}{//\ ========\ SLIDER\ CALLBACK\ ========}}
@@ -204,7 +204,7 @@
 \DoxyCodeLine{\Hypertarget{_arduino_giga_lvgl_display_8ino_source_l00300}00300\ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *name\ =\ (\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *)lv\_event\_get\_user\_data(e);}
 \DoxyCodeLine{\Hypertarget{_arduino_giga_lvgl_display_8ino_source_l00301}00301\ \ \ Serial.print(name);}
 \DoxyCodeLine{\Hypertarget{_arduino_giga_lvgl_display_8ino_source_l00302}00302\ \ \ Serial.print(\textcolor{stringliteral}{"{}\ speed\ set\ to\ "{}});}
-\DoxyCodeLine{\Hypertarget{_arduino_giga_lvgl_display_8ino_source_l00303}00303\ \ \ Serial.println(motor\_speed);}
+\DoxyCodeLine{\Hypertarget{_arduino_giga_lvgl_display_8ino_source_l00303}00303\ \ \ Serial.println(\mbox{\hyperlink{classmotor__constants_af83643f00e48ca7329566e17246a2c83}{motor\_constants::motor\_speed}});}
 \DoxyCodeLine{\Hypertarget{_arduino_giga_lvgl_display_8ino_source_l00304}00304\ \}}
 \DoxyCodeLine{\Hypertarget{_arduino_giga_lvgl_display_8ino_source_l00305}00305\ }
 \DoxyCodeLine{\Hypertarget{_arduino_giga_lvgl_display_8ino_source_l00306}00306\ \textcolor{comment}{//\ ========\ UI\ CREATION\ FUNCTION\ ========}}
@@ -296,15 +296,15 @@
 \DoxyCodeLine{\Hypertarget{_arduino_giga_lvgl_display_8ino_source_l00410}00410\ \}}
 \DoxyCodeLine{\Hypertarget{_arduino_giga_lvgl_display_8ino_source_l00415}\mbox{\hyperlink{_arduino_giga_lvgl_display_8ino_a1887246f5467ff145cd963e98fc2258e}{00415}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{_arduino_giga_lvgl_display_8ino_a1887246f5467ff145cd963e98fc2258e}{create\_ui}}()}
 \DoxyCodeLine{\Hypertarget{_arduino_giga_lvgl_display_8ino_source_l00416}00416\ \{}
-\DoxyCodeLine{\Hypertarget{_arduino_giga_lvgl_display_8ino_source_l00417}00417\ \ \ screen\_buttons\ =\ lv\_obj\_create(NULL);}
-\DoxyCodeLine{\Hypertarget{_arduino_giga_lvgl_display_8ino_source_l00418}00418\ \ \ \mbox{\hyperlink{_arduino_giga_lvgl_display_8ino_a9965ed6b6152697e6db85d37dfe41720}{create\_main\_button\_matrix}}(screen\_buttons);}
-\DoxyCodeLine{\Hypertarget{_arduino_giga_lvgl_display_8ino_source_l00419}00419\ \ \ \mbox{\hyperlink{_arduino_giga_lvgl_display_8ino_aecc909a3f155365b24a95ec0ffef19d3}{create\_test\_button\_matrix}}(screen\_buttons);}
+\DoxyCodeLine{\Hypertarget{_arduino_giga_lvgl_display_8ino_source_l00417}00417\ \ \ \mbox{\hyperlink{classother__constants_a6cb0844b817ba598ef84d337e3fd132f}{other\_constants::screen\_buttons}}\ =\ lv\_obj\_create(NULL);}
+\DoxyCodeLine{\Hypertarget{_arduino_giga_lvgl_display_8ino_source_l00418}00418\ \ \ \mbox{\hyperlink{_arduino_giga_lvgl_display_8ino_a9965ed6b6152697e6db85d37dfe41720}{create\_main\_button\_matrix}}(\mbox{\hyperlink{classother__constants_a6cb0844b817ba598ef84d337e3fd132f}{other\_constants::screen\_buttons}});}
+\DoxyCodeLine{\Hypertarget{_arduino_giga_lvgl_display_8ino_source_l00419}00419\ \ \ \mbox{\hyperlink{_arduino_giga_lvgl_display_8ino_aecc909a3f155365b24a95ec0ffef19d3}{create\_test\_button\_matrix}}(\mbox{\hyperlink{classother__constants_a6cb0844b817ba598ef84d337e3fd132f}{other\_constants::screen\_buttons}});}
 \DoxyCodeLine{\Hypertarget{_arduino_giga_lvgl_display_8ino_source_l00420}00420\ }
 \DoxyCodeLine{\Hypertarget{_arduino_giga_lvgl_display_8ino_source_l00421}00421\ \ \ \textcolor{comment}{//\ Call\ the\ new\ function\ to\ create\ speed\ sliders}}
-\DoxyCodeLine{\Hypertarget{_arduino_giga_lvgl_display_8ino_source_l00422}00422\ \ \ \mbox{\hyperlink{_arduino_giga_lvgl_display_8ino_ad5dca755f09c580eccadbdd097c4d57d}{create\_speed\_sliders}}(screen\_buttons);}
+\DoxyCodeLine{\Hypertarget{_arduino_giga_lvgl_display_8ino_source_l00422}00422\ \ \ \mbox{\hyperlink{_arduino_giga_lvgl_display_8ino_ad5dca755f09c580eccadbdd097c4d57d}{create\_speed\_sliders}}(\mbox{\hyperlink{classother__constants_a6cb0844b817ba598ef84d337e3fd132f}{other\_constants::screen\_buttons}});}
 \DoxyCodeLine{\Hypertarget{_arduino_giga_lvgl_display_8ino_source_l00423}00423\ }
 \DoxyCodeLine{\Hypertarget{_arduino_giga_lvgl_display_8ino_source_l00424}00424\ \ \ \textcolor{comment}{//\ =====\ Fwd/Rev\ Toggle\ Button\ =====}}
-\DoxyCodeLine{\Hypertarget{_arduino_giga_lvgl_display_8ino_source_l00425}00425\ \ \ lv\_obj\_t\ *toggle\_FwdRev\ =\ lv\_btn\_create(screen\_buttons);}
+\DoxyCodeLine{\Hypertarget{_arduino_giga_lvgl_display_8ino_source_l00425}00425\ \ \ lv\_obj\_t\ *toggle\_FwdRev\ =\ lv\_btn\_create(\mbox{\hyperlink{classother__constants_a6cb0844b817ba598ef84d337e3fd132f}{other\_constants::screen\_buttons}});}
 \DoxyCodeLine{\Hypertarget{_arduino_giga_lvgl_display_8ino_source_l00426}00426\ \ \ lv\_obj\_set\_size(toggle\_FwdRev,\ 80,\ 40);}
 \DoxyCodeLine{\Hypertarget{_arduino_giga_lvgl_display_8ino_source_l00427}00427\ \ \ lv\_obj\_align(toggle\_FwdRev,\ LV\_ALIGN\_TOP\_RIGHT,\ -\/20,\ 180);}
 \DoxyCodeLine{\Hypertarget{_arduino_giga_lvgl_display_8ino_source_l00428}00428\ }
@@ -322,15 +322,15 @@
 \DoxyCodeLine{\Hypertarget{_arduino_giga_lvgl_display_8ino_source_l00445}00445\ \{}
 \DoxyCodeLine{\Hypertarget{_arduino_giga_lvgl_display_8ino_source_l00446}00446\ \ \ \textcolor{keywordflow}{if}\ (speed\ >=\ 0)}
 \DoxyCodeLine{\Hypertarget{_arduino_giga_lvgl_display_8ino_source_l00447}00447\ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_arduino_giga_lvgl_display_8ino_source_l00448}00448\ \ \ \ \ digitalWrite(\mbox{\hyperlink{_arduino_giga_lvgl_display_8ino_ac74564e770f6c90dbf7dd71476f5114e}{IN1\_B}},\ HIGH);}
-\DoxyCodeLine{\Hypertarget{_arduino_giga_lvgl_display_8ino_source_l00449}00449\ \ \ \ \ digitalWrite(\mbox{\hyperlink{_arduino_giga_lvgl_display_8ino_a9570059ff6b742c8040a32962d0d5a37}{IN2\_B}},\ LOW);}
-\DoxyCodeLine{\Hypertarget{_arduino_giga_lvgl_display_8ino_source_l00450}00450\ \ \ \ \ analogWrite(\mbox{\hyperlink{_arduino_giga_lvgl_display_8ino_a51076b14694e306a6194047c53593a31}{ENA\_B}},\ speed);}
+\DoxyCodeLine{\Hypertarget{_arduino_giga_lvgl_display_8ino_source_l00448}00448\ \ \ \ \ digitalWrite(\mbox{\hyperlink{_arduino_giga_lvgl_display_8ino_a09c202aa2681c1591f47ade0fd9f93bea73a3f9b58bcbefe98e6d5cec2e9088a5}{MotorPins::IN1\_B}},\ HIGH);}
+\DoxyCodeLine{\Hypertarget{_arduino_giga_lvgl_display_8ino_source_l00449}00449\ \ \ \ \ digitalWrite(\mbox{\hyperlink{_arduino_giga_lvgl_display_8ino_a09c202aa2681c1591f47ade0fd9f93bea859b5cc7d0a7874c0d8a05ddfe033866}{MotorPins::IN2\_B}},\ LOW);}
+\DoxyCodeLine{\Hypertarget{_arduino_giga_lvgl_display_8ino_source_l00450}00450\ \ \ \ \ analogWrite(\mbox{\hyperlink{_arduino_giga_lvgl_display_8ino_a09c202aa2681c1591f47ade0fd9f93bea4fd12e00eb66efa116b4e9769045508c}{MotorPins::ENA\_B}},\ speed);}
 \DoxyCodeLine{\Hypertarget{_arduino_giga_lvgl_display_8ino_source_l00451}00451\ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_arduino_giga_lvgl_display_8ino_source_l00452}00452\ \ \ \textcolor{keywordflow}{else}}
 \DoxyCodeLine{\Hypertarget{_arduino_giga_lvgl_display_8ino_source_l00453}00453\ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_arduino_giga_lvgl_display_8ino_source_l00454}00454\ \ \ \ \ digitalWrite(\mbox{\hyperlink{_arduino_giga_lvgl_display_8ino_ac74564e770f6c90dbf7dd71476f5114e}{IN1\_B}},\ LOW);}
-\DoxyCodeLine{\Hypertarget{_arduino_giga_lvgl_display_8ino_source_l00455}00455\ \ \ \ \ digitalWrite(\mbox{\hyperlink{_arduino_giga_lvgl_display_8ino_a9570059ff6b742c8040a32962d0d5a37}{IN2\_B}},\ HIGH);}
-\DoxyCodeLine{\Hypertarget{_arduino_giga_lvgl_display_8ino_source_l00456}00456\ \ \ \ \ analogWrite(\mbox{\hyperlink{_arduino_giga_lvgl_display_8ino_a51076b14694e306a6194047c53593a31}{ENA\_B}},\ -\/speed);}
+\DoxyCodeLine{\Hypertarget{_arduino_giga_lvgl_display_8ino_source_l00454}00454\ \ \ \ \ digitalWrite(\mbox{\hyperlink{_arduino_giga_lvgl_display_8ino_a09c202aa2681c1591f47ade0fd9f93bea73a3f9b58bcbefe98e6d5cec2e9088a5}{MotorPins::IN1\_B}},\ LOW);}
+\DoxyCodeLine{\Hypertarget{_arduino_giga_lvgl_display_8ino_source_l00455}00455\ \ \ \ \ digitalWrite(\mbox{\hyperlink{_arduino_giga_lvgl_display_8ino_a09c202aa2681c1591f47ade0fd9f93bea859b5cc7d0a7874c0d8a05ddfe033866}{MotorPins::IN2\_B}},\ HIGH);}
+\DoxyCodeLine{\Hypertarget{_arduino_giga_lvgl_display_8ino_source_l00456}00456\ \ \ \ \ analogWrite(\mbox{\hyperlink{_arduino_giga_lvgl_display_8ino_a09c202aa2681c1591f47ade0fd9f93bea4fd12e00eb66efa116b4e9769045508c}{MotorPins::ENA\_B}},\ -\/speed);}
 \DoxyCodeLine{\Hypertarget{_arduino_giga_lvgl_display_8ino_source_l00457}00457\ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_arduino_giga_lvgl_display_8ino_source_l00458}00458\ \}}
 \DoxyCodeLine{\Hypertarget{_arduino_giga_lvgl_display_8ino_source_l00459}00459\ }
@@ -338,15 +338,15 @@
 \DoxyCodeLine{\Hypertarget{_arduino_giga_lvgl_display_8ino_source_l00466}00466\ \{}
 \DoxyCodeLine{\Hypertarget{_arduino_giga_lvgl_display_8ino_source_l00467}00467\ \ \ \textcolor{keywordflow}{if}\ (speed\ >=\ 0)}
 \DoxyCodeLine{\Hypertarget{_arduino_giga_lvgl_display_8ino_source_l00468}00468\ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_arduino_giga_lvgl_display_8ino_source_l00469}00469\ \ \ \ \ digitalWrite(\mbox{\hyperlink{_arduino_giga_lvgl_display_8ino_a0eff9fd47f52060c179765fc406c824f}{IN3\_B}},\ HIGH);}
-\DoxyCodeLine{\Hypertarget{_arduino_giga_lvgl_display_8ino_source_l00470}00470\ \ \ \ \ digitalWrite(\mbox{\hyperlink{_arduino_giga_lvgl_display_8ino_a2bf2794b643a821a4a1ee3fce9a17b39}{IN4\_B}},\ LOW);}
-\DoxyCodeLine{\Hypertarget{_arduino_giga_lvgl_display_8ino_source_l00471}00471\ \ \ \ \ analogWrite(\mbox{\hyperlink{_arduino_giga_lvgl_display_8ino_a4763be0e77388074ff071965028a76ba}{ENB\_B}},\ speed);}
+\DoxyCodeLine{\Hypertarget{_arduino_giga_lvgl_display_8ino_source_l00469}00469\ \ \ \ \ digitalWrite(\mbox{\hyperlink{_arduino_giga_lvgl_display_8ino_a09c202aa2681c1591f47ade0fd9f93bea6ed09eef66c4f29e12b322f4d83cae56}{MotorPins::IN3\_B}},\ HIGH);}
+\DoxyCodeLine{\Hypertarget{_arduino_giga_lvgl_display_8ino_source_l00470}00470\ \ \ \ \ digitalWrite(\mbox{\hyperlink{_arduino_giga_lvgl_display_8ino_a09c202aa2681c1591f47ade0fd9f93bea2047c5c4b4b18be0602eb80f9b4a1768}{MotorPins::IN4\_B}},\ LOW);}
+\DoxyCodeLine{\Hypertarget{_arduino_giga_lvgl_display_8ino_source_l00471}00471\ \ \ \ \ analogWrite(\mbox{\hyperlink{_arduino_giga_lvgl_display_8ino_a09c202aa2681c1591f47ade0fd9f93beafac329d5db4efdbf0c8d2d7d3de466a9}{MotorPins::ENB\_B}},\ speed);}
 \DoxyCodeLine{\Hypertarget{_arduino_giga_lvgl_display_8ino_source_l00472}00472\ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_arduino_giga_lvgl_display_8ino_source_l00473}00473\ \ \ \textcolor{keywordflow}{else}}
 \DoxyCodeLine{\Hypertarget{_arduino_giga_lvgl_display_8ino_source_l00474}00474\ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_arduino_giga_lvgl_display_8ino_source_l00475}00475\ \ \ \ \ digitalWrite(\mbox{\hyperlink{_arduino_giga_lvgl_display_8ino_a0eff9fd47f52060c179765fc406c824f}{IN3\_B}},\ LOW);}
-\DoxyCodeLine{\Hypertarget{_arduino_giga_lvgl_display_8ino_source_l00476}00476\ \ \ \ \ digitalWrite(\mbox{\hyperlink{_arduino_giga_lvgl_display_8ino_a2bf2794b643a821a4a1ee3fce9a17b39}{IN4\_B}},\ HIGH);}
-\DoxyCodeLine{\Hypertarget{_arduino_giga_lvgl_display_8ino_source_l00477}00477\ \ \ \ \ analogWrite(\mbox{\hyperlink{_arduino_giga_lvgl_display_8ino_a4763be0e77388074ff071965028a76ba}{ENB\_B}},\ -\/speed);}
+\DoxyCodeLine{\Hypertarget{_arduino_giga_lvgl_display_8ino_source_l00475}00475\ \ \ \ \ digitalWrite(\mbox{\hyperlink{_arduino_giga_lvgl_display_8ino_a09c202aa2681c1591f47ade0fd9f93bea6ed09eef66c4f29e12b322f4d83cae56}{MotorPins::IN3\_B}},\ LOW);}
+\DoxyCodeLine{\Hypertarget{_arduino_giga_lvgl_display_8ino_source_l00476}00476\ \ \ \ \ digitalWrite(\mbox{\hyperlink{_arduino_giga_lvgl_display_8ino_a09c202aa2681c1591f47ade0fd9f93bea2047c5c4b4b18be0602eb80f9b4a1768}{MotorPins::IN4\_B}},\ HIGH);}
+\DoxyCodeLine{\Hypertarget{_arduino_giga_lvgl_display_8ino_source_l00477}00477\ \ \ \ \ analogWrite(\mbox{\hyperlink{_arduino_giga_lvgl_display_8ino_a09c202aa2681c1591f47ade0fd9f93beafac329d5db4efdbf0c8d2d7d3de466a9}{MotorPins::ENB\_B}},\ -\/speed);}
 \DoxyCodeLine{\Hypertarget{_arduino_giga_lvgl_display_8ino_source_l00478}00478\ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_arduino_giga_lvgl_display_8ino_source_l00479}00479\ \}}
 \DoxyCodeLine{\Hypertarget{_arduino_giga_lvgl_display_8ino_source_l00480}00480\ }
@@ -354,15 +354,15 @@
 \DoxyCodeLine{\Hypertarget{_arduino_giga_lvgl_display_8ino_source_l00487}00487\ \{}
 \DoxyCodeLine{\Hypertarget{_arduino_giga_lvgl_display_8ino_source_l00488}00488\ \ \ \textcolor{keywordflow}{if}\ (speed\ >=\ 0)}
 \DoxyCodeLine{\Hypertarget{_arduino_giga_lvgl_display_8ino_source_l00489}00489\ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_arduino_giga_lvgl_display_8ino_source_l00490}00490\ \ \ \ \ digitalWrite(\mbox{\hyperlink{_arduino_giga_lvgl_display_8ino_a2f8c3e5c64df336aadd989def65390df}{IN1\_A}},\ HIGH);}
-\DoxyCodeLine{\Hypertarget{_arduino_giga_lvgl_display_8ino_source_l00491}00491\ \ \ \ \ digitalWrite(\mbox{\hyperlink{_arduino_giga_lvgl_display_8ino_a0a2da1fa43e204f03999bfcd82e2ce93}{IN2\_A}},\ LOW);}
-\DoxyCodeLine{\Hypertarget{_arduino_giga_lvgl_display_8ino_source_l00492}00492\ \ \ \ \ analogWrite(\mbox{\hyperlink{_arduino_giga_lvgl_display_8ino_a448921cced6d8ecae8e0ea9dc739dcea}{ENA\_A}},\ speed);}
+\DoxyCodeLine{\Hypertarget{_arduino_giga_lvgl_display_8ino_source_l00490}00490\ \ \ \ \ digitalWrite(\mbox{\hyperlink{_arduino_giga_lvgl_display_8ino_a09c202aa2681c1591f47ade0fd9f93bea115a61482486b39c89389f48bc9a36be}{MotorPins::IN1\_A}},\ HIGH);}
+\DoxyCodeLine{\Hypertarget{_arduino_giga_lvgl_display_8ino_source_l00491}00491\ \ \ \ \ digitalWrite(\mbox{\hyperlink{_arduino_giga_lvgl_display_8ino_a09c202aa2681c1591f47ade0fd9f93bea542f6a0db31278731d93bec3ed4151af}{MotorPins::IN2\_A}},\ LOW);}
+\DoxyCodeLine{\Hypertarget{_arduino_giga_lvgl_display_8ino_source_l00492}00492\ \ \ \ \ analogWrite(\mbox{\hyperlink{_arduino_giga_lvgl_display_8ino_a09c202aa2681c1591f47ade0fd9f93bea8ca39e084c4680aee4c18e3094761422}{MotorPins::ENA\_A}},\ speed);}
 \DoxyCodeLine{\Hypertarget{_arduino_giga_lvgl_display_8ino_source_l00493}00493\ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_arduino_giga_lvgl_display_8ino_source_l00494}00494\ \ \ \textcolor{keywordflow}{else}}
 \DoxyCodeLine{\Hypertarget{_arduino_giga_lvgl_display_8ino_source_l00495}00495\ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_arduino_giga_lvgl_display_8ino_source_l00496}00496\ \ \ \ \ digitalWrite(\mbox{\hyperlink{_arduino_giga_lvgl_display_8ino_a2f8c3e5c64df336aadd989def65390df}{IN1\_A}},\ LOW);}
-\DoxyCodeLine{\Hypertarget{_arduino_giga_lvgl_display_8ino_source_l00497}00497\ \ \ \ \ digitalWrite(\mbox{\hyperlink{_arduino_giga_lvgl_display_8ino_a0a2da1fa43e204f03999bfcd82e2ce93}{IN2\_A}},\ HIGH);}
-\DoxyCodeLine{\Hypertarget{_arduino_giga_lvgl_display_8ino_source_l00498}00498\ \ \ \ \ analogWrite(\mbox{\hyperlink{_arduino_giga_lvgl_display_8ino_a448921cced6d8ecae8e0ea9dc739dcea}{ENA\_A}},\ -\/speed);}
+\DoxyCodeLine{\Hypertarget{_arduino_giga_lvgl_display_8ino_source_l00496}00496\ \ \ \ \ digitalWrite(\mbox{\hyperlink{_arduino_giga_lvgl_display_8ino_a09c202aa2681c1591f47ade0fd9f93bea115a61482486b39c89389f48bc9a36be}{MotorPins::IN1\_A}},\ LOW);}
+\DoxyCodeLine{\Hypertarget{_arduino_giga_lvgl_display_8ino_source_l00497}00497\ \ \ \ \ digitalWrite(\mbox{\hyperlink{_arduino_giga_lvgl_display_8ino_a09c202aa2681c1591f47ade0fd9f93bea542f6a0db31278731d93bec3ed4151af}{MotorPins::IN2\_A}},\ HIGH);}
+\DoxyCodeLine{\Hypertarget{_arduino_giga_lvgl_display_8ino_source_l00498}00498\ \ \ \ \ analogWrite(\mbox{\hyperlink{_arduino_giga_lvgl_display_8ino_a09c202aa2681c1591f47ade0fd9f93bea8ca39e084c4680aee4c18e3094761422}{MotorPins::ENA\_A}},\ -\/speed);}
 \DoxyCodeLine{\Hypertarget{_arduino_giga_lvgl_display_8ino_source_l00499}00499\ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_arduino_giga_lvgl_display_8ino_source_l00500}00500\ \}}
 \DoxyCodeLine{\Hypertarget{_arduino_giga_lvgl_display_8ino_source_l00501}00501\ }
@@ -370,15 +370,15 @@
 \DoxyCodeLine{\Hypertarget{_arduino_giga_lvgl_display_8ino_source_l00508}00508\ \{}
 \DoxyCodeLine{\Hypertarget{_arduino_giga_lvgl_display_8ino_source_l00509}00509\ \ \ \textcolor{keywordflow}{if}\ (speed\ >=\ 0)}
 \DoxyCodeLine{\Hypertarget{_arduino_giga_lvgl_display_8ino_source_l00510}00510\ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_arduino_giga_lvgl_display_8ino_source_l00511}00511\ \ \ \ \ digitalWrite(\mbox{\hyperlink{_arduino_giga_lvgl_display_8ino_a5c616be1a0da4e4851766ab26fdc106b}{IN3\_A}},\ HIGH);}
-\DoxyCodeLine{\Hypertarget{_arduino_giga_lvgl_display_8ino_source_l00512}00512\ \ \ \ \ digitalWrite(\mbox{\hyperlink{_arduino_giga_lvgl_display_8ino_a7bc7d13c97218d43553bd1bdde068e9d}{IN4\_A}},\ LOW);}
-\DoxyCodeLine{\Hypertarget{_arduino_giga_lvgl_display_8ino_source_l00513}00513\ \ \ \ \ analogWrite(\mbox{\hyperlink{_arduino_giga_lvgl_display_8ino_af062d7609355335ffce63fa23bfed5f7}{ENB\_A}},\ speed);}
+\DoxyCodeLine{\Hypertarget{_arduino_giga_lvgl_display_8ino_source_l00511}00511\ \ \ \ \ digitalWrite(\mbox{\hyperlink{_arduino_giga_lvgl_display_8ino_a09c202aa2681c1591f47ade0fd9f93bea9d9477ff2adcb5d4e3b7f2912bc459db}{MotorPins::IN3\_A}},\ HIGH);}
+\DoxyCodeLine{\Hypertarget{_arduino_giga_lvgl_display_8ino_source_l00512}00512\ \ \ \ \ digitalWrite(\mbox{\hyperlink{_arduino_giga_lvgl_display_8ino_a09c202aa2681c1591f47ade0fd9f93bea93d7c651df7bde50e2382ad65e25c40a}{MotorPins::IN4\_A}},\ LOW);}
+\DoxyCodeLine{\Hypertarget{_arduino_giga_lvgl_display_8ino_source_l00513}00513\ \ \ \ \ analogWrite(\mbox{\hyperlink{_arduino_giga_lvgl_display_8ino_a09c202aa2681c1591f47ade0fd9f93beab601c6a9dbd4c1a3b70d8a84de3bd012}{MotorPins::ENB\_A}},\ speed);}
 \DoxyCodeLine{\Hypertarget{_arduino_giga_lvgl_display_8ino_source_l00514}00514\ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_arduino_giga_lvgl_display_8ino_source_l00515}00515\ \ \ \textcolor{keywordflow}{else}}
 \DoxyCodeLine{\Hypertarget{_arduino_giga_lvgl_display_8ino_source_l00516}00516\ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_arduino_giga_lvgl_display_8ino_source_l00517}00517\ \ \ \ \ digitalWrite(\mbox{\hyperlink{_arduino_giga_lvgl_display_8ino_a5c616be1a0da4e4851766ab26fdc106b}{IN3\_A}},\ LOW);}
-\DoxyCodeLine{\Hypertarget{_arduino_giga_lvgl_display_8ino_source_l00518}00518\ \ \ \ \ digitalWrite(\mbox{\hyperlink{_arduino_giga_lvgl_display_8ino_a7bc7d13c97218d43553bd1bdde068e9d}{IN4\_A}},\ HIGH);}
-\DoxyCodeLine{\Hypertarget{_arduino_giga_lvgl_display_8ino_source_l00519}00519\ \ \ \ \ analogWrite(\mbox{\hyperlink{_arduino_giga_lvgl_display_8ino_af062d7609355335ffce63fa23bfed5f7}{ENB\_A}},\ -\/speed);}
+\DoxyCodeLine{\Hypertarget{_arduino_giga_lvgl_display_8ino_source_l00517}00517\ \ \ \ \ digitalWrite(\mbox{\hyperlink{_arduino_giga_lvgl_display_8ino_a09c202aa2681c1591f47ade0fd9f93bea9d9477ff2adcb5d4e3b7f2912bc459db}{MotorPins::IN3\_A}},\ LOW);}
+\DoxyCodeLine{\Hypertarget{_arduino_giga_lvgl_display_8ino_source_l00518}00518\ \ \ \ \ digitalWrite(\mbox{\hyperlink{_arduino_giga_lvgl_display_8ino_a09c202aa2681c1591f47ade0fd9f93bea93d7c651df7bde50e2382ad65e25c40a}{MotorPins::IN4\_A}},\ HIGH);}
+\DoxyCodeLine{\Hypertarget{_arduino_giga_lvgl_display_8ino_source_l00519}00519\ \ \ \ \ analogWrite(\mbox{\hyperlink{_arduino_giga_lvgl_display_8ino_a09c202aa2681c1591f47ade0fd9f93beab601c6a9dbd4c1a3b70d8a84de3bd012}{MotorPins::ENB\_A}},\ -\/speed);}
 \DoxyCodeLine{\Hypertarget{_arduino_giga_lvgl_display_8ino_source_l00520}00520\ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_arduino_giga_lvgl_display_8ino_source_l00521}00521\ \}}
 \DoxyCodeLine{\Hypertarget{_arduino_giga_lvgl_display_8ino_source_l00522}00522\ }
@@ -388,11 +388,11 @@
 \DoxyCodeLine{\Hypertarget{_arduino_giga_lvgl_display_8ino_source_l00526}00526\ \ \ delay(3000);}
 \DoxyCodeLine{\Hypertarget{_arduino_giga_lvgl_display_8ino_source_l00527}00527\ \ \ Serial.begin(115200);}
 \DoxyCodeLine{\Hypertarget{_arduino_giga_lvgl_display_8ino_source_l00528}00528\ }
-\DoxyCodeLine{\Hypertarget{_arduino_giga_lvgl_display_8ino_source_l00529}00529\ \ \ Display.begin();}
-\DoxyCodeLine{\Hypertarget{_arduino_giga_lvgl_display_8ino_source_l00530}00530\ \ \ TouchDetector.begin();}
+\DoxyCodeLine{\Hypertarget{_arduino_giga_lvgl_display_8ino_source_l00529}00529\ \ \ \mbox{\hyperlink{class_arduino__constants_ae43c82f3708c54a2bf430275a03df168}{Arduino\_constants::Display}}.begin();}
+\DoxyCodeLine{\Hypertarget{_arduino_giga_lvgl_display_8ino_source_l00530}00530\ \ \ \mbox{\hyperlink{class_arduino__constants_a3159622c676cfc976b52891ce9bb9025}{Arduino\_constants::TouchDetector}}.begin();}
 \DoxyCodeLine{\Hypertarget{_arduino_giga_lvgl_display_8ino_source_l00531}00531\ }
 \DoxyCodeLine{\Hypertarget{_arduino_giga_lvgl_display_8ino_source_l00532}00532\ \ \ \mbox{\hyperlink{_arduino_giga_lvgl_display_8ino_a1887246f5467ff145cd963e98fc2258e}{create\_ui}}();}
-\DoxyCodeLine{\Hypertarget{_arduino_giga_lvgl_display_8ino_source_l00533}00533\ \ \ lv\_scr\_load(screen\_buttons);}
+\DoxyCodeLine{\Hypertarget{_arduino_giga_lvgl_display_8ino_source_l00533}00533\ \ \ lv\_scr\_load(\mbox{\hyperlink{classother__constants_a6cb0844b817ba598ef84d337e3fd132f}{other\_constants::screen\_buttons}});}
 \DoxyCodeLine{\Hypertarget{_arduino_giga_lvgl_display_8ino_source_l00534}00534\ \}}
 \DoxyCodeLine{\Hypertarget{_arduino_giga_lvgl_display_8ino_source_l00535}00535\ }
 \DoxyCodeLine{\Hypertarget{_arduino_giga_lvgl_display_8ino_source_l00536}\mbox{\hyperlink{_arduino_giga_lvgl_display_8ino_afe461d27b9c48d5921c00d521181f12f}{00536}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{_arduino_giga_lvgl_display_8ino_afe461d27b9c48d5921c00d521181f12f}{loop}}()}

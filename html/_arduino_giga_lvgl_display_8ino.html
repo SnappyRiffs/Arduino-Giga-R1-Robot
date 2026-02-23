@@ -25,8 +25,9 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="Arduino_Logo.svg (Small).png"/></td>
   <td id="projectalign">
-   <div id="projectname">Arduino Giga Project Doxygen
+   <div id="projectname">Arduino Giga Project Doxygen<span id="projectnumber">&#160;1.0</span>
    </div>
   </td>
  </tr>
@@ -174,10 +175,30 @@ Include dependency graph for ArduinoGigaLvglDisplay.ino:</div>
 </div>
 <p><a href="_arduino_giga_lvgl_display_8ino_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-enum-members" class="groupheader"><a id="enum-members" name="enum-members"></a>
+Enumerations</h2></td></tr>
+<tr class="memitem:a09c202aa2681c1591f47ade0fd9f93be" id="r_a09c202aa2681c1591f47ade0fd9f93be"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a09c202aa2681c1591f47ade0fd9f93be">MotorPins</a> { <br />
+&#160;&#160;<a class="el" href="#a09c202aa2681c1591f47ade0fd9f93beafac329d5db4efdbf0c8d2d7d3de466a9">ENB_B</a> = 13
+, <a class="el" href="#a09c202aa2681c1591f47ade0fd9f93bea2047c5c4b4b18be0602eb80f9b4a1768">IN4_B</a> = 12
+, <a class="el" href="#a09c202aa2681c1591f47ade0fd9f93bea6ed09eef66c4f29e12b322f4d83cae56">IN3_B</a> = 11
+, <a class="el" href="#a09c202aa2681c1591f47ade0fd9f93bea859b5cc7d0a7874c0d8a05ddfe033866">IN2_B</a> = 10
+, <br />
+&#160;&#160;<a class="el" href="#a09c202aa2681c1591f47ade0fd9f93bea73a3f9b58bcbefe98e6d5cec2e9088a5">IN1_B</a> = 9
+, <a class="el" href="#a09c202aa2681c1591f47ade0fd9f93bea4fd12e00eb66efa116b4e9769045508c">ENA_B</a> = 8
+, <a class="el" href="#a09c202aa2681c1591f47ade0fd9f93beab601c6a9dbd4c1a3b70d8a84de3bd012">ENB_A</a> = 7
+, <a class="el" href="#a09c202aa2681c1591f47ade0fd9f93bea93d7c651df7bde50e2382ad65e25c40a">IN4_A</a> = 6
+, <br />
+&#160;&#160;<a class="el" href="#a09c202aa2681c1591f47ade0fd9f93bea9d9477ff2adcb5d4e3b7f2912bc459db">IN3_A</a> = 5
+, <a class="el" href="#a09c202aa2681c1591f47ade0fd9f93bea542f6a0db31278731d93bec3ed4151af">IN2_A</a> = 4
+, <a class="el" href="#a09c202aa2681c1591f47ade0fd9f93bea115a61482486b39c89389f48bc9a36be">IN1_A</a> = 3
+, <a class="el" href="#a09c202aa2681c1591f47ade0fd9f93bea8ca39e084c4680aee4c18e3094761422">ENA_A</a> = 2
+<br />
+ }</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
 <tr class="memitem:a0397ddbe4d2bddb9d77afbb47acf56f0" id="r_a0397ddbe4d2bddb9d77afbb47acf56f0"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0397ddbe4d2bddb9d77afbb47acf56f0">apply_mode</a> (const char *mode_name, const char *direction)</td></tr>
-<tr class="memdesc:a0397ddbe4d2bddb9d77afbb47acf56f0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Applies the selected movement mode and direction. This function creates a temporary message label on the screen indicating the applied mode and direction. It also appends the direction to the global program vector for later execution.  <br /></td></tr>
+<tr class="memdesc:a0397ddbe4d2bddb9d77afbb47acf56f0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Applies the selected movement mode and direction. This function creates a temporary message label on the screen indicating the applied mode and direction. It also appends the direction to the <a class="el" href="classother__constants.html#a522b12f820f2390f63de34235a38942e">other_constants::program</a> vector for later execution.  <br /></td></tr>
 <tr class="memitem:a599fa16066a270f3a22e7de32fbb250f" id="r_a599fa16066a270f3a22e7de32fbb250f"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a599fa16066a270f3a22e7de32fbb250f">btn_Run_Program_event_cb</a> (lv_event_t *e)</td></tr>
 <tr class="memdesc:a599fa16066a270f3a22e7de32fbb250f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Handles the "Run Program" button event.  <br /></td></tr>
 <tr class="memitem:a6b08dca515fd8dd9eaec4b80e83e7e6a" id="r_a6b08dca515fd8dd9eaec4b80e83e7e6a"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6b08dca515fd8dd9eaec4b80e83e7e6a">main_btnm_event_cb</a> (lv_event_t *e)</td></tr>
@@ -207,31 +228,47 @@ Functions</h2></td></tr>
 <tr class="memdesc:ac5e4ea79ee09f85143f444ee9d22cea6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Moves the rear-left (RL) motor at the specified speed.  <br /></td></tr>
 <tr class="memitem:a4fc01d736fe50cf5b977f755b675f11d" id="r_a4fc01d736fe50cf5b977f755b675f11d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4fc01d736fe50cf5b977f755b675f11d">setup</a> ()</td></tr>
 <tr class="memitem:afe461d27b9c48d5921c00d521181f12f" id="r_afe461d27b9c48d5921c00d521181f12f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afe461d27b9c48d5921c00d521181f12f">loop</a> ()</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 id="header-var-members" class="groupheader"><a id="var-members" name="var-members"></a>
-Variables</h2></td></tr>
-<tr class="memitem:a4763be0e77388074ff071965028a76ba" id="r_a4763be0e77388074ff071965028a76ba"><td class="memItemLeft" align="right" valign="top">const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4763be0e77388074ff071965028a76ba">ENB_B</a> = 13</td></tr>
-<tr class="memitem:a2bf2794b643a821a4a1ee3fce9a17b39" id="r_a2bf2794b643a821a4a1ee3fce9a17b39"><td class="memItemLeft" align="right" valign="top">const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2bf2794b643a821a4a1ee3fce9a17b39">IN4_B</a> = 12</td></tr>
-<tr class="memitem:a0eff9fd47f52060c179765fc406c824f" id="r_a0eff9fd47f52060c179765fc406c824f"><td class="memItemLeft" align="right" valign="top">const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0eff9fd47f52060c179765fc406c824f">IN3_B</a> = 11</td></tr>
-<tr class="memitem:a9570059ff6b742c8040a32962d0d5a37" id="r_a9570059ff6b742c8040a32962d0d5a37"><td class="memItemLeft" align="right" valign="top">const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9570059ff6b742c8040a32962d0d5a37">IN2_B</a> = 10</td></tr>
-<tr class="memitem:ac74564e770f6c90dbf7dd71476f5114e" id="r_ac74564e770f6c90dbf7dd71476f5114e"><td class="memItemLeft" align="right" valign="top">const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac74564e770f6c90dbf7dd71476f5114e">IN1_B</a> = 9</td></tr>
-<tr class="memitem:a51076b14694e306a6194047c53593a31" id="r_a51076b14694e306a6194047c53593a31"><td class="memItemLeft" align="right" valign="top">const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a51076b14694e306a6194047c53593a31">ENA_B</a> = 8</td></tr>
-<tr class="memitem:af062d7609355335ffce63fa23bfed5f7" id="r_af062d7609355335ffce63fa23bfed5f7"><td class="memItemLeft" align="right" valign="top">const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af062d7609355335ffce63fa23bfed5f7">ENB_A</a> = 7</td></tr>
-<tr class="memitem:a7bc7d13c97218d43553bd1bdde068e9d" id="r_a7bc7d13c97218d43553bd1bdde068e9d"><td class="memItemLeft" align="right" valign="top">const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7bc7d13c97218d43553bd1bdde068e9d">IN4_A</a> = 6</td></tr>
-<tr class="memitem:a5c616be1a0da4e4851766ab26fdc106b" id="r_a5c616be1a0da4e4851766ab26fdc106b"><td class="memItemLeft" align="right" valign="top">const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5c616be1a0da4e4851766ab26fdc106b">IN3_A</a> = 5</td></tr>
-<tr class="memitem:a0a2da1fa43e204f03999bfcd82e2ce93" id="r_a0a2da1fa43e204f03999bfcd82e2ce93"><td class="memItemLeft" align="right" valign="top">const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0a2da1fa43e204f03999bfcd82e2ce93">IN2_A</a> = 4</td></tr>
-<tr class="memitem:a2f8c3e5c64df336aadd989def65390df" id="r_a2f8c3e5c64df336aadd989def65390df"><td class="memItemLeft" align="right" valign="top">const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2f8c3e5c64df336aadd989def65390df">IN1_A</a> = 3</td></tr>
-<tr class="memitem:a448921cced6d8ecae8e0ea9dc739dcea" id="r_a448921cced6d8ecae8e0ea9dc739dcea"><td class="memItemLeft" align="right" valign="top">const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a448921cced6d8ecae8e0ea9dc739dcea">ENA_A</a> = 2</td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Arduino Giga LVGL Display For Robot Car. </p>
 <dl class="section author"><dt>Author</dt><dd>Jadon Jung (<a href="#" onclick="location.href='mai'+'lto:'+'jad'+'on'+'jun'+'g3'+'@gm'+'ai'+'l.c'+'om'; return false;">jadon<span class="obfuscator">.nosp@m.</span>jung<span class="obfuscator">.nosp@m.</span>3@gma<span class="obfuscator">.nosp@m.</span>il.c<span class="obfuscator">.nosp@m.</span>om</a>) </dd></dl>
 <dl class="section version"><dt>Version</dt><dd>1.0 </dd></dl>
-<dl class="section date"><dt>Date</dt><dd>2026-01-02</dd></dl>
+<dl class="section date"><dt>Date</dt><dd>2026-02-22</dd></dl>
 <dl class="section copyright"><dt>Copyright</dt><dd>Copyright (c) 2026 </dd></dl>
 
 <p class="definition">Definition in file <a class="el" href="_arduino_giga_lvgl_display_8ino_source.html">ArduinoGigaLvglDisplay.ino</a>.</p>
-</div><a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Function Documentation</h2>
+</div><a name="doc-enum-members" id="doc-enum-members"></a><h2 id="header-doc-enum-members" class="groupheader">Enumeration Type Documentation</h2>
+<a id="a09c202aa2681c1591f47ade0fd9f93be" name="a09c202aa2681c1591f47ade0fd9f93be"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a09c202aa2681c1591f47ade0fd9f93be">&#9670;&#160;</a></span>MotorPins</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="#a09c202aa2681c1591f47ade0fd9f93be">MotorPins</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a09c202aa2681c1591f47ade0fd9f93beafac329d5db4efdbf0c8d2d7d3de466a9" name="a09c202aa2681c1591f47ade0fd9f93beafac329d5db4efdbf0c8d2d7d3de466a9"></a>ENB_B&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a09c202aa2681c1591f47ade0fd9f93bea2047c5c4b4b18be0602eb80f9b4a1768" name="a09c202aa2681c1591f47ade0fd9f93bea2047c5c4b4b18be0602eb80f9b4a1768"></a>IN4_B&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a09c202aa2681c1591f47ade0fd9f93bea6ed09eef66c4f29e12b322f4d83cae56" name="a09c202aa2681c1591f47ade0fd9f93bea6ed09eef66c4f29e12b322f4d83cae56"></a>IN3_B&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a09c202aa2681c1591f47ade0fd9f93bea859b5cc7d0a7874c0d8a05ddfe033866" name="a09c202aa2681c1591f47ade0fd9f93bea859b5cc7d0a7874c0d8a05ddfe033866"></a>IN2_B&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a09c202aa2681c1591f47ade0fd9f93bea73a3f9b58bcbefe98e6d5cec2e9088a5" name="a09c202aa2681c1591f47ade0fd9f93bea73a3f9b58bcbefe98e6d5cec2e9088a5"></a>IN1_B&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a09c202aa2681c1591f47ade0fd9f93bea4fd12e00eb66efa116b4e9769045508c" name="a09c202aa2681c1591f47ade0fd9f93bea4fd12e00eb66efa116b4e9769045508c"></a>ENA_B&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a09c202aa2681c1591f47ade0fd9f93beab601c6a9dbd4c1a3b70d8a84de3bd012" name="a09c202aa2681c1591f47ade0fd9f93beab601c6a9dbd4c1a3b70d8a84de3bd012"></a>ENB_A&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a09c202aa2681c1591f47ade0fd9f93bea93d7c651df7bde50e2382ad65e25c40a" name="a09c202aa2681c1591f47ade0fd9f93bea93d7c651df7bde50e2382ad65e25c40a"></a>IN4_A&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a09c202aa2681c1591f47ade0fd9f93bea9d9477ff2adcb5d4e3b7f2912bc459db" name="a09c202aa2681c1591f47ade0fd9f93bea9d9477ff2adcb5d4e3b7f2912bc459db"></a>IN3_A&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a09c202aa2681c1591f47ade0fd9f93bea542f6a0db31278731d93bec3ed4151af" name="a09c202aa2681c1591f47ade0fd9f93bea542f6a0db31278731d93bec3ed4151af"></a>IN2_A&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a09c202aa2681c1591f47ade0fd9f93bea115a61482486b39c89389f48bc9a36be" name="a09c202aa2681c1591f47ade0fd9f93bea115a61482486b39c89389f48bc9a36be"></a>IN1_A&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a09c202aa2681c1591f47ade0fd9f93bea8ca39e084c4680aee4c18e3094761422" name="a09c202aa2681c1591f47ade0fd9f93bea8ca39e084c4680aee4c18e3094761422"></a>ENA_A&#160;</td><td class="fielddoc"></td></tr>
+</table>
+
+<p class="definition">Definition at line <a class="el" href="_arduino_giga_lvgl_display_8ino_source.html#l00045">45</a> of file <a class="el" href="_arduino_giga_lvgl_display_8ino_source.html">ArduinoGigaLvglDisplay.ino</a>.</p>
+
+</div>
+</div>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Function Documentation</h2>
 <a id="a0397ddbe4d2bddb9d77afbb47acf56f0" name="a0397ddbe4d2bddb9d77afbb47acf56f0"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a0397ddbe4d2bddb9d77afbb47acf56f0">&#9670;&#160;</a></span>apply_mode()</h2>
 
@@ -259,7 +296,7 @@ Variables</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Applies the selected movement mode and direction. This function creates a temporary message label on the screen indicating the applied mode and direction. It also appends the direction to the global program vector for later execution. </p>
+<p>Applies the selected movement mode and direction. This function creates a temporary message label on the screen indicating the applied mode and direction. It also appends the direction to the <a class="el" href="classother__constants.html#a522b12f820f2390f63de34235a38942e">other_constants::program</a> vector for later execution. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">mode_name</td><td>mode of movement </td></tr>
@@ -268,7 +305,7 @@ Variables</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="_arduino_giga_lvgl_display_8ino_source.html#l00070">70</a> of file <a class="el" href="_arduino_giga_lvgl_display_8ino_source.html">ArduinoGigaLvglDisplay.ino</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_arduino_giga_lvgl_display_8ino_source.html#l00072">72</a> of file <a class="el" href="_arduino_giga_lvgl_display_8ino_source.html">ArduinoGigaLvglDisplay.ino</a>.</p>
 
 </div>
 </div>
@@ -305,7 +342,7 @@ Variables</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="_arduino_giga_lvgl_display_8ino_source.html#l00108">108</a> of file <a class="el" href="_arduino_giga_lvgl_display_8ino_source.html">ArduinoGigaLvglDisplay.ino</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_arduino_giga_lvgl_display_8ino_source.html#l00109">109</a> of file <a class="el" href="_arduino_giga_lvgl_display_8ino_source.html">ArduinoGigaLvglDisplay.ino</a>.</p>
 
 </div>
 </div>
@@ -734,199 +771,6 @@ Variables</h2></td></tr>
 </dl>
 
 <p class="definition">Definition at line <a class="el" href="_arduino_giga_lvgl_display_8ino_source.html#l00256">256</a> of file <a class="el" href="_arduino_giga_lvgl_display_8ino_source.html">ArduinoGigaLvglDisplay.ino</a>.</p>
-
-</div>
-</div>
-<a name="doc-var-members" id="doc-var-members"></a><h2 id="header-doc-var-members" class="groupheader">Variable Documentation</h2>
-<a id="a448921cced6d8ecae8e0ea9dc739dcea" name="a448921cced6d8ecae8e0ea9dc739dcea"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a448921cced6d8ecae8e0ea9dc739dcea">&#9670;&#160;</a></span>ENA_A</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">const int ENA_A = 2</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="_arduino_giga_lvgl_display_8ino_source.html#l00058">58</a> of file <a class="el" href="_arduino_giga_lvgl_display_8ino_source.html">ArduinoGigaLvglDisplay.ino</a>.</p>
-
-</div>
-</div>
-<a id="a51076b14694e306a6194047c53593a31" name="a51076b14694e306a6194047c53593a31"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a51076b14694e306a6194047c53593a31">&#9670;&#160;</a></span>ENA_B</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">const int ENA_B = 8</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="_arduino_giga_lvgl_display_8ino_source.html#l00051">51</a> of file <a class="el" href="_arduino_giga_lvgl_display_8ino_source.html">ArduinoGigaLvglDisplay.ino</a>.</p>
-
-</div>
-</div>
-<a id="af062d7609355335ffce63fa23bfed5f7" name="af062d7609355335ffce63fa23bfed5f7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af062d7609355335ffce63fa23bfed5f7">&#9670;&#160;</a></span>ENB_A</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">const int ENB_A = 7</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="_arduino_giga_lvgl_display_8ino_source.html#l00053">53</a> of file <a class="el" href="_arduino_giga_lvgl_display_8ino_source.html">ArduinoGigaLvglDisplay.ino</a>.</p>
-
-</div>
-</div>
-<a id="a4763be0e77388074ff071965028a76ba" name="a4763be0e77388074ff071965028a76ba"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4763be0e77388074ff071965028a76ba">&#9670;&#160;</a></span>ENB_B</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">const int ENB_B = 13</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="_arduino_giga_lvgl_display_8ino_source.html#l00046">46</a> of file <a class="el" href="_arduino_giga_lvgl_display_8ino_source.html">ArduinoGigaLvglDisplay.ino</a>.</p>
-
-</div>
-</div>
-<a id="a2f8c3e5c64df336aadd989def65390df" name="a2f8c3e5c64df336aadd989def65390df"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2f8c3e5c64df336aadd989def65390df">&#9670;&#160;</a></span>IN1_A</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">const int IN1_A = 3</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="_arduino_giga_lvgl_display_8ino_source.html#l00057">57</a> of file <a class="el" href="_arduino_giga_lvgl_display_8ino_source.html">ArduinoGigaLvglDisplay.ino</a>.</p>
-
-</div>
-</div>
-<a id="ac74564e770f6c90dbf7dd71476f5114e" name="ac74564e770f6c90dbf7dd71476f5114e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac74564e770f6c90dbf7dd71476f5114e">&#9670;&#160;</a></span>IN1_B</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">const int IN1_B = 9</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="_arduino_giga_lvgl_display_8ino_source.html#l00050">50</a> of file <a class="el" href="_arduino_giga_lvgl_display_8ino_source.html">ArduinoGigaLvglDisplay.ino</a>.</p>
-
-</div>
-</div>
-<a id="a0a2da1fa43e204f03999bfcd82e2ce93" name="a0a2da1fa43e204f03999bfcd82e2ce93"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0a2da1fa43e204f03999bfcd82e2ce93">&#9670;&#160;</a></span>IN2_A</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">const int IN2_A = 4</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="_arduino_giga_lvgl_display_8ino_source.html#l00056">56</a> of file <a class="el" href="_arduino_giga_lvgl_display_8ino_source.html">ArduinoGigaLvglDisplay.ino</a>.</p>
-
-</div>
-</div>
-<a id="a9570059ff6b742c8040a32962d0d5a37" name="a9570059ff6b742c8040a32962d0d5a37"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9570059ff6b742c8040a32962d0d5a37">&#9670;&#160;</a></span>IN2_B</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">const int IN2_B = 10</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="_arduino_giga_lvgl_display_8ino_source.html#l00049">49</a> of file <a class="el" href="_arduino_giga_lvgl_display_8ino_source.html">ArduinoGigaLvglDisplay.ino</a>.</p>
-
-</div>
-</div>
-<a id="a5c616be1a0da4e4851766ab26fdc106b" name="a5c616be1a0da4e4851766ab26fdc106b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5c616be1a0da4e4851766ab26fdc106b">&#9670;&#160;</a></span>IN3_A</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">const int IN3_A = 5</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="_arduino_giga_lvgl_display_8ino_source.html#l00055">55</a> of file <a class="el" href="_arduino_giga_lvgl_display_8ino_source.html">ArduinoGigaLvglDisplay.ino</a>.</p>
-
-</div>
-</div>
-<a id="a0eff9fd47f52060c179765fc406c824f" name="a0eff9fd47f52060c179765fc406c824f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0eff9fd47f52060c179765fc406c824f">&#9670;&#160;</a></span>IN3_B</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">const int IN3_B = 11</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="_arduino_giga_lvgl_display_8ino_source.html#l00048">48</a> of file <a class="el" href="_arduino_giga_lvgl_display_8ino_source.html">ArduinoGigaLvglDisplay.ino</a>.</p>
-
-</div>
-</div>
-<a id="a7bc7d13c97218d43553bd1bdde068e9d" name="a7bc7d13c97218d43553bd1bdde068e9d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7bc7d13c97218d43553bd1bdde068e9d">&#9670;&#160;</a></span>IN4_A</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">const int IN4_A = 6</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="_arduino_giga_lvgl_display_8ino_source.html#l00054">54</a> of file <a class="el" href="_arduino_giga_lvgl_display_8ino_source.html">ArduinoGigaLvglDisplay.ino</a>.</p>
-
-</div>
-</div>
-<a id="a2bf2794b643a821a4a1ee3fce9a17b39" name="a2bf2794b643a821a4a1ee3fce9a17b39"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2bf2794b643a821a4a1ee3fce9a17b39">&#9670;&#160;</a></span>IN4_B</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">const int IN4_B = 12</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="_arduino_giga_lvgl_display_8ino_source.html#l00047">47</a> of file <a class="el" href="_arduino_giga_lvgl_display_8ino_source.html">ArduinoGigaLvglDisplay.ino</a>.</p>
 
 </div>
 </div>
