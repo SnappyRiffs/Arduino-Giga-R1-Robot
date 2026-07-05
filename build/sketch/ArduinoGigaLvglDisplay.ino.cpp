@@ -5,12 +5,21 @@
  * @author Jadon Jung (jadonjung3@gmail.com)
  * @brief Arduino Giga LVGL Display For Robot Car
  * @version 1.0
- * @date 2026-01-02
+ * @date 2026-02-22
  *
  * @copyright Copyright (c) 2026
- *
+ * 
  */
 
+/**
+ * \mainpage Arduino Giga Project.
+ *
+ * Welcome to the documentation for my project.
+ *
+ * ## Overview
+ * This project is the documentation for the Arduino Giga R1 Wifi Robot car
+ *
+ */
 
 /**
  * @defgroup Imports All the imports needed
@@ -45,19 +54,22 @@
  * @brief Initialize motor control pins
  *
  */
-const int ENB_B = 13;
-const int IN4_B = 12;
-const int IN3_B = 11;
-const int IN2_B = 10;
-const int IN1_B = 9;
-const int ENA_B = 8;
+enum MotorPins
+{
+  ENB_B = 13,
+  IN4_B = 12,
+  IN3_B = 11,
+  IN2_B = 10,
+  IN1_B = 9,
+  ENA_B = 8,
 
-const int ENB_A = 7;
-const int IN4_A = 6;
-const int IN3_A = 5;
-const int IN2_A = 4;
-const int IN1_A = 3;
-const int ENA_A = 2;
+  ENB_A = 7,
+  IN4_A = 6,
+  IN3_A = 5,
+  IN2_A = 4,
+  IN1_A = 3,
+  ENA_A = 2
+};
 /** @} */ // end of Motor_Pins
 
 // ===== Shared label + vector logic =====
@@ -259,12 +271,13 @@ static void toggle_fwdrev_cb(lv_event_t *e)
   lv_obj_t *label = lv_obj_get_child(btn, 0);
 
   const char *txt = lv_label_get_text(label);
-
-  if (strcmp(txt, "Fwd") == 0) // If txt is "Fwd", change to "Rev" and assign motor_direction 1
+  // If txt is "Fwd", change to "Rev" and assign motor_direction 1 else change to "Fwd" and assign motor_direction -1
+  if (strcmp(txt, "Fwd") == 0)
   {
     lv_label_set_text(label, "Rev");
     motor_constants::motor_direction = 1;
-  } else // If txt is "Rev", change to "Fwd" and assign motor_direction -1
+  }
+  else
   {
     lv_label_set_text(label, "Fwd");
     motor_constants::motor_direction = -1;
@@ -444,15 +457,15 @@ void FR_move(int speed)
 {
   if (speed >= 0)
   {
-    digitalWrite(IN1_B, HIGH);
-    digitalWrite(IN2_B, LOW);
-    analogWrite(ENA_B, speed);
+    digitalWrite(MotorPins::IN1_B, HIGH);
+    digitalWrite(MotorPins::IN2_B, LOW);
+    analogWrite(MotorPins::ENA_B, speed);
   }
   else
   {
-    digitalWrite(IN1_B, LOW);
-    digitalWrite(IN2_B, HIGH);
-    analogWrite(ENA_B, -speed);
+    digitalWrite(MotorPins::IN1_B, LOW);
+    digitalWrite(MotorPins::IN2_B, HIGH);
+    analogWrite(MotorPins::ENA_B, -speed);
   }
 }
 
@@ -465,15 +478,15 @@ void FL_move(int speed)
 {
   if (speed >= 0)
   {
-    digitalWrite(IN3_B, HIGH);
-    digitalWrite(IN4_B, LOW);
-    analogWrite(ENB_B, speed);
+    digitalWrite(MotorPins::IN3_B, HIGH);
+    digitalWrite(MotorPins::IN4_B, LOW);
+    analogWrite(MotorPins::ENB_B, speed);
   }
   else
   {
-    digitalWrite(IN3_B, LOW);
-    digitalWrite(IN4_B, HIGH);
-    analogWrite(ENB_B, -speed);
+    digitalWrite(MotorPins::IN3_B, LOW);
+    digitalWrite(MotorPins::IN4_B, HIGH);
+    analogWrite(MotorPins::ENB_B, -speed);
   }
 }
 
@@ -486,15 +499,15 @@ void RR_move(int speed)
 {
   if (speed >= 0)
   {
-    digitalWrite(IN1_A, HIGH);
-    digitalWrite(IN2_A, LOW);
-    analogWrite(ENA_A, speed);
+    digitalWrite(MotorPins::IN1_A, HIGH);
+    digitalWrite(MotorPins::IN2_A, LOW);
+    analogWrite(MotorPins::ENA_A, speed);
   }
   else
   {
-    digitalWrite(IN1_A, LOW);
-    digitalWrite(IN2_A, HIGH);
-    analogWrite(ENA_A, -speed);
+    digitalWrite(MotorPins::IN1_A, LOW);
+    digitalWrite(MotorPins::IN2_A, HIGH);
+    analogWrite(MotorPins::ENA_A, -speed);
   }
 }
 
@@ -507,15 +520,15 @@ void RL_move(int speed)
 {
   if (speed >= 0)
   {
-    digitalWrite(IN3_A, HIGH);
-    digitalWrite(IN4_A, LOW);
-    analogWrite(ENB_A, speed);
+    digitalWrite(MotorPins::IN3_A, HIGH);
+    digitalWrite(MotorPins::IN4_A, LOW);
+    analogWrite(MotorPins::ENB_A, speed);
   }
   else
   {
-    digitalWrite(IN3_A, LOW);
-    digitalWrite(IN4_A, HIGH);
-    analogWrite(ENB_A, -speed);
+    digitalWrite(MotorPins::IN3_A, LOW);
+    digitalWrite(MotorPins::IN4_A, HIGH);
+    analogWrite(MotorPins::ENB_A, -speed);
   }
 }
 

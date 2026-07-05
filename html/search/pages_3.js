@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['project_20title_0',['My Project Title',['../index.html',1,'']]]
+  ['project_0',['Arduino Giga Project.',['../index.html',1,'']]]
 ];

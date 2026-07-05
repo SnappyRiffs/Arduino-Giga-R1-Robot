@@ -17,6 +17,7 @@
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript" src="darkmode_toggle.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -214,6 +215,7 @@ Functions</h2></td></tr>
 <tr class="memitem:a9965ed6b6152697e6db85d37dfe41720" id="r_a9965ed6b6152697e6db85d37dfe41720"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9965ed6b6152697e6db85d37dfe41720">create_main_button_matrix</a> (lv_obj_t *screen_buttons)</td></tr>
 <tr class="memdesc:a9965ed6b6152697e6db85d37dfe41720"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create the main button matrix object.  <br /></td></tr>
 <tr class="memitem:aecc909a3f155365b24a95ec0ffef19d3" id="r_aecc909a3f155365b24a95ec0ffef19d3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aecc909a3f155365b24a95ec0ffef19d3">create_test_button_matrix</a> (lv_obj_t *screen_buttons)</td></tr>
+<tr class="memdesc:aecc909a3f155365b24a95ec0ffef19d3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create the test button matrix object.  <br /></td></tr>
 <tr class="memitem:ad5dca755f09c580eccadbdd097c4d57d" id="r_ad5dca755f09c580eccadbdd097c4d57d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad5dca755f09c580eccadbdd097c4d57d">create_speed_sliders</a> (lv_obj_t *parent)</td></tr>
 <tr class="memdesc:ad5dca755f09c580eccadbdd097c4d57d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a speed sliders object.  <br /></td></tr>
 <tr class="memitem:a1887246f5467ff145cd963e98fc2258e" id="r_a1887246f5467ff145cd963e98fc2258e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1887246f5467ff145cd963e98fc2258e">create_ui</a> ()</td></tr>
@@ -264,7 +266,7 @@ Functions</h2></td></tr>
 <tr><td class="fieldname"><a id="a09c202aa2681c1591f47ade0fd9f93bea8ca39e084c4680aee4c18e3094761422" name="a09c202aa2681c1591f47ade0fd9f93bea8ca39e084c4680aee4c18e3094761422"></a>ENA_A&#160;</td><td class="fielddoc"></td></tr>
 </table>
 
-<p class="definition">Definition at line <a class="el" href="_arduino_giga_lvgl_display_8ino_source.html#l00045">45</a> of file <a class="el" href="_arduino_giga_lvgl_display_8ino_source.html">ArduinoGigaLvglDisplay.ino</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_arduino_giga_lvgl_display_8ino_source.html#l00055">55</a> of file <a class="el" href="_arduino_giga_lvgl_display_8ino_source.html">ArduinoGigaLvglDisplay.ino</a>.</p>
 
 </div>
 </div>
@@ -305,7 +307,7 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="_arduino_giga_lvgl_display_8ino_source.html#l00072">72</a> of file <a class="el" href="_arduino_giga_lvgl_display_8ino_source.html">ArduinoGigaLvglDisplay.ino</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_arduino_giga_lvgl_display_8ino_source.html#l00082">82</a> of file <a class="el" href="_arduino_giga_lvgl_display_8ino_source.html">ArduinoGigaLvglDisplay.ino</a>.</p>
 
 </div>
 </div>
@@ -342,7 +344,7 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="_arduino_giga_lvgl_display_8ino_source.html#l00109">109</a> of file <a class="el" href="_arduino_giga_lvgl_display_8ino_source.html">ArduinoGigaLvglDisplay.ino</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_arduino_giga_lvgl_display_8ino_source.html#l00119">119</a> of file <a class="el" href="_arduino_giga_lvgl_display_8ino_source.html">ArduinoGigaLvglDisplay.ino</a>.</p>
 
 </div>
 </div>
@@ -364,12 +366,12 @@ Functions</h2></td></tr>
 <p>Create the main button matrix object. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">screen_buttons</td><td>parent screen object Runs the btnm_event_cb on button press </td></tr>
+    <tr><td class="paramname">screen_buttons</td><td>parent screen object Runs the main_btnm_event_cb on button press </td></tr>
   </table>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="_arduino_giga_lvgl_display_8ino_source.html#l00328">328</a> of file <a class="el" href="_arduino_giga_lvgl_display_8ino_source.html">ArduinoGigaLvglDisplay.ino</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_arduino_giga_lvgl_display_8ino_source.html#l00338">338</a> of file <a class="el" href="_arduino_giga_lvgl_display_8ino_source.html">ArduinoGigaLvglDisplay.ino</a>.</p>
 
 </div>
 </div>
@@ -396,7 +398,7 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="_arduino_giga_lvgl_display_8ino_source.html#l00371">371</a> of file <a class="el" href="_arduino_giga_lvgl_display_8ino_source.html">ArduinoGigaLvglDisplay.ino</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_arduino_giga_lvgl_display_8ino_source.html#l00386">386</a> of file <a class="el" href="_arduino_giga_lvgl_display_8ino_source.html">ArduinoGigaLvglDisplay.ino</a>.</p>
 
 </div>
 </div>
@@ -415,7 +417,15 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_arduino_giga_lvgl_display_8ino_source.html#l00350">350</a> of file <a class="el" href="_arduino_giga_lvgl_display_8ino_source.html">ArduinoGigaLvglDisplay.ino</a>.</p>
+<p>Create the test button matrix object. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">screen_buttons</td><td>parent screen object Runs the test_btnm_event_cb on button press </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="_arduino_giga_lvgl_display_8ino_source.html#l00365">365</a> of file <a class="el" href="_arduino_giga_lvgl_display_8ino_source.html">ArduinoGigaLvglDisplay.ino</a>.</p>
 
 </div>
 </div>
@@ -436,7 +446,7 @@ Functions</h2></td></tr>
 
 <p>Create the main UI. </p>
 
-<p class="definition">Definition at line <a class="el" href="_arduino_giga_lvgl_display_8ino_source.html#l00415">415</a> of file <a class="el" href="_arduino_giga_lvgl_display_8ino_source.html">ArduinoGigaLvglDisplay.ino</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_arduino_giga_lvgl_display_8ino_source.html#l00430">430</a> of file <a class="el" href="_arduino_giga_lvgl_display_8ino_source.html">ArduinoGigaLvglDisplay.ino</a>.</p>
 
 </div>
 </div>
@@ -463,7 +473,7 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="_arduino_giga_lvgl_display_8ino_source.html#l00465">465</a> of file <a class="el" href="_arduino_giga_lvgl_display_8ino_source.html">ArduinoGigaLvglDisplay.ino</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_arduino_giga_lvgl_display_8ino_source.html#l00480">480</a> of file <a class="el" href="_arduino_giga_lvgl_display_8ino_source.html">ArduinoGigaLvglDisplay.ino</a>.</p>
 
 </div>
 </div>
@@ -490,7 +500,7 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="_arduino_giga_lvgl_display_8ino_source.html#l00444">444</a> of file <a class="el" href="_arduino_giga_lvgl_display_8ino_source.html">ArduinoGigaLvglDisplay.ino</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_arduino_giga_lvgl_display_8ino_source.html#l00459">459</a> of file <a class="el" href="_arduino_giga_lvgl_display_8ino_source.html">ArduinoGigaLvglDisplay.ino</a>.</p>
 
 </div>
 </div>
@@ -509,7 +519,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_arduino_giga_lvgl_display_8ino_source.html#l00536">536</a> of file <a class="el" href="_arduino_giga_lvgl_display_8ino_source.html">ArduinoGigaLvglDisplay.ino</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_arduino_giga_lvgl_display_8ino_source.html#l00556">556</a> of file <a class="el" href="_arduino_giga_lvgl_display_8ino_source.html">ArduinoGigaLvglDisplay.ino</a>.</p>
 
 </div>
 </div>
@@ -546,7 +556,7 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="_arduino_giga_lvgl_display_8ino_source.html#l00156">156</a> of file <a class="el" href="_arduino_giga_lvgl_display_8ino_source.html">ArduinoGigaLvglDisplay.ino</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_arduino_giga_lvgl_display_8ino_source.html#l00166">166</a> of file <a class="el" href="_arduino_giga_lvgl_display_8ino_source.html">ArduinoGigaLvglDisplay.ino</a>.</p>
 
 </div>
 </div>
@@ -573,7 +583,7 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="_arduino_giga_lvgl_display_8ino_source.html#l00507">507</a> of file <a class="el" href="_arduino_giga_lvgl_display_8ino_source.html">ArduinoGigaLvglDisplay.ino</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_arduino_giga_lvgl_display_8ino_source.html#l00522">522</a> of file <a class="el" href="_arduino_giga_lvgl_display_8ino_source.html">ArduinoGigaLvglDisplay.ino</a>.</p>
 
 </div>
 </div>
@@ -600,7 +610,7 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="_arduino_giga_lvgl_display_8ino_source.html#l00486">486</a> of file <a class="el" href="_arduino_giga_lvgl_display_8ino_source.html">ArduinoGigaLvglDisplay.ino</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_arduino_giga_lvgl_display_8ino_source.html#l00501">501</a> of file <a class="el" href="_arduino_giga_lvgl_display_8ino_source.html">ArduinoGigaLvglDisplay.ino</a>.</p>
 
 </div>
 </div>
@@ -638,7 +648,7 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="_arduino_giga_lvgl_display_8ino_source.html#l00314">314</a> of file <a class="el" href="_arduino_giga_lvgl_display_8ino_source.html">ArduinoGigaLvglDisplay.ino</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_arduino_giga_lvgl_display_8ino_source.html#l00324">324</a> of file <a class="el" href="_arduino_giga_lvgl_display_8ino_source.html">ArduinoGigaLvglDisplay.ino</a>.</p>
 
 </div>
 </div>
@@ -657,7 +667,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_arduino_giga_lvgl_display_8ino_source.html#l00524">524</a> of file <a class="el" href="_arduino_giga_lvgl_display_8ino_source.html">ArduinoGigaLvglDisplay.ino</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_arduino_giga_lvgl_display_8ino_source.html#l00544">544</a> of file <a class="el" href="_arduino_giga_lvgl_display_8ino_source.html">ArduinoGigaLvglDisplay.ino</a>.</p>
 
 </div>
 </div>
@@ -694,7 +704,7 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="_arduino_giga_lvgl_display_8ino_source.html#l00294">294</a> of file <a class="el" href="_arduino_giga_lvgl_display_8ino_source.html">ArduinoGigaLvglDisplay.ino</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_arduino_giga_lvgl_display_8ino_source.html#l00304">304</a> of file <a class="el" href="_arduino_giga_lvgl_display_8ino_source.html">ArduinoGigaLvglDisplay.ino</a>.</p>
 
 </div>
 </div>
@@ -730,7 +740,7 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="_arduino_giga_lvgl_display_8ino_source.html#l00207">207</a> of file <a class="el" href="_arduino_giga_lvgl_display_8ino_source.html">ArduinoGigaLvglDisplay.ino</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_arduino_giga_lvgl_display_8ino_source.html#l00217">217</a> of file <a class="el" href="_arduino_giga_lvgl_display_8ino_source.html">ArduinoGigaLvglDisplay.ino</a>.</p>
 
 </div>
 </div>
@@ -770,7 +780,7 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="_arduino_giga_lvgl_display_8ino_source.html#l00256">256</a> of file <a class="el" href="_arduino_giga_lvgl_display_8ino_source.html">ArduinoGigaLvglDisplay.ino</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_arduino_giga_lvgl_display_8ino_source.html#l00266">266</a> of file <a class="el" href="_arduino_giga_lvgl_display_8ino_source.html">ArduinoGigaLvglDisplay.ino</a>.</p>
 
 </div>
 </div>

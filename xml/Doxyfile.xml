@@ -241,7 +241,7 @@
   </option>
   <option  id='HTML_EXTRA_FILES' default='yes' type='stringlist'>
   </option>
-  <option  id='HTML_COLORSTYLE' default='yes' type='string'><value>AUTO_LIGHT</value></option>
+  <option  id='HTML_COLORSTYLE' default='no' type='string'><value>TOGGLE</value></option>
   <option  id='HTML_COLORSTYLE_HUE' default='no' type='int'><value>84</value></option>
   <option  id='HTML_COLORSTYLE_SAT' default='no' type='int'><value>90</value></option>
   <option  id='HTML_COLORSTYLE_GAMMA' default='no' type='int'><value>55</value></option>
@@ -302,7 +302,7 @@
   <option  id='EXTERNAL_SEARCH_ID' default='yes' type='string'><value><![CDATA[]]></value></option>
   <option  id='EXTRA_SEARCH_MAPPINGS' default='yes' type='stringlist'>
   </option>
-  <option  id='GENERATE_LATEX' default='yes' type='bool'><value>YES</value></option>
+  <option  id='GENERATE_LATEX' default='no' type='bool'><value>NO</value></option>
   <option  id='LATEX_OUTPUT' default='yes' type='string'><value><![CDATA[latex]]></value></option>
   <option  id='LATEX_CMD_NAME' default='yes' type='string'><value><![CDATA[]]></value></option>
   <option  id='MAKEINDEX_CMD_NAME' default='yes' type='string'><value><![CDATA[makeindex]]></value></option>
@@ -326,7 +326,7 @@
   <option  id='GENERATE_RTF' default='no' type='bool'><value>YES</value></option>
   <option  id='RTF_OUTPUT' default='yes' type='string'><value><![CDATA[rtf]]></value></option>
   <option  id='COMPACT_RTF' default='yes' type='bool'><value>NO</value></option>
-  <option  id='RTF_HYPERLINKS' default='yes' type='bool'><value>NO</value></option>
+  <option  id='RTF_HYPERLINKS' default='no' type='bool'><value>YES</value></option>
   <option  id='RTF_STYLESHEET_FILE' default='yes' type='string'><value><![CDATA[]]></value></option>
   <option  id='RTF_EXTENSIONS_FILE' default='yes' type='string'><value><![CDATA[]]></value></option>
   <option  id='RTF_EXTRA_FILES' default='yes' type='stringlist'>
@@ -343,11 +343,11 @@
   <option  id='GENERATE_DOCBOOK' default='yes' type='bool'><value>NO</value></option>
   <option  id='DOCBOOK_OUTPUT' default='yes' type='string'><value><![CDATA[docbook]]></value></option>
   <option  id='GENERATE_AUTOGEN_DEF' default='yes' type='bool'><value>NO</value></option>
-  <option  id='GENERATE_SQLITE3' default='no' type='bool'><value>YES</value></option>
+  <option  id='GENERATE_SQLITE3' default='yes' type='bool'><value>NO</value></option>
   <option  id='SQLITE3_OUTPUT' default='yes' type='string'><value><![CDATA[sqlite3]]></value></option>
   <option  id='SQLITE3_RECREATE_DB' default='yes' type='bool'><value>YES</value></option>
   <option  id='GENERATE_PERLMOD' default='yes' type='bool'><value>NO</value></option>
-  <option  id='PERLMOD_LATEX' default='yes' type='bool'><value>NO</value></option>
+  <option  id='PERLMOD_LATEX' default='no' type='bool'><value>YES</value></option>
   <option  id='PERLMOD_PRETTY' default='yes' type='bool'><value>YES</value></option>
   <option  id='PERLMOD_MAKEVAR_PREFIX' default='yes' type='string'><value><![CDATA[]]></value></option>
   <option  id='ENABLE_PREPROCESSING' default='yes' type='bool'><value>YES</value></option>

@@ -10,6 +10,16 @@
  */
 
 /**
+ * \mainpage Arduino Giga Project.
+ *
+ * Welcome to the documentation for my project.
+ *
+ * ## Overview
+ * This project is the documentation for the Arduino Giga R1 Wifi Robot car
+ *
+ */
+
+/**
  * @defgroup Imports All the imports needed
  * @brief Includes all necessary libraries and headers for LVGL and Arduino functionality.
  *
@@ -323,7 +333,7 @@ void set_btnm_bg_colors(lv_obj_t *btnm, uint32_t normal, uint32_t pressed)
 /**
  * @brief Create the main button matrix object
  * @param screen_buttons parent screen object
- * Runs the btnm_event_cb on button press
+ * Runs the main_btnm_event_cb on button press
  */
 void create_main_button_matrix(lv_obj_t *screen_buttons)
 {
@@ -347,6 +357,11 @@ void create_main_button_matrix(lv_obj_t *screen_buttons)
 }
 
 // ===== Test Button Matrix =====
+/**
+ * @brief Create the test button matrix object
+ * @param screen_buttons parent screen object
+ * Runs the test_btnm_event_cb on button press
+ */
 void create_test_button_matrix(lv_obj_t *screen_buttons)
 {
   static const char *test_btnm_map[] = {"FL", "FR", "\n", "RL", "RR", ""};
@@ -521,6 +536,11 @@ void RL_move(int speed)
 }
 
 // ===== Setup & loop =====
+/**
+ * @defgroup Arduino Run
+ * @brief Run program
+ *
+ */
 void setup()
 {
   delay(3000);
@@ -543,3 +563,4 @@ void loop()
     msg_label = NULL;
   }
 }
+/** @} */ // end of Arduino

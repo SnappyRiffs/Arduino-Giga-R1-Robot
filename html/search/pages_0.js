@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['getting_20started_0',['Getting Started',['../index.html#autotoc_md1',1,'']]]
+  ['arduino_20giga_20project_0',['Arduino Giga Project.',['../index.html',1,'']]]
 ];

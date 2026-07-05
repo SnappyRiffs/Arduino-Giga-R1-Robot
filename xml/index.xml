@@ -69,11 +69,11 @@
     <member refid="_arduino_giga_lvgl_display_8ino_1a4fc01d736fe50cf5b977f755b675f11d" kind="function"><name>setup</name></member>
     <member refid="_arduino_giga_lvgl_display_8ino_1afe461d27b9c48d5921c00d521181f12f" kind="function"><name>loop</name></member>
   </compound>
-  <compound refid="mainpage_8dox" kind="file"><name>mainpage.dox</name>
-  </compound>
   <compound refid="group___imports" kind="group"><name>Imports</name>
   </compound>
   <compound refid="group___motor___pins" kind="group"><name>Motor_Pins</name>
+  </compound>
+  <compound refid="group___arduino" kind="group"><name>Arduino</name>
   </compound>
   <compound refid="dir_7c85f99d87a211b4d50ff5aae1f8b318" kind="dir"><name>C:/Users/Snapp/OneDrive/Arduino/libraries/Arduino_robot_project_library</name>
   </compound>

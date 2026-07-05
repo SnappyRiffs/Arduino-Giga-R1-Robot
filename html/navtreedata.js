@@ -25,7 +25,7 @@
 var NAVTREE =
 [
   [ "Arduino Giga Project Doxygen", "index.html", [
-    [ "My Project Title", "index.html", null ],
+    [ "Arduino Giga Project.", "index.html", null ],
     [ "Topics", "topics.html", "topics" ],
     [ "Classes", "annotated.html", [
       [ "Class List", "annotated.html", "annotated_dup" ],

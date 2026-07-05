@@ -66,6 +66,7 @@ var NAVTREEINDEX0 =
 "globals_enum.html":[3,1,2],
 "globals_eval.html":[3,1,3],
 "globals_func.html":[3,1,1],
+"group___arduino.html":[1,2],
 "group___imports.html":[1,0],
 "group___motor___pins.html":[1,1],
 "index.html":[],
