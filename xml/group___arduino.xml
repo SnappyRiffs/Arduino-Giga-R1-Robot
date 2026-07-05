@@ -3,6 +3,34 @@
   <compounddef id="group___arduino" kind="group">
     <compoundname>Arduino</compoundname>
     <title>Run</title>
+    <sectiondef kind="func">
+      <memberdef kind="function" id="group___arduino_1ga4fc01d736fe50cf5b977f755b675f11d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void setup</definition>
+        <argsstring>()</argsstring>
+        <name>setup</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ArduinoGigaLvglDisplay.ino" line="550" column="6" bodyfile="ArduinoGigaLvglDisplay.ino" bodystart="550" bodyend="560"/>
+      </memberdef>
+      <memberdef kind="function" id="group___arduino_1gafe461d27b9c48d5921c00d521181f12f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void loop</definition>
+        <argsstring>()</argsstring>
+        <name>loop</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ArduinoGigaLvglDisplay.ino" line="562" column="6" bodyfile="ArduinoGigaLvglDisplay.ino" bodystart="562" bodyend="571"/>
+      </memberdef>
+    </sectiondef>
     <briefdescription>
 <para>Run program. </para>
     </briefdescription>

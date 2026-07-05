@@ -7,7 +7,7 @@ var searchData=
   ['motor_5fconstants_2eh_4',['motor_constants.h',['../motor__constants_8h.html',1,'']]],
   ['motor_5fdirection_5',['motor_direction',['../classmotor__constants.html#a55499ee0a25a1f7a3024cea72541543a',1,'motor_constants']]],
   ['motor_5fspeed_6',['motor_speed',['../classmotor__constants.html#af83643f00e48ca7329566e17246a2c83',1,'motor_constants']]],
-  ['motorpins_7',['MotorPins',['../_arduino_giga_lvgl_display_8ino.html#a09c202aa2681c1591f47ade0fd9f93be',1,'ArduinoGigaLvglDisplay.ino']]],
+  ['motorpins_7',['MotorPins',['../group___motor___pins.html#ga09c202aa2681c1591f47ade0fd9f93be',1,'ArduinoGigaLvglDisplay.ino']]],
   ['msg_5fconstants_8',['msg_constants',['../classmsg__constants.html',1,'msg_constants'],['../classmsg__constants.html#a3122ce1618c23c45a2f13616a44fd8fd',1,'msg_constants::msg_constants()']]],
   ['msg_5fconstants_2ecpp_9',['msg_constants.cpp',['../msg__constants_8cpp.html',1,'']]],
   ['msg_5fconstants_2eh_10',['msg_constants.h',['../msg__constants_8h.html',1,'']]],

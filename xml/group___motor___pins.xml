@@ -3,6 +3,115 @@
   <compounddef id="group___motor___pins" kind="group">
     <compoundname>Motor_Pins</compoundname>
     <title>Motor control pin definitions</title>
+    <sectiondef kind="enum">
+      <memberdef kind="enum" id="group___motor___pins_1ga09c202aa2681c1591f47ade0fd9f93be" prot="public" static="no" strong="no">
+        <type></type>
+        <name>MotorPins</name>
+        <enumvalue id="group___motor___pins_1gga09c202aa2681c1591f47ade0fd9f93beafac329d5db4efdbf0c8d2d7d3de466a9" prot="public">
+          <name>ENB_B</name>
+          <initializer>= 13</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___motor___pins_1gga09c202aa2681c1591f47ade0fd9f93bea2047c5c4b4b18be0602eb80f9b4a1768" prot="public">
+          <name>IN4_B</name>
+          <initializer>= 12</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___motor___pins_1gga09c202aa2681c1591f47ade0fd9f93bea6ed09eef66c4f29e12b322f4d83cae56" prot="public">
+          <name>IN3_B</name>
+          <initializer>= 11</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___motor___pins_1gga09c202aa2681c1591f47ade0fd9f93bea859b5cc7d0a7874c0d8a05ddfe033866" prot="public">
+          <name>IN2_B</name>
+          <initializer>= 10</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___motor___pins_1gga09c202aa2681c1591f47ade0fd9f93bea73a3f9b58bcbefe98e6d5cec2e9088a5" prot="public">
+          <name>IN1_B</name>
+          <initializer>= 9</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___motor___pins_1gga09c202aa2681c1591f47ade0fd9f93bea4fd12e00eb66efa116b4e9769045508c" prot="public">
+          <name>ENA_B</name>
+          <initializer>= 8</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___motor___pins_1gga09c202aa2681c1591f47ade0fd9f93beab601c6a9dbd4c1a3b70d8a84de3bd012" prot="public">
+          <name>ENB_A</name>
+          <initializer>= 7</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___motor___pins_1gga09c202aa2681c1591f47ade0fd9f93bea93d7c651df7bde50e2382ad65e25c40a" prot="public">
+          <name>IN4_A</name>
+          <initializer>= 6</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___motor___pins_1gga09c202aa2681c1591f47ade0fd9f93bea9d9477ff2adcb5d4e3b7f2912bc459db" prot="public">
+          <name>IN3_A</name>
+          <initializer>= 5</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___motor___pins_1gga09c202aa2681c1591f47ade0fd9f93bea542f6a0db31278731d93bec3ed4151af" prot="public">
+          <name>IN2_A</name>
+          <initializer>= 4</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___motor___pins_1gga09c202aa2681c1591f47ade0fd9f93bea115a61482486b39c89389f48bc9a36be" prot="public">
+          <name>IN1_A</name>
+          <initializer>= 3</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___motor___pins_1gga09c202aa2681c1591f47ade0fd9f93bea8ca39e084c4680aee4c18e3094761422" prot="public">
+          <name>ENA_A</name>
+          <initializer>= 2</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ArduinoGigaLvglDisplay.ino" line="57" column="1" bodyfile="ArduinoGigaLvglDisplay.ino" bodystart="58" bodyend="72"/>
+      </memberdef>
+    </sectiondef>
     <briefdescription>
 <para>Initialize motor control pins. </para>
     </briefdescription>

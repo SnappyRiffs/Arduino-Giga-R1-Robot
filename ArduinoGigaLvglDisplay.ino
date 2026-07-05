@@ -21,6 +21,7 @@
 
 /**
  * @defgroup Imports All the imports needed
+ * @{
  * @brief Includes all necessary libraries and headers for LVGL and Arduino functionality.
  *
  */
@@ -49,6 +50,7 @@
 
 /**
  * @defgroup Motor_Pins Motor control pin definitions
+ * @{
  * @brief Initialize motor control pins
  *
  */
@@ -142,6 +144,9 @@ static void btn_Run_Program_event_cb(lv_event_t *e)
 }
 
 // ======== CALLBACK DECLARATIONS ========
+/**
+ * @brief Callback for main button matrix events.
+ */
 static void main_btnm_event_cb(lv_event_t *e);
 static void test_btnm_event_cb(lv_event_t *e);
 static void slider_event_cb(lv_event_t *e);
@@ -538,6 +543,7 @@ void RL_move(int speed)
 // ===== Setup & loop =====
 /**
  * @defgroup Arduino Run
+ * @{
  * @brief Run program
  *
  */

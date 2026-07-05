@@ -38,19 +38,7 @@
   <compound refid="other__constants_8h" kind="file"><name>other_constants.h</name>
   </compound>
   <compound refid="_arduino_giga_lvgl_display_8ino" kind="file"><name>ArduinoGigaLvglDisplay.ino</name>
-    <member refid="_arduino_giga_lvgl_display_8ino_1a09c202aa2681c1591f47ade0fd9f93be" kind="enum"><name>MotorPins</name></member>
-    <member refid="_arduino_giga_lvgl_display_8ino_1a09c202aa2681c1591f47ade0fd9f93beafac329d5db4efdbf0c8d2d7d3de466a9" kind="enumvalue"><name>ENB_B</name></member>
-    <member refid="_arduino_giga_lvgl_display_8ino_1a09c202aa2681c1591f47ade0fd9f93bea2047c5c4b4b18be0602eb80f9b4a1768" kind="enumvalue"><name>IN4_B</name></member>
-    <member refid="_arduino_giga_lvgl_display_8ino_1a09c202aa2681c1591f47ade0fd9f93bea6ed09eef66c4f29e12b322f4d83cae56" kind="enumvalue"><name>IN3_B</name></member>
-    <member refid="_arduino_giga_lvgl_display_8ino_1a09c202aa2681c1591f47ade0fd9f93bea859b5cc7d0a7874c0d8a05ddfe033866" kind="enumvalue"><name>IN2_B</name></member>
-    <member refid="_arduino_giga_lvgl_display_8ino_1a09c202aa2681c1591f47ade0fd9f93bea73a3f9b58bcbefe98e6d5cec2e9088a5" kind="enumvalue"><name>IN1_B</name></member>
-    <member refid="_arduino_giga_lvgl_display_8ino_1a09c202aa2681c1591f47ade0fd9f93bea4fd12e00eb66efa116b4e9769045508c" kind="enumvalue"><name>ENA_B</name></member>
-    <member refid="_arduino_giga_lvgl_display_8ino_1a09c202aa2681c1591f47ade0fd9f93beab601c6a9dbd4c1a3b70d8a84de3bd012" kind="enumvalue"><name>ENB_A</name></member>
-    <member refid="_arduino_giga_lvgl_display_8ino_1a09c202aa2681c1591f47ade0fd9f93bea93d7c651df7bde50e2382ad65e25c40a" kind="enumvalue"><name>IN4_A</name></member>
-    <member refid="_arduino_giga_lvgl_display_8ino_1a09c202aa2681c1591f47ade0fd9f93bea9d9477ff2adcb5d4e3b7f2912bc459db" kind="enumvalue"><name>IN3_A</name></member>
-    <member refid="_arduino_giga_lvgl_display_8ino_1a09c202aa2681c1591f47ade0fd9f93bea542f6a0db31278731d93bec3ed4151af" kind="enumvalue"><name>IN2_A</name></member>
-    <member refid="_arduino_giga_lvgl_display_8ino_1a09c202aa2681c1591f47ade0fd9f93bea115a61482486b39c89389f48bc9a36be" kind="enumvalue"><name>IN1_A</name></member>
-    <member refid="_arduino_giga_lvgl_display_8ino_1a09c202aa2681c1591f47ade0fd9f93bea8ca39e084c4680aee4c18e3094761422" kind="enumvalue"><name>ENA_A</name></member>
+    <member refid="group___motor___pins_1ga09c202aa2681c1591f47ade0fd9f93be" kind="enum"><name>MotorPins</name></member>
     <member refid="_arduino_giga_lvgl_display_8ino_1a0397ddbe4d2bddb9d77afbb47acf56f0" kind="function"><name>apply_mode</name></member>
     <member refid="_arduino_giga_lvgl_display_8ino_1a599fa16066a270f3a22e7de32fbb250f" kind="function"><name>btn_Run_Program_event_cb</name></member>
     <member refid="_arduino_giga_lvgl_display_8ino_1a6b08dca515fd8dd9eaec4b80e83e7e6a" kind="function"><name>main_btnm_event_cb</name></member>
@@ -66,14 +54,29 @@
     <member refid="_arduino_giga_lvgl_display_8ino_1a89702714cf6f17fb069f22e5f1f36d97" kind="function"><name>FL_move</name></member>
     <member refid="_arduino_giga_lvgl_display_8ino_1a72d3ab08a583fa7cbdf7e3db1cb9ee5f" kind="function"><name>RR_move</name></member>
     <member refid="_arduino_giga_lvgl_display_8ino_1ac5e4ea79ee09f85143f444ee9d22cea6" kind="function"><name>RL_move</name></member>
-    <member refid="_arduino_giga_lvgl_display_8ino_1a4fc01d736fe50cf5b977f755b675f11d" kind="function"><name>setup</name></member>
-    <member refid="_arduino_giga_lvgl_display_8ino_1afe461d27b9c48d5921c00d521181f12f" kind="function"><name>loop</name></member>
+    <member refid="group___arduino_1ga4fc01d736fe50cf5b977f755b675f11d" kind="function"><name>setup</name></member>
+    <member refid="group___arduino_1gafe461d27b9c48d5921c00d521181f12f" kind="function"><name>loop</name></member>
   </compound>
   <compound refid="group___imports" kind="group"><name>Imports</name>
   </compound>
   <compound refid="group___motor___pins" kind="group"><name>Motor_Pins</name>
+    <member refid="group___motor___pins_1ga09c202aa2681c1591f47ade0fd9f93be" kind="enum"><name>MotorPins</name></member>
+    <member refid="group___motor___pins_1gga09c202aa2681c1591f47ade0fd9f93beafac329d5db4efdbf0c8d2d7d3de466a9" kind="enumvalue"><name>ENB_B</name></member>
+    <member refid="group___motor___pins_1gga09c202aa2681c1591f47ade0fd9f93bea2047c5c4b4b18be0602eb80f9b4a1768" kind="enumvalue"><name>IN4_B</name></member>
+    <member refid="group___motor___pins_1gga09c202aa2681c1591f47ade0fd9f93bea6ed09eef66c4f29e12b322f4d83cae56" kind="enumvalue"><name>IN3_B</name></member>
+    <member refid="group___motor___pins_1gga09c202aa2681c1591f47ade0fd9f93bea859b5cc7d0a7874c0d8a05ddfe033866" kind="enumvalue"><name>IN2_B</name></member>
+    <member refid="group___motor___pins_1gga09c202aa2681c1591f47ade0fd9f93bea73a3f9b58bcbefe98e6d5cec2e9088a5" kind="enumvalue"><name>IN1_B</name></member>
+    <member refid="group___motor___pins_1gga09c202aa2681c1591f47ade0fd9f93bea4fd12e00eb66efa116b4e9769045508c" kind="enumvalue"><name>ENA_B</name></member>
+    <member refid="group___motor___pins_1gga09c202aa2681c1591f47ade0fd9f93beab601c6a9dbd4c1a3b70d8a84de3bd012" kind="enumvalue"><name>ENB_A</name></member>
+    <member refid="group___motor___pins_1gga09c202aa2681c1591f47ade0fd9f93bea93d7c651df7bde50e2382ad65e25c40a" kind="enumvalue"><name>IN4_A</name></member>
+    <member refid="group___motor___pins_1gga09c202aa2681c1591f47ade0fd9f93bea9d9477ff2adcb5d4e3b7f2912bc459db" kind="enumvalue"><name>IN3_A</name></member>
+    <member refid="group___motor___pins_1gga09c202aa2681c1591f47ade0fd9f93bea542f6a0db31278731d93bec3ed4151af" kind="enumvalue"><name>IN2_A</name></member>
+    <member refid="group___motor___pins_1gga09c202aa2681c1591f47ade0fd9f93bea115a61482486b39c89389f48bc9a36be" kind="enumvalue"><name>IN1_A</name></member>
+    <member refid="group___motor___pins_1gga09c202aa2681c1591f47ade0fd9f93bea8ca39e084c4680aee4c18e3094761422" kind="enumvalue"><name>ENA_A</name></member>
   </compound>
   <compound refid="group___arduino" kind="group"><name>Arduino</name>
+    <member refid="group___arduino_1ga4fc01d736fe50cf5b977f755b675f11d" kind="function"><name>setup</name></member>
+    <member refid="group___arduino_1gafe461d27b9c48d5921c00d521181f12f" kind="function"><name>loop</name></member>
   </compound>
   <compound refid="dir_7c85f99d87a211b4d50ff5aae1f8b318" kind="dir"><name>C:/Users/Snapp/OneDrive/Arduino/libraries/Arduino_robot_project_library</name>
   </compound>
