@@ -328,7 +328,7 @@
   <option  id='COMPACT_RTF' default='yes' type='bool'><value>NO</value></option>
   <option  id='RTF_HYPERLINKS' default='no' type='bool'><value>YES</value></option>
   <option  id='RTF_STYLESHEET_FILE' default='yes' type='string'><value><![CDATA[]]></value></option>
-  <option  id='RTF_EXTENSIONS_FILE' default='yes' type='string'><value><![CDATA[]]></value></option>
+  <option  id='RTF_EXTENSIONS_FILE' default='no' type='string'><value><![CDATA[rtf_extensions.txt]]></value></option>
   <option  id='RTF_EXTRA_FILES' default='yes' type='stringlist'>
   </option>
   <option  id='GENERATE_MAN' default='yes' type='bool'><value>NO</value></option>

@@ -6,7 +6,7 @@
  * @date 2026-02-22
  *
  * @copyright Copyright (c) 2026
- * 
+ *
  */
 
 /**
@@ -56,19 +56,19 @@
  */
 enum MotorPins
 {
-  ENB_B = 13,
-  IN4_B = 12,
-  IN3_B = 11,
-  IN2_B = 10,
-  IN1_B = 9,
-  ENA_B = 8,
+    ENB_B = 13,
+    IN4_B = 12,
+    IN3_B = 11,
+    IN2_B = 10,
+    IN1_B = 9,
+    ENA_B = 8,
 
-  ENB_A = 7,
-  IN4_A = 6,
-  IN3_A = 5,
-  IN2_A = 4,
-  IN1_A = 3,
-  ENA_A = 2
+    ENB_A = 7,
+    IN4_A = 6,
+    IN3_A = 5,
+    IN2_A = 4,
+    IN1_A = 3,
+    ENA_A = 2
 };
 /** @} */ // end of Motor_Pins
 
@@ -83,22 +83,24 @@ enum MotorPins
  */
 static void apply_mode(const char *mode_name, const char *direction)
 {
-  if (msg_constants::msg_label != NULL)
-  {
-    lv_obj_del(msg_constants::msg_label);
-    msg_constants::msg_label = NULL;
-  }
+    // Delete any existing message label before creating a new one
+    if (msg_constants::msg_label != NULL)
+    {
+        lv_obj_del(msg_constants::msg_label);
+        msg_constants::msg_label = NULL;
+    }
+    
+    // Create a new message label to display the applied mode and direction
+    msg_constants::msg_label = lv_label_create(lv_scr_act());
+    char buffer[64];
+    snprintf(buffer, sizeof(buffer), "Applied %s Mode: %s.", mode_name, direction);
+    lv_label_set_text(msg_constants::msg_label, buffer);
 
-  msg_constants::msg_label = lv_label_create(lv_scr_act());
-  char buffer[64];
-  snprintf(buffer, sizeof(buffer), "Applied %s Mode: %s.", mode_name, direction);
-  lv_label_set_text(msg_constants::msg_label, buffer);
+    other_constants::program.push_back(direction);
 
-  other_constants::program.push_back(direction);
-
-  lv_obj_set_style_text_font(msg_constants::msg_label, &lv_font_montserrat_24, 0);
-  lv_obj_align(msg_constants::msg_label, LV_ALIGN_BOTTOM_MID, 0, -20);
-  msg_constants::msg_start_time = millis();
+    lv_obj_set_style_text_font(msg_constants::msg_label, &lv_font_montserrat_24, 0);
+    lv_obj_align(msg_constants::msg_label, LV_ALIGN_BOTTOM_MID, 0, -20);
+    msg_constants::msg_start_time = millis();
 }
 
 // ===== Run Program (special) =====
@@ -120,27 +122,27 @@ static void apply_mode(const char *mode_name, const char *direction)
  */
 static void btn_Run_Program_event_cb(lv_event_t *e)
 {
-  if (msg_constants::msg_label != NULL)
-  {
-    lv_obj_del(msg_constants::msg_label);
-    msg_constants::msg_label = NULL;
-  }
+    if (msg_constants::msg_label != NULL)
+    {
+        lv_obj_del(msg_constants::msg_label);
+        msg_constants::msg_label = NULL;
+    }
 
-  msg_constants::msg_label = lv_label_create(lv_scr_act());
-  lv_label_set_text(msg_constants::msg_label, "Applied program!");
-  // Print program to Serial Monitor (for debugging)
-  for (auto p : other_constants::program)
-  {
-    Serial.println(p);
-  }
-  Serial.println();
+    msg_constants::msg_label = lv_label_create(lv_scr_act());
+    lv_label_set_text(msg_constants::msg_label, "Applied program!");
+    // Print program to Serial Monitor (for debugging)
+    for (auto p : other_constants::program)
+    {
+        Serial.println(p);
+    }
+    Serial.println();
 
-  delay(500);
-  other_constants::program.clear();
+    delay(500);
+    other_constants::program.clear();
 
-  lv_obj_set_style_text_font(msg_constants::msg_label, &lv_font_montserrat_24, 0);
-  lv_obj_align(msg_constants::msg_label, LV_ALIGN_BOTTOM_MID, 0, -20);
-  msg_constants::msg_start_time = millis();
+    lv_obj_set_style_text_font(msg_constants::msg_label, &lv_font_montserrat_24, 0);
+    lv_obj_align(msg_constants::msg_label, LV_ALIGN_BOTTOM_MID, 0, -20);
+    msg_constants::msg_start_time = millis();
 }
 
 // ======== CALLBACK DECLARATIONS ========
@@ -170,41 +172,41 @@ static void toggle_fwdrev_cb(lv_event_t *e);
  */
 static void main_btnm_event_cb(lv_event_t *e)
 {
-  lv_obj_t *btnm = (lv_obj_t *)lv_event_get_target(e);
-  const char *dir_txt = lv_btnmatrix_get_btn_text(
-      btnm, lv_btnmatrix_get_selected_btn(btnm));
+    lv_obj_t *btnm = (lv_obj_t *)lv_event_get_target(e);
+    const char *dir_txt = lv_btnmatrix_get_btn_text(
+        btnm, lv_btnmatrix_get_selected_btn(btnm));
 
-  if (dir_txt == NULL)
-    return;
+    if (dir_txt == NULL)
+        return;
 
-  if (strcmp(dir_txt, "Forward") == 0 || strcmp(dir_txt, "Backward") == 0)
-  {
-    apply_mode("Straight", dir_txt);
-  }
-  else if (strcmp(dir_txt, "Left") == 0 || strcmp(dir_txt, "Right") == 0)
-  {
-    apply_mode("Sideways", dir_txt);
-  }
-  else if (strcmp(dir_txt, "45") == 0 || strcmp(dir_txt, "135") == 0 || strcmp(dir_txt, "225") == 0 || strcmp(dir_txt, "315") == 0)
-  {
-    apply_mode("Diagonal", dir_txt);
-  }
-  else if (strcmp(dir_txt, "Right Fwd") == 0 || strcmp(dir_txt, "Right Bwd") == 0 || strcmp(dir_txt, "Left Fwd") == 0 || strcmp(dir_txt, "Left Bwd") == 0)
-  {
-    apply_mode("Pivot", dir_txt);
-  }
-  else if (strcmp(dir_txt, "Front Right") == 0 || strcmp(dir_txt, "Front Left") == 0 || strcmp(dir_txt, "Rear Right") == 0 || strcmp(dir_txt, "Rear Left") == 0)
-  {
-    apply_mode("Pivot Sideways", dir_txt);
-  }
-  else if (strcmp(dir_txt, "CCW") == 0 || strcmp(dir_txt, "CW") == 0)
-  {
-    apply_mode("Rotate", dir_txt);
-  }
-  else if (strcmp(dir_txt, "Prgm Car") == 0)
-  {
-    btn_Run_Program_event_cb(e);
-  }
+    if (strcmp(dir_txt, "Forward") == 0 || strcmp(dir_txt, "Backward") == 0)
+    {
+        apply_mode("Straight", dir_txt);
+    }
+    else if (strcmp(dir_txt, "Left") == 0 || strcmp(dir_txt, "Right") == 0)
+    {
+        apply_mode("Sideways", dir_txt);
+    }
+    else if (strcmp(dir_txt, "45") == 0 || strcmp(dir_txt, "135") == 0 || strcmp(dir_txt, "225") == 0 || strcmp(dir_txt, "315") == 0)
+    {
+        apply_mode("Diagonal", dir_txt);
+    }
+    else if (strcmp(dir_txt, "Right Fwd") == 0 || strcmp(dir_txt, "Right Bwd") == 0 || strcmp(dir_txt, "Left Fwd") == 0 || strcmp(dir_txt, "Left Bwd") == 0)
+    {
+        apply_mode("Pivot", dir_txt);
+    }
+    else if (strcmp(dir_txt, "Front Right") == 0 || strcmp(dir_txt, "Front Left") == 0 || strcmp(dir_txt, "Rear Right") == 0 || strcmp(dir_txt, "Rear Left") == 0)
+    {
+        apply_mode("Pivot Sideways", dir_txt);
+    }
+    else if (strcmp(dir_txt, "CCW") == 0 || strcmp(dir_txt, "CW") == 0)
+    {
+        apply_mode("Rotate", dir_txt);
+    }
+    else if (strcmp(dir_txt, "Prgm Car") == 0)
+    {
+        btn_Run_Program_event_cb(e);
+    }
 }
 
 // ======== test CONTROL BUTTON CALLBACK ========
@@ -221,35 +223,35 @@ static void main_btnm_event_cb(lv_event_t *e)
  */
 static void test_btnm_event_cb(lv_event_t *e)
 {
-  lv_obj_t *btnm = (lv_obj_t *)lv_event_get_target(e);
-  const char *txt = lv_btnmatrix_get_btn_text(
-      btnm, lv_btnmatrix_get_selected_btn(btnm));
+    lv_obj_t *btnm = (lv_obj_t *)lv_event_get_target(e);
+    const char *txt = lv_btnmatrix_get_btn_text(
+        btnm, lv_btnmatrix_get_selected_btn(btnm));
 
-  if (txt == NULL)
-    return;
+    if (txt == NULL)
+        return;
 
-  if (strcmp(txt, "FL") == 0)
-  {
-    Serial.println("Front Left test Move");
-    FL_move(motor_constants::motor_speed * motor_constants::motor_direction);
-  }
-  else if (strcmp(txt, "FR") == 0)
-  {
-    Serial.println("Front Right test Move");
-    FR_move(motor_constants::motor_speed * motor_constants::motor_direction);
-  }
-  else if (strcmp(txt, "RL") == 0)
-  {
-    Serial.println("Rear Left test Move");
-    RL_move(motor_constants::motor_speed * motor_constants::motor_direction);
-  }
-  else if (strcmp(txt, "RR") == 0)
-  {
-    Serial.println("Rear Right test Move");
-    RR_move(motor_constants::motor_speed * motor_constants::motor_direction);
-  }
+    if (strcmp(txt, "FL") == 0)
+    {
+        Serial.println("Front Left test Move");
+        FL_move(motor_constants::motor_speed * motor_constants::motor_direction);
+    }
+    else if (strcmp(txt, "FR") == 0)
+    {
+        Serial.println("Front Right test Move");
+        FR_move(motor_constants::motor_speed * motor_constants::motor_direction);
+    }
+    else if (strcmp(txt, "RL") == 0)
+    {
+        Serial.println("Rear Left test Move");
+        RL_move(motor_constants::motor_speed * motor_constants::motor_direction);
+    }
+    else if (strcmp(txt, "RR") == 0)
+    {
+        Serial.println("Rear Right test Move");
+        RR_move(motor_constants::motor_speed * motor_constants::motor_direction);
+    }
 
-  delay(500);
+    delay(500);
 }
 
 // ======== FWD/REV TOGGLE CALLBACK ========
@@ -270,26 +272,26 @@ static void test_btnm_event_cb(lv_event_t *e)
  */
 static void toggle_fwdrev_cb(lv_event_t *e)
 {
-  lv_obj_t *btn = (lv_obj_t *)lv_event_get_target(e);
-  lv_obj_t *label = lv_obj_get_child(btn, 0);
+    lv_obj_t *btn = (lv_obj_t *)lv_event_get_target(e);
+    lv_obj_t *label = lv_obj_get_child(btn, 0);
 
-  const char *txt = lv_label_get_text(label);
-  // If txt is "Fwd", change to "Rev" and assign motor_direction 1 else change to "Fwd" and assign motor_direction -1
-  if (strcmp(txt, "Fwd") == 0)
-  {
-    lv_label_set_text(label, "Rev");
-    motor_constants::motor_direction = 1;
-  }
-  else
-  {
-    lv_label_set_text(label, "Fwd");
-    motor_constants::motor_direction = -1;
-  }
+    const char *txt = lv_label_get_text(label);
+    // If txt is "Fwd", change to "Rev" and assign motor_direction 1 else change to "Fwd" and assign motor_direction -1
+    if (strcmp(txt, "Fwd") == 0)
+    {
+        lv_label_set_text(label, "Rev");
+        motor_constants::motor_direction = 1;
+    }
+    else
+    {
+        lv_label_set_text(label, "Fwd");
+        motor_constants::motor_direction = -1;
+    }
 
-  Serial.print("Mode: ");
-  Serial.println(lv_label_get_text(label));
-  Serial.print("Direction set to ");
-  Serial.println(motor_constants::motor_direction);
+    Serial.print("Mode: ");
+    Serial.println(lv_label_get_text(label));
+    Serial.print("Direction set to ");
+    Serial.println(motor_constants::motor_direction);
 }
 
 // ======== SLIDER CALLBACK ========
@@ -308,14 +310,14 @@ static void toggle_fwdrev_cb(lv_event_t *e)
  */
 static void slider_event_cb(lv_event_t *e)
 {
-  lv_obj_t *slider = (lv_obj_t *)lv_event_get_target(e);
-  motor_speed = lv_slider_get_value(slider);
+    lv_obj_t *slider = (lv_obj_t *)lv_event_get_target(e);
+    motor_speed = lv_slider_get_value(slider);
 
-  // Identify which slider this is (optional, if you name them)
-  const char *name = (const char *)lv_event_get_user_data(e);
-  Serial.print(name);
-  Serial.print(" speed set to ");
-  Serial.println(motor_constants::motor_speed);
+    // Identify which slider this is (optional, if you name them)
+    const char *name = (const char *)lv_event_get_user_data(e);
+    Serial.print(name);
+    Serial.print(" speed set to ");
+    Serial.println(motor_constants::motor_speed);
 }
 
 // ======== UI CREATION FUNCTION ========
@@ -328,10 +330,38 @@ static void slider_event_cb(lv_event_t *e)
  */
 void set_btnm_bg_colors(lv_obj_t *btnm, uint32_t normal, uint32_t pressed)
 {
-  lv_obj_set_style_bg_color(btnm, lv_color_hex(normal), LV_PART_ITEMS);
-  lv_obj_set_style_bg_opa(btnm, LV_OPA_COVER, LV_PART_ITEMS);
-  lv_obj_set_style_bg_color(btnm, lv_color_hex(pressed), LV_PART_ITEMS | LV_STATE_PRESSED);
-  lv_obj_set_style_bg_opa(btnm, LV_OPA_COVER, LV_PART_ITEMS | LV_STATE_PRESSED);
+    lv_obj_set_style_bg_color(btnm, lv_color_hex(normal), LV_PART_ITEMS);
+    lv_obj_set_style_bg_opa(btnm, LV_OPA_COVER, LV_PART_ITEMS);
+    lv_obj_set_style_bg_color(btnm, lv_color_hex(pressed), LV_PART_ITEMS | LV_STATE_PRESSED);
+    lv_obj_set_style_bg_opa(btnm, LV_OPA_COVER, LV_PART_ITEMS | LV_STATE_PRESSED);
+}
+
+// ===== Button Matrix Creation Helper Function =====
+/**
+ * @brief Create a button matrix with specified properties.
+ * @param parent Parent LVGL object to which the button matrix will be added.
+ * @param btnm_map Array of button labels for the button matrix. Each string represents a button, and "\n" indicates a new row.
+ * @param width Width of the button matrix in pixels.
+ * @param height Height of the button matrix in pixels.
+ * @param align Alignment of the button matrix relative to its parent.
+ * @param x_ofs X-axis offset for positioning the button matrix.
+ * @param y_ofs Y-axis offset for positioning the button matrix.
+ * @param color1 Background color of the button matrix in normal state (hexadecimal).
+ * @param color2 Background color of the button matrix in pressed state (hexadecimal).
+ * @param event_cb Callback function to handle button press events for the button matrix.
+ */
+void create_button_matrix(lv_obj_t *parent, const char **btnm_map, lv_coord_t width, lv_coord_t height, lv_align_t align, lv_coord_t x_ofs, lv_coord_t y_ofs, uint32_t color1, uint32_t color2, lv_event_cb_t event_cb)
+{
+    lv_obj_t *btnm = lv_btnmatrix_create(parent);
+    lv_btnmatrix_set_map(btnm, btnm_map);
+
+    lv_obj_set_size(btnm, width, height);
+    lv_obj_align(btnm, align, x_ofs, y_ofs);
+
+    set_btnm_bg_colors(btnm, color1, color2);
+    lv_obj_set_style_text_color(btnm, lv_color_hex(0xffffff), LV_PART_ITEMS);
+
+    lv_obj_add_event_cb(btnm, event_cb, LV_EVENT_VALUE_CHANGED, NULL);
 }
 
 // ===== Main Button Matrix =====
@@ -342,23 +372,20 @@ void set_btnm_bg_colors(lv_obj_t *btnm, uint32_t normal, uint32_t pressed)
  */
 void create_main_button_matrix(lv_obj_t *screen_buttons)
 {
-  static const char *btnm_map[] = {
-      "Forward", "Backward", "Left", "Right", "\n",
-      "45", "135", "225", "315", "\n",
-      "Right Fwd", "Right Bwd", "Left Fwd", "Left Bwd", "\n",
-      "Front Right", "Front Left", "Rear Right", "Rear Left", "\n",
-      "CCW", "CW", "Prgm Car", ""};
+    static const char *btnm_map[] = {
+        "Forward", "Backward", "Left", "Right", "\n",
+        "45", "135", "225", "315", "\n",
+        "Right Fwd", "Right Bwd", "Left Fwd", "Left Bwd", "\n",
+        "Front Right", "Front Left", "Rear Right", "Rear Left", "\n",
+        "CCW", "CW", "Prgm Car", ""};
 
-  lv_obj_t *btnm = lv_btnmatrix_create(screen_buttons);
-  lv_btnmatrix_set_map(btnm, btnm_map);
-  lv_obj_set_size(btnm, 460, 300);
-  lv_obj_align(btnm, LV_ALIGN_TOP_LEFT, 10, 0);
-
-  set_btnm_bg_colors(btnm, 0x008800, 0xe74c3c);
-
-  lv_obj_set_style_text_color(btnm, lv_color_hex(0xffffff), LV_PART_ITEMS);
-
-  lv_obj_add_event_cb(btnm, main_btnm_event_cb, LV_EVENT_VALUE_CHANGED, NULL);
+    create_button_matrix(
+        screen_buttons,
+        btnm_map,
+        460, 300,
+        LV_ALIGN_TOP_LEFT, 10, 0,
+        0x008800, 0xe74c3c,
+        main_btnm_event_cb);
 }
 
 // ===== Test Button Matrix =====
@@ -369,16 +396,15 @@ void create_main_button_matrix(lv_obj_t *screen_buttons)
  */
 void create_test_button_matrix(lv_obj_t *screen_buttons)
 {
-  static const char *test_btnm_map[] = {"FL", "FR", "\n", "RL", "RR", ""};
-  lv_obj_t *test_btnm = lv_btnmatrix_create(screen_buttons);
-  lv_btnmatrix_set_map(test_btnm, test_btnm_map);
+    static const char *test_btnm_map[] = {"FL", "FR", "\n", "RL", "RR", ""};
 
-  lv_obj_set_size(test_btnm, 200, 120);
-  lv_obj_align(test_btnm, LV_ALIGN_BOTTOM_LEFT, 20, -20);
-
-  set_btnm_bg_colors(test_btnm, 0x5555ff, 0xe74c3c);
-
-  lv_obj_add_event_cb(test_btnm, test_btnm_event_cb, LV_EVENT_VALUE_CHANGED, NULL);
+    create_button_matrix(
+        screen_buttons,
+        test_btnm_map,
+        200, 120,
+        LV_ALIGN_BOTTOM_LEFT, 20, -20,
+        0x5555ff, 0xe74c3c,
+        test_btnm_event_cb);
 }
 
 /**
@@ -390,43 +416,43 @@ void create_test_button_matrix(lv_obj_t *screen_buttons)
 // ===== Speed Sliders =====
 void create_speed_sliders(lv_obj_t *parent)
 {
-  const char *labels[] = {"FR", "FL", "RR", "RL"};
-  int y_positions[] = {20, 60, 100, 140};
+    const char *labels[] = {"FR", "FL", "RR", "RL"};
+    int y_positions[] = {20, 60, 100, 140};
 
-  for (int i = 0; i < 4; i++)
-  {
-    // Create label
-    lv_obj_t *label = lv_label_create(parent);
-    lv_label_set_text(label, labels[i]);
-    lv_obj_align(label, LV_ALIGN_TOP_RIGHT, -230, y_positions[i]);
+    for (int i = 0; i < 4; i++)
+    {
+        // Create label
+        lv_obj_t *label = lv_label_create(parent);
+        lv_label_set_text(label, labels[i]);
+        lv_obj_align(label, LV_ALIGN_TOP_RIGHT, -230, y_positions[i]);
 
-    // Create slider
-    lv_obj_t *slider = lv_slider_create(parent);
-    lv_slider_set_range(slider, 0, 255);
-    lv_obj_set_size(slider, 150, 20);
-    lv_obj_align_to(slider, label, LV_ALIGN_OUT_RIGHT_MID, 15, 0);
+        // Create slider
+        lv_obj_t *slider = lv_slider_create(parent);
+        lv_slider_set_range(slider, 0, 255);
+        lv_obj_set_size(slider, 150, 20);
+        lv_obj_align_to(slider, label, LV_ALIGN_OUT_RIGHT_MID, 15, 0);
 
-    // Create value label
-    lv_obj_t *value_label = lv_label_create(parent);
-    char buf[4];
-    snprintf(buf, sizeof(buf), "%d", lv_slider_get_value(slider));
-    lv_label_set_text(value_label, buf);
-    lv_obj_align_to(value_label, slider, LV_ALIGN_OUT_RIGHT_MID, 15, 0);
+        // Create value label
+        lv_obj_t *value_label = lv_label_create(parent);
+        char buf[4];
+        snprintf(buf, sizeof(buf), "%d", lv_slider_get_value(slider));
+        lv_label_set_text(value_label, buf);
+        lv_obj_align_to(value_label, slider, LV_ALIGN_OUT_RIGHT_MID, 15, 0);
 
-    // Add event callback that updates the value label
-    lv_obj_add_event_cb(
-        slider, [](lv_event_t *e)
-        {
+        // Add event callback that updates the value label
+        lv_obj_add_event_cb(
+            slider, [](lv_event_t *e)
+            {
                 lv_obj_t* s = (lv_obj_t*)lv_event_get_target(e);
                 lv_obj_t* val_lbl = (lv_obj_t*)lv_event_get_user_data(e);
                 char buf[4]; // Buffer to hold the string representation of the slider value (3 digits + null terminator)
                 snprintf(buf, sizeof(buf), "%d", lv_slider_get_value(s));
                 lv_label_set_text(val_lbl, buf); },
-        LV_EVENT_VALUE_CHANGED, value_label);
+            LV_EVENT_VALUE_CHANGED, value_label);
 
-    // Add slider event callback to update speed
-    lv_obj_add_event_cb(slider, slider_event_cb, LV_EVENT_VALUE_CHANGED, (void *)labels[i]);
-  }
+        // Add slider event callback to update speed
+        lv_obj_add_event_cb(slider, slider_event_cb, LV_EVENT_VALUE_CHANGED, (void *)labels[i]);
+    }
 }
 /**
  * @brief Create the main UI
@@ -434,24 +460,24 @@ void create_speed_sliders(lv_obj_t *parent)
  */
 void create_ui()
 {
-  other_constants::screen_buttons = lv_obj_create(NULL);
-  create_main_button_matrix(other_constants::screen_buttons);
-  create_test_button_matrix(other_constants::screen_buttons);
+    other_constants::screen_buttons = lv_obj_create(NULL);
+    create_main_button_matrix(other_constants::screen_buttons);
+    create_test_button_matrix(other_constants::screen_buttons);
 
-  // Call the new function to create speed sliders
-  create_speed_sliders(other_constants::screen_buttons);
+    // Call the new function to create speed sliders
+    create_speed_sliders(other_constants::screen_buttons);
 
-  // ===== Fwd/Rev Toggle Button =====
-  lv_obj_t *toggle_FwdRev = lv_btn_create(other_constants::screen_buttons);
-  lv_obj_set_size(toggle_FwdRev, 80, 40);
-  lv_obj_align(toggle_FwdRev, LV_ALIGN_TOP_RIGHT, -20, 180);
+    // ===== Fwd/Rev Toggle Button =====
+    lv_obj_t *toggle_FwdRev = lv_btn_create(other_constants::screen_buttons);
+    lv_obj_set_size(toggle_FwdRev, 80, 40);
+    lv_obj_align(toggle_FwdRev, LV_ALIGN_TOP_RIGHT, -20, 180);
 
-  lv_obj_t *toggle_label = lv_label_create(toggle_FwdRev);
-  lv_label_set_text(toggle_label, "Fwd");
-  lv_obj_center(toggle_label);
+    lv_obj_t *toggle_label = lv_label_create(toggle_FwdRev);
+    lv_label_set_text(toggle_label, "Fwd");
+    lv_obj_center(toggle_label);
 
-  // Set direction
-  lv_obj_add_event_cb(toggle_FwdRev, toggle_fwdrev_cb, LV_EVENT_CLICKED, NULL);
+    // Set direction
+    lv_obj_add_event_cb(toggle_FwdRev, toggle_fwdrev_cb, LV_EVENT_CLICKED, NULL);
 }
 
 // ===== test movement functions =====
@@ -463,18 +489,18 @@ void create_ui()
  */
 void FR_move(int speed)
 {
-  if (speed >= 0)
-  {
-    digitalWrite(MotorPins::IN1_B, HIGH);
-    digitalWrite(MotorPins::IN2_B, LOW);
-    analogWrite(MotorPins::ENA_B, speed);
-  }
-  else
-  {
-    digitalWrite(MotorPins::IN1_B, LOW);
-    digitalWrite(MotorPins::IN2_B, HIGH);
-    analogWrite(MotorPins::ENA_B, -speed);
-  }
+    if (speed >= 0)
+    {
+        digitalWrite(MotorPins::IN1_B, HIGH);
+        digitalWrite(MotorPins::IN2_B, LOW);
+        analogWrite(MotorPins::ENA_B, speed);
+    }
+    else
+    {
+        digitalWrite(MotorPins::IN1_B, LOW);
+        digitalWrite(MotorPins::IN2_B, HIGH);
+        analogWrite(MotorPins::ENA_B, -speed);
+    }
 }
 
 /**
@@ -484,18 +510,18 @@ void FR_move(int speed)
  */
 void FL_move(int speed)
 {
-  if (speed >= 0)
-  {
-    digitalWrite(MotorPins::IN3_B, HIGH);
-    digitalWrite(MotorPins::IN4_B, LOW);
-    analogWrite(MotorPins::ENB_B, speed);
-  }
-  else
-  {
-    digitalWrite(MotorPins::IN3_B, LOW);
-    digitalWrite(MotorPins::IN4_B, HIGH);
-    analogWrite(MotorPins::ENB_B, -speed);
-  }
+    if (speed >= 0)
+    {
+        digitalWrite(MotorPins::IN3_B, HIGH);
+        digitalWrite(MotorPins::IN4_B, LOW);
+        analogWrite(MotorPins::ENB_B, speed);
+    }
+    else
+    {
+        digitalWrite(MotorPins::IN3_B, LOW);
+        digitalWrite(MotorPins::IN4_B, HIGH);
+        analogWrite(MotorPins::ENB_B, -speed);
+    }
 }
 
 /**
@@ -505,18 +531,18 @@ void FL_move(int speed)
  */
 void RR_move(int speed)
 {
-  if (speed >= 0)
-  {
-    digitalWrite(MotorPins::IN1_A, HIGH);
-    digitalWrite(MotorPins::IN2_A, LOW);
-    analogWrite(MotorPins::ENA_A, speed);
-  }
-  else
-  {
-    digitalWrite(MotorPins::IN1_A, LOW);
-    digitalWrite(MotorPins::IN2_A, HIGH);
-    analogWrite(MotorPins::ENA_A, -speed);
-  }
+    if (speed >= 0)
+    {
+        digitalWrite(MotorPins::IN1_A, HIGH);
+        digitalWrite(MotorPins::IN2_A, LOW);
+        analogWrite(MotorPins::ENA_A, speed);
+    }
+    else
+    {
+        digitalWrite(MotorPins::IN1_A, LOW);
+        digitalWrite(MotorPins::IN2_A, HIGH);
+        analogWrite(MotorPins::ENA_A, -speed);
+    }
 }
 
 /**
@@ -526,18 +552,18 @@ void RR_move(int speed)
  */
 void RL_move(int speed)
 {
-  if (speed >= 0)
-  {
-    digitalWrite(MotorPins::IN3_A, HIGH);
-    digitalWrite(MotorPins::IN4_A, LOW);
-    analogWrite(MotorPins::ENB_A, speed);
-  }
-  else
-  {
-    digitalWrite(MotorPins::IN3_A, LOW);
-    digitalWrite(MotorPins::IN4_A, HIGH);
-    analogWrite(MotorPins::ENB_A, -speed);
-  }
+    if (speed >= 0)
+    {
+        digitalWrite(MotorPins::IN3_A, HIGH);
+        digitalWrite(MotorPins::IN4_A, LOW);
+        analogWrite(MotorPins::ENB_A, speed);
+    }
+    else
+    {
+        digitalWrite(MotorPins::IN3_A, LOW);
+        digitalWrite(MotorPins::IN4_A, HIGH);
+        analogWrite(MotorPins::ENB_A, -speed);
+    }
 }
 
 // ===== Setup & loop =====
@@ -549,24 +575,24 @@ void RL_move(int speed)
  */
 void setup()
 {
-  delay(3000);
-  Serial.begin(115200);
+    delay(3000);
+    Serial.begin(115200);
 
-  Arduino_constants::Display.begin();
-  Arduino_constants::TouchDetector.begin();
+    Arduino_constants::Display.begin();
+    Arduino_constants::TouchDetector.begin();
 
-  create_ui();
-  lv_scr_load(other_constants::screen_buttons);
+    create_ui();
+    lv_scr_load(other_constants::screen_buttons);
 }
 
 void loop()
 {
-  lv_timer_handler();
+    lv_timer_handler();
 
-  if (msg_label != NULL && (millis() - msg_start_time > msg_duration))
-  {
-    lv_obj_del(msg_label);
-    msg_label = NULL;
-  }
+    if (msg_label != NULL && (millis() - msg_start_time > msg_duration))
+    {
+        lv_obj_del(msg_label);
+        msg_label = NULL;
+    }
 }
 /** @} */ // end of Arduino

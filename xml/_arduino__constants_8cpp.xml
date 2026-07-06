@@ -37,8 +37,7 @@
 <codeline lineno="5"><highlight class="normal"><sp/><sp/><sp/><sp/>:<sp/><ref refid="class_arduino__constants_1ae43c82f3708c54a2bf430275a03df168" kindref="member">Display</ref>(800,<sp/>480,<sp/>GigaDisplayShield)<sp/></highlight><highlight class="comment">//<sp/>initialize<sp/>Display</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="6"><highlight class="normal">{</highlight></codeline>
 <codeline lineno="7"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>TouchDetector<sp/>has<sp/>a<sp/>default<sp/>constructor,<sp/>so<sp/>it<sp/>is<sp/>automatically<sp/>initialized.</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="8"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>No<sp/>explicit<sp/>initialization<sp/>is<sp/>needed<sp/>in<sp/>the<sp/>constructor.</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="9"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="8"><highlight class="normal">}</highlight></codeline>
     </programlisting>
     <location file="C:/Users/Snapp/OneDrive/Arduino/libraries/Arduino_robot_project_library/src/Arduino_constants.cpp"/>
   </compounddef>
